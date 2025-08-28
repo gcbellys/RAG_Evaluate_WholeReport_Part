@@ -1,0 +1,2848 @@
+{
+  "report_id": "diagnostic_4059",
+  "timestamp": "2025-08-28T00:28:12.980098",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4059_symptom_0",
+      "diagnosis": "peritoneal dialysate was tapped and showed 7000 wbcs",
+      "expected_organs": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Mesentery",
+          "anatomicalLocations": [
+            "Mesenteric Root",
+            "Mesenteric Fat"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Vein (Vena)",
+          "anatomicalLocations": [
+            "Superior Vena Cava",
+            "Subclavian Vein"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Peritoneum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Teeth (Dentes)",
+          "anatomicalLocations": [
+            "Molars",
+            "Premolars"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Diffuse\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Diffuse"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    ""
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Mesentery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Peritoneum\",\n      \"anatomicalLocations\": [\n        \"Peritoneum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\",\n        \"Renal Cortex\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Mesentery",
+            "anatomical_locations": [
+              "Mesentery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Mesentery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Peritoneum",
+                  "anatomicalLocations": [
+                    "Peritoneum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)",
+                    "Renal Cortex"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Mesentery",
+          "anatomical_locations": [
+            "Mesentery"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4059_symptom_1",
+      "diagnosis": "100% of which were polys",
+      "expected_organs": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Mesentery",
+          "anatomicalLocations": [
+            "Mesenteric Root",
+            "Mesenteric Fat"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Vein (Vena)",
+          "anatomicalLocations": [
+            "Superior Vena Cava",
+            "Subclavian Vein"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Peritoneum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Teeth (Dentes)",
+          "anatomicalLocations": [
+            "Molars",
+            "Premolars"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Diffuse\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Diffuse"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    ""
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Mesentery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Peritoneum\",\n      \"anatomicalLocations\": [\n        \"Peritoneum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\",\n        \"Renal Cortex\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Mesentery",
+            "anatomical_locations": [
+              "Mesentery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Mesentery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Peritoneum",
+                  "anatomicalLocations": [
+                    "Peritoneum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)",
+                    "Renal Cortex"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Mesentery",
+          "anatomical_locations": [
+            "Mesentery"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4059_symptom_2",
+      "diagnosis": "tachycardic",
+      "expected_organs": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Mesentery",
+          "anatomicalLocations": [
+            "Mesenteric Root",
+            "Mesenteric Fat"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Vein (Vena)",
+          "anatomicalLocations": [
+            "Superior Vena Cava",
+            "Subclavian Vein"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Peritoneum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Teeth (Dentes)",
+          "anatomicalLocations": [
+            "Molars",
+            "Premolars"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Diffuse\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Diffuse"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    ""
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Mesentery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Peritoneum\",\n      \"anatomicalLocations\": [\n        \"Peritoneum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\",\n        \"Renal Cortex\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Mesentery",
+            "anatomical_locations": [
+              "Mesentery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Mesentery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Peritoneum",
+                  "anatomicalLocations": [
+                    "Peritoneum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)",
+                    "Renal Cortex"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Mesentery",
+          "anatomical_locations": [
+            "Mesentery"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4059_symptom_3",
+      "diagnosis": "diffuse stranding of the mesentery",
+      "expected_organs": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Mesentery",
+          "anatomicalLocations": [
+            "Mesenteric Root",
+            "Mesenteric Fat"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Vein (Vena)",
+          "anatomicalLocations": [
+            "Superior Vena Cava",
+            "Subclavian Vein"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Peritoneum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Teeth (Dentes)",
+          "anatomicalLocations": [
+            "Molars",
+            "Premolars"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Diffuse\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Diffuse"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    ""
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Mesentery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Peritoneum\",\n      \"anatomicalLocations\": [\n        \"Peritoneum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\",\n        \"Renal Cortex\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Mesentery",
+            "anatomical_locations": [
+              "Mesentery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Mesentery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Peritoneum",
+                  "anatomicalLocations": [
+                    "Peritoneum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)",
+                    "Renal Cortex"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Mesentery",
+          "anatomical_locations": [
+            "Mesentery"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4059_symptom_4",
+      "diagnosis": "some dysuria",
+      "expected_organs": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Mesentery",
+          "anatomicalLocations": [
+            "Mesenteric Root",
+            "Mesenteric Fat"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Vein (Vena)",
+          "anatomicalLocations": [
+            "Superior Vena Cava",
+            "Subclavian Vein"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Peritoneum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Teeth (Dentes)",
+          "anatomicalLocations": [
+            "Molars",
+            "Premolars"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Diffuse\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Diffuse"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    ""
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Mesentery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Peritoneum\",\n      \"anatomicalLocations\": [\n        \"Peritoneum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\",\n        \"Renal Cortex\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Mesentery",
+            "anatomical_locations": [
+              "Mesentery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Mesentery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Peritoneum",
+                  "anatomicalLocations": [
+                    "Peritoneum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)",
+                    "Renal Cortex"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Mesentery",
+          "anatomical_locations": [
+            "Mesentery"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4059_symptom_5",
+      "diagnosis": "central line placement",
+      "expected_organs": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Mesentery",
+          "anatomicalLocations": [
+            "Mesenteric Root",
+            "Mesenteric Fat"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Vein (Vena)",
+          "anatomicalLocations": [
+            "Superior Vena Cava",
+            "Subclavian Vein"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Peritoneum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Teeth (Dentes)",
+          "anatomicalLocations": [
+            "Molars",
+            "Premolars"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Diffuse\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Diffuse"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    ""
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Mesentery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Peritoneum\",\n      \"anatomicalLocations\": [\n        \"Peritoneum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\",\n        \"Renal Cortex\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Mesentery",
+            "anatomical_locations": [
+              "Mesentery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Mesentery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Peritoneum",
+                  "anatomicalLocations": [
+                    "Peritoneum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)",
+                    "Renal Cortex"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Mesentery",
+          "anatomical_locations": [
+            "Mesentery"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4059_symptom_6",
+      "diagnosis": "mild headache",
+      "expected_organs": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Mesentery",
+          "anatomicalLocations": [
+            "Mesenteric Root",
+            "Mesenteric Fat"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Vein (Vena)",
+          "anatomicalLocations": [
+            "Superior Vena Cava",
+            "Subclavian Vein"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Peritoneum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Teeth (Dentes)",
+          "anatomicalLocations": [
+            "Molars",
+            "Premolars"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Diffuse\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Diffuse"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    ""
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Mesentery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Peritoneum\",\n      \"anatomicalLocations\": [\n        \"Peritoneum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\",\n        \"Renal Cortex\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Mesentery",
+            "anatomical_locations": [
+              "Mesentery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Mesentery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Peritoneum",
+                  "anatomicalLocations": [
+                    "Peritoneum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)",
+                    "Renal Cortex"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Mesentery",
+          "anatomical_locations": [
+            "Mesentery"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4059_symptom_7",
+      "diagnosis": "fevers",
+      "expected_organs": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Mesentery",
+          "anatomicalLocations": [
+            "Mesenteric Root",
+            "Mesenteric Fat"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Vein (Vena)",
+          "anatomicalLocations": [
+            "Superior Vena Cava",
+            "Subclavian Vein"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Peritoneum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Teeth (Dentes)",
+          "anatomicalLocations": [
+            "Molars",
+            "Premolars"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Diffuse\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Diffuse"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    ""
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Mesentery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Peritoneum\",\n      \"anatomicalLocations\": [\n        \"Peritoneum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\",\n        \"Renal Cortex\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Mesentery",
+            "anatomical_locations": [
+              "Mesentery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Mesentery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Peritoneum",
+                  "anatomicalLocations": [
+                    "Peritoneum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)",
+                    "Renal Cortex"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Mesentery",
+          "anatomical_locations": [
+            "Mesentery"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4059_symptom_8",
+      "diagnosis": "abd pain started the day of admission",
+      "expected_organs": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Mesentery",
+          "anatomicalLocations": [
+            "Mesenteric Root",
+            "Mesenteric Fat"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Vein (Vena)",
+          "anatomicalLocations": [
+            "Superior Vena Cava",
+            "Subclavian Vein"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Peritoneum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Teeth (Dentes)",
+          "anatomicalLocations": [
+            "Molars",
+            "Premolars"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Diffuse\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Diffuse"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    ""
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Mesentery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Peritoneum\",\n      \"anatomicalLocations\": [\n        \"Peritoneum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\",\n        \"Renal Cortex\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Mesentery",
+            "anatomical_locations": [
+              "Mesentery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Mesentery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Peritoneum",
+                  "anatomicalLocations": [
+                    "Peritoneum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)",
+                    "Renal Cortex"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Mesentery",
+          "anatomical_locations": [
+            "Mesentery"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4059_symptom_9",
+      "diagnosis": "left nephrostomy tube placement",
+      "expected_organs": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Mesentery",
+          "anatomicalLocations": [
+            "Mesenteric Root",
+            "Mesenteric Fat"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Vein (Vena)",
+          "anatomicalLocations": [
+            "Superior Vena Cava",
+            "Subclavian Vein"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Peritoneum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Teeth (Dentes)",
+          "anatomicalLocations": [
+            "Molars",
+            "Premolars"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Diffuse\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Diffuse"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    ""
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Mesentery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Peritoneum\",\n      \"anatomicalLocations\": [\n        \"Peritoneum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\",\n        \"Renal Cortex\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Mesentery",
+            "anatomical_locations": [
+              "Mesentery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Mesentery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Peritoneum",
+                  "anatomicalLocations": [
+                    "Peritoneum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)",
+                    "Renal Cortex"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Mesentery",
+          "anatomical_locations": [
+            "Mesentery"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4059_symptom_10",
+      "diagnosis": "lumbar puncture",
+      "expected_organs": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Mesentery",
+          "anatomicalLocations": [
+            "Mesenteric Root",
+            "Mesenteric Fat"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Vein (Vena)",
+          "anatomicalLocations": [
+            "Superior Vena Cava",
+            "Subclavian Vein"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Peritoneum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Teeth (Dentes)",
+          "anatomicalLocations": [
+            "Molars",
+            "Premolars"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Diffuse\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Diffuse"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    ""
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Mesentery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Peritoneum\",\n      \"anatomicalLocations\": [\n        \"Peritoneum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\",\n        \"Renal Cortex\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Mesentery",
+            "anatomical_locations": [
+              "Mesentery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Mesentery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Peritoneum",
+                  "anatomicalLocations": [
+                    "Peritoneum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)",
+                    "Renal Cortex"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Mesentery",
+          "anatomical_locations": [
+            "Mesentery"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4059_symptom_11",
+      "diagnosis": "missing lower teeth",
+      "expected_organs": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Mesentery",
+          "anatomicalLocations": [
+            "Mesenteric Root",
+            "Mesenteric Fat"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Vein (Vena)",
+          "anatomicalLocations": [
+            "Superior Vena Cava",
+            "Subclavian Vein"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Peritoneum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Teeth (Dentes)",
+          "anatomicalLocations": [
+            "Molars",
+            "Premolars"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Diffuse\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Diffuse"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    ""
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Mesentery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Peritoneum\",\n      \"anatomicalLocations\": [\n        \"Peritoneum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\",\n        \"Renal Cortex\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Mesentery",
+            "anatomical_locations": [
+              "Mesentery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Mesentery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Peritoneum",
+                  "anatomicalLocations": [
+                    "Peritoneum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)",
+                    "Renal Cortex"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Mesentery",
+          "anatomical_locations": [
+            "Mesentery"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4059_symptom_12",
+      "diagnosis": "no blood in her stools or her urine or from the pd catheter",
+      "expected_organs": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Mesentery",
+          "anatomicalLocations": [
+            "Mesenteric Root",
+            "Mesenteric Fat"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Vein (Vena)",
+          "anatomicalLocations": [
+            "Superior Vena Cava",
+            "Subclavian Vein"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Peritoneum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Teeth (Dentes)",
+          "anatomicalLocations": [
+            "Molars",
+            "Premolars"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Diffuse\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Diffuse"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    ""
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Mesentery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Peritoneum\",\n      \"anatomicalLocations\": [\n        \"Peritoneum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\",\n        \"Renal Cortex\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Mesentery",
+            "anatomical_locations": [
+              "Mesentery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Mesentery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Peritoneum",
+                  "anatomicalLocations": [
+                    "Peritoneum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)",
+                    "Renal Cortex"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Mesentery",
+          "anatomical_locations": [
+            "Mesentery"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4059_symptom_13",
+      "diagnosis": "hypertensive",
+      "expected_organs": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Mesentery",
+          "anatomicalLocations": [
+            "Mesenteric Root",
+            "Mesenteric Fat"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Vein (Vena)",
+          "anatomicalLocations": [
+            "Superior Vena Cava",
+            "Subclavian Vein"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Peritoneum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Teeth (Dentes)",
+          "anatomicalLocations": [
+            "Molars",
+            "Premolars"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Diffuse\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Diffuse"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    ""
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Mesentery\",\n      \"anatomicalLocations\": [\n        \"Mesentery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Peritoneum\",\n      \"anatomicalLocations\": [\n        \"Peritoneum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\",\n        \"Renal Cortex\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Mesentery",
+            "anatomical_locations": [
+              "Mesentery"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Mesentery",
+                  "anatomicalLocations": [
+                    "Mesentery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Peritoneum",
+                  "anatomicalLocations": [
+                    "Peritoneum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)",
+                    "Renal Cortex"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Mesentery",
+          "anatomical_locations": [
+            "Mesentery"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

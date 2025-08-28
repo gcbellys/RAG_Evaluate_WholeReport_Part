@@ -1,0 +1,234 @@
+[
+  {
+    "query": "seizure at time of trauma work-up",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "place dry guaze once a day until site completely scabbed over",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "patient intubated for airway protection",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "patient intubated for airway protection",
+        "units": [
+          {
+            "u_id": "u_28485",
+            "u_unit": {
+              "d_diagnosis": "patient was intubated for airway protection",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "patient was intubated for airway protection"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "patient intubated for airway protection",
+        "units": [
+          {
+            "u_id": "u_88160",
+            "u_unit": {
+              "d_diagnosis": "intubated for airway protection",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "intubated for airway protection"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "left pneumothorax",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "left pneumothorax",
+        "units": [
+          {
+            "u_id": "u_54165",
+            "u_unit": {
+              "d_diagnosis": "left pneumothorax",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "left pneumothorax"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "left pneumothorax",
+        "units": [
+          {
+            "u_id": "u_5783",
+            "u_unit": {
+              "d_diagnosis": "small left pneumothorax",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "small left pneumothorax"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "right pneumothorax",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "right pneumothorax",
+        "units": [
+          {
+            "u_id": "u_65307",
+            "u_unit": {
+              "d_diagnosis": "right pneumothorax",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "right pneumothorax"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "right pneumothorax",
+        "units": [
+          {
+            "u_id": "u_59994",
+            "u_unit": {
+              "d_diagnosis": "right sided pneumothorax",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "right sided pneumothorax"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "right pneumothorax",
+        "units": [
+          {
+            "u_id": "u_81053",
+            "u_unit": {
+              "d_diagnosis": "chest x-ray showed a right pneumothorax",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "chest x-ray showed a right pneumothorax"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "keep dressing in place on old right chest tube site for 1 more day before removing",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "continue with dry gauze over left chest wound and change once a day until completely scabbed over",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "bilateral chest tubes placed for bilateral pneumothoraces",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "bilateral chest tubes placed for bilateral pneumothoraces",
+        "units": [
+          {
+            "u_id": "u_66357",
+            "u_unit": {
+              "d_diagnosis": "bilateral pneumothoraces",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "bilateral pneumothoraces"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "bilateral chest tubes placed for bilateral pneumothoraces",
+        "units": [
+          {
+            "u_id": "u_66701",
+            "u_unit": {
+              "d_diagnosis": "bilateral chest tube thoracostomies",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "bilateral chest tube thoracostomies"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "bilateral chest tubes placed for bilateral pneumothoraces",
+        "units": [
+          {
+            "u_id": "u_7740",
+            "u_unit": {
+              "d_diagnosis": "two chest tubes placed intraoperatively",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "two chest tubes placed intraoperatively"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+]

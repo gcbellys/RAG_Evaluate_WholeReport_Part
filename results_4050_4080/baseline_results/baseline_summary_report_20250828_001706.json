@@ -1,0 +1,327 @@
+{
+  "workflow_type": "baseline_individual_symptoms",
+  "timestamp": "2025-08-28T00:17:06.951594",
+  "total_reports": 31,
+  "reports": [
+    {
+      "report_id": "diagnostic_4050",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4050.json",
+      "total_symptoms": 8,
+      "valid_symptoms": 8,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4051",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4051.json",
+      "total_symptoms": 11,
+      "valid_symptoms": 11,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4052",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4052.json",
+      "total_symptoms": 12,
+      "valid_symptoms": 12,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4053",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4053.json",
+      "total_symptoms": 1,
+      "valid_symptoms": 1,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4054",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4054.json",
+      "total_symptoms": 14,
+      "valid_symptoms": 14,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4055",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4055.json",
+      "total_symptoms": 7,
+      "valid_symptoms": 7,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4056",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4056.json",
+      "total_symptoms": 5,
+      "valid_symptoms": 5,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4057",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4057.json",
+      "total_symptoms": 5,
+      "valid_symptoms": 5,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4058",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4058.json",
+      "total_symptoms": 5,
+      "valid_symptoms": 5,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4059",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4059.json",
+      "total_symptoms": 12,
+      "valid_symptoms": 12,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4060",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4060.json",
+      "total_symptoms": 14,
+      "valid_symptoms": 14,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4061",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4061.json",
+      "total_symptoms": 6,
+      "valid_symptoms": 6,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4062",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4062.json",
+      "total_symptoms": 5,
+      "valid_symptoms": 5,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4063",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4063.json",
+      "total_symptoms": 7,
+      "valid_symptoms": 7,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4064",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4064.json",
+      "total_symptoms": 8,
+      "valid_symptoms": 8,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4065",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4065.json",
+      "total_symptoms": 6,
+      "valid_symptoms": 6,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4066",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4066.json",
+      "total_symptoms": 14,
+      "valid_symptoms": 14,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4067",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4067.json",
+      "total_symptoms": 8,
+      "valid_symptoms": 8,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4068",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4068.json",
+      "total_symptoms": 10,
+      "valid_symptoms": 10,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4069",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4069.json",
+      "total_symptoms": 9,
+      "valid_symptoms": 9,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4070",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4070.json",
+      "total_symptoms": 11,
+      "valid_symptoms": 11,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4071",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4071.json",
+      "total_symptoms": 3,
+      "valid_symptoms": 3,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4072",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4072.json",
+      "total_symptoms": 8,
+      "valid_symptoms": 8,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4073",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4073.json",
+      "total_symptoms": 1,
+      "valid_symptoms": 1,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4074",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4074.json",
+      "total_symptoms": 7,
+      "valid_symptoms": 7,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4075",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4075.json",
+      "total_symptoms": 12,
+      "valid_symptoms": 12,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4076",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4076.json",
+      "total_symptoms": 13,
+      "valid_symptoms": 13,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4077",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4077.json",
+      "total_symptoms": 8,
+      "valid_symptoms": 8,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4078",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4078.json",
+      "total_symptoms": 17,
+      "valid_symptoms": 17,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4079",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4079.json",
+      "total_symptoms": 7,
+      "valid_symptoms": 7,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    },
+    {
+      "report_id": "diagnostic_4080",
+      "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4080.json",
+      "total_symptoms": 6,
+      "valid_symptoms": 6,
+      "api_clients": [
+        "moonshot",
+        "deepseek"
+      ]
+    }
+  ],
+  "overall_statistics": {
+    "total_symptoms": 260,
+    "valid_symptoms": 260,
+    "total_api_calls": 520,
+    "successful_api_calls": 520,
+    "failed_api_calls": 0,
+    "average_overall_score": 43.1,
+    "average_precision": 28.7,
+    "average_recall": 39.8
+  }
+}

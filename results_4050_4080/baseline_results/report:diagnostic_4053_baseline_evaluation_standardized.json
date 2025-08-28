@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "report_id": "diagnostic_4053",
+    "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4053.json",
+    "processing_timestamp": "2025-08-27T23:23:29.349914",
+    "evaluation_timestamp": "2025-08-27T23:23:43.103850",
+    "total_symptoms": 1,
+    "valid_symptoms": 1,
+    "api_clients": [
+      "moonshot",
+      "deepseek"
+    ]
+  },
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4053_symptom_0",
+      "symptom_text": "integrated_extraction",
+      "expected_results": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 78,
+            "prompt_tokens": 2153,
+            "total_tokens": 2231,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 189,
+            "prompt_tokens": 2025,
+            "total_tokens": 2214,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 41
+          },
+          "error": null
+        }
+      }
+    }
+  ],
+  "evaluation_summary": {
+    "total_api_calls": 2,
+    "successful_api_calls": 2,
+    "failed_api_calls": 0,
+    "average_overall_score": 12.5,
+    "average_precision": 0.0,
+    "average_recall": 0.0
+  }
+}

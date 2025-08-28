@@ -1,0 +1,2610 @@
+{
+  "report_id": "diagnostic_4075",
+  "timestamp": "2025-08-28T00:46:20.259108",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4075_symptom_0",
+      "diagnosis": "abdominal pain resolved s/p bm",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Red Bone Marrow",
+            "Hematopoietic Tissue"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Fundus"
+          ]
+        },
+        {
+          "organName": "Urinary bladder (Vesica urinaria)",
+          "anatomicalLocations": [
+            "Bladder Wall",
+            "Trigone of the Bladder"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Lumbar Nerve Roots"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Sweat Glands"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Conus Medullaris"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Intestinum tenue\",\n      \"anatomicalLocations\": [\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Intestinum crassum\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Descending Colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Vena\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Muscles\",\n      \"anatomicalLocations\": [\n        \"Right Leg Muscles\",\n        \"Back Muscles\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Intestinum tenue",
+            "anatomical_locations": [
+              "Jejunum",
+              "Ileum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Intestinum tenue",
+                  "anatomicalLocations": [
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Intestinum crassum",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Descending Colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Vena",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Muscles",
+                  "anatomicalLocations": [
+                    "Right Leg Muscles",
+                    "Back Muscles"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Intestinum tenue",
+          "anatomical_locations": [
+            "Jejunum",
+            "Ileum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Bladder Neck\",\n        \"Trigone of Bladder\",\n        \"Detrusor Muscle\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric Body\",\n        \"Pylorus\",\n        \"Gastric Fundus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Lumbar Spinal Cord\",\n        \"Sacral Spinal Cord\",\n        \"Cauda Equina\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Bladder Neck",
+                    "Trigone of Bladder",
+                    "Detrusor Muscle"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric Body",
+                    "Pylorus",
+                    "Gastric Fundus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Lumbar Spinal Cord",
+                    "Sacral Spinal Cord",
+                    "Cauda Equina"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4075_symptom_1",
+      "diagnosis": "right medial tibial plateau fracture",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Red Bone Marrow",
+            "Hematopoietic Tissue"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Fundus"
+          ]
+        },
+        {
+          "organName": "Urinary bladder (Vesica urinaria)",
+          "anatomicalLocations": [
+            "Bladder Wall",
+            "Trigone of the Bladder"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Lumbar Nerve Roots"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Sweat Glands"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Conus Medullaris"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Intestinum tenue\",\n      \"anatomicalLocations\": [\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Intestinum crassum\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Descending Colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Vena\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Muscles\",\n      \"anatomicalLocations\": [\n        \"Right Leg Muscles\",\n        \"Back Muscles\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Intestinum tenue",
+            "anatomical_locations": [
+              "Jejunum",
+              "Ileum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Intestinum tenue",
+                  "anatomicalLocations": [
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Intestinum crassum",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Descending Colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Vena",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Muscles",
+                  "anatomicalLocations": [
+                    "Right Leg Muscles",
+                    "Back Muscles"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Intestinum tenue",
+          "anatomical_locations": [
+            "Jejunum",
+            "Ileum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Bladder Neck\",\n        \"Trigone of Bladder\",\n        \"Detrusor Muscle\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric Body\",\n        \"Pylorus\",\n        \"Gastric Fundus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Lumbar Spinal Cord\",\n        \"Sacral Spinal Cord\",\n        \"Cauda Equina\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Bladder Neck",
+                    "Trigone of Bladder",
+                    "Detrusor Muscle"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric Body",
+                    "Pylorus",
+                    "Gastric Fundus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Lumbar Spinal Cord",
+                    "Sacral Spinal Cord",
+                    "Cauda Equina"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4075_symptom_2",
+      "diagnosis": "constipation that resolved with a soap suds enema",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Red Bone Marrow",
+            "Hematopoietic Tissue"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Fundus"
+          ]
+        },
+        {
+          "organName": "Urinary bladder (Vesica urinaria)",
+          "anatomicalLocations": [
+            "Bladder Wall",
+            "Trigone of the Bladder"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Lumbar Nerve Roots"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Sweat Glands"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Conus Medullaris"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Intestinum tenue\",\n      \"anatomicalLocations\": [\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Intestinum crassum\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Descending Colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Vena\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Muscles\",\n      \"anatomicalLocations\": [\n        \"Right Leg Muscles\",\n        \"Back Muscles\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Intestinum tenue",
+            "anatomical_locations": [
+              "Jejunum",
+              "Ileum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Intestinum tenue",
+                  "anatomicalLocations": [
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Intestinum crassum",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Descending Colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Vena",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Muscles",
+                  "anatomicalLocations": [
+                    "Right Leg Muscles",
+                    "Back Muscles"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Intestinum tenue",
+          "anatomical_locations": [
+            "Jejunum",
+            "Ileum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Bladder Neck\",\n        \"Trigone of Bladder\",\n        \"Detrusor Muscle\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric Body\",\n        \"Pylorus\",\n        \"Gastric Fundus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Lumbar Spinal Cord\",\n        \"Sacral Spinal Cord\",\n        \"Cauda Equina\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Bladder Neck",
+                    "Trigone of Bladder",
+                    "Detrusor Muscle"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric Body",
+                    "Pylorus",
+                    "Gastric Fundus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Lumbar Spinal Cord",
+                    "Sacral Spinal Cord",
+                    "Cauda Equina"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4075_symptom_3",
+      "diagnosis": "leukocytosis to 25.8 from 12.2 the day prior",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Red Bone Marrow",
+            "Hematopoietic Tissue"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Fundus"
+          ]
+        },
+        {
+          "organName": "Urinary bladder (Vesica urinaria)",
+          "anatomicalLocations": [
+            "Bladder Wall",
+            "Trigone of the Bladder"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Lumbar Nerve Roots"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Sweat Glands"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Conus Medullaris"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Intestinum tenue\",\n      \"anatomicalLocations\": [\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Intestinum crassum\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Descending Colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Vena\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Muscles\",\n      \"anatomicalLocations\": [\n        \"Right Leg Muscles\",\n        \"Back Muscles\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Intestinum tenue",
+            "anatomical_locations": [
+              "Jejunum",
+              "Ileum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Intestinum tenue",
+                  "anatomicalLocations": [
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Intestinum crassum",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Descending Colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Vena",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Muscles",
+                  "anatomicalLocations": [
+                    "Right Leg Muscles",
+                    "Back Muscles"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Intestinum tenue",
+          "anatomical_locations": [
+            "Jejunum",
+            "Ileum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Bladder Neck\",\n        \"Trigone of Bladder\",\n        \"Detrusor Muscle\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric Body\",\n        \"Pylorus\",\n        \"Gastric Fundus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Lumbar Spinal Cord\",\n        \"Sacral Spinal Cord\",\n        \"Cauda Equina\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Bladder Neck",
+                    "Trigone of Bladder",
+                    "Detrusor Muscle"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric Body",
+                    "Pylorus",
+                    "Gastric Fundus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Lumbar Spinal Cord",
+                    "Sacral Spinal Cord",
+                    "Cauda Equina"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4075_symptom_4",
+      "diagnosis": "vomited multiple times with narcan treatment",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Red Bone Marrow",
+            "Hematopoietic Tissue"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Fundus"
+          ]
+        },
+        {
+          "organName": "Urinary bladder (Vesica urinaria)",
+          "anatomicalLocations": [
+            "Bladder Wall",
+            "Trigone of the Bladder"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Lumbar Nerve Roots"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Sweat Glands"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Conus Medullaris"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Intestinum tenue\",\n      \"anatomicalLocations\": [\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Intestinum crassum\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Descending Colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Vena\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Muscles\",\n      \"anatomicalLocations\": [\n        \"Right Leg Muscles\",\n        \"Back Muscles\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Intestinum tenue",
+            "anatomical_locations": [
+              "Jejunum",
+              "Ileum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Intestinum tenue",
+                  "anatomicalLocations": [
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Intestinum crassum",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Descending Colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Vena",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Muscles",
+                  "anatomicalLocations": [
+                    "Right Leg Muscles",
+                    "Back Muscles"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Intestinum tenue",
+          "anatomical_locations": [
+            "Jejunum",
+            "Ileum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Bladder Neck\",\n        \"Trigone of Bladder\",\n        \"Detrusor Muscle\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric Body\",\n        \"Pylorus\",\n        \"Gastric Fundus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Lumbar Spinal Cord\",\n        \"Sacral Spinal Cord\",\n        \"Cauda Equina\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Bladder Neck",
+                    "Trigone of Bladder",
+                    "Detrusor Muscle"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric Body",
+                    "Pylorus",
+                    "Gastric Fundus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Lumbar Spinal Cord",
+                    "Sacral Spinal Cord",
+                    "Cauda Equina"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4075_symptom_5",
+      "diagnosis": "discomfort with urinary retention which resolved after being straight catheterization",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Red Bone Marrow",
+            "Hematopoietic Tissue"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Fundus"
+          ]
+        },
+        {
+          "organName": "Urinary bladder (Vesica urinaria)",
+          "anatomicalLocations": [
+            "Bladder Wall",
+            "Trigone of the Bladder"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Lumbar Nerve Roots"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Sweat Glands"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Conus Medullaris"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Intestinum tenue\",\n      \"anatomicalLocations\": [\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Intestinum crassum\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Descending Colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Vena\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Muscles\",\n      \"anatomicalLocations\": [\n        \"Right Leg Muscles\",\n        \"Back Muscles\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Intestinum tenue",
+            "anatomical_locations": [
+              "Jejunum",
+              "Ileum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Intestinum tenue",
+                  "anatomicalLocations": [
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Intestinum crassum",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Descending Colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Vena",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Muscles",
+                  "anatomicalLocations": [
+                    "Right Leg Muscles",
+                    "Back Muscles"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Intestinum tenue",
+          "anatomical_locations": [
+            "Jejunum",
+            "Ileum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Bladder Neck\",\n        \"Trigone of Bladder\",\n        \"Detrusor Muscle\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric Body\",\n        \"Pylorus\",\n        \"Gastric Fundus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Lumbar Spinal Cord\",\n        \"Sacral Spinal Cord\",\n        \"Cauda Equina\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Bladder Neck",
+                    "Trigone of Bladder",
+                    "Detrusor Muscle"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric Body",
+                    "Pylorus",
+                    "Gastric Fundus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Lumbar Spinal Cord",
+                    "Sacral Spinal Cord",
+                    "Cauda Equina"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4075_symptom_6",
+      "diagnosis": "pain in right leg from the buttock down to the ankle on the lateral calf",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Red Bone Marrow",
+            "Hematopoietic Tissue"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Fundus"
+          ]
+        },
+        {
+          "organName": "Urinary bladder (Vesica urinaria)",
+          "anatomicalLocations": [
+            "Bladder Wall",
+            "Trigone of the Bladder"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Lumbar Nerve Roots"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Sweat Glands"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Conus Medullaris"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Intestinum tenue\",\n      \"anatomicalLocations\": [\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Intestinum crassum\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Descending Colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Vena\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Muscles\",\n      \"anatomicalLocations\": [\n        \"Right Leg Muscles\",\n        \"Back Muscles\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Intestinum tenue",
+            "anatomical_locations": [
+              "Jejunum",
+              "Ileum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Intestinum tenue",
+                  "anatomicalLocations": [
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Intestinum crassum",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Descending Colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Vena",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Muscles",
+                  "anatomicalLocations": [
+                    "Right Leg Muscles",
+                    "Back Muscles"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Intestinum tenue",
+          "anatomical_locations": [
+            "Jejunum",
+            "Ileum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Bladder Neck\",\n        \"Trigone of Bladder\",\n        \"Detrusor Muscle\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric Body\",\n        \"Pylorus\",\n        \"Gastric Fundus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Lumbar Spinal Cord\",\n        \"Sacral Spinal Cord\",\n        \"Cauda Equina\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Bladder Neck",
+                    "Trigone of Bladder",
+                    "Detrusor Muscle"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric Body",
+                    "Pylorus",
+                    "Gastric Fundus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Lumbar Spinal Cord",
+                    "Sacral Spinal Cord",
+                    "Cauda Equina"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4075_symptom_7",
+      "diagnosis": "diaphoresis without any other sxs that self resolved",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Red Bone Marrow",
+            "Hematopoietic Tissue"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Fundus"
+          ]
+        },
+        {
+          "organName": "Urinary bladder (Vesica urinaria)",
+          "anatomicalLocations": [
+            "Bladder Wall",
+            "Trigone of the Bladder"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Lumbar Nerve Roots"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Sweat Glands"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Conus Medullaris"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Intestinum tenue\",\n      \"anatomicalLocations\": [\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Intestinum crassum\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Descending Colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Vena\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Muscles\",\n      \"anatomicalLocations\": [\n        \"Right Leg Muscles\",\n        \"Back Muscles\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Intestinum tenue",
+            "anatomical_locations": [
+              "Jejunum",
+              "Ileum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Intestinum tenue",
+                  "anatomicalLocations": [
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Intestinum crassum",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Descending Colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Vena",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Muscles",
+                  "anatomicalLocations": [
+                    "Right Leg Muscles",
+                    "Back Muscles"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Intestinum tenue",
+          "anatomical_locations": [
+            "Jejunum",
+            "Ileum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Bladder Neck\",\n        \"Trigone of Bladder\",\n        \"Detrusor Muscle\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric Body\",\n        \"Pylorus\",\n        \"Gastric Fundus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Lumbar Spinal Cord\",\n        \"Sacral Spinal Cord\",\n        \"Cauda Equina\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Bladder Neck",
+                    "Trigone of Bladder",
+                    "Detrusor Muscle"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric Body",
+                    "Pylorus",
+                    "Gastric Fundus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Lumbar Spinal Cord",
+                    "Sacral Spinal Cord",
+                    "Cauda Equina"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4075_symptom_8",
+      "diagnosis": "normal ck and ck-mb",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Red Bone Marrow",
+            "Hematopoietic Tissue"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Fundus"
+          ]
+        },
+        {
+          "organName": "Urinary bladder (Vesica urinaria)",
+          "anatomicalLocations": [
+            "Bladder Wall",
+            "Trigone of the Bladder"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Lumbar Nerve Roots"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Sweat Glands"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Conus Medullaris"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Intestinum tenue\",\n      \"anatomicalLocations\": [\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Intestinum crassum\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Descending Colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Vena\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Muscles\",\n      \"anatomicalLocations\": [\n        \"Right Leg Muscles\",\n        \"Back Muscles\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Intestinum tenue",
+            "anatomical_locations": [
+              "Jejunum",
+              "Ileum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Intestinum tenue",
+                  "anatomicalLocations": [
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Intestinum crassum",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Descending Colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Vena",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Muscles",
+                  "anatomicalLocations": [
+                    "Right Leg Muscles",
+                    "Back Muscles"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Intestinum tenue",
+          "anatomical_locations": [
+            "Jejunum",
+            "Ileum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Bladder Neck\",\n        \"Trigone of Bladder\",\n        \"Detrusor Muscle\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric Body\",\n        \"Pylorus\",\n        \"Gastric Fundus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Lumbar Spinal Cord\",\n        \"Sacral Spinal Cord\",\n        \"Cauda Equina\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Bladder Neck",
+                    "Trigone of Bladder",
+                    "Detrusor Muscle"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric Body",
+                    "Pylorus",
+                    "Gastric Fundus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Lumbar Spinal Cord",
+                    "Sacral Spinal Cord",
+                    "Cauda Equina"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4075_symptom_9",
+      "diagnosis": "troponin leak which is trending down",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Red Bone Marrow",
+            "Hematopoietic Tissue"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Fundus"
+          ]
+        },
+        {
+          "organName": "Urinary bladder (Vesica urinaria)",
+          "anatomicalLocations": [
+            "Bladder Wall",
+            "Trigone of the Bladder"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Lumbar Nerve Roots"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Sweat Glands"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Conus Medullaris"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Intestinum tenue\",\n      \"anatomicalLocations\": [\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Intestinum crassum\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Descending Colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Vena\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Muscles\",\n      \"anatomicalLocations\": [\n        \"Right Leg Muscles\",\n        \"Back Muscles\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Intestinum tenue",
+            "anatomical_locations": [
+              "Jejunum",
+              "Ileum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Intestinum tenue",
+                  "anatomicalLocations": [
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Intestinum crassum",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Descending Colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Vena",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Muscles",
+                  "anatomicalLocations": [
+                    "Right Leg Muscles",
+                    "Back Muscles"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Intestinum tenue",
+          "anatomical_locations": [
+            "Jejunum",
+            "Ileum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Bladder Neck\",\n        \"Trigone of Bladder\",\n        \"Detrusor Muscle\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric Body\",\n        \"Pylorus\",\n        \"Gastric Fundus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Lumbar Spinal Cord\",\n        \"Sacral Spinal Cord\",\n        \"Cauda Equina\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Bladder Neck",
+                    "Trigone of Bladder",
+                    "Detrusor Muscle"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric Body",
+                    "Pylorus",
+                    "Gastric Fundus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Lumbar Spinal Cord",
+                    "Sacral Spinal Cord",
+                    "Cauda Equina"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4075_symptom_10",
+      "diagnosis": "low back pain and le weakness",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Red Bone Marrow",
+            "Hematopoietic Tissue"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Fundus"
+          ]
+        },
+        {
+          "organName": "Urinary bladder (Vesica urinaria)",
+          "anatomicalLocations": [
+            "Bladder Wall",
+            "Trigone of the Bladder"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Lumbar Nerve Roots"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Sweat Glands"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Conus Medullaris"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Intestinum tenue\",\n      \"anatomicalLocations\": [\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Intestinum crassum\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Descending Colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Vena\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Muscles\",\n      \"anatomicalLocations\": [\n        \"Right Leg Muscles\",\n        \"Back Muscles\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Intestinum tenue",
+            "anatomical_locations": [
+              "Jejunum",
+              "Ileum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Intestinum tenue",
+                  "anatomicalLocations": [
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Intestinum crassum",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Descending Colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Vena",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Muscles",
+                  "anatomicalLocations": [
+                    "Right Leg Muscles",
+                    "Back Muscles"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Intestinum tenue",
+          "anatomical_locations": [
+            "Jejunum",
+            "Ileum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Bladder Neck\",\n        \"Trigone of Bladder\",\n        \"Detrusor Muscle\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric Body\",\n        \"Pylorus\",\n        \"Gastric Fundus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Lumbar Spinal Cord\",\n        \"Sacral Spinal Cord\",\n        \"Cauda Equina\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Bladder Neck",
+                    "Trigone of Bladder",
+                    "Detrusor Muscle"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric Body",
+                    "Pylorus",
+                    "Gastric Fundus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Lumbar Spinal Cord",
+                    "Sacral Spinal Cord",
+                    "Cauda Equina"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4075_symptom_11",
+      "diagnosis": "abdominal pain throughout this admission",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Red Bone Marrow",
+            "Hematopoietic Tissue"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Fundus"
+          ]
+        },
+        {
+          "organName": "Urinary bladder (Vesica urinaria)",
+          "anatomicalLocations": [
+            "Bladder Wall",
+            "Trigone of the Bladder"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Lumbar Nerve Roots"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Sweat Glands"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cauda Equina",
+            "Conus Medullaris"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Intestinum tenue\",\n      \"anatomicalLocations\": [\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Intestinum crassum\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Descending Colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Vena\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Muscles\",\n      \"anatomicalLocations\": [\n        \"Right Leg Muscles\",\n        \"Back Muscles\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Intestinum tenue",
+            "anatomical_locations": [
+              "Jejunum",
+              "Ileum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Intestinum tenue",
+                  "anatomicalLocations": [
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Intestinum crassum",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Descending Colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Vena",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Muscles",
+                  "anatomicalLocations": [
+                    "Right Leg Muscles",
+                    "Back Muscles"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Intestinum tenue",
+          "anatomical_locations": [
+            "Jejunum",
+            "Ileum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Bladder Neck\",\n        \"Trigone of Bladder\",\n        \"Detrusor Muscle\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric Body\",\n        \"Pylorus\",\n        \"Gastric Fundus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Lumbar Spinal Cord\",\n        \"Sacral Spinal Cord\",\n        \"Cauda Equina\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Bladder Neck",
+                    "Trigone of Bladder",
+                    "Detrusor Muscle"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric Body",
+                    "Pylorus",
+                    "Gastric Fundus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Lumbar Spinal Cord",
+                    "Sacral Spinal Cord",
+                    "Cauda Equina"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

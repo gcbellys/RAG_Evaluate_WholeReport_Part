@@ -1,0 +1,1997 @@
+{
+  "report_id": "diagnostic_4051",
+  "timestamp": "2025-08-28T00:20:02.332517",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4051_symptom_0",
+      "diagnosis": "stools were guaiac negative",
+      "expected_organs": [
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveolar Sacs",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Gallbladder (Vesica biliaris)",
+          "anatomicalLocations": [
+            "Gallbladder Body",
+            "Gallbladder Mucosa"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchioles\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Gallbladder (Vesica biliaris)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)",
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchioles",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Gallbladder (Vesica biliaris)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)",
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_1",
+      "diagnosis": "acute kidney failure",
+      "expected_organs": [
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveolar Sacs",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Gallbladder (Vesica biliaris)",
+          "anatomicalLocations": [
+            "Gallbladder Body",
+            "Gallbladder Mucosa"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchioles\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Gallbladder (Vesica biliaris)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)",
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchioles",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Gallbladder (Vesica biliaris)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)",
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_2",
+      "diagnosis": "patient is currently on tube feeds via dophoff, promote with fiber at 100 cc/hr",
+      "expected_organs": [
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveolar Sacs",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Gallbladder (Vesica biliaris)",
+          "anatomicalLocations": [
+            "Gallbladder Body",
+            "Gallbladder Mucosa"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchioles\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Gallbladder (Vesica biliaris)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)",
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchioles",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Gallbladder (Vesica biliaris)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)",
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_3",
+      "diagnosis": "post intubation tracheal stenosis",
+      "expected_organs": [
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveolar Sacs",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Gallbladder (Vesica biliaris)",
+          "anatomicalLocations": [
+            "Gallbladder Body",
+            "Gallbladder Mucosa"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchioles\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Gallbladder (Vesica biliaris)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)",
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchioles",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Gallbladder (Vesica biliaris)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)",
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_4",
+      "diagnosis": "ventilator associated pneumonia",
+      "expected_organs": [
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveolar Sacs",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Gallbladder (Vesica biliaris)",
+          "anatomicalLocations": [
+            "Gallbladder Body",
+            "Gallbladder Mucosa"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchioles\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Gallbladder (Vesica biliaris)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)",
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchioles",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Gallbladder (Vesica biliaris)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)",
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_5",
+      "diagnosis": "renal function was preserved",
+      "expected_organs": [
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveolar Sacs",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Gallbladder (Vesica biliaris)",
+          "anatomicalLocations": [
+            "Gallbladder Body",
+            "Gallbladder Mucosa"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchioles\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Gallbladder (Vesica biliaris)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)",
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchioles",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Gallbladder (Vesica biliaris)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)",
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_6",
+      "diagnosis": "mild regional left ventricular systolic dysfunction",
+      "expected_organs": [
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveolar Sacs",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Gallbladder (Vesica biliaris)",
+          "anatomicalLocations": [
+            "Gallbladder Body",
+            "Gallbladder Mucosa"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchioles\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Gallbladder (Vesica biliaris)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)",
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchioles",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Gallbladder (Vesica biliaris)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)",
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_7",
+      "diagnosis": "cr was elevated on admission, recovered to baseline with hydration, then he developed arf again in the setting of hypotension and septic shock",
+      "expected_organs": [
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveolar Sacs",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Gallbladder (Vesica biliaris)",
+          "anatomicalLocations": [
+            "Gallbladder Body",
+            "Gallbladder Mucosa"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchioles\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Gallbladder (Vesica biliaris)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)",
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchioles",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Gallbladder (Vesica biliaris)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)",
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_8",
+      "diagnosis": "hypercarbic hypoxic respiratory failure",
+      "expected_organs": [
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveolar Sacs",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Gallbladder (Vesica biliaris)",
+          "anatomicalLocations": [
+            "Gallbladder Body",
+            "Gallbladder Mucosa"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchioles\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Gallbladder (Vesica biliaris)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)",
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchioles",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Gallbladder (Vesica biliaris)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)",
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_9",
+      "diagnosis": "gallbladder sludge",
+      "expected_organs": [
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveolar Sacs",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Gallbladder (Vesica biliaris)",
+          "anatomicalLocations": [
+            "Gallbladder Body",
+            "Gallbladder Mucosa"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchioles\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Gallbladder (Vesica biliaris)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)",
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchioles",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Gallbladder (Vesica biliaris)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)",
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_10",
+      "diagnosis": "ruq u/s x 2 not consistent with acalculous cholecystitis",
+      "expected_organs": [
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveolar Sacs",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Gallbladder (Vesica biliaris)",
+          "anatomicalLocations": [
+            "Gallbladder Body",
+            "Gallbladder Mucosa"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchioles\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Gallbladder (Vesica biliaris)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Medulla (Pyramids)",
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchioles",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Gallbladder (Vesica biliaris)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)",
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

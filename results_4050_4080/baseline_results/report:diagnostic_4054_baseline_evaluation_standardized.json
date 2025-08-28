@@ -1,0 +1,725 @@
+{
+  "metadata": {
+    "report_id": "diagnostic_4054",
+    "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4054.json",
+    "processing_timestamp": "2025-08-27T23:23:43.104271",
+    "evaluation_timestamp": "2025-08-27T23:26:56.347443",
+    "total_symptoms": 14,
+    "valid_symptoms": 14,
+    "api_clients": [
+      "moonshot",
+      "deepseek"
+    ]
+  },
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4054_symptom_0",
+      "symptom_text": "not completely off her norepinephrine drip because she was unable to keep her maps above 60",
+      "expected_results": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        }
+      ],
+      "total_u_units": 2,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 118,
+            "prompt_tokens": 2171,
+            "total_tokens": 2289,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 249,
+            "prompt_tokens": 2039,
+            "total_tokens": 2288,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 55
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4054_symptom_1",
+      "symptom_text": "uti",
+      "expected_results": [
+        {
+          "organName": "Urinary bladder (Vesica urinaria)",
+          "anatomicalLocations": [
+            "Bladder Wall",
+            "Trigone of the Bladder",
+            "Bladder Mucosa"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 157,
+            "prompt_tokens": 2151,
+            "total_tokens": 2308,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 198,
+            "prompt_tokens": 2022,
+            "total_tokens": 2220,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 38
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4054_symptom_2",
+      "symptom_text": "blood sugars were well-controlled with iss",
+      "expected_results": [
+        {
+          "organName": "Thyroid gland",
+          "anatomicalLocations": [
+            "Right Lobe of Thyroid",
+            "Left Lobe of Thyroid"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 63,
+            "prompt_tokens": 2157,
+            "total_tokens": 2220,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 126,
+            "prompt_tokens": 2028,
+            "total_tokens": 2154,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 44
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4054_symptom_3",
+      "symptom_text": "unable to keep her maps above 60",
+      "expected_results": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve",
+            "Coronary Artery"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 77,
+            "prompt_tokens": 2158,
+            "total_tokens": 2235,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 183,
+            "prompt_tokens": 2030,
+            "total_tokens": 2213,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 46
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4054_symptom_4",
+      "symptom_text": "c. difficile positive",
+      "expected_results": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Colonic Mucosa",
+            "Rectum"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 105,
+            "prompt_tokens": 2154,
+            "total_tokens": 2259,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 126,
+            "prompt_tokens": 2025,
+            "total_tokens": 2151,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 41
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4054_symptom_5",
+      "symptom_text": "small right hilar opacity seen on cxr",
+      "expected_results": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lung",
+            "Bronchopulmonary Segments",
+            "Lung Hilum"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 66,
+            "prompt_tokens": 2158,
+            "total_tokens": 2224,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 192,
+            "prompt_tokens": 2030,
+            "total_tokens": 2222,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 46
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4054_symptom_6",
+      "symptom_text": "hypernatremia resolved through her hospital stay",
+      "expected_results": [
+        {
+          "organName": "Thyroid gland",
+          "anatomicalLocations": [
+            "Right Lobe of Thyroid",
+            "Left Lobe of Thyroid"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 121,
+            "prompt_tokens": 2159,
+            "total_tokens": 2280,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 119,
+            "prompt_tokens": 2030,
+            "total_tokens": 2149,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 46
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4054_symptom_7",
+      "symptom_text": "iron deficiency anemia",
+      "expected_results": [
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Red Bone Marrow",
+            "Hematopoietic Tissue"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 161,
+            "prompt_tokens": 2154,
+            "total_tokens": 2315,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 202,
+            "prompt_tokens": 2024,
+            "total_tokens": 2226,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 40
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4054_symptom_8",
+      "symptom_text": "respiratory distress",
+      "expected_results": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 137,
+            "prompt_tokens": 2154,
+            "total_tokens": 2291,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 205,
+            "prompt_tokens": 2024,
+            "total_tokens": 2229,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 40
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4054_symptom_9",
+      "symptom_text": "hypoxia",
+      "expected_results": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lung",
+            "Bronchioles",
+            "Alveoli"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 177,
+            "prompt_tokens": 2153,
+            "total_tokens": 2330,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 243,
+            "prompt_tokens": 2023,
+            "total_tokens": 2266,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 39
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4054_symptom_10",
+      "symptom_text": "sputum cultures grew out 2+mrsa and proteus",
+      "expected_results": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Alveoli",
+            "Bronchial Tree"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 65,
+            "prompt_tokens": 2164,
+            "total_tokens": 2229,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 149,
+            "prompt_tokens": 2035,
+            "total_tokens": 2184,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 51
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4054_symptom_11",
+      "symptom_text": "dyspnea",
+      "expected_results": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Alveoli",
+            "Pleura"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 136,
+            "prompt_tokens": 2153,
+            "total_tokens": 2289,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 184,
+            "prompt_tokens": 2025,
+            "total_tokens": 2209,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 41
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4054_symptom_12",
+      "symptom_text": "cortisol stimulation test was normal",
+      "expected_results": [
+        {
+          "organName": "Thyroid gland",
+          "anatomicalLocations": [
+            "Right Lobe of Thyroid",
+            "Left Lobe of Thyroid"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 109,
+            "prompt_tokens": 2157,
+            "total_tokens": 2266,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 152,
+            "prompt_tokens": 2028,
+            "total_tokens": 2180,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 44
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4054_symptom_13",
+      "symptom_text": "completely contracted upper extremities",
+      "expected_results": [
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cervical Spinal Cord",
+            "Motor Neurons"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 125,
+            "prompt_tokens": 2156,
+            "total_tokens": 2281,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 111,
+            "prompt_tokens": 2026,
+            "total_tokens": 2137,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 42
+          },
+          "error": null
+        }
+      }
+    }
+  ],
+  "evaluation_summary": {
+    "total_api_calls": 28,
+    "successful_api_calls": 28,
+    "failed_api_calls": 0,
+    "average_overall_score": 47.3,
+    "average_precision": 36.0,
+    "average_recall": 36.3
+  }
+}

@@ -1,0 +1,1270 @@
+{
+  "report_id": "diagnostic_4064",
+  "timestamp": "2025-08-28T00:33:37.304770",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4064_symptom_0",
+      "diagnosis": "no flatus",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Lymph node",
+          "anatomicalLocations": [
+            "Lymph Node Cortex",
+            "Lymph Node Medulla"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Lower Esophageal Sphincter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleura"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Body",
+            "Gastric Antrum"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Rectum",
+            "Anal Canal"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Transverse Colon\",\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Duodenum\",\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Cecum",
+              "Ascending Colon",
+              "Transverse Colon",
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Transverse Colon",
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Duodenum",
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Cecum",
+            "Ascending Colon",
+            "Transverse Colon",
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Colon\",\n        \"Rectum\",\n        \"Sigmoid colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Colon",
+              "Rectum",
+              "Sigmoid colon"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Colon",
+                    "Rectum",
+                    "Sigmoid colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Colon",
+            "Rectum",
+            "Sigmoid colon"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4064_symptom_1",
+      "diagnosis": "low grade temp of 100.4",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Lymph node",
+          "anatomicalLocations": [
+            "Lymph Node Cortex",
+            "Lymph Node Medulla"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Lower Esophageal Sphincter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleura"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Body",
+            "Gastric Antrum"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Rectum",
+            "Anal Canal"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Transverse Colon\",\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Duodenum\",\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Cecum",
+              "Ascending Colon",
+              "Transverse Colon",
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Transverse Colon",
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Duodenum",
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Cecum",
+            "Ascending Colon",
+            "Transverse Colon",
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Colon\",\n        \"Rectum\",\n        \"Sigmoid colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Colon",
+              "Rectum",
+              "Sigmoid colon"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Colon",
+                    "Rectum",
+                    "Sigmoid colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Colon",
+            "Rectum",
+            "Sigmoid colon"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4064_symptom_2",
+      "diagnosis": "able to tolerate pills by mouth and full liquid diet",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Lymph node",
+          "anatomicalLocations": [
+            "Lymph Node Cortex",
+            "Lymph Node Medulla"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Lower Esophageal Sphincter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleura"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Body",
+            "Gastric Antrum"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Rectum",
+            "Anal Canal"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Transverse Colon\",\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Duodenum\",\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Cecum",
+              "Ascending Colon",
+              "Transverse Colon",
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Transverse Colon",
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Duodenum",
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Cecum",
+            "Ascending Colon",
+            "Transverse Colon",
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Colon\",\n        \"Rectum\",\n        \"Sigmoid colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Colon",
+              "Rectum",
+              "Sigmoid colon"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Colon",
+                    "Rectum",
+                    "Sigmoid colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Colon",
+            "Rectum",
+            "Sigmoid colon"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4064_symptom_3",
+      "diagnosis": "saturating to >92% on room air while ambulating",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Lymph node",
+          "anatomicalLocations": [
+            "Lymph Node Cortex",
+            "Lymph Node Medulla"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Lower Esophageal Sphincter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleura"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Body",
+            "Gastric Antrum"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Rectum",
+            "Anal Canal"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Transverse Colon\",\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Duodenum\",\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Cecum",
+              "Ascending Colon",
+              "Transverse Colon",
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Transverse Colon",
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Duodenum",
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Cecum",
+            "Ascending Colon",
+            "Transverse Colon",
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Colon\",\n        \"Rectum\",\n        \"Sigmoid colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Colon",
+              "Rectum",
+              "Sigmoid colon"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Colon",
+                    "Rectum",
+                    "Sigmoid colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Colon",
+            "Rectum",
+            "Sigmoid colon"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4064_symptom_4",
+      "diagnosis": "denies n/v",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Lymph node",
+          "anatomicalLocations": [
+            "Lymph Node Cortex",
+            "Lymph Node Medulla"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Lower Esophageal Sphincter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleura"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Body",
+            "Gastric Antrum"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Rectum",
+            "Anal Canal"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Transverse Colon\",\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Duodenum\",\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Cecum",
+              "Ascending Colon",
+              "Transverse Colon",
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Transverse Colon",
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Duodenum",
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Cecum",
+            "Ascending Colon",
+            "Transverse Colon",
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Colon\",\n        \"Rectum\",\n        \"Sigmoid colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Colon",
+              "Rectum",
+              "Sigmoid colon"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Colon",
+                    "Rectum",
+                    "Sigmoid colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Colon",
+            "Rectum",
+            "Sigmoid colon"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4064_symptom_5",
+      "diagnosis": "had a bowel movement overnight",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Lymph node",
+          "anatomicalLocations": [
+            "Lymph Node Cortex",
+            "Lymph Node Medulla"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Lower Esophageal Sphincter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleura"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Body",
+            "Gastric Antrum"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Rectum",
+            "Anal Canal"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Transverse Colon\",\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Duodenum\",\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Cecum",
+              "Ascending Colon",
+              "Transverse Colon",
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Transverse Colon",
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Duodenum",
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Cecum",
+            "Ascending Colon",
+            "Transverse Colon",
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Colon\",\n        \"Rectum\",\n        \"Sigmoid colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Colon",
+              "Rectum",
+              "Sigmoid colon"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Colon",
+                    "Rectum",
+                    "Sigmoid colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Colon",
+            "Rectum",
+            "Sigmoid colon"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4064_symptom_6",
+      "diagnosis": "minimal bowel sounds",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Lymph node",
+          "anatomicalLocations": [
+            "Lymph Node Cortex",
+            "Lymph Node Medulla"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Lower Esophageal Sphincter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleura"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Body",
+            "Gastric Antrum"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Rectum",
+            "Anal Canal"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Transverse Colon\",\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Duodenum\",\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Cecum",
+              "Ascending Colon",
+              "Transverse Colon",
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Transverse Colon",
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Duodenum",
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Cecum",
+            "Ascending Colon",
+            "Transverse Colon",
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Colon\",\n        \"Rectum\",\n        \"Sigmoid colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Colon",
+              "Rectum",
+              "Sigmoid colon"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Colon",
+                    "Rectum",
+                    "Sigmoid colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Colon",
+            "Rectum",
+            "Sigmoid colon"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4064_symptom_7",
+      "diagnosis": "feels much better after flatus and multiple bowel movements during the day",
+      "expected_organs": [
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Lymph node",
+          "anatomicalLocations": [
+            "Lymph Node Cortex",
+            "Lymph Node Medulla"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Lower Esophageal Sphincter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleura"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Body",
+            "Gastric Antrum"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Rectum",
+            "Anal Canal"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Cecum\",\n        \"Ascending Colon\",\n        \"Transverse Colon\",\n        \"Descending Colon\",\n        \"Sigmoid Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Duodenum\",\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Cecum",
+              "Ascending Colon",
+              "Transverse Colon",
+              "Descending Colon",
+              "Sigmoid Colon",
+              "Rectum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Cecum",
+                    "Ascending Colon",
+                    "Transverse Colon",
+                    "Descending Colon",
+                    "Sigmoid Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Duodenum",
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Cecum",
+            "Ascending Colon",
+            "Transverse Colon",
+            "Descending Colon",
+            "Sigmoid Colon",
+            "Rectum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Colon\",\n        \"Rectum\",\n        \"Sigmoid colon\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Ileum\",\n        \"Jejunum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Large intestine (Intestinum crassum)",
+            "anatomical_locations": [
+              "Colon",
+              "Rectum",
+              "Sigmoid colon"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Colon",
+                    "Rectum",
+                    "Sigmoid colon"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Ileum",
+                    "Jejunum",
+                    "Duodenum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Large intestine (Intestinum crassum)",
+          "anatomical_locations": [
+            "Colon",
+            "Rectum",
+            "Sigmoid colon"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

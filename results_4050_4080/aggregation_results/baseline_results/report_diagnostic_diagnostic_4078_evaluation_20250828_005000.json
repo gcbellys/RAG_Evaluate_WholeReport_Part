@@ -1,0 +1,2947 @@
+{
+  "report_id": "diagnostic_4078",
+  "timestamp": "2025-08-28T00:50:00.921393",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4078_symptom_0",
+      "diagnosis": "mental status continued to wax/wane",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Frontal Lobe"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Bone Marrow Stroma",
+            "Bone Marrow Blood Vessels"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Brainstem"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Brainstem"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchi"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Brainstem"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4078_symptom_1",
+      "diagnosis": "slept through night without event, alert and oriented to person, place, and time",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Frontal Lobe"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Bone Marrow Stroma",
+            "Bone Marrow Blood Vessels"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Brainstem"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Brainstem"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchi"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Brainstem"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4078_symptom_2",
+      "diagnosis": "left 3rd rib fracture",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Frontal Lobe"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Bone Marrow Stroma",
+            "Bone Marrow Blood Vessels"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Brainstem"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Brainstem"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchi"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Brainstem"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4078_symptom_3",
+      "diagnosis": "hypotension",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Frontal Lobe"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Bone Marrow Stroma",
+            "Bone Marrow Blood Vessels"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Brainstem"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Brainstem"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchi"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Brainstem"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4078_symptom_4",
+      "diagnosis": "right acetabular fracture",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Frontal Lobe"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Bone Marrow Stroma",
+            "Bone Marrow Blood Vessels"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Brainstem"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Brainstem"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchi"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Brainstem"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4078_symptom_5",
+      "diagnosis": "degenerative changes at the first cmc joint",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Frontal Lobe"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Bone Marrow Stroma",
+            "Bone Marrow Blood Vessels"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Brainstem"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Brainstem"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchi"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Brainstem"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4078_symptom_6",
+      "diagnosis": "lethargy and minimal response to sternal rub",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Frontal Lobe"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Bone Marrow Stroma",
+            "Bone Marrow Blood Vessels"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Brainstem"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Brainstem"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchi"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Brainstem"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4078_symptom_7",
+      "diagnosis": "bilateral chest tube placement",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Frontal Lobe"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Bone Marrow Stroma",
+            "Bone Marrow Blood Vessels"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Brainstem"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Brainstem"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchi"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Brainstem"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4078_symptom_8",
+      "diagnosis": "multiple fractures of the distal radius, distal ulna, fifth metacarpal, and scaphoid",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Frontal Lobe"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Bone Marrow Stroma",
+            "Bone Marrow Blood Vessels"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Brainstem"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Brainstem"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchi"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Brainstem"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4078_symptom_9",
+      "diagnosis": "troponin leak of 0.27",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Frontal Lobe"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Bone Marrow Stroma",
+            "Bone Marrow Blood Vessels"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Brainstem"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Brainstem"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchi"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Brainstem"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4078_symptom_10",
+      "diagnosis": "mental status was alert and oriented but sleepy",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Frontal Lobe"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Bone Marrow Stroma",
+            "Bone Marrow Blood Vessels"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Brainstem"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Brainstem"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchi"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Brainstem"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4078_symptom_11",
+      "diagnosis": "retrocardiac opacity",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Frontal Lobe"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Bone Marrow Stroma",
+            "Bone Marrow Blood Vessels"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Brainstem"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Brainstem"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchi"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Brainstem"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4078_symptom_12",
+      "diagnosis": "baseline platelets 50-100k",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Frontal Lobe"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Bone Marrow Stroma",
+            "Bone Marrow Blood Vessels"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Brainstem"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Brainstem"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchi"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Brainstem"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4078_symptom_13",
+      "diagnosis": "somnolence",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Frontal Lobe"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Bone Marrow Stroma",
+            "Bone Marrow Blood Vessels"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Brainstem"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Brainstem"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchi"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Brainstem"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4078_symptom_14",
+      "diagnosis": "vbg confirmed hypercarbia",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Frontal Lobe"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Bone Marrow Stroma",
+            "Bone Marrow Blood Vessels"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Brainstem"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Brainstem"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchi"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Brainstem"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4078_symptom_15",
+      "diagnosis": "bilateral pneumothoraces",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Frontal Lobe"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Bone Marrow Stroma",
+            "Bone Marrow Blood Vessels"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Brainstem"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Brainstem"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchi"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Brainstem"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4078_symptom_16",
+      "diagnosis": "patient became more alert",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Frontal Lobe"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Bone Marrow Stroma",
+            "Bone Marrow Blood Vessels"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Brainstem"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Brainstem"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchi"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Brainstem"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

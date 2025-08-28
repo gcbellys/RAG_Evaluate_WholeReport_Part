@@ -1,0 +1,704 @@
+[
+  {
+    "report_number": "diagnostic_4080",
+    "method": "baseline_aggregation",
+    "method_name": "症状聚合基线方法",
+    "aggregated_symptoms": "slightly elevated creatinine; hemoptysis; resolution of this renal insufficiency; severe dyspnea on exertion; esophagoscopy; laparotomy with harvesting of omental flap and repair of umbilical hernia",
+    "expected_results": {
+      "organ": "Bronchus, Esophagus, Heart (Cor), Kidney (Ren), Liver (Hepar), Lung (Pulmo)",
+      "a_position": "Aortic Valve, Esophageal Mucosa, Esophageal Sphincter, Left Lobe of Liver, Left Lower Lobe, Left Upper Lobe, Left Ventricle (LV), Main Bronchi, Renal Cortex, Renal Medulla (Pyramids), Right Lobe of Liver, Right Upper Lobe, Segmental Bronchi"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Kidney (Ren)",
+          "a_position": "Renal Cortex, Renal Medulla (Pyramids)"
+        },
+        "api_eva": {
+          "overall_score": 66.2,
+          "precision": 100.0,
+          "recall": 15.4,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Kidney (Ren)",
+          "a_position": "Renal Cortex, Renal Medulla (Pyramids), Renal Pelvis"
+        },
+        "api_eva": {
+          "overall_score": 52.8,
+          "precision": 66.7,
+          "recall": 15.4,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 59.5,
+      "average_precision": 83.3,
+      "average_recall": 15.4
+    }
+  },
+  {
+    "report_number": "diagnostic_4080",
+    "method": "rag_enhanced_aggregation",
+    "method_name": "增强症状聚合方法",
+    "aggregated_symptoms": "slightly elevated creatinine; hemoptysis; resolution of this renal insufficiency; severe dyspnea on exertion; esophagoscopy; laparotomy with harvesting of omental flap and repair of umbilical hernia",
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"slightly elevated creatinine\",\n            \"primary_organ\": \"Kidney\",\n            \"severity\": \"Mild\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"hemoptysis\",\n            \"primary_organ\": \"Respiratory system\",\n            \"severity\": \"Severe\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"resolution of this renal insufficiency\",\n            \"primary_organ\": \"Kidney\",\n            \"severity\": \"Mild\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"severe dyspnea on exertion\",\n            \"primary_organ\": \"Respiratory system\",\n            \"severity\": \"Severe\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"esophagoscopy\",\n            \"primary_organ\": \"Esophagus\",\n            \"severity\": \"Diagnostic procedure\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"laparotomy with harvesting of omental flap and repair of umbilical hernia\",\n            \"primary_organ\": \"Abdomen\",\n            \"severity\": \"Surgical procedure\"\n        }\n    ],\n    \"total_count\": 6,\n    \"reasoning\": \"The provided symptoms are split based on their distinct medical conditions and related organs. 'Slightly elevated creatinine' and 'resolution of this renal insufficiency' are both related to kidney function, thus grouped together. 'Hemoptysis' and 'severe dyspnea on exertion' are both respiratory symptoms, indicating a severe condition. 'Esophagoscopy' is a diagnostic procedure for the esophagus, while 'laparotomy with harvesting of omental flap and repair of umbilical hernia' is a surgical procedure related to the abdominal region.\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "slightly elevated creatinine",
+              "primary_organ": "Kidney",
+              "severity": "Mild"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "hemoptysis",
+              "primary_organ": "Respiratory system",
+              "severity": "Severe"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "resolution of this renal insufficiency",
+              "primary_organ": "Kidney",
+              "severity": "Mild"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "severe dyspnea on exertion",
+              "primary_organ": "Respiratory system",
+              "severity": "Severe"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "esophagoscopy",
+              "primary_organ": "Esophagus",
+              "severity": "Diagnostic procedure"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "laparotomy with harvesting of omental flap and repair of umbilical hernia",
+              "primary_organ": "Abdomen",
+              "severity": "Surgical procedure"
+            }
+          ],
+          "total_count": 6,
+          "reasoning": "The provided symptoms are split based on their distinct medical conditions and related organs. 'Slightly elevated creatinine' and 'resolution of this renal insufficiency' are both related to kidney function, thus grouped together. 'Hemoptysis' and 'severe dyspnea on exertion' are both respiratory symptoms, indicating a severe condition. 'Esophagoscopy' is a diagnostic procedure for the esophagus, while 'laparotomy with harvesting of omental flap and repair of umbilical hernia' is a surgical procedure related to the abdominal region."
+        }
+      },
+      "timestamp": "2025-08-28T00:51:22.964450"
+    },
+    "rag_search_results": {
+      "success": true,
+      "total_searched": 6,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "slightly elevated creatinine",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "slightly elevated creatinine",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "slightly elevated creatinine",
+                  "units": [
+                    {
+                      "u_id": "u_2836",
+                      "u_unit": {
+                        "d_diagnosis": "slightly high creatinine",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "slightly high creatinine"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "slightly elevated creatinine",
+                  "units": [
+                    {
+                      "u_id": "u_42892",
+                      "u_unit": {
+                        "d_diagnosis": "slightly elevated cr at admission",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "slightly elevated cr at admission"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "slightly elevated creatinine",
+                  "units": [
+                    {
+                      "u_id": "u_50033",
+                      "u_unit": {
+                        "d_diagnosis": "elevated creatinine",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "elevated creatinine"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:51:24.778253"
+          }
+        },
+        "s2": {
+          "symptom_text": "hemoptysis",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "hemoptysis",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "hemoptysis",
+                  "units": [
+                    {
+                      "u_id": "u_23616",
+                      "u_unit": {
+                        "d_diagnosis": "hemoptysis",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "hemoptysis"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:51:26.546186"
+          }
+        },
+        "s3": {
+          "symptom_text": "resolution of this renal insufficiency",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "resolution of this renal insufficiency",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "resolution of this renal insufficiency",
+                  "units": [
+                    {
+                      "u_id": "u_26587",
+                      "u_unit": {
+                        "d_diagnosis": "now resolved as renal function has resolved",
+                        "o_organ": {
+                          "organName": "Kidney (Ren)",
+                          "anatomicalLocations": [
+                            "Kidney (Ren)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "now resolved as renal function has resolved"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "resolution of this renal insufficiency",
+                  "units": [
+                    {
+                      "u_id": "u_24312",
+                      "u_unit": {
+                        "d_diagnosis": "acute renal failure resolved",
+                        "o_organ": {
+                          "organName": "Kidney (Ren)",
+                          "anatomicalLocations": [
+                            "Kidney (Ren)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "acute renal failure resolved"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "resolution of this renal insufficiency",
+                  "units": [
+                    {
+                      "u_id": "u_1126",
+                      "u_unit": {
+                        "d_diagnosis": "chronic renal insufficiency",
+                        "o_organ": {
+                          "organName": "Kidney (Ren)",
+                          "anatomicalLocations": [
+                            "Kidney (Ren)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "chronic renal insufficiency"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:51:28.343928"
+          }
+        },
+        "s4": {
+          "symptom_text": "severe dyspnea on exertion",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "severe dyspnea on exertion",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "severe dyspnea on exertion",
+                  "units": [
+                    {
+                      "u_id": "u_22454",
+                      "u_unit": {
+                        "d_diagnosis": "significant dyspnea on exertion",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "significant dyspnea on exertion"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "severe dyspnea on exertion",
+                  "units": [
+                    {
+                      "u_id": "u_37001",
+                      "u_unit": {
+                        "d_diagnosis": "dyspnea on exertion",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "dyspnea on exertion"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:51:30.153066"
+          }
+        },
+        "s5": {
+          "symptom_text": "esophagoscopy",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "esophagoscopy",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "esophagoscopy",
+                  "units": [
+                    {
+                      "u_id": "u_10940",
+                      "u_unit": {
+                        "d_diagnosis": "video esophageal evaluation",
+                        "o_organ": {
+                          "organName": "Esophagus",
+                          "anatomicalLocations": [
+                            "Esophagus"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "video esophageal evaluation"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:51:32.133606"
+          }
+        },
+        "s6": {
+          "symptom_text": "laparotomy with harvesting of omental flap and repair of umbilical hernia",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "laparotomy with harvesting of omental flap and repair of umbilical hernia",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "laparotomy with harvesting of omental flap and repair of umbilical hernia",
+                  "units": [
+                    {
+                      "u_id": "u_11670",
+                      "u_unit": {
+                        "d_diagnosis": "incisional hernia with omentum",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "incisional hernia with omentum"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:51:34.452571"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "slightly elevated creatinine",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "slightly elevated creatinine",
+              "units": [
+                {
+                  "u_id": "u_2836",
+                  "u_unit": {
+                    "d_diagnosis": "slightly high creatinine",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "slightly high creatinine"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "slightly elevated creatinine",
+              "units": [
+                {
+                  "u_id": "u_42892",
+                  "u_unit": {
+                    "d_diagnosis": "slightly elevated cr at admission",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "slightly elevated cr at admission"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "slightly elevated creatinine",
+              "units": [
+                {
+                  "u_id": "u_50033",
+                  "u_unit": {
+                    "d_diagnosis": "elevated creatinine",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "elevated creatinine"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "hemoptysis",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "hemoptysis",
+              "units": [
+                {
+                  "u_id": "u_23616",
+                  "u_unit": {
+                    "d_diagnosis": "hemoptysis",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "hemoptysis"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "resolution of this renal insufficiency",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "resolution of this renal insufficiency",
+              "units": [
+                {
+                  "u_id": "u_26587",
+                  "u_unit": {
+                    "d_diagnosis": "now resolved as renal function has resolved",
+                    "o_organ": {
+                      "organName": "Kidney (Ren)",
+                      "anatomicalLocations": [
+                        "Kidney (Ren)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "now resolved as renal function has resolved"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "resolution of this renal insufficiency",
+              "units": [
+                {
+                  "u_id": "u_24312",
+                  "u_unit": {
+                    "d_diagnosis": "acute renal failure resolved",
+                    "o_organ": {
+                      "organName": "Kidney (Ren)",
+                      "anatomicalLocations": [
+                        "Kidney (Ren)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "acute renal failure resolved"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "resolution of this renal insufficiency",
+              "units": [
+                {
+                  "u_id": "u_1126",
+                  "u_unit": {
+                    "d_diagnosis": "chronic renal insufficiency",
+                    "o_organ": {
+                      "organName": "Kidney (Ren)",
+                      "anatomicalLocations": [
+                        "Kidney (Ren)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "chronic renal insufficiency"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "severe dyspnea on exertion",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "severe dyspnea on exertion",
+              "units": [
+                {
+                  "u_id": "u_22454",
+                  "u_unit": {
+                    "d_diagnosis": "significant dyspnea on exertion",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "significant dyspnea on exertion"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "severe dyspnea on exertion",
+              "units": [
+                {
+                  "u_id": "u_37001",
+                  "u_unit": {
+                    "d_diagnosis": "dyspnea on exertion",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "dyspnea on exertion"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "esophagoscopy",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "esophagoscopy",
+              "units": [
+                {
+                  "u_id": "u_10940",
+                  "u_unit": {
+                    "d_diagnosis": "video esophageal evaluation",
+                    "o_organ": {
+                      "organName": "Esophagus",
+                      "anatomicalLocations": [
+                        "Esophagus"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "video esophageal evaluation"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "laparotomy with harvesting of omental flap and repair of umbilical hernia",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "laparotomy with harvesting of omental flap and repair of umbilical hernia",
+              "units": [
+                {
+                  "u_id": "u_11670",
+                  "u_unit": {
+                    "d_diagnosis": "incisional hernia with omentum",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "incisional hernia with omentum"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:51:34.452609"
+    },
+    "expected_results": {
+      "organ": "Bronchus, Esophagus, Heart (Cor), Kidney (Ren), Liver (Hepar), Lung (Pulmo)",
+      "a_position": "Aortic Valve, Esophageal Mucosa, Esophageal Sphincter, Left Lobe of Liver, Left Lower Lobe, Left Upper Lobe, Left Ventricle (LV), Main Bronchi, Renal Cortex, Renal Medulla (Pyramids), Right Lobe of Liver, Right Upper Lobe, Segmental Bronchi"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Kidney (Ren)",
+          "a_position": "Renal Cortex, Renal Medulla (Pyramids)"
+        },
+        "api_eva": {
+          "overall_score": 66.2,
+          "precision": 100.0,
+          "recall": 15.4,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Kidney (Ren)",
+          "a_position": "Renal Cortex, Renal Medulla (Pyramids), Renal Pelvis"
+        },
+        "api_eva": {
+          "overall_score": 52.8,
+          "precision": 66.7,
+          "recall": 15.4,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 59.5,
+      "average_precision": 83.3,
+      "average_recall": 15.4
+    }
+  }
+]

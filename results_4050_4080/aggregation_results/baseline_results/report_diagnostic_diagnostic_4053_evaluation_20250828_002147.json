@@ -1,0 +1,119 @@
+{
+  "report_id": "diagnostic_4053",
+  "timestamp": "2025-08-28T00:21:47.347892",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4053_symptom_0",
+      "diagnosis": "integrated_extraction",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Frontal Lobe\",\n        \"Temporal Lobe\",\n        \"Cerebral Cortex\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Frontal Lobe",
+              "Temporal Lobe",
+              "Cerebral Cortex"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Frontal Lobe",
+                    "Temporal Lobe",
+                    "Cerebral Cortex"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Frontal Lobe",
+            "Temporal Lobe",
+            "Cerebral Cortex"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Frontal Lobe\",\n        \"Temporal Lobe\",\n        \"Basal Ganglia\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Spinal cord (Medulla spinalis)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Eye (Oculus)\",\n      \"anatomicalLocations\": [\n        \"Eye (Oculus)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Ear (Auris)\",\n      \"anatomicalLocations\": [\n        \"Ear (Auris)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Frontal Lobe",
+              "Temporal Lobe",
+              "Basal Ganglia"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Frontal Lobe",
+                    "Temporal Lobe",
+                    "Basal Ganglia"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Spinal cord (Medulla spinalis)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Eye (Oculus)",
+                  "anatomicalLocations": [
+                    "Eye (Oculus)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Ear (Auris)",
+                  "anatomicalLocations": [
+                    "Ear (Auris)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Frontal Lobe",
+            "Temporal Lobe",
+            "Basal Ganglia"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

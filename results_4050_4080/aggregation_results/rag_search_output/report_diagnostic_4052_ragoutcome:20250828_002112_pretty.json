@@ -1,0 +1,447 @@
+[
+  {
+    "query": "flash pul edema",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "flash pul edema",
+        "units": [
+          {
+            "u_id": "u_21264",
+            "u_unit": {
+              "d_diagnosis": "flash pulmonary edema",
+              "o_organ": {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Lung (Pulmo)"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "flash pulmonary edema"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "intubation",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "intubation",
+        "units": [
+          {
+            "u_id": "u_50390",
+            "u_unit": {
+              "d_diagnosis": "intubation",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "intubation"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "guardian stitch cut",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "extubated to bipap",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "extubated to bipap",
+        "units": [
+          {
+            "u_id": "u_39964",
+            "u_unit": {
+              "d_diagnosis": "transfered to the icu for bipap (w/o peep d/t ptx)",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "transfered to the icu for bipap (w/o peep d/t ptx)"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "extubated to bipap",
+        "units": [
+          {
+            "u_id": "u_83557",
+            "u_unit": {
+              "d_diagnosis": "pt was extubated one week after transfer, and required to go back on bipap three times after extubation",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "pt was extubated one week after transfer, and required to go back on bipap three times after extubation"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "extubated to bipap",
+        "units": [
+          {
+            "u_id": "u_92637",
+            "u_unit": {
+              "d_diagnosis": "extubated",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "extubated"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "persistent leukocytosis",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "persistent leukocytosis",
+        "units": [
+          {
+            "u_id": "u_35675",
+            "u_unit": {
+              "d_diagnosis": "leukocytosis subsequently resolved",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "leukocytosis subsequently resolved"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "persistent leukocytosis",
+        "units": [
+          {
+            "u_id": "u_30195",
+            "u_unit": {
+              "d_diagnosis": "progressive leukocytosis during admission",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "progressive leukocytosis during admission"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "persistent leukocytosis",
+        "units": [
+          {
+            "u_id": "u_81683",
+            "u_unit": {
+              "d_diagnosis": "leukocytosis",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "leukocytosis"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "stable stenosis",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "stable stenosis",
+        "units": [
+          {
+            "u_id": "u_95582",
+            "u_unit": {
+              "d_diagnosis": "stable tracheal stenosis",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "stable tracheal stenosis"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "stable stenosis",
+        "units": [
+          {
+            "u_id": "u_39907",
+            "u_unit": {
+              "d_diagnosis": "post stent examination revealed 0% stenosis",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "post stent examination revealed 0% stenosis"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "sputum w/ gm+ cocci",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "extubated on pod#1",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "extubated on pod#1",
+        "units": [
+          {
+            "u_id": "u_28735",
+            "u_unit": {
+              "d_diagnosis": "he was extubated on pod#1",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "he was extubated on pod#1"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "extubated on pod#1",
+        "units": [
+          {
+            "u_id": "u_73611",
+            "u_unit": {
+              "d_diagnosis": "she was extubated by pod #1",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "she was extubated by pod #1"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "extubated on pod#1",
+        "units": [
+          {
+            "u_id": "u_87552",
+            "u_unit": {
+              "d_diagnosis": "extubated on post operative day 1",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "extubated on post operative day 1"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "reg diet and ambulating",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "reg diet and ambulating",
+        "units": [
+          {
+            "u_id": "u_54499",
+            "u_unit": {
+              "d_diagnosis": "ambulating a regular diet",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "ambulating a regular diet"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "reg diet and ambulating",
+        "units": [
+          {
+            "u_id": "u_80102",
+            "u_unit": {
+              "d_diagnosis": "patient was ambulating, eating a regular diet, having regular bowel movements",
+              "o_organ": {
+                "organName": "Gastrointestinal Tract",
+                "anatomicalLocations": [
+                  "Gastrointestinal Tract"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "patient was ambulating, eating a regular diet, having regular bowel movements"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "reg diet and ambulating",
+        "units": [
+          {
+            "u_id": "u_85748",
+            "u_unit": {
+              "d_diagnosis": "he is tolerating a regular diet and is ambulating",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "he is tolerating a regular diet and is ambulating"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "guardian stitch placed in or to maintain neck flexion and to decrease tension on anastomosis",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "epidural d/c'd and maintained on pca",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "epidural d/c'd and maintained on pca",
+        "units": [
+          {
+            "u_id": "u_74420",
+            "u_unit": {
+              "d_diagnosis": "pain was controlled through epidural analgesia and intravenous dialudid via patient controlled analgesia",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "pain was controlled through epidural analgesia and intravenous dialudid via patient controlled analgesia"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "epidural d/c'd and maintained on pca",
+        "units": [
+          {
+            "u_id": "u_43463",
+            "u_unit": {
+              "d_diagnosis": "post-op pain was managed with epidural",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "post-op pain was managed with epidural"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "tracheal stenosis",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "tracheal stenosis",
+        "units": [
+          {
+            "u_id": "u_68409",
+            "u_unit": {
+              "d_diagnosis": "tracheal stenosis",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "tracheal stenosis"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "tracheal stenosis",
+        "units": [
+          {
+            "u_id": "u_95582",
+            "u_unit": {
+              "d_diagnosis": "stable tracheal stenosis",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "stable tracheal stenosis"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+]

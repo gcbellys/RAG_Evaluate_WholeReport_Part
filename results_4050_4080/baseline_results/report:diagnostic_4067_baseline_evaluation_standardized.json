@@ -1,0 +1,423 @@
+{
+  "metadata": {
+    "report_id": "diagnostic_4067",
+    "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4067.json",
+    "processing_timestamp": "2025-08-27T23:49:56.523158",
+    "evaluation_timestamp": "2025-08-27T23:52:26.488061",
+    "total_symptoms": 8,
+    "valid_symptoms": 8,
+    "api_clients": [
+      "moonshot",
+      "deepseek"
+    ]
+  },
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4067_symptom_0",
+      "symptom_text": "elevated troponin",
+      "expected_results": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 82,
+            "prompt_tokens": 2156,
+            "total_tokens": 2238,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 78,
+            "prompt_tokens": 2026,
+            "total_tokens": 2104,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 42
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4067_symptom_1",
+      "symptom_text": "abdominal pain",
+      "expected_results": [
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Head of the Pancreas",
+            "Tail of the Pancreas"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Antrum"
+          ]
+        }
+      ],
+      "total_u_units": 2,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 324,
+            "prompt_tokens": 2154,
+            "total_tokens": 2478,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 412,
+            "prompt_tokens": 2024,
+            "total_tokens": 2436,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 40
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4067_symptom_2",
+      "symptom_text": "improved respiratory",
+      "expected_results": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 131,
+            "prompt_tokens": 2153,
+            "total_tokens": 2284,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 149,
+            "prompt_tokens": 2024,
+            "total_tokens": 2173,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 40
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4067_symptom_3",
+      "symptom_text": "electrocardiogram changes",
+      "expected_results": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 82,
+            "prompt_tokens": 2156,
+            "total_tokens": 2238,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 257,
+            "prompt_tokens": 2026,
+            "total_tokens": 2283,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 42
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4067_symptom_4",
+      "symptom_text": "congestive heart failure",
+      "expected_results": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 193,
+            "prompt_tokens": 2155,
+            "total_tokens": 2348,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 248,
+            "prompt_tokens": 2026,
+            "total_tokens": 2274,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 42
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4067_symptom_5",
+      "symptom_text": "chest pressure",
+      "expected_results": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 136,
+            "prompt_tokens": 2152,
+            "total_tokens": 2288,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 168,
+            "prompt_tokens": 2024,
+            "total_tokens": 2192,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 40
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4067_symptom_6",
+      "symptom_text": "shortness of breath",
+      "expected_results": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 129,
+            "prompt_tokens": 2154,
+            "total_tokens": 2283,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 256,
+            "prompt_tokens": 2025,
+            "total_tokens": 2281,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 41
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4067_symptom_7",
+      "symptom_text": "hypotension",
+      "expected_results": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 190,
+            "prompt_tokens": 2153,
+            "total_tokens": 2343,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 294,
+            "prompt_tokens": 2024,
+            "total_tokens": 2318,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 40
+          },
+          "error": null
+        }
+      }
+    }
+  ],
+  "evaluation_summary": {
+    "total_api_calls": 16,
+    "successful_api_calls": 16,
+    "failed_api_calls": 0,
+    "average_overall_score": 65.6,
+    "average_precision": 50.0,
+    "average_recall": 81.2
+  }
+}

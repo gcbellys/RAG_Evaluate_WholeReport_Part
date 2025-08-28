@@ -1,0 +1,1 @@
+{"query": "integrated_extraction", "expected_organs": [], "expected_a_locations": [], "s": {"rag_s_1_id": {"s_text": "integrated_extraction", "units": [{"u_id": "u_37495", "u_unit": {"d_diagnosis": "integrated_extraction", "o_organ": {"organName": "Unknown", "anatomicalLocations": []}, "b_textual_basis": {"medicalInference": "integrated_extraction"}}}]}}}

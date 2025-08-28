@@ -1,0 +1,1439 @@
+[
+  {
+    "report_number": "diagnostic_4051",
+    "method": "baseline_aggregation",
+    "method_name": "症状聚合基线方法",
+    "aggregated_symptoms": "stools were guaiac negative; acute kidney failure; patient is currently on tube feeds via dophoff, promote with fiber at 100 cc/hr; post intubation tracheal stenosis; ventilator associated pneumonia; renal function was preserved; mild regional left ventricular systolic dysfunction; cr was elevated on admission, recovered to baseline with hydration, then he developed arf again in the setting of hypotension and septic shock. he has since returned to a his baseline of cr 0.8 at discharge; hypercarbic hypoxic respiratory failure; gallbladder sludge; ruq u/s x 2 not consistent with acalculous cholecystitis",
+    "expected_results": {
+      "organ": "Gallbladder (Vesica biliaris), Heart (Cor), Kidney (Ren), Liver (Hepar), Lung (Pulmo), Trachea",
+      "a_position": "Alveolar Sacs, Alveoli, Bronchioles, Bronchopulmonary Segments, Gallbladder Body, Gallbladder Mucosa, Interventricular Septum (IVS), Left Lobe of Liver, Left Ventricle (LV), Renal Cortex, Renal Medulla (Pyramids), Right Lobe of Liver, Tracheal Mucosa, Tracheal Rings"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Kidney (Ren)",
+          "a_position": "Renal Cortex, Renal Medulla (Pyramids)"
+        },
+        "api_eva": {
+          "overall_score": 65.7,
+          "precision": 100.0,
+          "recall": 14.3,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Kidney (Ren)",
+          "a_position": "Renal Cortex, Renal Medulla (Pyramids), Renal Pelvis"
+        },
+        "api_eva": {
+          "overall_score": 52.4,
+          "precision": 66.7,
+          "recall": 14.3,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 59.0,
+      "average_precision": 83.3,
+      "average_recall": 14.3
+    }
+  },
+  {
+    "report_number": "diagnostic_4051",
+    "method": "rag_enhanced_aggregation",
+    "method_name": "增强症状聚合方法",
+    "aggregated_symptoms": "stools were guaiac negative; acute kidney failure; patient is currently on tube feeds via dophoff, promote with fiber at 100 cc/hr; post intubation tracheal stenosis; ventilator associated pneumonia; renal function was preserved; mild regional left ventricular systolic dysfunction; cr was elevated on admission, recovered to baseline with hydration, then he developed arf again in the setting of hypotension and septic shock. he has since returned to a his baseline of cr 0.8 at discharge; hypercarbic hypoxic respiratory failure; gallbladder sludge; ruq u/s x 2 not consistent with acalculous cholecystitis",
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"stools were guaiac negative\",\n            \"primary_organ\": \"Gastrointestinal system\",\n            \"severity\": \"Mild\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"acute kidney failure\",\n            \"primary_organ\": \"Kidneys\",\n            \"severity\": \"Severe\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"patient is currently on tube feeds via dophoff, promote with fiber at 100 cc/hr\",\n            \"primary_organ\": \"Gastrointestinal system\",\n            \"severity\": \"Mild\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"post intubation tracheal stenosis\",\n            \"primary_organ\": \"Respiratory system\",\n            \"severity\": \"Moderate\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"ventilator associated pneumonia\",\n            \"primary_organ\": \"Respiratory system\",\n            \"severity\": \"Severe\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"renal function was preserved\",\n            \"primary_organ\": \"Kidneys\",\n            \"severity\": \"None\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"mild regional left ventricular systolic dysfunction\",\n            \"primary_organ\": \"Heart\",\n            \"severity\": \"Mild\"\n        },\n        {\n            \"symptom_id\": \"s8\",\n            \"symptom_text\": \"cr was elevated on admission, recovered to baseline with hydration, then he developed arf again in the setting of hypotension and septic shock\",\n            \"primary_organ\": \"Kidneys\",\n            \"severity\": \"Severe\"\n        },\n        {\n            \"symptom_id\": \"s9\",\n            \"symptom_text\": \"hypercarbic hypoxic respiratory failure\",\n            \"primary_organ\": \"Respiratory system\",\n            \"severity\": \"Severe\"\n        },\n        {\n            \"symptom_id\": \"s10\",\n            \"symptom_text\": \"gallbladder sludge\",\n            \"primary_organ\": \"Gallbladder\",\n            \"severity\": \"Mild\"\n        },\n        {\n            \"symptom_id\": \"s11\",\n            \"symptom_text\": \"ruq u/s x 2 not consistent with acalculous cholecystitis\",\n            \"primary_organ\": \"Gallbladder\",\n            \"severity\": \"None\"\n        }\n    ],\n    \"total_count\": 11,\n    \"reasoning\": \"The symptoms are split based on the different organs they affect and their severity. Each symptom is identified by its unique identifier, description, the primary organ it affects, and its severity level.\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "stools were guaiac negative",
+              "primary_organ": "Gastrointestinal system",
+              "severity": "Mild"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "acute kidney failure",
+              "primary_organ": "Kidneys",
+              "severity": "Severe"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "patient is currently on tube feeds via dophoff, promote with fiber at 100 cc/hr",
+              "primary_organ": "Gastrointestinal system",
+              "severity": "Mild"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "post intubation tracheal stenosis",
+              "primary_organ": "Respiratory system",
+              "severity": "Moderate"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "ventilator associated pneumonia",
+              "primary_organ": "Respiratory system",
+              "severity": "Severe"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "renal function was preserved",
+              "primary_organ": "Kidneys",
+              "severity": "None"
+            },
+            {
+              "symptom_id": "s7",
+              "symptom_text": "mild regional left ventricular systolic dysfunction",
+              "primary_organ": "Heart",
+              "severity": "Mild"
+            },
+            {
+              "symptom_id": "s8",
+              "symptom_text": "cr was elevated on admission, recovered to baseline with hydration, then he developed arf again in the setting of hypotension and septic shock",
+              "primary_organ": "Kidneys",
+              "severity": "Severe"
+            },
+            {
+              "symptom_id": "s9",
+              "symptom_text": "hypercarbic hypoxic respiratory failure",
+              "primary_organ": "Respiratory system",
+              "severity": "Severe"
+            },
+            {
+              "symptom_id": "s10",
+              "symptom_text": "gallbladder sludge",
+              "primary_organ": "Gallbladder",
+              "severity": "Mild"
+            },
+            {
+              "symptom_id": "s11",
+              "symptom_text": "ruq u/s x 2 not consistent with acalculous cholecystitis",
+              "primary_organ": "Gallbladder",
+              "severity": "None"
+            }
+          ],
+          "total_count": 11,
+          "reasoning": "The symptoms are split based on the different organs they affect and their severity. Each symptom is identified by its unique identifier, description, the primary organ it affects, and its severity level."
+        }
+      },
+      "timestamp": "2025-08-28T00:19:22.347226"
+    },
+    "rag_search_results": {
+      "success": true,
+      "total_searched": 11,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "stools were guaiac negative",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "stools were guaiac negative",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "stools were guaiac negative",
+                  "units": [
+                    {
+                      "u_id": "u_21187",
+                      "u_unit": {
+                        "d_diagnosis": "stools had been guaiac negative",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "stools had been guaiac negative"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "stools were guaiac negative",
+                  "units": [
+                    {
+                      "u_id": "u_46681",
+                      "u_unit": {
+                        "d_diagnosis": "rectal exam showed guaiac negative stools",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "rectal exam showed guaiac negative stools"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "stools were guaiac negative",
+                  "units": [
+                    {
+                      "u_id": "u_53226",
+                      "u_unit": {
+                        "d_diagnosis": "black stools that were concerning but her stools were guaiac negative",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "black stools that were concerning but her stools were guaiac negative"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:19:24.089071"
+          }
+        },
+        "s2": {
+          "symptom_text": "acute kidney failure",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "acute kidney failure",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "acute kidney failure",
+                  "units": [
+                    {
+                      "u_id": "u_69331",
+                      "u_unit": {
+                        "d_diagnosis": "Acute kidney failure",
+                        "o_organ": {
+                          "organName": "Kidney (Ren)",
+                          "anatomicalLocations": [
+                            "Kidney (Ren)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "Acute kidney failure"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "acute kidney failure",
+                  "units": [
+                    {
+                      "u_id": "u_23065",
+                      "u_unit": {
+                        "d_diagnosis": "acute kidney failure",
+                        "o_organ": {
+                          "organName": "Kidney (Ren)",
+                          "anatomicalLocations": [
+                            "Kidney (Ren)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "acute kidney failure"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:19:25.788795"
+          }
+        },
+        "s3": {
+          "symptom_text": "patient is currently on tube feeds via dophoff, promote with fiber at 100 cc/hr",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "patient is currently on tube feeds via dophoff, promote with fiber at 100 cc/hr",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "patient is currently on tube feeds via dophoff, promote with fiber at 100 cc/hr",
+                  "units": [
+                    {
+                      "u_id": "u_13667",
+                      "u_unit": {
+                        "d_diagnosis": "the patient was initially on enteral feedings at 100 cc/kg/day",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "the patient was initially on enteral feedings at 100 cc/kg/day"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:19:27.581767"
+          }
+        },
+        "s4": {
+          "symptom_text": "post intubation tracheal stenosis",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "post intubation tracheal stenosis",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "post intubation tracheal stenosis",
+                  "units": [
+                    {
+                      "u_id": "u_68409",
+                      "u_unit": {
+                        "d_diagnosis": "tracheal stenosis",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "tracheal stenosis"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "post intubation tracheal stenosis",
+                  "units": [
+                    {
+                      "u_id": "u_61194",
+                      "u_unit": {
+                        "d_diagnosis": "tracheal rupture during intubation",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "tracheal rupture during intubation"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:19:29.337016"
+          }
+        },
+        "s5": {
+          "symptom_text": "ventilator associated pneumonia",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "ventilator associated pneumonia",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "ventilator associated pneumonia",
+                  "units": [
+                    {
+                      "u_id": "u_96837",
+                      "u_unit": {
+                        "d_diagnosis": "ventilator associated pneumonia",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "ventilator associated pneumonia"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "ventilator associated pneumonia",
+                  "units": [
+                    {
+                      "u_id": "u_11802",
+                      "u_unit": {
+                        "d_diagnosis": "respiratory failure and pneumonia",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "respiratory failure and pneumonia"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:19:31.083144"
+          }
+        },
+        "s6": {
+          "symptom_text": "renal function was preserved",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "renal function was preserved",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "renal function was preserved",
+                  "units": [
+                    {
+                      "u_id": "u_51377",
+                      "u_unit": {
+                        "d_diagnosis": "renal function continued to improve",
+                        "o_organ": {
+                          "organName": "Kidney (Ren)",
+                          "anatomicalLocations": [
+                            "Kidney (Ren)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "renal function continued to improve"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "renal function was preserved",
+                  "units": [
+                    {
+                      "u_id": "u_95929",
+                      "u_unit": {
+                        "d_diagnosis": "renal function remained stable",
+                        "o_organ": {
+                          "organName": "Kidney (Ren)",
+                          "anatomicalLocations": [
+                            "Kidney (Ren)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "renal function remained stable"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "renal function was preserved",
+                  "units": [
+                    {
+                      "u_id": "u_12333",
+                      "u_unit": {
+                        "d_diagnosis": "renal function stable",
+                        "o_organ": {
+                          "organName": "Kidney (Ren)",
+                          "anatomicalLocations": [
+                            "Kidney (Ren)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "renal function stable"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:19:32.834844"
+          }
+        },
+        "s7": {
+          "symptom_text": "mild regional left ventricular systolic dysfunction",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "mild regional left ventricular systolic dysfunction",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "mild regional left ventricular systolic dysfunction",
+                  "units": [
+                    {
+                      "u_id": "u_40786",
+                      "u_unit": {
+                        "d_diagnosis": "mild regional left ventricular systolic dysfunction, including hypokinesis of inferior and inferolateral walls",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "mild regional left ventricular systolic dysfunction, including hypokinesis of inferior and inferolateral walls"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "mild regional left ventricular systolic dysfunction",
+                  "units": [
+                    {
+                      "u_id": "u_73113",
+                      "u_unit": {
+                        "d_diagnosis": "moderate regional left ventricular systolic dysfunction",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "moderate regional left ventricular systolic dysfunction"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:19:34.590522"
+          }
+        },
+        "s8": {
+          "symptom_text": "cr was elevated on admission, recovered to baseline with hydration, then he developed arf again in the setting of hypotension and septic shock",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "cr was elevated on admission, recovered to baseline with hydration, then he developed arf again in the setting of hypotension and septic shock",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "cr was elevated on admission, recovered to baseline with hydration, then he developed arf again in the setting of hypotension and septic shock",
+                  "units": [
+                    {
+                      "u_id": "u_89992",
+                      "u_unit": {
+                        "d_diagnosis": "rising cr above baseline and arf",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "rising cr above baseline and arf"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "cr was elevated on admission, recovered to baseline with hydration, then he developed arf again in the setting of hypotension and septic shock",
+                  "units": [
+                    {
+                      "u_id": "u_60454",
+                      "u_unit": {
+                        "d_diagnosis": "slight increase from baseline creatinine despite aggressive hydration upon presentation",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "slight increase from baseline creatinine despite aggressive hydration upon presentation"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "cr was elevated on admission, recovered to baseline with hydration, then he developed arf again in the setting of hypotension and septic shock",
+                  "units": [
+                    {
+                      "u_id": "u_96896",
+                      "u_unit": {
+                        "d_diagnosis": "cr improved during admission and returned to baseline",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "cr improved during admission and returned to baseline"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:19:36.329714"
+          }
+        },
+        "s9": {
+          "symptom_text": "hypercarbic hypoxic respiratory failure",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "hypercarbic hypoxic respiratory failure",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "hypercarbic hypoxic respiratory failure",
+                  "units": [
+                    {
+                      "u_id": "u_55337",
+                      "u_unit": {
+                        "d_diagnosis": "hypercarbic/hypoxic respiratory failure",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "hypercarbic/hypoxic respiratory failure"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "hypercarbic hypoxic respiratory failure",
+                  "units": [
+                    {
+                      "u_id": "u_7298",
+                      "u_unit": {
+                        "d_diagnosis": "hypercarbic and hypoxemic respiratory failure",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "hypercarbic and hypoxemic respiratory failure"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "hypercarbic hypoxic respiratory failure",
+                  "units": [
+                    {
+                      "u_id": "u_48519",
+                      "u_unit": {
+                        "d_diagnosis": "hypercapnic, hypoxic respiratory failure",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "hypercapnic, hypoxic respiratory failure"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:19:38.033723"
+          }
+        },
+        "s10": {
+          "symptom_text": "gallbladder sludge",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "gallbladder sludge",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "gallbladder sludge",
+                  "units": [
+                    {
+                      "u_id": "u_5937",
+                      "u_unit": {
+                        "d_diagnosis": "sludge filling an otherwise unremarkable-appearing gallbladder",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "sludge filling an otherwise unremarkable-appearing gallbladder"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "gallbladder sludge",
+                  "units": [
+                    {
+                      "u_id": "u_25798",
+                      "u_unit": {
+                        "d_diagnosis": "gallbladder stones",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "gallbladder stones"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "gallbladder sludge",
+                  "units": [
+                    {
+                      "u_id": "u_7793",
+                      "u_unit": {
+                        "d_diagnosis": "gallbladder sludge, no stones, no intra or extra hepatic ductal dilatation",
+                        "o_organ": {
+                          "organName": "Liver (Hepar)",
+                          "anatomicalLocations": [
+                            "Liver (Hepar)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "gallbladder sludge, no stones, no intra or extra hepatic ductal dilatation"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:19:39.768160"
+          }
+        },
+        "s11": {
+          "symptom_text": "ruq u/s x 2 not consistent with acalculous cholecystitis",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "ruq u/s x 2 not consistent with acalculous cholecystitis",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "ruq u/s x 2 not consistent with acalculous cholecystitis",
+                  "units": [
+                    {
+                      "u_id": "u_64786",
+                      "u_unit": {
+                        "d_diagnosis": "ruq ultrasound revealed cholelithiasis without evidence of cholecystitis",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "ruq ultrasound revealed cholelithiasis without evidence of cholecystitis"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "ruq u/s x 2 not consistent with acalculous cholecystitis",
+                  "units": [
+                    {
+                      "u_id": "u_79994",
+                      "u_unit": {
+                        "d_diagnosis": "a right upper quadrant ultrasound, which revealed a few gallstones but did not show evidence of cholecystitis, biliary tree dilation, or enlarged common bile duct",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "a right upper quadrant ultrasound, which revealed a few gallstones but did not show evidence of cholecystitis, biliary tree dilation, or enlarged common bile duct"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "ruq u/s x 2 not consistent with acalculous cholecystitis",
+                  "units": [
+                    {
+                      "u_id": "u_31656",
+                      "u_unit": {
+                        "d_diagnosis": "repeat us done here did not reveal evidence of cholecystitis or biliary obstruction",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "repeat us done here did not reveal evidence of cholecystitis or biliary obstruction"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:19:41.483943"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "stools were guaiac negative",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "stools were guaiac negative",
+              "units": [
+                {
+                  "u_id": "u_21187",
+                  "u_unit": {
+                    "d_diagnosis": "stools had been guaiac negative",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "stools had been guaiac negative"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "stools were guaiac negative",
+              "units": [
+                {
+                  "u_id": "u_46681",
+                  "u_unit": {
+                    "d_diagnosis": "rectal exam showed guaiac negative stools",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "rectal exam showed guaiac negative stools"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "stools were guaiac negative",
+              "units": [
+                {
+                  "u_id": "u_53226",
+                  "u_unit": {
+                    "d_diagnosis": "black stools that were concerning but her stools were guaiac negative",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "black stools that were concerning but her stools were guaiac negative"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "acute kidney failure",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "acute kidney failure",
+              "units": [
+                {
+                  "u_id": "u_69331",
+                  "u_unit": {
+                    "d_diagnosis": "Acute kidney failure",
+                    "o_organ": {
+                      "organName": "Kidney (Ren)",
+                      "anatomicalLocations": [
+                        "Kidney (Ren)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "Acute kidney failure"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "acute kidney failure",
+              "units": [
+                {
+                  "u_id": "u_23065",
+                  "u_unit": {
+                    "d_diagnosis": "acute kidney failure",
+                    "o_organ": {
+                      "organName": "Kidney (Ren)",
+                      "anatomicalLocations": [
+                        "Kidney (Ren)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "acute kidney failure"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "patient is currently on tube feeds via dophoff, promote with fiber at 100 cc/hr",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "patient is currently on tube feeds via dophoff, promote with fiber at 100 cc/hr",
+              "units": [
+                {
+                  "u_id": "u_13667",
+                  "u_unit": {
+                    "d_diagnosis": "the patient was initially on enteral feedings at 100 cc/kg/day",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "the patient was initially on enteral feedings at 100 cc/kg/day"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "post intubation tracheal stenosis",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "post intubation tracheal stenosis",
+              "units": [
+                {
+                  "u_id": "u_68409",
+                  "u_unit": {
+                    "d_diagnosis": "tracheal stenosis",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "tracheal stenosis"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "post intubation tracheal stenosis",
+              "units": [
+                {
+                  "u_id": "u_61194",
+                  "u_unit": {
+                    "d_diagnosis": "tracheal rupture during intubation",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "tracheal rupture during intubation"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "ventilator associated pneumonia",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "ventilator associated pneumonia",
+              "units": [
+                {
+                  "u_id": "u_96837",
+                  "u_unit": {
+                    "d_diagnosis": "ventilator associated pneumonia",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "ventilator associated pneumonia"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "ventilator associated pneumonia",
+              "units": [
+                {
+                  "u_id": "u_11802",
+                  "u_unit": {
+                    "d_diagnosis": "respiratory failure and pneumonia",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "respiratory failure and pneumonia"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "renal function was preserved",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "renal function was preserved",
+              "units": [
+                {
+                  "u_id": "u_51377",
+                  "u_unit": {
+                    "d_diagnosis": "renal function continued to improve",
+                    "o_organ": {
+                      "organName": "Kidney (Ren)",
+                      "anatomicalLocations": [
+                        "Kidney (Ren)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "renal function continued to improve"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "renal function was preserved",
+              "units": [
+                {
+                  "u_id": "u_95929",
+                  "u_unit": {
+                    "d_diagnosis": "renal function remained stable",
+                    "o_organ": {
+                      "organName": "Kidney (Ren)",
+                      "anatomicalLocations": [
+                        "Kidney (Ren)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "renal function remained stable"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "renal function was preserved",
+              "units": [
+                {
+                  "u_id": "u_12333",
+                  "u_unit": {
+                    "d_diagnosis": "renal function stable",
+                    "o_organ": {
+                      "organName": "Kidney (Ren)",
+                      "anatomicalLocations": [
+                        "Kidney (Ren)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "renal function stable"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "mild regional left ventricular systolic dysfunction",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "mild regional left ventricular systolic dysfunction",
+              "units": [
+                {
+                  "u_id": "u_40786",
+                  "u_unit": {
+                    "d_diagnosis": "mild regional left ventricular systolic dysfunction, including hypokinesis of inferior and inferolateral walls",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "mild regional left ventricular systolic dysfunction, including hypokinesis of inferior and inferolateral walls"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "mild regional left ventricular systolic dysfunction",
+              "units": [
+                {
+                  "u_id": "u_73113",
+                  "u_unit": {
+                    "d_diagnosis": "moderate regional left ventricular systolic dysfunction",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "moderate regional left ventricular systolic dysfunction"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "cr was elevated on admission, recovered to baseline with hydration, then he developed arf again in the setting of hypotension and septic shock",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "cr was elevated on admission, recovered to baseline with hydration, then he developed arf again in the setting of hypotension and septic shock",
+              "units": [
+                {
+                  "u_id": "u_89992",
+                  "u_unit": {
+                    "d_diagnosis": "rising cr above baseline and arf",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "rising cr above baseline and arf"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "cr was elevated on admission, recovered to baseline with hydration, then he developed arf again in the setting of hypotension and septic shock",
+              "units": [
+                {
+                  "u_id": "u_60454",
+                  "u_unit": {
+                    "d_diagnosis": "slight increase from baseline creatinine despite aggressive hydration upon presentation",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "slight increase from baseline creatinine despite aggressive hydration upon presentation"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "cr was elevated on admission, recovered to baseline with hydration, then he developed arf again in the setting of hypotension and septic shock",
+              "units": [
+                {
+                  "u_id": "u_96896",
+                  "u_unit": {
+                    "d_diagnosis": "cr improved during admission and returned to baseline",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "cr improved during admission and returned to baseline"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "hypercarbic hypoxic respiratory failure",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "hypercarbic hypoxic respiratory failure",
+              "units": [
+                {
+                  "u_id": "u_55337",
+                  "u_unit": {
+                    "d_diagnosis": "hypercarbic/hypoxic respiratory failure",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "hypercarbic/hypoxic respiratory failure"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "hypercarbic hypoxic respiratory failure",
+              "units": [
+                {
+                  "u_id": "u_7298",
+                  "u_unit": {
+                    "d_diagnosis": "hypercarbic and hypoxemic respiratory failure",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "hypercarbic and hypoxemic respiratory failure"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "hypercarbic hypoxic respiratory failure",
+              "units": [
+                {
+                  "u_id": "u_48519",
+                  "u_unit": {
+                    "d_diagnosis": "hypercapnic, hypoxic respiratory failure",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "hypercapnic, hypoxic respiratory failure"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "gallbladder sludge",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "gallbladder sludge",
+              "units": [
+                {
+                  "u_id": "u_5937",
+                  "u_unit": {
+                    "d_diagnosis": "sludge filling an otherwise unremarkable-appearing gallbladder",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "sludge filling an otherwise unremarkable-appearing gallbladder"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "gallbladder sludge",
+              "units": [
+                {
+                  "u_id": "u_25798",
+                  "u_unit": {
+                    "d_diagnosis": "gallbladder stones",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "gallbladder stones"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "gallbladder sludge",
+              "units": [
+                {
+                  "u_id": "u_7793",
+                  "u_unit": {
+                    "d_diagnosis": "gallbladder sludge, no stones, no intra or extra hepatic ductal dilatation",
+                    "o_organ": {
+                      "organName": "Liver (Hepar)",
+                      "anatomicalLocations": [
+                        "Liver (Hepar)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "gallbladder sludge, no stones, no intra or extra hepatic ductal dilatation"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "ruq u/s x 2 not consistent with acalculous cholecystitis",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "ruq u/s x 2 not consistent with acalculous cholecystitis",
+              "units": [
+                {
+                  "u_id": "u_64786",
+                  "u_unit": {
+                    "d_diagnosis": "ruq ultrasound revealed cholelithiasis without evidence of cholecystitis",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "ruq ultrasound revealed cholelithiasis without evidence of cholecystitis"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "ruq u/s x 2 not consistent with acalculous cholecystitis",
+              "units": [
+                {
+                  "u_id": "u_79994",
+                  "u_unit": {
+                    "d_diagnosis": "a right upper quadrant ultrasound, which revealed a few gallstones but did not show evidence of cholecystitis, biliary tree dilation, or enlarged common bile duct",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "a right upper quadrant ultrasound, which revealed a few gallstones but did not show evidence of cholecystitis, biliary tree dilation, or enlarged common bile duct"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "ruq u/s x 2 not consistent with acalculous cholecystitis",
+              "units": [
+                {
+                  "u_id": "u_31656",
+                  "u_unit": {
+                    "d_diagnosis": "repeat us done here did not reveal evidence of cholecystitis or biliary obstruction",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "repeat us done here did not reveal evidence of cholecystitis or biliary obstruction"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:19:41.483989"
+    },
+    "expected_results": {
+      "organ": "Gallbladder (Vesica biliaris), Heart (Cor), Kidney (Ren), Liver (Hepar), Lung (Pulmo), Trachea",
+      "a_position": "Alveolar Sacs, Alveoli, Bronchioles, Bronchopulmonary Segments, Gallbladder Body, Gallbladder Mucosa, Interventricular Septum (IVS), Left Lobe of Liver, Left Ventricle (LV), Renal Cortex, Renal Medulla (Pyramids), Right Lobe of Liver, Tracheal Mucosa, Tracheal Rings"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Kidney (Ren)",
+          "a_position": "Renal Cortex, Renal Medulla (Pyramids)"
+        },
+        "api_eva": {
+          "overall_score": 65.7,
+          "precision": 100.0,
+          "recall": 14.3,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Kidney (Ren)",
+          "a_position": "Renal Cortex, Renal Medulla (Pyramids), Renal Pelvis"
+        },
+        "api_eva": {
+          "overall_score": 52.4,
+          "precision": 66.7,
+          "recall": 14.3,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 59.0,
+      "average_precision": 83.3,
+      "average_recall": 14.3
+    }
+  }
+]

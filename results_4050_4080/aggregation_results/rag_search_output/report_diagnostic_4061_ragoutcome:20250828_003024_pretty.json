@@ -1,0 +1,232 @@
+[
+  {
+    "query": "extubate",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "extubate",
+        "units": [
+          {
+            "u_id": "u_92637",
+            "u_unit": {
+              "d_diagnosis": "extubated",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "extubated"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "right upper quadrant pain",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "right upper quadrant pain",
+        "units": [
+          {
+            "u_id": "u_15142",
+            "u_unit": {
+              "d_diagnosis": "right upper quadrant pain",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "right upper quadrant pain"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "respiratory distress improved",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "respiratory distress improved",
+        "units": [
+          {
+            "u_id": "u_21910",
+            "u_unit": {
+              "d_diagnosis": "worsening respiratory distress",
+              "o_organ": {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Lung (Pulmo)"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "worsening respiratory distress"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "lft normalized",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "lft normalized",
+        "units": [
+          {
+            "u_id": "u_4523",
+            "u_unit": {
+              "d_diagnosis": "normal lfts",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "normal lfts"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "lft normalized",
+        "units": [
+          {
+            "u_id": "u_51775",
+            "u_unit": {
+              "d_diagnosis": "lfts were normal",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "lfts were normal"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "no other complications",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "no other complications",
+        "units": [
+          {
+            "u_id": "u_12190",
+            "u_unit": {
+              "d_diagnosis": "complications: none were apparent",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "complications: none were apparent"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "no other complications",
+        "units": [
+          {
+            "u_id": "u_49782",
+            "u_unit": {
+              "d_diagnosis": "no other defects were noted",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "no other defects were noted"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "persistent pleural effusion bilaterally",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "persistent pleural effusion bilaterally",
+        "units": [
+          {
+            "u_id": "u_85504",
+            "u_unit": {
+              "d_diagnosis": "bilateral pleural effusions are present",
+              "o_organ": {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Lung (Pulmo)"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "bilateral pleural effusions are present"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "persistent pleural effusion bilaterally",
+        "units": [
+          {
+            "u_id": "u_83016",
+            "u_unit": {
+              "d_diagnosis": "chronic bilateral pleural effusions",
+              "o_organ": {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Lung (Pulmo)"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "chronic bilateral pleural effusions"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "persistent pleural effusion bilaterally",
+        "units": [
+          {
+            "u_id": "u_24531",
+            "u_unit": {
+              "d_diagnosis": "bilateral pleural effusion",
+              "o_organ": {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Lung (Pulmo)"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "bilateral pleural effusion"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+]

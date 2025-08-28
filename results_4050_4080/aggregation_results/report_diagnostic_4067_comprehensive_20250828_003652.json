@@ -1,0 +1,1219 @@
+{
+  "report_id": "diagnostic_4067",
+  "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4067.json",
+  "original_symptoms_count": 8,
+  "baseline": {
+    "aggregated_symptoms": "elevated troponin; abdominal pain; improved respiratory; electrocardiogram changes; congestive heart failure; chest pressure; shortness of breath; hypotension",
+    "expected_results": [
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Left Ventricle (LV)",
+          "Right Ventricle (RV)"
+        ]
+      },
+      {
+        "organName": "Pancreas",
+        "anatomicalLocations": [
+          "Head of the Pancreas",
+          "Tail of the Pancreas"
+        ]
+      },
+      {
+        "organName": "Stomach (Gaster)",
+        "anatomicalLocations": [
+          "Gastric Mucosa",
+          "Gastric Antrum"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Alveoli",
+          "Bronchioles"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Left Ventricle (LV)",
+          "Interventricular Septum (IVS)"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Left Ventricle (LV)",
+          "Mitral Valve"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Left Ventricle (LV)",
+          "Aortic Valve"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Alveoli",
+          "Pleural Cavity"
+        ]
+      }
+    ],
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\",\n        \"Hepatic Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Coronary Artery",
+                  "Aortic Valve"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Pleural Cavity",
+                  "Pulmonary Capillaries"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Liver (Hepar)",
+                "anatomicalLocations": [
+                  "Portal Vein",
+                  "Hepatic Veins"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Coronary Artery",
+          "Aortic Valve"
+        ],
+        "usage": {
+          "completion_tokens": 186,
+          "prompt_tokens": 2186,
+          "total_tokens": 2372,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "evaluation": {
+          "overall_score": 53.3,
+          "precision": 66.7,
+          "recall": 16.7,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/12 (16.7%); 过度生成惩罚: 100.0%"
+        }
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Aorta\",\n        \"Ascending Aorta\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\",\n        \"Pulmonary Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve",
+            "Pericardium"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Coronary Artery",
+                  "Aortic Valve",
+                  "Pericardium"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Pulmonary Capillaries",
+                  "Pleural Cavity"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": [
+                  "Coronary Artery",
+                  "Aorta",
+                  "Ascending Aorta"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Vein (Vena)",
+                "anatomicalLocations": [
+                  "Superior Vena Cava",
+                  "Inferior Vena Cava",
+                  "Pulmonary Veins"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Coronary Artery",
+          "Aortic Valve",
+          "Pericardium"
+        ],
+        "usage": {
+          "completion_tokens": 248,
+          "prompt_tokens": 2052,
+          "total_tokens": 2300,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 1984
+          },
+          "prompt_cache_hit_tokens": 1984,
+          "prompt_cache_miss_tokens": 68
+        },
+        "model": "deepseek-chat",
+        "evaluation": {
+          "overall_score": 46.7,
+          "precision": 50.0,
+          "recall": 16.7,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/12 (16.7%); 过度生成惩罚: 100.0%"
+        }
+      }
+    },
+    "evaluation": {
+      "report_id": "diagnostic_4067",
+      "total_symptoms": 8,
+      "valid_symptoms": 8,
+      "evaluation_timestamp": "2025-08-28T00:36:07.393188",
+      "symptom_evaluations": [
+        {
+          "symptom_id": "aggregated_symptoms",
+          "symptom_text": "elevated troponin; abdominal pain; improved respiratory; electrocardiogram changes; congestive heart failure; chest pressure; shortness of breath; hypotension",
+          "expected_results": [
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Left Ventricle (LV)",
+                "Right Ventricle (RV)"
+              ]
+            },
+            {
+              "organName": "Pancreas",
+              "anatomicalLocations": [
+                "Head of the Pancreas",
+                "Tail of the Pancreas"
+              ]
+            },
+            {
+              "organName": "Stomach (Gaster)",
+              "anatomicalLocations": [
+                "Gastric Mucosa",
+                "Gastric Antrum"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Alveoli",
+                "Bronchioles"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Left Ventricle (LV)",
+                "Interventricular Septum (IVS)"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Left Ventricle (LV)",
+                "Mitral Valve"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Left Ventricle (LV)",
+                "Aortic Valve"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Alveoli",
+                "Pleural Cavity"
+              ]
+            }
+          ],
+          "api_evaluations": {
+            "moonshot": {
+              "overall_score": 53.3,
+              "precision": 66.7,
+              "recall": 16.7,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/12 (16.7%); 过度生成惩罚: 100.0%"
+            },
+            "deepseek": {
+              "overall_score": 46.7,
+              "precision": 50.0,
+              "recall": 16.7,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/12 (16.7%); 过度生成惩罚: 100.0%"
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total_api_calls": 2,
+        "successful_api_calls": 2,
+        "failed_api_calls": 0,
+        "average_overall_score": 50.0,
+        "average_precision": 58.4,
+        "average_recall": 16.7
+      }
+    }
+  },
+  "rag_search": {
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"elevated troponin\",\n            \"primary_organ\": \"heart\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"abdominal pain\",\n            \"primary_organ\": \"abdomen\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"improved respiratory\",\n            \"primary_organ\": \"lungs\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"electrocardiogram changes\",\n            \"primary_organ\": \"heart\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"congestive heart failure\",\n            \"primary_organ\": \"heart\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"chest pressure\",\n            \"primary_organ\": \"chest\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"shortness of breath\",\n            \"primary_organ\": \"lungs\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s8\",\n            \"symptom_text\": \"hypotension\",\n            \"primary_organ\": \"circulatory system\",\n            \"severity\": \"moderate\"\n        }\n    ],\n    \"total_count\": 8,\n    \"reasoning\": \"The symptoms are split based on the primary organ affected and the severity of the symptom. Elevated troponin and electrocardiogram changes are related to the heart, while congestive heart failure is a severe heart condition. Abdominal pain is related to the abdomen. Improved respiratory and shortness of breath are related to the lungs. Chest pressure is related to the chest. Hypotension is related to the circulatory system.\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "elevated troponin",
+              "primary_organ": "heart",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "abdominal pain",
+              "primary_organ": "abdomen",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "improved respiratory",
+              "primary_organ": "lungs",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "electrocardiogram changes",
+              "primary_organ": "heart",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "congestive heart failure",
+              "primary_organ": "heart",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "chest pressure",
+              "primary_organ": "chest",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s7",
+              "symptom_text": "shortness of breath",
+              "primary_organ": "lungs",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s8",
+              "symptom_text": "hypotension",
+              "primary_organ": "circulatory system",
+              "severity": "moderate"
+            }
+          ],
+          "total_count": 8,
+          "reasoning": "The symptoms are split based on the primary organ affected and the severity of the symptom. Elevated troponin and electrocardiogram changes are related to the heart, while congestive heart failure is a severe heart condition. Abdominal pain is related to the abdomen. Improved respiratory and shortness of breath are related to the lungs. Chest pressure is related to the chest. Hypotension is related to the circulatory system."
+        }
+      },
+      "timestamp": "2025-08-28T00:36:16.524495"
+    },
+    "search_results": {
+      "success": true,
+      "total_searched": 8,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "elevated troponin",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "elevated troponin",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "elevated troponin",
+                  "units": [
+                    {
+                      "u_id": "u_57208",
+                      "u_unit": {
+                        "d_diagnosis": "elevated troponin",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "elevated troponin"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:36:18.281491"
+          }
+        },
+        "s2": {
+          "symptom_text": "abdominal pain",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "abdominal pain",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "abdominal pain",
+                  "units": [
+                    {
+                      "u_id": "u_44150",
+                      "u_unit": {
+                        "d_diagnosis": "abdominal pain",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "abdominal pain"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:36:20.418752"
+          }
+        },
+        "s3": {
+          "symptom_text": "improved respiratory",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "improved respiratory",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "improved respiratory",
+                  "units": [
+                    {
+                      "u_id": "u_14730",
+                      "u_unit": {
+                        "d_diagnosis": "improving respiratory status",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "improving respiratory status"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "improved respiratory",
+                  "units": [
+                    {
+                      "u_id": "u_16182",
+                      "u_unit": {
+                        "d_diagnosis": "shortness of breath improved",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "shortness of breath improved"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "improved respiratory",
+                  "units": [
+                    {
+                      "u_id": "u_33899",
+                      "u_unit": {
+                        "d_diagnosis": "improved aeration",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "improved aeration"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:36:22.186106"
+          }
+        },
+        "s4": {
+          "symptom_text": "electrocardiogram changes",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "electrocardiogram changes",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "electrocardiogram changes",
+                  "units": [
+                    {
+                      "u_id": "u_63235",
+                      "u_unit": {
+                        "d_diagnosis": "ekg changes",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "ekg changes"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:36:23.916497"
+          }
+        },
+        "s5": {
+          "symptom_text": "congestive heart failure",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "congestive heart failure",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "congestive heart failure",
+                  "units": [
+                    {
+                      "u_id": "u_74531",
+                      "u_unit": {
+                        "d_diagnosis": "Congestive heart failure",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "Congestive heart failure"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "congestive heart failure",
+                  "units": [
+                    {
+                      "u_id": "u_19742",
+                      "u_unit": {
+                        "d_diagnosis": "congestive heart failure",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "congestive heart failure"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:36:25.607438"
+          }
+        },
+        "s6": {
+          "symptom_text": "chest pressure",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "chest pressure",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "chest pressure",
+                  "units": [
+                    {
+                      "u_id": "u_68499",
+                      "u_unit": {
+                        "d_diagnosis": "chest pressure",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "chest pressure"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:36:27.318189"
+          }
+        },
+        "s7": {
+          "symptom_text": "shortness of breath",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "shortness of breath",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "shortness of breath",
+                  "units": [
+                    {
+                      "u_id": "u_70138",
+                      "u_unit": {
+                        "d_diagnosis": "shortness of breath",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "shortness of breath"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:36:29.443198"
+          }
+        },
+        "s8": {
+          "symptom_text": "hypotension",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "hypotension",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "hypotension",
+                  "units": [
+                    {
+                      "u_id": "u_83863",
+                      "u_unit": {
+                        "d_diagnosis": "hypotension",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "hypotension"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:36:31.223779"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "elevated troponin",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "elevated troponin",
+              "units": [
+                {
+                  "u_id": "u_57208",
+                  "u_unit": {
+                    "d_diagnosis": "elevated troponin",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "elevated troponin"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "abdominal pain",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "abdominal pain",
+              "units": [
+                {
+                  "u_id": "u_44150",
+                  "u_unit": {
+                    "d_diagnosis": "abdominal pain",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "abdominal pain"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "improved respiratory",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "improved respiratory",
+              "units": [
+                {
+                  "u_id": "u_14730",
+                  "u_unit": {
+                    "d_diagnosis": "improving respiratory status",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "improving respiratory status"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "improved respiratory",
+              "units": [
+                {
+                  "u_id": "u_16182",
+                  "u_unit": {
+                    "d_diagnosis": "shortness of breath improved",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "shortness of breath improved"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "improved respiratory",
+              "units": [
+                {
+                  "u_id": "u_33899",
+                  "u_unit": {
+                    "d_diagnosis": "improved aeration",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "improved aeration"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "electrocardiogram changes",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "electrocardiogram changes",
+              "units": [
+                {
+                  "u_id": "u_63235",
+                  "u_unit": {
+                    "d_diagnosis": "ekg changes",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "ekg changes"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "congestive heart failure",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "congestive heart failure",
+              "units": [
+                {
+                  "u_id": "u_74531",
+                  "u_unit": {
+                    "d_diagnosis": "Congestive heart failure",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "Congestive heart failure"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "congestive heart failure",
+              "units": [
+                {
+                  "u_id": "u_19742",
+                  "u_unit": {
+                    "d_diagnosis": "congestive heart failure",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "congestive heart failure"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "chest pressure",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "chest pressure",
+              "units": [
+                {
+                  "u_id": "u_68499",
+                  "u_unit": {
+                    "d_diagnosis": "chest pressure",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "chest pressure"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "shortness of breath",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "shortness of breath",
+              "units": [
+                {
+                  "u_id": "u_70138",
+                  "u_unit": {
+                    "d_diagnosis": "shortness of breath",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "shortness of breath"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "hypotension",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "hypotension",
+              "units": [
+                {
+                  "u_id": "u_83863",
+                  "u_unit": {
+                    "d_diagnosis": "hypotension",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "hypotension"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:36:31.223816"
+    }
+  },
+  "rag_enhanced": {
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Coronary Artery",
+                  "Aortic Valve"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Pulmonary Capillaries"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Liver (Hepar)",
+                "anatomicalLocations": [
+                  "Portal Vein"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Coronary Artery",
+          "Aortic Valve"
+        ],
+        "usage": {
+          "completion_tokens": 170,
+          "prompt_tokens": 2801,
+          "total_tokens": 2971,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "evaluation": {
+          "overall_score": 53.3,
+          "precision": 66.7,
+          "recall": 16.7,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/12 (16.7%); 过度生成惩罚: 100.0%"
+        }
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Aorta\",\n        \"Ascending Aorta\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\",\n        \"Pulmonary Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Brainstem\",\n        \"Cerebral Cortex\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve",
+            "Pericardium"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Coronary Artery",
+                  "Aortic Valve",
+                  "Pericardium"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Pulmonary Capillaries",
+                  "Pleural Cavity"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": [
+                  "Coronary Artery",
+                  "Aorta",
+                  "Ascending Aorta"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Vein (Vena)",
+                "anatomicalLocations": [
+                  "Superior Vena Cava",
+                  "Inferior Vena Cava",
+                  "Pulmonary Veins"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Brainstem",
+                  "Cerebral Cortex",
+                  "Cerebrospinal Fluid (CSF)"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Coronary Artery",
+          "Aortic Valve",
+          "Pericardium"
+        ],
+        "usage": {
+          "completion_tokens": 301,
+          "prompt_tokens": 2631,
+          "total_tokens": 2932,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2368
+          },
+          "prompt_cache_hit_tokens": 2368,
+          "prompt_cache_miss_tokens": 263
+        },
+        "model": "deepseek-chat",
+        "evaluation": {
+          "overall_score": 46.7,
+          "precision": 50.0,
+          "recall": 16.7,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/12 (16.7%); 过度生成惩罚: 100.0%"
+        }
+      }
+    },
+    "evaluation": {
+      "report_id": "diagnostic_4067",
+      "total_symptoms": 8,
+      "valid_symptoms": 8,
+      "evaluation_timestamp": "2025-08-28T00:36:52.035605",
+      "symptom_evaluations": [
+        {
+          "symptom_id": "rag_enhanced_symptoms",
+          "symptom_text": "elevated troponin; abdominal pain; improved respiratory; electrocardiogram changes; congestive heart failure; chest pressure; shortness of breath; hypotension",
+          "expected_results": [
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Left Ventricle (LV)",
+                "Right Ventricle (RV)"
+              ]
+            },
+            {
+              "organName": "Pancreas",
+              "anatomicalLocations": [
+                "Head of the Pancreas",
+                "Tail of the Pancreas"
+              ]
+            },
+            {
+              "organName": "Stomach (Gaster)",
+              "anatomicalLocations": [
+                "Gastric Mucosa",
+                "Gastric Antrum"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Alveoli",
+                "Bronchioles"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Left Ventricle (LV)",
+                "Interventricular Septum (IVS)"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Left Ventricle (LV)",
+                "Mitral Valve"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Left Ventricle (LV)",
+                "Aortic Valve"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Alveoli",
+                "Pleural Cavity"
+              ]
+            }
+          ],
+          "api_evaluations": {
+            "moonshot": {
+              "overall_score": 53.3,
+              "precision": 66.7,
+              "recall": 16.7,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/12 (16.7%); 过度生成惩罚: 100.0%"
+            },
+            "deepseek": {
+              "overall_score": 46.7,
+              "precision": 50.0,
+              "recall": 16.7,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/12 (16.7%); 过度生成惩罚: 100.0%"
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total_api_calls": 2,
+        "successful_api_calls": 2,
+        "failed_api_calls": 0,
+        "average_overall_score": 50.0,
+        "average_precision": 58.4,
+        "average_recall": 16.7
+      }
+    }
+  },
+  "comparison": {
+    "baseline_score": 50.0,
+    "rag_enhanced_score": 50.0,
+    "improvement": 0.0
+  },
+  "processing_timestamp": "2025-08-28T00:36:52.035651"
+}

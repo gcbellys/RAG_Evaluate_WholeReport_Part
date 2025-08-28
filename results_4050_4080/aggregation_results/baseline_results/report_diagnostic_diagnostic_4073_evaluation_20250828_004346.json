@@ -1,0 +1,429 @@
+{
+  "report_id": "diagnostic_4073",
+  "timestamp": "2025-08-28T00:43:46.290725",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4073_symptom_0",
+      "diagnosis": "fevers",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Left Anterior Descending Artery (LAD)"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Coronary Artery"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "{\n  \"organs\": [\n    {\n      \"organName\": \"Intestinum tenue\",\n      \"anatomicalLocations\": [\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Intestinum crassum\",\n      \"anatomicalLocations\": [\n        \"Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Intrahepatic Bile Ducts\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lymph node\",\n      \"anatomicalLocations\": [\n        \"Mesenteric Lymph Nodes\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}",
+          "parsed_data": {
+            "organ_name": "Intestinum tenue",
+            "anatomical_locations": [
+              "Jejunum",
+              "Ileum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Intestinum tenue",
+                  "anatomicalLocations": [
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Intestinum crassum",
+                  "anatomicalLocations": [
+                    "Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Intrahepatic Bile Ducts"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lymph node",
+                  "anatomicalLocations": [
+                    "Mesenteric Lymph Nodes"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Intestinum tenue",
+          "anatomical_locations": [
+            "Jejunum",
+            "Ileum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Jejunum\",\n        \"Ileum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Colon\",\n        \"Rectum\",\n        \"Cecum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Hypothalamus\",\n        \"Diencephalon\",\n        \"Cerebral Cortex\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lymph node\",\n      \"anatomicalLocations\": [\n        \"Mesenteric lymph nodes\",\n        \"Abdominal lymph nodes\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Small intestine (Intestinum tenue)",
+            "anatomical_locations": [
+              "Jejunum",
+              "Ileum",
+              "Duodenum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Jejunum",
+                    "Ileum",
+                    "Duodenum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Colon",
+                    "Rectum",
+                    "Cecum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Hypothalamus",
+                    "Diencephalon",
+                    "Cerebral Cortex"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lymph node",
+                  "anatomicalLocations": [
+                    "Mesenteric lymph nodes",
+                    "Abdominal lymph nodes"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Small intestine (Intestinum tenue)",
+          "anatomical_locations": [
+            "Jejunum",
+            "Ileum",
+            "Duodenum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4073_symptom_1",
+      "diagnosis": "chills",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Left Anterior Descending Artery (LAD)"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Coronary Artery"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "{\n  \"organs\": [\n    {\n      \"organName\": \"Intestinum tenue\",\n      \"anatomicalLocations\": [\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Intestinum crassum\",\n      \"anatomicalLocations\": [\n        \"Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Intrahepatic Bile Ducts\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lymph node\",\n      \"anatomicalLocations\": [\n        \"Mesenteric Lymph Nodes\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}",
+          "parsed_data": {
+            "organ_name": "Intestinum tenue",
+            "anatomical_locations": [
+              "Jejunum",
+              "Ileum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Intestinum tenue",
+                  "anatomicalLocations": [
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Intestinum crassum",
+                  "anatomicalLocations": [
+                    "Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Intrahepatic Bile Ducts"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lymph node",
+                  "anatomicalLocations": [
+                    "Mesenteric Lymph Nodes"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Intestinum tenue",
+          "anatomical_locations": [
+            "Jejunum",
+            "Ileum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Jejunum\",\n        \"Ileum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Colon\",\n        \"Rectum\",\n        \"Cecum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Hypothalamus\",\n        \"Diencephalon\",\n        \"Cerebral Cortex\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lymph node\",\n      \"anatomicalLocations\": [\n        \"Mesenteric lymph nodes\",\n        \"Abdominal lymph nodes\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Small intestine (Intestinum tenue)",
+            "anatomical_locations": [
+              "Jejunum",
+              "Ileum",
+              "Duodenum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Jejunum",
+                    "Ileum",
+                    "Duodenum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Colon",
+                    "Rectum",
+                    "Cecum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Hypothalamus",
+                    "Diencephalon",
+                    "Cerebral Cortex"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lymph node",
+                  "anatomicalLocations": [
+                    "Mesenteric lymph nodes",
+                    "Abdominal lymph nodes"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Small intestine (Intestinum tenue)",
+          "anatomical_locations": [
+            "Jejunum",
+            "Ileum",
+            "Duodenum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4073_symptom_2",
+      "diagnosis": "diarrhea",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Left Anterior Descending Artery (LAD)"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Coronary Artery"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "{\n  \"organs\": [\n    {\n      \"organName\": \"Intestinum tenue\",\n      \"anatomicalLocations\": [\n        \"Jejunum\",\n        \"Ileum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Intestinum crassum\",\n      \"anatomicalLocations\": [\n        \"Colon\",\n        \"Rectum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Intrahepatic Bile Ducts\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lymph node\",\n      \"anatomicalLocations\": [\n        \"Mesenteric Lymph Nodes\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}",
+          "parsed_data": {
+            "organ_name": "Intestinum tenue",
+            "anatomical_locations": [
+              "Jejunum",
+              "Ileum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Intestinum tenue",
+                  "anatomicalLocations": [
+                    "Jejunum",
+                    "Ileum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Intestinum crassum",
+                  "anatomicalLocations": [
+                    "Colon",
+                    "Rectum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Intrahepatic Bile Ducts"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lymph node",
+                  "anatomicalLocations": [
+                    "Mesenteric Lymph Nodes"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Intestinum tenue",
+          "anatomical_locations": [
+            "Jejunum",
+            "Ileum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Jejunum\",\n        \"Ileum\",\n        \"Duodenum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Colon\",\n        \"Rectum\",\n        \"Cecum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Hypothalamus\",\n        \"Diencephalon\",\n        \"Cerebral Cortex\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lymph node\",\n      \"anatomicalLocations\": [\n        \"Mesenteric lymph nodes\",\n        \"Abdominal lymph nodes\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Small intestine (Intestinum tenue)",
+            "anatomical_locations": [
+              "Jejunum",
+              "Ileum",
+              "Duodenum"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Small intestine (Intestinum tenue)",
+                  "anatomicalLocations": [
+                    "Jejunum",
+                    "Ileum",
+                    "Duodenum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Colon",
+                    "Rectum",
+                    "Cecum"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Hypothalamus",
+                    "Diencephalon",
+                    "Cerebral Cortex"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lymph node",
+                  "anatomicalLocations": [
+                    "Mesenteric lymph nodes",
+                    "Abdominal lymph nodes"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Small intestine (Intestinum tenue)",
+          "anatomical_locations": [
+            "Jejunum",
+            "Ileum",
+            "Duodenum"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

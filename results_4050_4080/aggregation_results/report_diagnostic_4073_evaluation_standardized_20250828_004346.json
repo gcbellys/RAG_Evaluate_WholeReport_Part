@@ -1,0 +1,343 @@
+{
+  "report_number": "diagnostic_4073",
+  "timestamp": "2025-08-28T00:43:46.290725",
+  "baseline_method": {
+    "aggregated_symptoms": "fevers, chills and diarrhea",
+    "expected_results": [
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Left Ventricle (LV)",
+          "Left Anterior Descending Artery (LAD)"
+        ]
+      },
+      {
+        "organName": "Artery (Arteria)",
+        "anatomicalLocations": [
+          "Left Anterior Descending Artery (LAD)",
+          "Coronary Artery"
+        ]
+      }
+    ],
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "success": true,
+        "organ_name": "Intestinum tenue",
+        "anatomical_locations": [
+          "Jejunum",
+          "Ileum"
+        ],
+        "usage": {
+          "completion_tokens": 204,
+          "prompt_tokens": 2160,
+          "total_tokens": 2364,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "success": true,
+        "organ_name": "Small intestine (Intestinum tenue)",
+        "anatomical_locations": [
+          "Jejunum",
+          "Ileum",
+          "Duodenum"
+        ],
+        "usage": {
+          "completion_tokens": 221,
+          "prompt_tokens": 2031,
+          "total_tokens": 2252,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 1984
+          },
+          "prompt_cache_hit_tokens": 1984,
+          "prompt_cache_miss_tokens": 47
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 20.0,
+      "average_precision": 0.0,
+      "average_recall": 0.0
+    }
+  },
+  "rag_enhanced_method": {
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"fevers\",\n            \"primary_organ\": \"全身\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"chills\",\n            \"primary_organ\": \"全身\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"diarrhea\",\n            \"primary_organ\": \"消化系统\",\n            \"severity\": \"中等\"\n        }\n    ],\n    \"total_count\": 3,\n    \"reasoning\": \"聚合症状中包含三个独立的症状：'fevers'（发热）, 'chills'（寒战）和'diarrhea'（腹泻）。这三个症状分别指向全身和消化系统的不同症状表现，因此将它们分割成独立的单元。\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "fevers",
+              "primary_organ": "全身",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "chills",
+              "primary_organ": "全身",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "diarrhea",
+              "primary_organ": "消化系统",
+              "severity": "中等"
+            }
+          ],
+          "total_count": 3,
+          "reasoning": "聚合症状中包含三个独立的症状：'fevers'（发热）, 'chills'（寒战）和'diarrhea'（腹泻）。这三个症状分别指向全身和消化系统的不同症状表现，因此将它们分割成独立的单元。"
+        }
+      },
+      "timestamp": "2025-08-28T00:43:22.510013"
+    },
+    "rag_search_results": {
+      "success": true,
+      "total_searched": 3,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "fevers",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "fevers",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "fevers",
+                  "units": [
+                    {
+                      "u_id": "u_82069",
+                      "u_unit": {
+                        "d_diagnosis": "fevers",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "fevers"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:43:24.270192"
+          }
+        },
+        "s2": {
+          "symptom_text": "chills",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "chills",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "chills",
+                  "units": [
+                    {
+                      "u_id": "u_83502",
+                      "u_unit": {
+                        "d_diagnosis": "chills",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "chills"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:43:26.063750"
+          }
+        },
+        "s3": {
+          "symptom_text": "diarrhea",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "diarrhea",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "diarrhea",
+                  "units": [
+                    {
+                      "u_id": "u_35969",
+                      "u_unit": {
+                        "d_diagnosis": "diarrhea",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "diarrhea"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:43:27.974532"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "fevers",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "fevers",
+              "units": [
+                {
+                  "u_id": "u_82069",
+                  "u_unit": {
+                    "d_diagnosis": "fevers",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "fevers"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "chills",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "chills",
+              "units": [
+                {
+                  "u_id": "u_83502",
+                  "u_unit": {
+                    "d_diagnosis": "chills",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "chills"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "diarrhea",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "diarrhea",
+              "units": [
+                {
+                  "u_id": "u_35969",
+                  "u_unit": {
+                    "d_diagnosis": "diarrhea",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "diarrhea"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:43:27.974560"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "success": true,
+        "organ_name": "Intestinum tenue",
+        "anatomical_locations": [
+          "Jejunum",
+          "Ileum"
+        ],
+        "usage": {
+          "completion_tokens": 219,
+          "prompt_tokens": 2709,
+          "total_tokens": 2928,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "success": true,
+        "organ_name": "Small intestine (Intestinum tenue)",
+        "anatomical_locations": [
+          "Jejunum",
+          "Ileum",
+          "Duodenum"
+        ],
+        "usage": {
+          "completion_tokens": 227,
+          "prompt_tokens": 2559,
+          "total_tokens": 2786,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2368
+          },
+          "prompt_cache_hit_tokens": 2368,
+          "prompt_cache_miss_tokens": 191
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 20.0,
+      "average_precision": 0.0,
+      "average_recall": 0.0
+    }
+  },
+  "comparison": {
+    "baseline_score": 20.0,
+    "rag_enhanced_score": 20.0,
+    "improvement": 0.0
+  }
+}

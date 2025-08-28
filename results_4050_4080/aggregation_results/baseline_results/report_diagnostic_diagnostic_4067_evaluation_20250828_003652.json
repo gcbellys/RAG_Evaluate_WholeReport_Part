@@ -1,0 +1,1486 @@
+{
+  "report_id": "diagnostic_4067",
+  "timestamp": "2025-08-28T00:36:52.035651",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4067_symptom_0",
+      "diagnosis": "elevated troponin",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Head of the Pancreas",
+            "Tail of the Pancreas"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Antrum"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\",\n        \"Hepatic Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein",
+                    "Hepatic Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Aorta\",\n        \"Ascending Aorta\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\",\n        \"Pulmonary Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve",
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Aorta",
+                    "Ascending Aorta"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava",
+                    "Pulmonary Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve",
+            "Pericardium"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4067_symptom_1",
+      "diagnosis": "abdominal pain",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Head of the Pancreas",
+            "Tail of the Pancreas"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Antrum"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\",\n        \"Hepatic Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein",
+                    "Hepatic Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Aorta\",\n        \"Ascending Aorta\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\",\n        \"Pulmonary Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve",
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Aorta",
+                    "Ascending Aorta"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava",
+                    "Pulmonary Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve",
+            "Pericardium"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4067_symptom_2",
+      "diagnosis": "improved respiratory",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Head of the Pancreas",
+            "Tail of the Pancreas"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Antrum"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\",\n        \"Hepatic Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein",
+                    "Hepatic Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Aorta\",\n        \"Ascending Aorta\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\",\n        \"Pulmonary Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve",
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Aorta",
+                    "Ascending Aorta"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava",
+                    "Pulmonary Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve",
+            "Pericardium"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4067_symptom_3",
+      "diagnosis": "electrocardiogram changes",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Head of the Pancreas",
+            "Tail of the Pancreas"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Antrum"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\",\n        \"Hepatic Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein",
+                    "Hepatic Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Aorta\",\n        \"Ascending Aorta\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\",\n        \"Pulmonary Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve",
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Aorta",
+                    "Ascending Aorta"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava",
+                    "Pulmonary Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve",
+            "Pericardium"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4067_symptom_4",
+      "diagnosis": "congestive heart failure",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Head of the Pancreas",
+            "Tail of the Pancreas"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Antrum"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\",\n        \"Hepatic Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein",
+                    "Hepatic Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Aorta\",\n        \"Ascending Aorta\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\",\n        \"Pulmonary Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve",
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Aorta",
+                    "Ascending Aorta"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava",
+                    "Pulmonary Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve",
+            "Pericardium"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4067_symptom_5",
+      "diagnosis": "chest pressure",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Head of the Pancreas",
+            "Tail of the Pancreas"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Antrum"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\",\n        \"Hepatic Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein",
+                    "Hepatic Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Aorta\",\n        \"Ascending Aorta\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\",\n        \"Pulmonary Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve",
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Aorta",
+                    "Ascending Aorta"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava",
+                    "Pulmonary Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve",
+            "Pericardium"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4067_symptom_6",
+      "diagnosis": "shortness of breath",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Head of the Pancreas",
+            "Tail of the Pancreas"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Antrum"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\",\n        \"Hepatic Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein",
+                    "Hepatic Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Aorta\",\n        \"Ascending Aorta\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\",\n        \"Pulmonary Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve",
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Aorta",
+                    "Ascending Aorta"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava",
+                    "Pulmonary Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve",
+            "Pericardium"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4067_symptom_7",
+      "diagnosis": "hypotension",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Head of the Pancreas",
+            "Tail of the Pancreas"
+          ]
+        },
+        {
+          "organName": "Stomach (Gaster)",
+          "anatomicalLocations": [
+            "Gastric Mucosa",
+            "Gastric Antrum"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Portal Vein\",\n        \"Hepatic Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Portal Vein",
+                    "Hepatic Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Aorta\",\n        \"Ascending Aorta\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\",\n        \"Pulmonary Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve",
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Aorta",
+                    "Ascending Aorta"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Superior Vena Cava",
+                    "Inferior Vena Cava",
+                    "Pulmonary Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve",
+            "Pericardium"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

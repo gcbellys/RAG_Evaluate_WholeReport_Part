@@ -1,0 +1,180 @@
+{
+  "metadata": {
+    "report_id": "diagnostic_4071",
+    "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4071.json",
+    "processing_timestamp": "2025-08-27T23:59:20.916655",
+    "evaluation_timestamp": "2025-08-28T00:00:06.329476",
+    "total_symptoms": 3,
+    "valid_symptoms": 3,
+    "api_clients": [
+      "moonshot",
+      "deepseek"
+    ]
+  },
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4071_symptom_0",
+      "symptom_text": "denied claudication, stroke, syncope in the past secondary to hypoglycemia",
+      "expected_results": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 180,
+            "prompt_tokens": 2169,
+            "total_tokens": 2349,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 176,
+            "prompt_tokens": 2038,
+            "total_tokens": 2214,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 54
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4071_symptom_1",
+      "symptom_text": "substernal chest pain radiating to the neck and jaw with minimal activity",
+      "expected_results": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Left Anterior Descending Artery (LAD)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Circumflex Artery",
+            "Right Coronary Artery"
+          ]
+        }
+      ],
+      "total_u_units": 2,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 129,
+            "prompt_tokens": 2164,
+            "total_tokens": 2293,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 144,
+            "prompt_tokens": 2035,
+            "total_tokens": 2179,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 51
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4071_symptom_2",
+      "symptom_text": "closure of wrist and axillary lacerations",
+      "expected_results": [
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 206,
+            "prompt_tokens": 2159,
+            "total_tokens": 2365,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 129,
+            "prompt_tokens": 2030,
+            "total_tokens": 2159,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 46
+          },
+          "error": null
+        }
+      }
+    }
+  ],
+  "evaluation_summary": {
+    "total_api_calls": 6,
+    "successful_api_calls": 6,
+    "failed_api_calls": 0,
+    "average_overall_score": 52.9,
+    "average_precision": 41.7,
+    "average_recall": 46.7
+  }
+}

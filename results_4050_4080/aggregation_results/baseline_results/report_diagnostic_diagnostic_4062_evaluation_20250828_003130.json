@@ -1,0 +1,1554 @@
+{
+  "report_id": "diagnostic_4062",
+  "timestamp": "2025-08-28T00:31:30.707546",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4062_symptom_0",
+      "diagnosis": "headache",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Meninges",
+            "Cerebral Cortex"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Internal Carotid Artery"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Meninges\",\n        \"Cerebrospinal Fluid (CSF)\",\n        \"Blood Vessels\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Jugular Vein\",\n        \"Internal Jugular Vein\",\n        \"Cerebral Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Meninges",
+              "Cerebrospinal Fluid (CSF)",
+              "Blood Vessels"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Meninges",
+                    "Cerebrospinal Fluid (CSF)",
+                    "Blood Vessels"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Jugular Vein",
+                    "Internal Jugular Vein",
+                    "Cerebral Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Meninges",
+            "Cerebrospinal Fluid (CSF)",
+            "Blood Vessels"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4062_symptom_1",
+      "diagnosis": "nuchal",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Meninges",
+            "Cerebral Cortex"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Internal Carotid Artery"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Meninges\",\n        \"Cerebrospinal Fluid (CSF)\",\n        \"Blood Vessels\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Jugular Vein\",\n        \"Internal Jugular Vein\",\n        \"Cerebral Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Meninges",
+              "Cerebrospinal Fluid (CSF)",
+              "Blood Vessels"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Meninges",
+                    "Cerebrospinal Fluid (CSF)",
+                    "Blood Vessels"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Jugular Vein",
+                    "Internal Jugular Vein",
+                    "Cerebral Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Meninges",
+            "Cerebrospinal Fluid (CSF)",
+            "Blood Vessels"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4062_symptom_2",
+      "diagnosis": "pounding",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Meninges",
+            "Cerebral Cortex"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Internal Carotid Artery"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Meninges\",\n        \"Cerebrospinal Fluid (CSF)\",\n        \"Blood Vessels\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Jugular Vein\",\n        \"Internal Jugular Vein\",\n        \"Cerebral Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Meninges",
+              "Cerebrospinal Fluid (CSF)",
+              "Blood Vessels"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Meninges",
+                    "Cerebrospinal Fluid (CSF)",
+                    "Blood Vessels"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Jugular Vein",
+                    "Internal Jugular Vein",
+                    "Cerebral Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Meninges",
+            "Cerebrospinal Fluid (CSF)",
+            "Blood Vessels"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4062_symptom_3",
+      "diagnosis": "increased on straining",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Meninges",
+            "Cerebral Cortex"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Internal Carotid Artery"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Meninges\",\n        \"Cerebrospinal Fluid (CSF)\",\n        \"Blood Vessels\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Jugular Vein\",\n        \"Internal Jugular Vein\",\n        \"Cerebral Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Meninges",
+              "Cerebrospinal Fluid (CSF)",
+              "Blood Vessels"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Meninges",
+                    "Cerebrospinal Fluid (CSF)",
+                    "Blood Vessels"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Jugular Vein",
+                    "Internal Jugular Vein",
+                    "Cerebral Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Meninges",
+            "Cerebrospinal Fluid (CSF)",
+            "Blood Vessels"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4062_symptom_4",
+      "diagnosis": "blood pressure of 205/114",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Meninges",
+            "Cerebral Cortex"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Internal Carotid Artery"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Meninges\",\n        \"Cerebrospinal Fluid (CSF)\",\n        \"Blood Vessels\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Jugular Vein\",\n        \"Internal Jugular Vein\",\n        \"Cerebral Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Meninges",
+              "Cerebrospinal Fluid (CSF)",
+              "Blood Vessels"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Meninges",
+                    "Cerebrospinal Fluid (CSF)",
+                    "Blood Vessels"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Jugular Vein",
+                    "Internal Jugular Vein",
+                    "Cerebral Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Meninges",
+            "Cerebrospinal Fluid (CSF)",
+            "Blood Vessels"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4062_symptom_5",
+      "diagnosis": "blood pressure came down to 150/80's",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Meninges",
+            "Cerebral Cortex"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Internal Carotid Artery"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Meninges\",\n        \"Cerebrospinal Fluid (CSF)\",\n        \"Blood Vessels\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Jugular Vein\",\n        \"Internal Jugular Vein\",\n        \"Cerebral Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Meninges",
+              "Cerebrospinal Fluid (CSF)",
+              "Blood Vessels"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Meninges",
+                    "Cerebrospinal Fluid (CSF)",
+                    "Blood Vessels"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Jugular Vein",
+                    "Internal Jugular Vein",
+                    "Cerebral Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Meninges",
+            "Cerebrospinal Fluid (CSF)",
+            "Blood Vessels"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4062_symptom_6",
+      "diagnosis": "severe headache on friday",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Meninges",
+            "Cerebral Cortex"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Internal Carotid Artery"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Meninges\",\n        \"Cerebrospinal Fluid (CSF)\",\n        \"Blood Vessels\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Jugular Vein\",\n        \"Internal Jugular Vein\",\n        \"Cerebral Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Meninges",
+              "Cerebrospinal Fluid (CSF)",
+              "Blood Vessels"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Meninges",
+                    "Cerebrospinal Fluid (CSF)",
+                    "Blood Vessels"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Jugular Vein",
+                    "Internal Jugular Vein",
+                    "Cerebral Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Meninges",
+            "Cerebrospinal Fluid (CSF)",
+            "Blood Vessels"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4062_symptom_7",
+      "diagnosis": "headache resolved by itself",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Meninges",
+            "Cerebral Cortex"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Internal Carotid Artery"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Meninges\",\n        \"Cerebrospinal Fluid (CSF)\",\n        \"Blood Vessels\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Jugular Vein\",\n        \"Internal Jugular Vein\",\n        \"Cerebral Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Meninges",
+              "Cerebrospinal Fluid (CSF)",
+              "Blood Vessels"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Meninges",
+                    "Cerebrospinal Fluid (CSF)",
+                    "Blood Vessels"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Jugular Vein",
+                    "Internal Jugular Vein",
+                    "Cerebral Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Meninges",
+            "Cerebrospinal Fluid (CSF)",
+            "Blood Vessels"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4062_symptom_8",
+      "diagnosis": "recurred on sunday",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Meninges",
+            "Cerebral Cortex"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Internal Carotid Artery"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Meninges\",\n        \"Cerebrospinal Fluid (CSF)\",\n        \"Blood Vessels\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Jugular Vein\",\n        \"Internal Jugular Vein\",\n        \"Cerebral Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Meninges",
+              "Cerebrospinal Fluid (CSF)",
+              "Blood Vessels"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Meninges",
+                    "Cerebrospinal Fluid (CSF)",
+                    "Blood Vessels"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Jugular Vein",
+                    "Internal Jugular Vein",
+                    "Cerebral Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Meninges",
+            "Cerebrospinal Fluid (CSF)",
+            "Blood Vessels"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4062_symptom_9",
+      "diagnosis": "recurred on monday",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Meninges",
+            "Cerebral Cortex"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Internal Carotid Artery"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Meninges\",\n        \"Cerebrospinal Fluid (CSF)\",\n        \"Blood Vessels\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Jugular Vein\",\n        \"Internal Jugular Vein\",\n        \"Cerebral Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Meninges",
+              "Cerebrospinal Fluid (CSF)",
+              "Blood Vessels"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Meninges",
+                    "Cerebrospinal Fluid (CSF)",
+                    "Blood Vessels"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Jugular Vein",
+                    "Internal Jugular Vein",
+                    "Cerebral Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Meninges",
+            "Cerebrospinal Fluid (CSF)",
+            "Blood Vessels"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4062_symptom_10",
+      "diagnosis": "blood in the csf",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Meninges",
+            "Cerebral Cortex"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Internal Carotid Artery"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Meninges\",\n        \"Cerebrospinal Fluid (CSF)\",\n        \"Blood Vessels\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Jugular Vein\",\n        \"Internal Jugular Vein\",\n        \"Cerebral Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Meninges",
+              "Cerebrospinal Fluid (CSF)",
+              "Blood Vessels"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Meninges",
+                    "Cerebrospinal Fluid (CSF)",
+                    "Blood Vessels"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Jugular Vein",
+                    "Internal Jugular Vein",
+                    "Cerebral Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Meninges",
+            "Cerebrospinal Fluid (CSF)",
+            "Blood Vessels"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4062_symptom_11",
+      "diagnosis": "headache recurred",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Meninges",
+            "Cerebral Cortex"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Internal Carotid Artery"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Meninges\",\n        \"Cerebrospinal Fluid (CSF)\",\n        \"Blood Vessels\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Jugular Vein\",\n        \"Internal Jugular Vein\",\n        \"Cerebral Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Meninges",
+              "Cerebrospinal Fluid (CSF)",
+              "Blood Vessels"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Meninges",
+                    "Cerebrospinal Fluid (CSF)",
+                    "Blood Vessels"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Cerebral Arteries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Vein (Vena)",
+                  "anatomicalLocations": [
+                    "Jugular Vein",
+                    "Internal Jugular Vein",
+                    "Cerebral Veins"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Meninges",
+            "Cerebrospinal Fluid (CSF)",
+            "Blood Vessels"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,661 @@
+{
+  "metadata": {
+    "report_id": "diagnostic_4051",
+    "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4051.json",
+    "processing_timestamp": "2025-08-27T23:18:33.461621",
+    "evaluation_timestamp": "2025-08-27T23:20:46.151768",
+    "total_symptoms": 11,
+    "valid_symptoms": 11,
+    "api_clients": [
+      "moonshot",
+      "deepseek"
+    ]
+  },
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4051_symptom_0",
+      "symptom_text": "stools were guaiac negative",
+      "expected_results": [
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 108,
+            "prompt_tokens": 2157,
+            "total_tokens": 2265,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 169,
+            "prompt_tokens": 2028,
+            "total_tokens": 2197,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 44
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_1",
+      "symptom_text": "acute kidney failure",
+      "expected_results": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 76,
+            "prompt_tokens": 2153,
+            "total_tokens": 2229,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 83,
+            "prompt_tokens": 2024,
+            "total_tokens": 2107,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 40
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_2",
+      "symptom_text": "patient is currently on tube feeds via dophoff, promote with fiber at 100 cc/hr",
+      "expected_results": [
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 196,
+            "prompt_tokens": 2168,
+            "total_tokens": 2364,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 165,
+            "prompt_tokens": 2040,
+            "total_tokens": 2205,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 56
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_3",
+      "symptom_text": "post intubation tracheal stenosis",
+      "expected_results": [
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 63,
+            "prompt_tokens": 2159,
+            "total_tokens": 2222,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 110,
+            "prompt_tokens": 2027,
+            "total_tokens": 2137,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 43
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_4",
+      "symptom_text": "ventilator associated pneumonia",
+      "expected_results": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveolar Sacs",
+            "Bronchopulmonary Segments"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 71,
+            "prompt_tokens": 2155,
+            "total_tokens": 2226,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 149,
+            "prompt_tokens": 2026,
+            "total_tokens": 2175,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 42
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_5",
+      "symptom_text": "renal function was preserved",
+      "expected_results": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        }
+      ],
+      "total_u_units": 8,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 65,
+            "prompt_tokens": 2154,
+            "total_tokens": 2219,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 83,
+            "prompt_tokens": 2025,
+            "total_tokens": 2108,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 41
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_6",
+      "symptom_text": "mild regional left ventricular systolic dysfunction",
+      "expected_results": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 85,
+            "prompt_tokens": 2159,
+            "total_tokens": 2244,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 76,
+            "prompt_tokens": 2028,
+            "total_tokens": 2104,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 44
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_7",
+      "symptom_text": "cr was elevated on admission, recovered to baseline with hydration, then he developed arf again in the setting of hypotension and septic shock. he has since returned to a his baseline of cr 0.8 at discharge",
+      "expected_results": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        }
+      ],
+      "total_u_units": 8,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 114,
+            "prompt_tokens": 2196,
+            "total_tokens": 2310,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 171,
+            "prompt_tokens": 2064,
+            "total_tokens": 2235,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 2048
+            },
+            "prompt_cache_hit_tokens": 2048,
+            "prompt_cache_miss_tokens": 16
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_8",
+      "symptom_text": "hypercarbic hypoxic respiratory failure",
+      "expected_results": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 120,
+            "prompt_tokens": 2158,
+            "total_tokens": 2278,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 223,
+            "prompt_tokens": 2028,
+            "total_tokens": 2251,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 44
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_9",
+      "symptom_text": "gallbladder sludge",
+      "expected_results": [
+        {
+          "organName": "Gallbladder (Vesica biliaris)",
+          "anatomicalLocations": [
+            "Gallbladder Body",
+            "Gallbladder Mucosa"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 63,
+            "prompt_tokens": 2156,
+            "total_tokens": 2219,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 133,
+            "prompt_tokens": 2024,
+            "total_tokens": 2157,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 40
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4051_symptom_10",
+      "symptom_text": "ruq u/s x 2 not consistent with acalculous cholecystitis",
+      "expected_results": [
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 121,
+            "prompt_tokens": 2168,
+            "total_tokens": 2289,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 193,
+            "prompt_tokens": 2038,
+            "total_tokens": 2231,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 54
+          },
+          "error": null
+        }
+      }
+    }
+  ],
+  "evaluation_summary": {
+    "total_api_calls": 22,
+    "successful_api_calls": 22,
+    "failed_api_calls": 0,
+    "average_overall_score": 46.4,
+    "average_precision": 31.4,
+    "average_recall": 45.5
+  }
+}

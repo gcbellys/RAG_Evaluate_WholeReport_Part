@@ -1,0 +1,613 @@
+{
+  "report_number": "diagnostic_4056",
+  "timestamp": "2025-08-28T00:25:13.108268",
+  "baseline_method": {
+    "aggregated_symptoms": "transferred to the csru in stable condition on epinephrine, neosynephrine and propofol drips; went into afib on pod #3 and converted on amiodarone; obstructive sleep apnea; developed rue thrombophlebitis at site of a peripheral iv; htn renal calculi",
+    "expected_results": [
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Aortic Valve",
+          "Left Ventricle (LV)",
+          "Aortic Root & Ascending Aorta"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Left Atrium (LA)",
+          "Right Atrium (RA)",
+          "Interatrial Septum (IAS)"
+        ]
+      },
+      {
+        "organName": "Nose (Nasus)",
+        "anatomicalLocations": [
+          "Nasal Cavity",
+          "Nasal Turbinates",
+          "Inferior Turbinate"
+        ]
+      },
+      {
+        "organName": "Pharynx",
+        "anatomicalLocations": [
+          "Oropharynx",
+          "Palatine Tonsils",
+          "Soft Palate"
+        ]
+      },
+      {
+        "organName": "Vein (Vena)",
+        "anatomicalLocations": [
+          "Superior Vena Cava",
+          "Subclavian Vein",
+          "Brachiocephalic Vein"
+        ]
+      },
+      {
+        "organName": "Kidney (Ren)",
+        "anatomicalLocations": [
+          "Renal Pelvis",
+          "Renal Calyces (Major & Minor)",
+          "Renal Cortex"
+        ]
+      }
+    ],
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "success": true,
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Atrium (LA)",
+          "Right Atrium (RA)"
+        ],
+        "usage": {
+          "completion_tokens": 177,
+          "prompt_tokens": 2220,
+          "total_tokens": 2397,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "success": true,
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Atrium (LA)",
+          "Right Atrium (RA)",
+          "Coronary Artery"
+        ],
+        "usage": {
+          "completion_tokens": 294,
+          "prompt_tokens": 2088,
+          "total_tokens": 2382,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 1984
+          },
+          "prompt_cache_hit_tokens": 1984,
+          "prompt_cache_miss_tokens": 104
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 57.8,
+      "average_precision": 83.3,
+      "average_recall": 11.1
+    }
+  },
+  "rag_enhanced_method": {
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"transferred to the csru in stable condition on epinephrine, neosynephrine and propofol drips\",\n            \"primary_organ\": \"心血管系统\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"went into afib on pod #3 and converted on amiodarone\",\n            \"primary_organ\": \"心血管系统\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"obstructive sleep apnea\",\n            \"primary_organ\": \"呼吸系统\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"developed rue thrombophlebitis at site of a peripheral iv\",\n            \"primary_organ\": \"血管系统\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"htn renal calculi\",\n            \"primary_organ\": \"泌尿系统\",\n            \"severity\": \"中等\"\n        }\n    ],\n    \"total_count\": 5,\n    \"reasoning\": \"根据症状描述，将症状分为5个独立的症状单元。每个症状单元描述了一个特定的症状，涉及不同的器官系统，包括心血管系统、呼吸系统、血管系统和泌尿系统。\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "transferred to the csru in stable condition on epinephrine, neosynephrine and propofol drips",
+              "primary_organ": "心血管系统",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "went into afib on pod #3 and converted on amiodarone",
+              "primary_organ": "心血管系统",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "obstructive sleep apnea",
+              "primary_organ": "呼吸系统",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "developed rue thrombophlebitis at site of a peripheral iv",
+              "primary_organ": "血管系统",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "htn renal calculi",
+              "primary_organ": "泌尿系统",
+              "severity": "中等"
+            }
+          ],
+          "total_count": 5,
+          "reasoning": "根据症状描述，将症状分为5个独立的症状单元。每个症状单元描述了一个特定的症状，涉及不同的器官系统，包括心血管系统、呼吸系统、血管系统和泌尿系统。"
+        }
+      },
+      "timestamp": "2025-08-28T00:24:40.775914"
+    },
+    "rag_search_results": {
+      "success": true,
+      "total_searched": 5,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "transferred to the csru in stable condition on epinephrine, neosynephrine and propofol drips",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "transferred to the csru in stable condition on epinephrine, neosynephrine and propofol drips",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "transferred to the csru in stable condition on epinephrine, neosynephrine and propofol drips",
+                  "units": [
+                    {
+                      "u_id": "u_98544",
+                      "u_unit": {
+                        "d_diagnosis": "transferred to csru in stable condition on insulin, epinephrine, propofol, and neosynephrine drips",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "transferred to csru in stable condition on insulin, epinephrine, propofol, and neosynephrine drips"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "transferred to the csru in stable condition on epinephrine, neosynephrine and propofol drips",
+                  "units": [
+                    {
+                      "u_id": "u_30128",
+                      "u_unit": {
+                        "d_diagnosis": "transferred to the csru in stable condition on titrated epinephrine and propofol drips",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "transferred to the csru in stable condition on titrated epinephrine and propofol drips"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "transferred to the csru in stable condition on epinephrine, neosynephrine and propofol drips",
+                  "units": [
+                    {
+                      "u_id": "u_84791",
+                      "u_unit": {
+                        "d_diagnosis": "transferred to the csru in stable condition on titrated neosynephrine and propofol drips",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "transferred to the csru in stable condition on titrated neosynephrine and propofol drips"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:24:42.560143"
+          }
+        },
+        "s2": {
+          "symptom_text": "went into afib on pod #3 and converted on amiodarone",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "went into afib on pod #3 and converted on amiodarone",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "went into afib on pod #3 and converted on amiodarone",
+                  "units": [
+                    {
+                      "u_id": "u_22803",
+                      "u_unit": {
+                        "d_diagnosis": "brief episode of post op afib which converted with amiodarone",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "brief episode of post op afib which converted with amiodarone"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "went into afib on pod #3 and converted on amiodarone",
+                  "units": [
+                    {
+                      "u_id": "u_18491",
+                      "u_unit": {
+                        "d_diagnosis": "he went into afib on the floor and was treated and started on amiodarone",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "he went into afib on the floor and was treated and started on amiodarone"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "went into afib on pod #3 and converted on amiodarone",
+                  "units": [
+                    {
+                      "u_id": "u_23802",
+                      "u_unit": {
+                        "d_diagnosis": "went into rapid afib and was treated with amiodarone on pod #2 and chest tubes also removed",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "went into rapid afib and was treated with amiodarone on pod #2 and chest tubes also removed"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:24:44.607164"
+          }
+        },
+        "s3": {
+          "symptom_text": "obstructive sleep apnea",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "obstructive sleep apnea",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "obstructive sleep apnea",
+                  "units": [
+                    {
+                      "u_id": "u_67755",
+                      "u_unit": {
+                        "d_diagnosis": "obstructive sleep apnea",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "obstructive sleep apnea"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:24:46.356885"
+          }
+        },
+        "s4": {
+          "symptom_text": "developed rue thrombophlebitis at site of a peripheral iv",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "developed rue thrombophlebitis at site of a peripheral iv",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:24:48.114259"
+          }
+        },
+        "s5": {
+          "symptom_text": "htn renal calculi",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "htn renal calculi",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "htn renal calculi",
+                  "units": [
+                    {
+                      "u_id": "u_92638",
+                      "u_unit": {
+                        "d_diagnosis": "renal calculi",
+                        "o_organ": {
+                          "organName": "Kidney (Ren)",
+                          "anatomicalLocations": [
+                            "Kidney (Ren)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "renal calculi"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:24:49.974971"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "transferred to the csru in stable condition on epinephrine, neosynephrine and propofol drips",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "transferred to the csru in stable condition on epinephrine, neosynephrine and propofol drips",
+              "units": [
+                {
+                  "u_id": "u_98544",
+                  "u_unit": {
+                    "d_diagnosis": "transferred to csru in stable condition on insulin, epinephrine, propofol, and neosynephrine drips",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "transferred to csru in stable condition on insulin, epinephrine, propofol, and neosynephrine drips"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "transferred to the csru in stable condition on epinephrine, neosynephrine and propofol drips",
+              "units": [
+                {
+                  "u_id": "u_30128",
+                  "u_unit": {
+                    "d_diagnosis": "transferred to the csru in stable condition on titrated epinephrine and propofol drips",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "transferred to the csru in stable condition on titrated epinephrine and propofol drips"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "transferred to the csru in stable condition on epinephrine, neosynephrine and propofol drips",
+              "units": [
+                {
+                  "u_id": "u_84791",
+                  "u_unit": {
+                    "d_diagnosis": "transferred to the csru in stable condition on titrated neosynephrine and propofol drips",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "transferred to the csru in stable condition on titrated neosynephrine and propofol drips"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "went into afib on pod #3 and converted on amiodarone",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "went into afib on pod #3 and converted on amiodarone",
+              "units": [
+                {
+                  "u_id": "u_22803",
+                  "u_unit": {
+                    "d_diagnosis": "brief episode of post op afib which converted with amiodarone",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "brief episode of post op afib which converted with amiodarone"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "went into afib on pod #3 and converted on amiodarone",
+              "units": [
+                {
+                  "u_id": "u_18491",
+                  "u_unit": {
+                    "d_diagnosis": "he went into afib on the floor and was treated and started on amiodarone",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "he went into afib on the floor and was treated and started on amiodarone"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "went into afib on pod #3 and converted on amiodarone",
+              "units": [
+                {
+                  "u_id": "u_23802",
+                  "u_unit": {
+                    "d_diagnosis": "went into rapid afib and was treated with amiodarone on pod #2 and chest tubes also removed",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "went into rapid afib and was treated with amiodarone on pod #2 and chest tubes also removed"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "obstructive sleep apnea",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "obstructive sleep apnea",
+              "units": [
+                {
+                  "u_id": "u_67755",
+                  "u_unit": {
+                    "d_diagnosis": "obstructive sleep apnea",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "obstructive sleep apnea"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "developed rue thrombophlebitis at site of a peripheral iv",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "htn renal calculi",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "htn renal calculi",
+              "units": [
+                {
+                  "u_id": "u_92638",
+                  "u_unit": {
+                    "d_diagnosis": "renal calculi",
+                    "o_organ": {
+                      "organName": "Kidney (Ren)",
+                      "anatomicalLocations": [
+                        "Kidney (Ren)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "renal calculi"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:24:49.975000"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "success": true,
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Atrium (LA)",
+          "Right Atrium (RA)"
+        ],
+        "usage": {
+          "completion_tokens": 226,
+          "prompt_tokens": 2845,
+          "total_tokens": 3071,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "success": true,
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Atrium (LA)",
+          "Right Atrium (RA)",
+          "Coronary Artery"
+        ],
+        "usage": {
+          "completion_tokens": 340,
+          "prompt_tokens": 2685,
+          "total_tokens": 3025,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2368
+          },
+          "prompt_cache_hit_tokens": 2368,
+          "prompt_cache_miss_tokens": 317
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 57.8,
+      "average_precision": 83.3,
+      "average_recall": 11.1
+    }
+  },
+  "comparison": {
+    "baseline_score": 57.8,
+    "rag_enhanced_score": 57.8,
+    "improvement": 0.0
+  }
+}

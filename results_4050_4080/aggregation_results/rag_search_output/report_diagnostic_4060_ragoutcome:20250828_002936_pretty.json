@@ -1,0 +1,369 @@
+[
+  {
+    "query": "nephrostomy site is patent and intact however, very tender to palpation",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "pt incontinent of moderate amounts of brown loose stool x 3",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "pt c/o constant urge to urinate",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "pt c/o constant urge to urinate",
+        "units": [
+          {
+            "u_id": "u_85673",
+            "u_unit": {
+              "d_diagnosis": "pt voiding spontanteously, at times having difficulty with urinal",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "pt voiding spontanteously, at times having difficulty with urinal"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "very labored breathing",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "very labored breathing",
+        "units": [
+          {
+            "u_id": "u_32040",
+            "u_unit": {
+              "d_diagnosis": "labored breathing",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "labored breathing"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "very labored breathing",
+        "units": [
+          {
+            "u_id": "u_82657",
+            "u_unit": {
+              "d_diagnosis": "increased labored breathing",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "increased labored breathing"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "cvp 4-21",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "cvp 4-21",
+        "units": [
+          {
+            "u_id": "u_34839",
+            "u_unit": {
+              "d_diagnosis": "cvp 17-19",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "cvp 17-19"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "cvp 4-21",
+        "units": [
+          {
+            "u_id": "u_5037",
+            "u_unit": {
+              "d_diagnosis": "cvp=16-19",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "cvp=16-19"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "pt has a very dry nonproductive cough",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "pt has a very dry nonproductive cough",
+        "units": [
+          {
+            "u_id": "u_55684",
+            "u_unit": {
+              "d_diagnosis": "pt with weak non-productive cough",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "pt with weak non-productive cough"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "pt has a very dry nonproductive cough",
+        "units": [
+          {
+            "u_id": "u_1734",
+            "u_unit": {
+              "d_diagnosis": "non-productive cough over this time period",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "non-productive cough over this time period"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "pt has a very dry nonproductive cough",
+        "units": [
+          {
+            "u_id": "u_85559",
+            "u_unit": {
+              "d_diagnosis": "nonproductive dry cough",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "nonproductive dry cough"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "sudden pain in luq (nephrostomy site)in afternoon",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "sbp 129-157",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "sbp 129-157",
+        "units": [
+          {
+            "u_id": "u_20211",
+            "u_unit": {
+              "d_diagnosis": "sbp 109-176",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "sbp 109-176"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "sbp 129-157",
+        "units": [
+          {
+            "u_id": "u_94904",
+            "u_unit": {
+              "d_diagnosis": "sbp 120",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "sbp 120"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "sbp 129-157",
+        "units": [
+          {
+            "u_id": "u_55872",
+            "u_unit": {
+              "d_diagnosis": "sbp=92-128",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "sbp=92-128"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "swallowing small amounts of liquid in am...by afternoon unable to swallow liquids",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "patent foley draining clear yellow urine",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "patent foley draining clear yellow urine",
+        "units": [
+          {
+            "u_id": "u_18019",
+            "u_unit": {
+              "d_diagnosis": "foley patent and draining clear, yellow urine",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "foley patent and draining clear, yellow urine"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "patent foley draining clear yellow urine",
+        "units": [
+          {
+            "u_id": "u_97161",
+            "u_unit": {
+              "d_diagnosis": "foley patent and draining adequate amounts of clear, yellow urine",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "foley patent and draining adequate amounts of clear, yellow urine"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "patent foley draining clear yellow urine",
+        "units": [
+          {
+            "u_id": "u_26328",
+            "u_unit": {
+              "d_diagnosis": "foley patent and draining clear, yellow urine. uo adequate",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "foley patent and draining clear, yellow urine. uo adequate"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "pt. denied pain all morning and reported sudden pain in luq (nephrostomy site)in afternoon",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "hr 85-100 nsr",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "hr 85-100 nsr",
+        "units": [
+          {
+            "u_id": "u_20174",
+            "u_unit": {
+              "d_diagnosis": "hr 85",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "hr 85"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "hr 85-100 nsr",
+        "units": [
+          {
+            "u_id": "u_90988",
+            "u_unit": {
+              "d_diagnosis": "hr has been 70-90, nsr",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "hr has been 70-90, nsr"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+]

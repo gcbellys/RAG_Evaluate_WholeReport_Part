@@ -1,0 +1,282 @@
+{
+  "metadata": {
+    "report_id": "diagnostic_4056",
+    "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4056.json",
+    "processing_timestamp": "2025-08-27T23:28:50.771326",
+    "evaluation_timestamp": "2025-08-27T23:30:00.180053",
+    "total_symptoms": 5,
+    "valid_symptoms": 5,
+    "api_clients": [
+      "moonshot",
+      "deepseek"
+    ]
+  },
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4056_symptom_0",
+      "symptom_text": "transferred to the csru in stable condition on epinephrine, neosynephrine and propofol drips",
+      "expected_results": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Left Ventricle (LV)",
+            "Aortic Root & Ascending Aorta"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 163,
+            "prompt_tokens": 2175,
+            "total_tokens": 2338,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 180,
+            "prompt_tokens": 2046,
+            "total_tokens": 2226,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 62
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4056_symptom_1",
+      "symptom_text": "went into afib on pod #3 and converted on amiodarone",
+      "expected_results": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Atrium (LA)",
+            "Right Atrium (RA)",
+            "Interatrial Septum (IAS)"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 78,
+            "prompt_tokens": 2165,
+            "total_tokens": 2243,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 84,
+            "prompt_tokens": 2036,
+            "total_tokens": 2120,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 52
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4056_symptom_2",
+      "symptom_text": "obstructive sleep apnea",
+      "expected_results": [
+        {
+          "organName": "Nose (Nasus)",
+          "anatomicalLocations": [
+            "Nasal Cavity",
+            "Nasal Turbinates",
+            "Inferior Turbinate"
+          ]
+        },
+        {
+          "organName": "Pharynx",
+          "anatomicalLocations": [
+            "Oropharynx",
+            "Palatine Tonsils",
+            "Soft Palate"
+          ]
+        }
+      ],
+      "total_u_units": 2,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 145,
+            "prompt_tokens": 2156,
+            "total_tokens": 2301,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 267,
+            "prompt_tokens": 2026,
+            "total_tokens": 2293,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 42
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4056_symptom_3",
+      "symptom_text": "developed rue thrombophlebitis at site of a peripheral iv",
+      "expected_results": [
+        {
+          "organName": "Vein (Vena)",
+          "anatomicalLocations": [
+            "Superior Vena Cava",
+            "Subclavian Vein",
+            "Brachiocephalic Vein"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 62,
+            "prompt_tokens": 2165,
+            "total_tokens": 2227,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 135,
+            "prompt_tokens": 2034,
+            "total_tokens": 2169,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 50
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4056_symptom_4",
+      "symptom_text": "htn renal calculi",
+      "expected_results": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)",
+            "Renal Cortex"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 157,
+            "prompt_tokens": 2155,
+            "total_tokens": 2312,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 180,
+            "prompt_tokens": 2026,
+            "total_tokens": 2206,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 42
+          },
+          "error": null
+        }
+      }
+    }
+  ],
+  "evaluation_summary": {
+    "total_api_calls": 10,
+    "successful_api_calls": 10,
+    "failed_api_calls": 0,
+    "average_overall_score": 60.3,
+    "average_precision": 51.7,
+    "average_recall": 51.7
+  }
+}

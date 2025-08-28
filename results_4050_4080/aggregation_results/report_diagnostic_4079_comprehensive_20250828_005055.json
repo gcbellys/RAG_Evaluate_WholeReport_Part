@@ -1,0 +1,1052 @@
+{
+  "report_id": "diagnostic_4079",
+  "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4079.json",
+  "original_symptoms_count": 7,
+  "baseline": {
+    "aggregated_symptoms": "seizure at time of trauma work-up; place dry guaze once a day until site completely scabbed over; patient intubated for airway protection; left pneumothorax and then right pneumothorax cleared on chest x-ray; keep dressing in place on old right chest tube site for 1 more day before removing; continue with dry gauze over left chest wound and change once a day until completely scabbed over; bilateral chest tubes placed for bilateral pnemothraces",
+    "expected_results": [
+      {
+        "organName": "Brain",
+        "anatomicalLocations": [
+          "Cerebral Cortex",
+          "Temporal Lobe"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Right Lung",
+          "Pleural Cavity"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Trachea",
+          "Bronchus"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Left Lung",
+          "Right Lung",
+          "Pleural Cavity"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Left Lung",
+          "Pleural Cavity"
+        ]
+      }
+    ],
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Left Lung\",\n        \"Right Lung\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Temporal Lobe"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Cerebral Cortex",
+                  "Temporal Lobe"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Left Lung",
+                  "Right Lung",
+                  "Pleural Cavity"
+                ],
+                "relevance": "High"
+              }
+            ]
+          }
+        },
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Temporal Lobe"
+        ],
+        "usage": {
+          "completion_tokens": 118,
+          "prompt_tokens": 2252,
+          "total_tokens": 2370,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "evaluation": {
+          "overall_score": 71.4,
+          "precision": 100.0,
+          "recall": 28.6,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 2/2 (100.0%); Recall(召回率): 2/7 (28.6%); 过度生成惩罚: 100.0%"
+        }
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleural Cavity\",\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Visceral Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleural Cavity",
+            "Alveoli",
+            "Bronchioles",
+            "Visceral Pleura"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Pleural Cavity",
+                  "Alveoli",
+                  "Bronchioles",
+                  "Visceral Pleura"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Cerebral Cortex",
+                  "Brainstem",
+                  "Temporal Lobe"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Trachea",
+                "anatomicalLocations": [
+                  "Trachea"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Pleural Cavity",
+          "Alveoli",
+          "Bronchioles",
+          "Visceral Pleura"
+        ],
+        "usage": {
+          "completion_tokens": 164,
+          "prompt_tokens": 2121,
+          "total_tokens": 2285,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 1984
+          },
+          "prompt_cache_hit_tokens": 1984,
+          "prompt_cache_miss_tokens": 137
+        },
+        "model": "deepseek-chat",
+        "evaluation": {
+          "overall_score": 35.7,
+          "precision": 25.0,
+          "recall": 14.3,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 1/4 (25.0%); Recall(召回率): 1/7 (14.3%); 过度生成惩罚: 100.0%"
+        }
+      }
+    },
+    "evaluation": {
+      "report_id": "diagnostic_4079",
+      "total_symptoms": 7,
+      "valid_symptoms": 7,
+      "evaluation_timestamp": "2025-08-28T00:50:14.168301",
+      "symptom_evaluations": [
+        {
+          "symptom_id": "aggregated_symptoms",
+          "symptom_text": "seizure at time of trauma work-up; place dry guaze once a day until site completely scabbed over; patient intubated for airway protection; left pneumothorax and then right pneumothorax cleared on chest x-ray; keep dressing in place on old right chest tube site for 1 more day before removing; continue with dry gauze over left chest wound and change once a day until completely scabbed over; bilateral chest tubes placed for bilateral pnemothraces",
+          "expected_results": [
+            {
+              "organName": "Brain",
+              "anatomicalLocations": [
+                "Cerebral Cortex",
+                "Temporal Lobe"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Right Lung",
+                "Pleural Cavity"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Trachea",
+                "Bronchus"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Left Lung",
+                "Right Lung",
+                "Pleural Cavity"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Left Lung",
+                "Pleural Cavity"
+              ]
+            }
+          ],
+          "api_evaluations": {
+            "moonshot": {
+              "overall_score": 71.4,
+              "precision": 100.0,
+              "recall": 28.6,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 2/2 (100.0%); Recall(召回率): 2/7 (28.6%); 过度生成惩罚: 100.0%"
+            },
+            "deepseek": {
+              "overall_score": 35.7,
+              "precision": 25.0,
+              "recall": 14.3,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 1/4 (25.0%); Recall(召回率): 1/7 (14.3%); 过度生成惩罚: 100.0%"
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total_api_calls": 2,
+        "successful_api_calls": 2,
+        "failed_api_calls": 0,
+        "average_overall_score": 53.6,
+        "average_precision": 62.5,
+        "average_recall": 21.5
+      }
+    }
+  },
+  "rag_search": {
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"seizure at time of trauma work-up\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"place dry guaze once a day until site completely scabbed over\",\n            \"primary_organ\": \"skin\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"patient intubated for airway protection\",\n            \"primary_organ\": \"respiratory system\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"left pneumothorax\",\n            \"primary_organ\": \"lung\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"right pneumothorax\",\n            \"primary_organ\": \"lung\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"keep dressing in place on old right chest tube site for 1 more day before removing\",\n            \"primary_organ\": \"skin\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"continue with dry gauze over left chest wound and change once a day until completely scabbed over\",\n            \"primary_organ\": \"skin\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s8\",\n            \"symptom_text\": \"bilateral chest tubes placed for bilateral pneumothoraces\",\n            \"primary_organ\": \"lung\",\n            \"severity\": \"severe\"\n        }\n    ],\n    \"total_count\": 8,\n    \"reasoning\": \"The given text describes a patient with multiple symptoms related to trauma and respiratory issues. I have split the text into 8 separate symptoms based on the different medical conditions and procedures mentioned. Each symptom is associated with a specific organ system (brain, skin, respiratory system, lung) and has been assigned a severity level (moderate or severe) based on the context provided.\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "seizure at time of trauma work-up",
+              "primary_organ": "brain",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "place dry guaze once a day until site completely scabbed over",
+              "primary_organ": "skin",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "patient intubated for airway protection",
+              "primary_organ": "respiratory system",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "left pneumothorax",
+              "primary_organ": "lung",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "right pneumothorax",
+              "primary_organ": "lung",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "keep dressing in place on old right chest tube site for 1 more day before removing",
+              "primary_organ": "skin",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s7",
+              "symptom_text": "continue with dry gauze over left chest wound and change once a day until completely scabbed over",
+              "primary_organ": "skin",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s8",
+              "symptom_text": "bilateral chest tubes placed for bilateral pneumothoraces",
+              "primary_organ": "lung",
+              "severity": "severe"
+            }
+          ],
+          "total_count": 8,
+          "reasoning": "The given text describes a patient with multiple symptoms related to trauma and respiratory issues. I have split the text into 8 separate symptoms based on the different medical conditions and procedures mentioned. Each symptom is associated with a specific organ system (brain, skin, respiratory system, lung) and has been assigned a severity level (moderate or severe) based on the context provided."
+        }
+      },
+      "timestamp": "2025-08-28T00:50:24.553869"
+    },
+    "search_results": {
+      "success": true,
+      "total_searched": 8,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "seizure at time of trauma work-up",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "seizure at time of trauma work-up",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:50:26.586467"
+          }
+        },
+        "s2": {
+          "symptom_text": "place dry guaze once a day until site completely scabbed over",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "place dry guaze once a day until site completely scabbed over",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:50:28.346443"
+          }
+        },
+        "s3": {
+          "symptom_text": "patient intubated for airway protection",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "patient intubated for airway protection",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "patient intubated for airway protection",
+                  "units": [
+                    {
+                      "u_id": "u_28485",
+                      "u_unit": {
+                        "d_diagnosis": "patient was intubated for airway protection",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "patient was intubated for airway protection"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "patient intubated for airway protection",
+                  "units": [
+                    {
+                      "u_id": "u_88160",
+                      "u_unit": {
+                        "d_diagnosis": "intubated for airway protection",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "intubated for airway protection"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:50:30.109383"
+          }
+        },
+        "s4": {
+          "symptom_text": "left pneumothorax",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "left pneumothorax",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "left pneumothorax",
+                  "units": [
+                    {
+                      "u_id": "u_54165",
+                      "u_unit": {
+                        "d_diagnosis": "left pneumothorax",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "left pneumothorax"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "left pneumothorax",
+                  "units": [
+                    {
+                      "u_id": "u_5783",
+                      "u_unit": {
+                        "d_diagnosis": "small left pneumothorax",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "small left pneumothorax"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:50:32.122484"
+          }
+        },
+        "s5": {
+          "symptom_text": "right pneumothorax",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "right pneumothorax",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "right pneumothorax",
+                  "units": [
+                    {
+                      "u_id": "u_65307",
+                      "u_unit": {
+                        "d_diagnosis": "right pneumothorax",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "right pneumothorax"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "right pneumothorax",
+                  "units": [
+                    {
+                      "u_id": "u_59994",
+                      "u_unit": {
+                        "d_diagnosis": "right sided pneumothorax",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "right sided pneumothorax"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "right pneumothorax",
+                  "units": [
+                    {
+                      "u_id": "u_81053",
+                      "u_unit": {
+                        "d_diagnosis": "chest x-ray showed a right pneumothorax",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "chest x-ray showed a right pneumothorax"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:50:34.268884"
+          }
+        },
+        "s6": {
+          "symptom_text": "keep dressing in place on old right chest tube site for 1 more day before removing",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "keep dressing in place on old right chest tube site for 1 more day before removing",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:50:36.443864"
+          }
+        },
+        "s7": {
+          "symptom_text": "continue with dry gauze over left chest wound and change once a day until completely scabbed over",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "continue with dry gauze over left chest wound and change once a day until completely scabbed over",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:50:38.312752"
+          }
+        },
+        "s8": {
+          "symptom_text": "bilateral chest tubes placed for bilateral pneumothoraces",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "bilateral chest tubes placed for bilateral pneumothoraces",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "bilateral chest tubes placed for bilateral pneumothoraces",
+                  "units": [
+                    {
+                      "u_id": "u_66357",
+                      "u_unit": {
+                        "d_diagnosis": "bilateral pneumothoraces",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "bilateral pneumothoraces"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "bilateral chest tubes placed for bilateral pneumothoraces",
+                  "units": [
+                    {
+                      "u_id": "u_66701",
+                      "u_unit": {
+                        "d_diagnosis": "bilateral chest tube thoracostomies",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "bilateral chest tube thoracostomies"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "bilateral chest tubes placed for bilateral pneumothoraces",
+                  "units": [
+                    {
+                      "u_id": "u_7740",
+                      "u_unit": {
+                        "d_diagnosis": "two chest tubes placed intraoperatively",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "two chest tubes placed intraoperatively"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:50:40.098607"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "seizure at time of trauma work-up",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "place dry guaze once a day until site completely scabbed over",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "patient intubated for airway protection",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "patient intubated for airway protection",
+              "units": [
+                {
+                  "u_id": "u_28485",
+                  "u_unit": {
+                    "d_diagnosis": "patient was intubated for airway protection",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "patient was intubated for airway protection"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "patient intubated for airway protection",
+              "units": [
+                {
+                  "u_id": "u_88160",
+                  "u_unit": {
+                    "d_diagnosis": "intubated for airway protection",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "intubated for airway protection"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "left pneumothorax",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "left pneumothorax",
+              "units": [
+                {
+                  "u_id": "u_54165",
+                  "u_unit": {
+                    "d_diagnosis": "left pneumothorax",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "left pneumothorax"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "left pneumothorax",
+              "units": [
+                {
+                  "u_id": "u_5783",
+                  "u_unit": {
+                    "d_diagnosis": "small left pneumothorax",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "small left pneumothorax"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "right pneumothorax",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "right pneumothorax",
+              "units": [
+                {
+                  "u_id": "u_65307",
+                  "u_unit": {
+                    "d_diagnosis": "right pneumothorax",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "right pneumothorax"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "right pneumothorax",
+              "units": [
+                {
+                  "u_id": "u_59994",
+                  "u_unit": {
+                    "d_diagnosis": "right sided pneumothorax",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "right sided pneumothorax"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "right pneumothorax",
+              "units": [
+                {
+                  "u_id": "u_81053",
+                  "u_unit": {
+                    "d_diagnosis": "chest x-ray showed a right pneumothorax",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "chest x-ray showed a right pneumothorax"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "keep dressing in place on old right chest tube site for 1 more day before removing",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "continue with dry gauze over left chest wound and change once a day until completely scabbed over",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "bilateral chest tubes placed for bilateral pneumothoraces",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "bilateral chest tubes placed for bilateral pneumothoraces",
+              "units": [
+                {
+                  "u_id": "u_66357",
+                  "u_unit": {
+                    "d_diagnosis": "bilateral pneumothoraces",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "bilateral pneumothoraces"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "bilateral chest tubes placed for bilateral pneumothoraces",
+              "units": [
+                {
+                  "u_id": "u_66701",
+                  "u_unit": {
+                    "d_diagnosis": "bilateral chest tube thoracostomies",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "bilateral chest tube thoracostomies"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "bilateral chest tubes placed for bilateral pneumothoraces",
+              "units": [
+                {
+                  "u_id": "u_7740",
+                  "u_unit": {
+                    "d_diagnosis": "two chest tubes placed intraoperatively",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "two chest tubes placed intraoperatively"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:50:40.098638"
+    }
+  },
+  "rag_enhanced": {
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Left Lung\",\n        \"Right Lung\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Temporal Lobe"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Cerebral Cortex",
+                  "Temporal Lobe"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Left Lung",
+                  "Right Lung",
+                  "Pleural Cavity"
+                ],
+                "relevance": "High"
+              }
+            ]
+          }
+        },
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Temporal Lobe"
+        ],
+        "usage": {
+          "completion_tokens": 118,
+          "prompt_tokens": 2927,
+          "total_tokens": 3045,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "evaluation": {
+          "overall_score": 71.4,
+          "precision": 100.0,
+          "recall": 28.6,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 2/2 (100.0%); Recall(召回率): 2/7 (28.6%); 过度生成惩罚: 100.0%"
+        }
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Left Lung\",\n        \"Right Lung\",\n        \"Pleural Cavity\",\n        \"Visceral Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Temporal Lobe\",\n        \"Frontal Lobe\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Skin (Cutis)\",\n      \"anatomicalLocations\": [\n        \"Skin (Cutis)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Left Lung",
+            "Right Lung",
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Left Lung",
+                  "Right Lung",
+                  "Pleural Cavity",
+                  "Visceral Pleura"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Cerebral Cortex",
+                  "Temporal Lobe",
+                  "Frontal Lobe",
+                  "Brainstem"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Trachea",
+                "anatomicalLocations": [
+                  "Trachea"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Skin (Cutis)",
+                "anatomicalLocations": [
+                  "Skin (Cutis)"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Left Lung",
+          "Right Lung",
+          "Pleural Cavity",
+          "Visceral Pleura"
+        ],
+        "usage": {
+          "completion_tokens": 208,
+          "prompt_tokens": 2761,
+          "total_tokens": 2969,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2368
+          },
+          "prompt_cache_hit_tokens": 2368,
+          "prompt_cache_miss_tokens": 393
+        },
+        "model": "deepseek-chat",
+        "evaluation": {
+          "overall_score": 67.1,
+          "precision": 75.0,
+          "recall": 42.9,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 3/4 (75.0%); Recall(召回率): 3/7 (42.9%); 过度生成惩罚: 100.0%"
+        }
+      }
+    },
+    "evaluation": {
+      "report_id": "diagnostic_4079",
+      "total_symptoms": 7,
+      "valid_symptoms": 7,
+      "evaluation_timestamp": "2025-08-28T00:50:55.073207",
+      "symptom_evaluations": [
+        {
+          "symptom_id": "rag_enhanced_symptoms",
+          "symptom_text": "seizure at time of trauma work-up; place dry guaze once a day until site completely scabbed over; patient intubated for airway protection; left pneumothorax and then right pneumothorax cleared on chest x-ray; keep dressing in place on old right chest tube site for 1 more day before removing; continue with dry gauze over left chest wound and change once a day until completely scabbed over; bilateral chest tubes placed for bilateral pnemothraces",
+          "expected_results": [
+            {
+              "organName": "Brain",
+              "anatomicalLocations": [
+                "Cerebral Cortex",
+                "Temporal Lobe"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Right Lung",
+                "Pleural Cavity"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Trachea",
+                "Bronchus"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Left Lung",
+                "Right Lung",
+                "Pleural Cavity"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Left Lung",
+                "Pleural Cavity"
+              ]
+            }
+          ],
+          "api_evaluations": {
+            "moonshot": {
+              "overall_score": 71.4,
+              "precision": 100.0,
+              "recall": 28.6,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 2/2 (100.0%); Recall(召回率): 2/7 (28.6%); 过度生成惩罚: 100.0%"
+            },
+            "deepseek": {
+              "overall_score": 67.1,
+              "precision": 75.0,
+              "recall": 42.9,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 3/4 (75.0%); Recall(召回率): 3/7 (42.9%); 过度生成惩罚: 100.0%"
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total_api_calls": 2,
+        "successful_api_calls": 2,
+        "failed_api_calls": 0,
+        "average_overall_score": 69.2,
+        "average_precision": 87.5,
+        "average_recall": 35.8
+      }
+    }
+  },
+  "comparison": {
+    "baseline_score": 53.6,
+    "rag_enhanced_score": 69.2,
+    "improvement": 15.600000000000001
+  },
+  "processing_timestamp": "2025-08-28T00:50:55.073247"
+}

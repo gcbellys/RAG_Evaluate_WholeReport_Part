@@ -1,0 +1,2286 @@
+{
+  "report_id": "diagnostic_4060",
+  "timestamp": "2025-08-28T00:29:36.757422",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4060_symptom_0",
+      "diagnosis": "nephrostomy site is patent and intact however, very tender to palpation",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Pelvis"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Upper Esophageal Sphincter"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Foley\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophageal lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Foley"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric lumen"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophageal lumen"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophagus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Large intestine (Intestinum crassum)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Pelvis",
+              "Renal Calyces (Major & Minor)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophagus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Large intestine (Intestinum crassum)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4060_symptom_1",
+      "diagnosis": "pt incontinent of moderate amounts of brown loose stool x 3",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Pelvis"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Upper Esophageal Sphincter"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Foley\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophageal lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Foley"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric lumen"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophageal lumen"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophagus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Large intestine (Intestinum crassum)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Pelvis",
+              "Renal Calyces (Major & Minor)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophagus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Large intestine (Intestinum crassum)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4060_symptom_2",
+      "diagnosis": "pt c/o constant urge to urinate",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Pelvis"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Upper Esophageal Sphincter"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Foley\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophageal lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Foley"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric lumen"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophageal lumen"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophagus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Large intestine (Intestinum crassum)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Pelvis",
+              "Renal Calyces (Major & Minor)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophagus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Large intestine (Intestinum crassum)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4060_symptom_3",
+      "diagnosis": "very labored breathing",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Pelvis"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Upper Esophageal Sphincter"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Foley\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophageal lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Foley"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric lumen"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophageal lumen"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophagus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Large intestine (Intestinum crassum)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Pelvis",
+              "Renal Calyces (Major & Minor)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophagus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Large intestine (Intestinum crassum)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4060_symptom_4",
+      "diagnosis": "cvp 4-21",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Pelvis"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Upper Esophageal Sphincter"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Foley\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophageal lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Foley"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric lumen"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophageal lumen"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophagus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Large intestine (Intestinum crassum)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Pelvis",
+              "Renal Calyces (Major & Minor)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophagus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Large intestine (Intestinum crassum)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4060_symptom_5",
+      "diagnosis": "pt has a very dry nonproductive cough",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Pelvis"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Upper Esophageal Sphincter"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Foley\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophageal lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Foley"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric lumen"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophageal lumen"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophagus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Large intestine (Intestinum crassum)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Pelvis",
+              "Renal Calyces (Major & Minor)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophagus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Large intestine (Intestinum crassum)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4060_symptom_6",
+      "diagnosis": "sudden pain in luq (nephrostomy site)in afternoon",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Pelvis"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Upper Esophageal Sphincter"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Foley\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophageal lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Foley"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric lumen"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophageal lumen"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophagus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Large intestine (Intestinum crassum)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Pelvis",
+              "Renal Calyces (Major & Minor)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophagus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Large intestine (Intestinum crassum)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4060_symptom_7",
+      "diagnosis": "sbp 129-157",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Pelvis"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Upper Esophageal Sphincter"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Foley\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophageal lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Foley"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric lumen"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophageal lumen"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophagus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Large intestine (Intestinum crassum)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Pelvis",
+              "Renal Calyces (Major & Minor)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophagus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Large intestine (Intestinum crassum)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4060_symptom_8",
+      "diagnosis": "swallowing small amounts of liquid in am...by afternoon unable to swallow liquids",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Pelvis"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Upper Esophageal Sphincter"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Foley\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophageal lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Foley"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric lumen"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophageal lumen"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophagus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Large intestine (Intestinum crassum)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Pelvis",
+              "Renal Calyces (Major & Minor)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophagus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Large intestine (Intestinum crassum)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4060_symptom_9",
+      "diagnosis": "patent foley draining clear yellow urine",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Pelvis"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Upper Esophageal Sphincter"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Foley\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophageal lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Foley"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric lumen"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophageal lumen"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophagus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Large intestine (Intestinum crassum)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Pelvis",
+              "Renal Calyces (Major & Minor)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophagus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Large intestine (Intestinum crassum)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4060_symptom_10",
+      "diagnosis": "pt. denied pain all morning and reported sudden pain in luq (nephrostomy site)in afternoon",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Pelvis"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Upper Esophageal Sphincter"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Foley\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophageal lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Foley"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric lumen"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophageal lumen"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophagus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Large intestine (Intestinum crassum)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Pelvis",
+              "Renal Calyces (Major & Minor)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophagus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Large intestine (Intestinum crassum)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4060_symptom_11",
+      "diagnosis": "hr 85-100 nsr",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Pelvis",
+            "Ureter"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Pelvis"
+          ]
+        },
+        {
+          "organName": "Esophagus",
+          "anatomicalLocations": [
+            "Esophageal Body",
+            "Upper Esophageal Sphincter"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Foley\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophageal lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Pelvis"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Foley"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Stomach (Gaster)",
+                  "anatomicalLocations": [
+                    "Gastric lumen"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophageal lumen"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Pelvis"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophagus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Large intestine (Intestinum crassum)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Kidney (Ren)",
+            "anatomical_locations": [
+              "Renal Cortex",
+              "Renal Pelvis",
+              "Renal Calyces (Major & Minor)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Pelvis",
+                    "Renal Calyces (Major & Minor)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Esophagus",
+                  "anatomicalLocations": [
+                    "Esophagus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [
+                    "Large intestine (Intestinum crassum)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Urinary bladder (Vesica urinaria)",
+                  "anatomicalLocations": [
+                    "Urinary bladder (Vesica urinaria)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

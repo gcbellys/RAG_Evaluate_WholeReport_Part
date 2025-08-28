@@ -1,0 +1,213 @@
+{
+  "report_number": "diagnostic_4076",
+  "timestamp": "2025-08-28T00:47:22.187162",
+  "baseline_method": {
+    "aggregated_symptoms": "leukocytosis; hypotension during dialysis; moderate, fixed perfusion defect in the inferior wall. mild global hypokinesis; dyspnea/sob on admission; obese, soft, non-tender/non-distender, +bs. no hepatosplenomegaly; occasionally develops bruises on her knee from the apparatus; used to ambulate with a walker and but has recently been unable to use it due to the pain; pain developed over the course of 7 weeks and progressively got worse over time; u/s neg for dvt; minimal crackels and wheesing, poor inspiratory effort; ef 40%; mod la/ra dilation; mild lvh/mild global hk (most prominent in the septum); 1+ mr. mod pulmonary htn; rrr, nl s1 and s2, no s3/s4, no m,r,g; developed nausea/vomiting following taking the dicloxacillin",
+    "expected_results": [
+      {
+        "organName": "Kidney (Ren)",
+        "anatomicalLocations": [
+          "Renal Cortex",
+          "Renal Pelvis"
+        ]
+      },
+      {
+        "organName": "Kidney (Ren)",
+        "anatomicalLocations": [
+          "Renal Cortex",
+          "Renal Medulla (Pyramids)"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Right Ventricle (RV)",
+          "Inferior Wall of Left Ventricle"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Left Ventricle (LV)",
+          "Mitral Valve"
+        ]
+      },
+      {
+        "organName": "Pancreas",
+        "anatomicalLocations": [
+          "Head of the Pancreas",
+          "Uncinate Process"
+        ]
+      },
+      {
+        "organName": "Skin (Cutis)",
+        "anatomicalLocations": [
+          "Epidermis",
+          "Dermis"
+        ]
+      },
+      {
+        "organName": "Skin (Cutis)",
+        "anatomicalLocations": [
+          "Dermis",
+          "Subcutaneous Tissue"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Aortic Valve",
+          "Mitral Valve"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Alveoli",
+          "Bronchioles"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Left Ventricle (LV)",
+          "Interventricular Septum (IVS)"
+        ]
+      },
+      {
+        "organName": "Stomach (Gaster)",
+        "anatomicalLocations": [
+          "Gastric Mucosa",
+          "Gastric Antrum"
+        ]
+      }
+    ],
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "success": true,
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Mitral Valve",
+          "Left Atrium (LA)"
+        ],
+        "usage": {
+          "completion_tokens": 186,
+          "prompt_tokens": 2353,
+          "total_tokens": 2539,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "success": true,
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Right Ventricle (RV)",
+          "Interventricular Septum (IVS)",
+          "Mitral Valve"
+        ],
+        "usage": {
+          "completion_tokens": 229,
+          "prompt_tokens": 2214,
+          "total_tokens": 2443,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 1984
+          },
+          "prompt_cache_hit_tokens": 1984,
+          "prompt_cache_miss_tokens": 230
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 60.0,
+      "average_precision": 83.3,
+      "average_recall": 16.6
+    }
+  },
+  "rag_enhanced_method": {
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"leukocytosis\",\n            \"primary_organ\": \"血液系统\",\n            \"severity\": \"中度\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"hypotension during dialysis\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"中度\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"moderate, fixed perfusion defect in the inferior wall\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"中度\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"mild global hypokinesis\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"轻度\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"dyspnea/sob on admission\",\n            \"primary_organ\": \"呼吸系统\",\n            \"severity\": \"轻度\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"obese, soft, non-tender/non-distender, +bs\",\n            \"primary_organ\": \"消化系统\",\n            \"severity\": \"轻度\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"no hepatosplenomegaly\",\n            \"primary_organ\": \"消化系统\",\n            \"severity\": \"无\"\n        },\n        {\n            \"symptom_id\": \"s8\",\n            \"symptom_text\": \"occasionally develops bruises on her knee from the apparatus\",\n            \"primary_organ\": \"皮肤\",\n            \"severity\": \"轻度\"\n        },\n        {\n            \"symptom_id\": \"s9\",\n            \"symptom_text\": \"used to ambulate with a walker and but has recently been unable to use it due to the pain\",\n            \"primary_organ\": \"运动系统\",\n            \"severity\": \"中度\"\n        },\n        {\n            \"symptom_id\": \"s10\",\n            \"symptom_text\": \"pain developed over the course of 7 weeks and progressively got worse over time\",\n            \"primary_organ\": \"运动系统\",\n            \"severity\": \"中度\"\n        },\n        {\n            \"symptom_id\": \"s11\",\n            \"symptom_text\": \"u/s neg for dvt\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"无\"\n        },\n        {\n            \"symptom_id\": \"s12\",\n            \"symptom_text\": \"minimal crackles and wheezing, poor inspiratory effort\",\n            \"primary_organ\": \"呼吸系统\",\n            \"severity\": \"轻度\"\n        },\n        {\n            \"symptom_id\": \"s13\",\n            \"symptom_text\": \"ef 40%\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"中度\"\n        },\n        {\n            \"symptom_id\": \"s14\",\n            \"symptom_text\": \"mod la/ra dilation\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"中度\"\n        },\n        {\n            \"symptom_id\": \"s15\",\n            \"symptom_text\": \"mild lvh/mild global hk (most prominent in the septum)\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"轻度\"\n        },\n        {\n            \"symptom_id\": \"s16\",\n            \"symptom_text\": \"1+ mr\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"轻度\"\n        },\n        {\n            \"symptom_id\": \"s17\",\n            \"symptom_text\": \"mod pulmonary htn\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"中度\"\n        },\n        {\n            \"symptom_id\": \"s18\",\n            \"symptom_text\": \"rrr, nl s1 and s2, no s3/s4, no m,r,g\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"无\"\n        },\n        {\n            \"symptom_id\": \"s19\",\n            \"symptom_text\": \"developed nausea/vomiting following taking the dicloxacillin\",\n            \"primary_",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": []
+      },
+      "timestamp": "2025-08-28T00:47:01.908853"
+    },
+    "rag_search_results": {
+      "success": true,
+      "total_searched": 0,
+      "symptom_rag_results": {},
+      "rag_search_output": [],
+      "timestamp": "2025-08-28T00:47:01.908870"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "success": true,
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Left Atrium (LA)",
+          "Interventricular Septum (IVS)"
+        ],
+        "usage": {
+          "completion_tokens": 221,
+          "prompt_tokens": 2749,
+          "total_tokens": 2970,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "success": true,
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Interventricular Septum (IVS)",
+          "Mitral Valve",
+          "Coronary Artery"
+        ],
+        "usage": {
+          "completion_tokens": 241,
+          "prompt_tokens": 2603,
+          "total_tokens": 2844,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2368
+          },
+          "prompt_cache_hit_tokens": 2368,
+          "prompt_cache_miss_tokens": 235
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 53.9,
+      "average_precision": 70.8,
+      "average_recall": 13.9
+    }
+  },
+  "comparison": {
+    "baseline_score": 60.0,
+    "rag_enhanced_score": 53.9,
+    "improvement": -6.100000000000001
+  }
+}

@@ -1,0 +1,980 @@
+[
+  {
+    "report_number": "diagnostic_4075",
+    "method": "baseline_aggregation",
+    "method_name": "症状聚合基线方法",
+    "aggregated_symptoms": "abdominal pain resolved s/p bm; right medial tibial plateau fracture; constipation that resolved with a soap suds enema; leukocytosis to 25.8 from 12.2 the day prior; vomited multiple times with narcan treatment; discomfort with urinary retention which resolved after being straight catheterization; pain in right leg from the buttock down to the ankle on the lateral calf; diaphoresis without any other sxs that self resolved; normal ck and ck-mb; troponin leak which is trending down; low back pain and le weakness; abdominal pain throughout this admission",
+    "expected_results": {
+      "organ": "Brainstem, Heart (Cor), Large intestine (Intestinum crassum), Skin (Cutis), Stomach (Gaster), Urinary bladder (Vesica urinaria)",
+      "a_position": "Aortic Valve, Bladder Wall, Cauda Equina, Colon, Conus Medullaris, Dermis, Epidermis, Gastric Fundus, Gastric Mucosa, Hematopoietic Tissue, Lumbar Nerve Roots, Mitral Valve, Rectum, Red Bone Marrow, Sweat Glands, Trigone of the Bladder"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Intestinum tenue",
+          "a_position": "Jejunum, Ileum"
+        },
+        "api_eva": {
+          "overall_score": 20.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Large intestine (Intestinum crassum)",
+          "a_position": "Descending Colon, Sigmoid Colon, Rectum"
+        },
+        "api_eva": {
+          "overall_score": 35.8,
+          "precision": 33.3,
+          "recall": 6.2,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 27.9,
+      "average_precision": 16.6,
+      "average_recall": 3.1
+    }
+  },
+  {
+    "report_number": "diagnostic_4075",
+    "method": "rag_enhanced_aggregation",
+    "method_name": "增强症状聚合方法",
+    "aggregated_symptoms": "abdominal pain resolved s/p bm; right medial tibial plateau fracture; constipation that resolved with a soap suds enema; leukocytosis to 25.8 from 12.2 the day prior; vomited multiple times with narcan treatment; discomfort with urinary retention which resolved after being straight catheterization; pain in right leg from the buttock down to the ankle on the lateral calf; diaphoresis without any other sxs that self resolved; normal ck and ck-mb; troponin leak which is trending down; low back pain and le weakness; abdominal pain throughout this admission",
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"abdominal pain resolved s/p bm\",\n            \"primary_organ\": \"abdomen\",\n            \"severity\": \"resolved\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"right medial tibial plateau fracture\",\n            \"primary_organ\": \"right leg\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"constipation that resolved with a soap suds enema\",\n            \"primary_organ\": \"intestines\",\n            \"severity\": \"resolved\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"leukocytosis to 25.8 from 12.2 the day prior\",\n            \"primary_organ\": \"blood\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"vomited multiple times with narcan treatment\",\n            \"primary_organ\": \"stomach\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"discomfort with urinary retention which resolved after being straight catheterization\",\n            \"primary_organ\": \"urinary system\",\n            \"severity\": \"resolved\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"pain in right leg from the buttock down to the ankle on the lateral calf\",\n            \"primary_organ\": \"right leg\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s8\",\n            \"symptom_text\": \"diaphoresis without any other sxs that self resolved\",\n            \"primary_organ\": \"skin\",\n            \"severity\": \"resolved\"\n        },\n        {\n            \"symptom_id\": \"s9\",\n            \"symptom_text\": \"normal ck and ck-mb\",\n            \"primary_organ\": \"muscles\",\n            \"severity\": \"normal\"\n        },\n        {\n            \"symptom_id\": \"s10\",\n            \"symptom_text\": \"troponin leak which is trending down\",\n            \"primary_organ\": \"heart\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s11\",\n            \"symptom_text\": \"low back pain and le weakness\",\n            \"primary_organ\": \"back\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s12\",\n            \"symptom_text\": \"abdominal pain throughout this admission\",\n            \"primary_organ\": \"abdomen\",\n            \"severity\": \"mild\"\n        }\n    ],\n    \"total_count\": 12,\n    \"reasoning\": \"根据症状描述，将聚合症状分割成12个独立的症状单元。每个症状单元包含症状描述、主要相关器官和严重程度。分割逻辑主要依据症状发生的部位和性质。\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "abdominal pain resolved s/p bm",
+              "primary_organ": "abdomen",
+              "severity": "resolved"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "right medial tibial plateau fracture",
+              "primary_organ": "right leg",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "constipation that resolved with a soap suds enema",
+              "primary_organ": "intestines",
+              "severity": "resolved"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "leukocytosis to 25.8 from 12.2 the day prior",
+              "primary_organ": "blood",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "vomited multiple times with narcan treatment",
+              "primary_organ": "stomach",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "discomfort with urinary retention which resolved after being straight catheterization",
+              "primary_organ": "urinary system",
+              "severity": "resolved"
+            },
+            {
+              "symptom_id": "s7",
+              "symptom_text": "pain in right leg from the buttock down to the ankle on the lateral calf",
+              "primary_organ": "right leg",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s8",
+              "symptom_text": "diaphoresis without any other sxs that self resolved",
+              "primary_organ": "skin",
+              "severity": "resolved"
+            },
+            {
+              "symptom_id": "s9",
+              "symptom_text": "normal ck and ck-mb",
+              "primary_organ": "muscles",
+              "severity": "normal"
+            },
+            {
+              "symptom_id": "s10",
+              "symptom_text": "troponin leak which is trending down",
+              "primary_organ": "heart",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s11",
+              "symptom_text": "low back pain and le weakness",
+              "primary_organ": "back",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s12",
+              "symptom_text": "abdominal pain throughout this admission",
+              "primary_organ": "abdomen",
+              "severity": "mild"
+            }
+          ],
+          "total_count": 12,
+          "reasoning": "根据症状描述，将聚合症状分割成12个独立的症状单元。每个症状单元包含症状描述、主要相关器官和严重程度。分割逻辑主要依据症状发生的部位和性质。"
+        }
+      },
+      "timestamp": "2025-08-28T00:45:32.152086"
+    },
+    "rag_search_results": {
+      "success": true,
+      "total_searched": 12,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "abdominal pain resolved s/p bm",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "abdominal pain resolved s/p bm",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "abdominal pain resolved s/p bm",
+                  "units": [
+                    {
+                      "u_id": "u_26829",
+                      "u_unit": {
+                        "d_diagnosis": "abdominal pain improved",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "abdominal pain improved"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "abdominal pain resolved s/p bm",
+                  "units": [
+                    {
+                      "u_id": "u_46729",
+                      "u_unit": {
+                        "d_diagnosis": "abdominal tenderness resolved",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "abdominal tenderness resolved"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "abdominal pain resolved s/p bm",
+                  "units": [
+                    {
+                      "u_id": "u_86083",
+                      "u_unit": {
+                        "d_diagnosis": "abdominal pain had improved",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "abdominal pain had improved"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:45:34.354811"
+          }
+        },
+        "s2": {
+          "symptom_text": "right medial tibial plateau fracture",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "right medial tibial plateau fracture",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:45:36.184017"
+          }
+        },
+        "s3": {
+          "symptom_text": "constipation that resolved with a soap suds enema",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "constipation that resolved with a soap suds enema",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:45:37.966246"
+          }
+        },
+        "s4": {
+          "symptom_text": "leukocytosis to 25.8 from 12.2 the day prior",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "leukocytosis to 25.8 from 12.2 the day prior",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:45:39.678839"
+          }
+        },
+        "s5": {
+          "symptom_text": "vomited multiple times with narcan treatment",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "vomited multiple times with narcan treatment",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:45:41.415342"
+          }
+        },
+        "s6": {
+          "symptom_text": "discomfort with urinary retention which resolved after being straight catheterization",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "discomfort with urinary retention which resolved after being straight catheterization",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "discomfort with urinary retention which resolved after being straight catheterization",
+                  "units": [
+                    {
+                      "u_id": "u_90950",
+                      "u_unit": {
+                        "d_diagnosis": "urinary retention",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "urinary retention"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:45:43.202133"
+          }
+        },
+        "s7": {
+          "symptom_text": "pain in right leg from the buttock down to the ankle on the lateral calf",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "pain in right leg from the buttock down to the ankle on the lateral calf",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:45:44.934461"
+          }
+        },
+        "s8": {
+          "symptom_text": "diaphoresis without any other sxs that self resolved",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "diaphoresis without any other sxs that self resolved",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "diaphoresis without any other sxs that self resolved",
+                  "units": [
+                    {
+                      "u_id": "u_44277",
+                      "u_unit": {
+                        "d_diagnosis": "no diaphoresis",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "no diaphoresis"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "diaphoresis without any other sxs that self resolved",
+                  "units": [
+                    {
+                      "u_id": "u_76336",
+                      "u_unit": {
+                        "d_diagnosis": "diaphoresis",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "diaphoresis"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:45:46.660073"
+          }
+        },
+        "s9": {
+          "symptom_text": "normal ck and ck-mb",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "normal ck and ck-mb",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "normal ck and ck-mb",
+                  "units": [
+                    {
+                      "u_id": "u_5073",
+                      "u_unit": {
+                        "d_diagnosis": "negative cardiac enzymes and negative ck mb and negative troponin x3",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "negative cardiac enzymes and negative ck mb and negative troponin x3"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "normal ck and ck-mb",
+                  "units": [
+                    {
+                      "u_id": "u_56559",
+                      "u_unit": {
+                        "d_diagnosis": "ck/mb negative",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "ck/mb negative"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "normal ck and ck-mb",
+                  "units": [
+                    {
+                      "u_id": "u_35592",
+                      "u_unit": {
+                        "d_diagnosis": "negative ck-mb",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "negative ck-mb"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:45:48.411555"
+          }
+        },
+        "s10": {
+          "symptom_text": "troponin leak which is trending down",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "troponin leak which is trending down",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "troponin leak which is trending down",
+                  "units": [
+                    {
+                      "u_id": "u_63699",
+                      "u_unit": {
+                        "d_diagnosis": "troponin had trended down",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "troponin had trended down"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "troponin leak which is trending down",
+                  "units": [
+                    {
+                      "u_id": "u_34438",
+                      "u_unit": {
+                        "d_diagnosis": "troponin leak",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "troponin leak"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:45:50.111054"
+          }
+        },
+        "s11": {
+          "symptom_text": "low back pain and le weakness",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "low back pain and le weakness",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "low back pain and le weakness",
+                  "units": [
+                    {
+                      "u_id": "u_8643",
+                      "u_unit": {
+                        "d_diagnosis": "le weakness",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "le weakness"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:45:51.820731"
+          }
+        },
+        "s12": {
+          "symptom_text": "abdominal pain throughout this admission",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "abdominal pain throughout this admission",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "abdominal pain throughout this admission",
+                  "units": [
+                    {
+                      "u_id": "u_82238",
+                      "u_unit": {
+                        "d_diagnosis": "abdominal pain on admission",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "abdominal pain on admission"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "abdominal pain throughout this admission",
+                  "units": [
+                    {
+                      "u_id": "u_57170",
+                      "u_unit": {
+                        "d_diagnosis": "the patient complained of abdominal pain on admission",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "the patient complained of abdominal pain on admission"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "abdominal pain throughout this admission",
+                  "units": [
+                    {
+                      "u_id": "u_44150",
+                      "u_unit": {
+                        "d_diagnosis": "abdominal pain",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "abdominal pain"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:45:53.572106"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "abdominal pain resolved s/p bm",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "abdominal pain resolved s/p bm",
+              "units": [
+                {
+                  "u_id": "u_26829",
+                  "u_unit": {
+                    "d_diagnosis": "abdominal pain improved",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "abdominal pain improved"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "abdominal pain resolved s/p bm",
+              "units": [
+                {
+                  "u_id": "u_46729",
+                  "u_unit": {
+                    "d_diagnosis": "abdominal tenderness resolved",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "abdominal tenderness resolved"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "abdominal pain resolved s/p bm",
+              "units": [
+                {
+                  "u_id": "u_86083",
+                  "u_unit": {
+                    "d_diagnosis": "abdominal pain had improved",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "abdominal pain had improved"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "right medial tibial plateau fracture",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "constipation that resolved with a soap suds enema",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "leukocytosis to 25.8 from 12.2 the day prior",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "vomited multiple times with narcan treatment",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "discomfort with urinary retention which resolved after being straight catheterization",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "discomfort with urinary retention which resolved after being straight catheterization",
+              "units": [
+                {
+                  "u_id": "u_90950",
+                  "u_unit": {
+                    "d_diagnosis": "urinary retention",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "urinary retention"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "pain in right leg from the buttock down to the ankle on the lateral calf",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "diaphoresis without any other sxs that self resolved",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "diaphoresis without any other sxs that self resolved",
+              "units": [
+                {
+                  "u_id": "u_44277",
+                  "u_unit": {
+                    "d_diagnosis": "no diaphoresis",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "no diaphoresis"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "diaphoresis without any other sxs that self resolved",
+              "units": [
+                {
+                  "u_id": "u_76336",
+                  "u_unit": {
+                    "d_diagnosis": "diaphoresis",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "diaphoresis"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "normal ck and ck-mb",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "normal ck and ck-mb",
+              "units": [
+                {
+                  "u_id": "u_5073",
+                  "u_unit": {
+                    "d_diagnosis": "negative cardiac enzymes and negative ck mb and negative troponin x3",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "negative cardiac enzymes and negative ck mb and negative troponin x3"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "normal ck and ck-mb",
+              "units": [
+                {
+                  "u_id": "u_56559",
+                  "u_unit": {
+                    "d_diagnosis": "ck/mb negative",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "ck/mb negative"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "normal ck and ck-mb",
+              "units": [
+                {
+                  "u_id": "u_35592",
+                  "u_unit": {
+                    "d_diagnosis": "negative ck-mb",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "negative ck-mb"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "troponin leak which is trending down",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "troponin leak which is trending down",
+              "units": [
+                {
+                  "u_id": "u_63699",
+                  "u_unit": {
+                    "d_diagnosis": "troponin had trended down",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "troponin had trended down"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "troponin leak which is trending down",
+              "units": [
+                {
+                  "u_id": "u_34438",
+                  "u_unit": {
+                    "d_diagnosis": "troponin leak",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "troponin leak"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "low back pain and le weakness",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "low back pain and le weakness",
+              "units": [
+                {
+                  "u_id": "u_8643",
+                  "u_unit": {
+                    "d_diagnosis": "le weakness",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "le weakness"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "abdominal pain throughout this admission",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "abdominal pain throughout this admission",
+              "units": [
+                {
+                  "u_id": "u_82238",
+                  "u_unit": {
+                    "d_diagnosis": "abdominal pain on admission",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "abdominal pain on admission"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "abdominal pain throughout this admission",
+              "units": [
+                {
+                  "u_id": "u_57170",
+                  "u_unit": {
+                    "d_diagnosis": "the patient complained of abdominal pain on admission",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "the patient complained of abdominal pain on admission"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "abdominal pain throughout this admission",
+              "units": [
+                {
+                  "u_id": "u_44150",
+                  "u_unit": {
+                    "d_diagnosis": "abdominal pain",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "abdominal pain"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:45:53.572150"
+    },
+    "expected_results": {
+      "organ": "Brainstem, Heart (Cor), Large intestine (Intestinum crassum), Skin (Cutis), Stomach (Gaster), Urinary bladder (Vesica urinaria)",
+      "a_position": "Aortic Valve, Bladder Wall, Cauda Equina, Colon, Conus Medullaris, Dermis, Epidermis, Gastric Fundus, Gastric Mucosa, Hematopoietic Tissue, Lumbar Nerve Roots, Mitral Valve, Rectum, Red Bone Marrow, Sweat Glands, Trigone of the Bladder"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Intestinum crassum",
+          "a_position": "Large intestine (Intestinum crassum)"
+        },
+        "api_eva": {
+          "overall_score": 20.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Large intestine (Intestinum crassum)",
+          "a_position": "Descending Colon, Sigmoid Colon, Rectum"
+        },
+        "api_eva": {
+          "overall_score": 35.8,
+          "precision": 33.3,
+          "recall": 6.2,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 27.9,
+      "average_precision": 16.6,
+      "average_recall": 3.1
+    }
+  }
+]

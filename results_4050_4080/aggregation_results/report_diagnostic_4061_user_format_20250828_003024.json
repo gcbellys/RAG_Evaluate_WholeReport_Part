@@ -1,0 +1,660 @@
+[
+  {
+    "report_number": "diagnostic_4061",
+    "method": "baseline_aggregation",
+    "method_name": "症状聚合基线方法",
+    "aggregated_symptoms": "extubate; right upper quadrant pain; respiratory distress improved; lft normalized; no other complications; persistend pleural effusion bilaterally",
+    "expected_results": {
+      "organ": "Gallbladder (Vesica biliaris), Liver (Hepar), Lung (Pulmo), Pancreas, Trachea",
+      "a_position": "Alveoli, Gallbladder Body, Gallbladder Fundus, Head of the Pancreas, Hepatic Artery, Intrahepatic Bile Ducts, Main Pancreatic Duct (Duct of Wirsung), Pleural Cavity, Tracheal Mucosa, Tracheal Rings, Visceral Pleura"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Lung (Pulmo)",
+          "a_position": "Pleura, Visceral Pleura, Pleural Cavity"
+        },
+        "api_eva": {
+          "overall_score": 53.9,
+          "precision": 66.7,
+          "recall": 18.2,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Lung (Pulmo)",
+          "a_position": "Pleural Cavity, Visceral Pleura, Parietal Pleura"
+        },
+        "api_eva": {
+          "overall_score": 53.9,
+          "precision": 66.7,
+          "recall": 18.2,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 53.9,
+      "average_precision": 66.7,
+      "average_recall": 18.2
+    }
+  },
+  {
+    "report_number": "diagnostic_4061",
+    "method": "rag_enhanced_aggregation",
+    "method_name": "增强症状聚合方法",
+    "aggregated_symptoms": "extubate; right upper quadrant pain; respiratory distress improved; lft normalized; no other complications; persistend pleural effusion bilaterally",
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"extubate\",\n            \"primary_organ\": \"respiratory system\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"right upper quadrant pain\",\n            \"primary_organ\": \"liver\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"respiratory distress improved\",\n            \"primary_organ\": \"respiratory system\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"lft normalized\",\n            \"primary_organ\": \"liver\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"no other complications\",\n            \"primary_organ\": \"N/A\",\n            \"severity\": \"none\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"persistent pleural effusion bilaterally\",\n            \"primary_organ\": \"lungs\",\n            \"severity\": \"moderate\"\n        }\n    ],\n    \"total_count\": 6,\n    \"reasoning\": \"The given symptoms are related to different organs and conditions. 'Extubate' and 'respiratory distress improved' are related to the respiratory system. 'Right upper quadrant pain' and 'lft normalized' are related to the liver. 'No other complications' is a general statement indicating no other issues. 'Persistent pleural effusion bilaterally' is related to the lungs. Each symptom is considered separately based on its primary organ and severity.\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "extubate",
+              "primary_organ": "respiratory system",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "right upper quadrant pain",
+              "primary_organ": "liver",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "respiratory distress improved",
+              "primary_organ": "respiratory system",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "lft normalized",
+              "primary_organ": "liver",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "no other complications",
+              "primary_organ": "N/A",
+              "severity": "none"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "persistent pleural effusion bilaterally",
+              "primary_organ": "lungs",
+              "severity": "moderate"
+            }
+          ],
+          "total_count": 6,
+          "reasoning": "The given symptoms are related to different organs and conditions. 'Extubate' and 'respiratory distress improved' are related to the respiratory system. 'Right upper quadrant pain' and 'lft normalized' are related to the liver. 'No other complications' is a general statement indicating no other issues. 'Persistent pleural effusion bilaterally' is related to the lungs. Each symptom is considered separately based on its primary organ and severity."
+        }
+      },
+      "timestamp": "2025-08-28T00:29:58.880074"
+    },
+    "rag_search_results": {
+      "success": true,
+      "total_searched": 6,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "extubate",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "extubate",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "extubate",
+                  "units": [
+                    {
+                      "u_id": "u_92637",
+                      "u_unit": {
+                        "d_diagnosis": "extubated",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "extubated"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:30:00.861551"
+          }
+        },
+        "s2": {
+          "symptom_text": "right upper quadrant pain",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "right upper quadrant pain",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "right upper quadrant pain",
+                  "units": [
+                    {
+                      "u_id": "u_15142",
+                      "u_unit": {
+                        "d_diagnosis": "right upper quadrant pain",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "right upper quadrant pain"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:30:02.606198"
+          }
+        },
+        "s3": {
+          "symptom_text": "respiratory distress improved",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "respiratory distress improved",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "respiratory distress improved",
+                  "units": [
+                    {
+                      "u_id": "u_21910",
+                      "u_unit": {
+                        "d_diagnosis": "worsening respiratory distress",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "worsening respiratory distress"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:30:04.342542"
+          }
+        },
+        "s4": {
+          "symptom_text": "lft normalized",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "lft normalized",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "lft normalized",
+                  "units": [
+                    {
+                      "u_id": "u_4523",
+                      "u_unit": {
+                        "d_diagnosis": "normal lfts",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "normal lfts"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "lft normalized",
+                  "units": [
+                    {
+                      "u_id": "u_51775",
+                      "u_unit": {
+                        "d_diagnosis": "lfts were normal",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "lfts were normal"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:30:06.071115"
+          }
+        },
+        "s5": {
+          "symptom_text": "no other complications",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "no other complications",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "no other complications",
+                  "units": [
+                    {
+                      "u_id": "u_12190",
+                      "u_unit": {
+                        "d_diagnosis": "complications: none were apparent",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "complications: none were apparent"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "no other complications",
+                  "units": [
+                    {
+                      "u_id": "u_49782",
+                      "u_unit": {
+                        "d_diagnosis": "no other defects were noted",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "no other defects were noted"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:30:07.792675"
+          }
+        },
+        "s6": {
+          "symptom_text": "persistent pleural effusion bilaterally",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "persistent pleural effusion bilaterally",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "persistent pleural effusion bilaterally",
+                  "units": [
+                    {
+                      "u_id": "u_85504",
+                      "u_unit": {
+                        "d_diagnosis": "bilateral pleural effusions are present",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "bilateral pleural effusions are present"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "persistent pleural effusion bilaterally",
+                  "units": [
+                    {
+                      "u_id": "u_83016",
+                      "u_unit": {
+                        "d_diagnosis": "chronic bilateral pleural effusions",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "chronic bilateral pleural effusions"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "persistent pleural effusion bilaterally",
+                  "units": [
+                    {
+                      "u_id": "u_24531",
+                      "u_unit": {
+                        "d_diagnosis": "bilateral pleural effusion",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "bilateral pleural effusion"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:30:09.539952"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "extubate",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "extubate",
+              "units": [
+                {
+                  "u_id": "u_92637",
+                  "u_unit": {
+                    "d_diagnosis": "extubated",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "extubated"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "right upper quadrant pain",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "right upper quadrant pain",
+              "units": [
+                {
+                  "u_id": "u_15142",
+                  "u_unit": {
+                    "d_diagnosis": "right upper quadrant pain",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "right upper quadrant pain"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "respiratory distress improved",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "respiratory distress improved",
+              "units": [
+                {
+                  "u_id": "u_21910",
+                  "u_unit": {
+                    "d_diagnosis": "worsening respiratory distress",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "worsening respiratory distress"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "lft normalized",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "lft normalized",
+              "units": [
+                {
+                  "u_id": "u_4523",
+                  "u_unit": {
+                    "d_diagnosis": "normal lfts",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "normal lfts"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "lft normalized",
+              "units": [
+                {
+                  "u_id": "u_51775",
+                  "u_unit": {
+                    "d_diagnosis": "lfts were normal",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "lfts were normal"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "no other complications",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "no other complications",
+              "units": [
+                {
+                  "u_id": "u_12190",
+                  "u_unit": {
+                    "d_diagnosis": "complications: none were apparent",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "complications: none were apparent"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "no other complications",
+              "units": [
+                {
+                  "u_id": "u_49782",
+                  "u_unit": {
+                    "d_diagnosis": "no other defects were noted",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "no other defects were noted"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "persistent pleural effusion bilaterally",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "persistent pleural effusion bilaterally",
+              "units": [
+                {
+                  "u_id": "u_85504",
+                  "u_unit": {
+                    "d_diagnosis": "bilateral pleural effusions are present",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "bilateral pleural effusions are present"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "persistent pleural effusion bilaterally",
+              "units": [
+                {
+                  "u_id": "u_83016",
+                  "u_unit": {
+                    "d_diagnosis": "chronic bilateral pleural effusions",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "chronic bilateral pleural effusions"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "persistent pleural effusion bilaterally",
+              "units": [
+                {
+                  "u_id": "u_24531",
+                  "u_unit": {
+                    "d_diagnosis": "bilateral pleural effusion",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "bilateral pleural effusion"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:30:09.539985"
+    },
+    "expected_results": {
+      "organ": "Gallbladder (Vesica biliaris), Liver (Hepar), Lung (Pulmo), Pancreas, Trachea",
+      "a_position": "Alveoli, Gallbladder Body, Gallbladder Fundus, Head of the Pancreas, Hepatic Artery, Intrahepatic Bile Ducts, Main Pancreatic Duct (Duct of Wirsung), Pleural Cavity, Tracheal Mucosa, Tracheal Rings, Visceral Pleura"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Lung (Pulmo)",
+          "a_position": "Pleura, Visceral Pleura, Pleural Cavity"
+        },
+        "api_eva": {
+          "overall_score": 53.9,
+          "precision": 66.7,
+          "recall": 18.2,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Lung (Pulmo)",
+          "a_position": "Pleural Cavity, Visceral Pleura, Parietal Pleura, Bronchioles"
+        },
+        "api_eva": {
+          "overall_score": 47.3,
+          "precision": 50.0,
+          "recall": 18.2,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 50.6,
+      "average_precision": 58.4,
+      "average_recall": 18.2
+    }
+  }
+]

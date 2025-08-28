@@ -1,0 +1,374 @@
+{
+  "metadata": {
+    "report_id": "diagnostic_4055",
+    "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4055.json",
+    "processing_timestamp": "2025-08-27T23:26:56.348648",
+    "evaluation_timestamp": "2025-08-27T23:28:50.770647",
+    "total_symptoms": 7,
+    "valid_symptoms": 7,
+    "api_clients": [
+      "moonshot",
+      "deepseek"
+    ]
+  },
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4055_symptom_0",
+      "symptom_text": "sodium of 120 and potassium of 1.7",
+      "expected_results": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        }
+      ],
+      "total_u_units": 2,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 115,
+            "prompt_tokens": 2162,
+            "total_tokens": 2277,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 235,
+            "prompt_tokens": 2033,
+            "total_tokens": 2268,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 49
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4055_symptom_1",
+      "symptom_text": "fena was <0.1 but urine osmolality >300",
+      "expected_results": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 118,
+            "prompt_tokens": 2164,
+            "total_tokens": 2282,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 117,
+            "prompt_tokens": 2035,
+            "total_tokens": 2152,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 51
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4055_symptom_2",
+      "symptom_text": "episodes of syncope",
+      "expected_results": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Brainstem",
+            "Frontal Lobe"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 188,
+            "prompt_tokens": 2155,
+            "total_tokens": 2343,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 180,
+            "prompt_tokens": 2026,
+            "total_tokens": 2206,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 42
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4055_symptom_3",
+      "symptom_text": "somnolence and encephalopathy",
+      "expected_results": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Diencephalon"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 173,
+            "prompt_tokens": 2159,
+            "total_tokens": 2332,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 176,
+            "prompt_tokens": 2028,
+            "total_tokens": 2204,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 44
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4055_symptom_4",
+      "symptom_text": "fatigue",
+      "expected_results": [
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Adrenal Cortex",
+            "Adrenal Medulla"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 226,
+            "prompt_tokens": 2152,
+            "total_tokens": 2378,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 379,
+            "prompt_tokens": 2023,
+            "total_tokens": 2402,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 39
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4055_symptom_5",
+      "symptom_text": "poor po intake",
+      "expected_results": [
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Duodenum",
+            "Jejunum"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 115,
+            "prompt_tokens": 2154,
+            "total_tokens": 2269,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 192,
+            "prompt_tokens": 2024,
+            "total_tokens": 2216,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 40
+          },
+          "error": null
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4055_symptom_6",
+      "symptom_text": "increased somnulence, weakness, and episodes of syncope",
+      "expected_results": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Parietal Lobe",
+            "Frontal Lobe"
+          ]
+        }
+      ],
+      "total_u_units": 1,
+      "api_responses": {
+        "moonshot": {
+          "success": true,
+          "model": "moonshot-v1-8k",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 176,
+            "prompt_tokens": 2163,
+            "total_tokens": 2339,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          },
+          "error": null
+        },
+        "deepseek": {
+          "success": true,
+          "model": "deepseek-chat",
+          "organ_name": "",
+          "anatomical_locations": [],
+          "usage": {
+            "completion_tokens": 201,
+            "prompt_tokens": 2034,
+            "total_tokens": 2235,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 1984
+            },
+            "prompt_cache_hit_tokens": 1984,
+            "prompt_cache_miss_tokens": 50
+          },
+          "error": null
+        }
+      }
+    }
+  ],
+  "evaluation_summary": {
+    "total_api_calls": 14,
+    "successful_api_calls": 14,
+    "failed_api_calls": 0,
+    "average_overall_score": 41.4,
+    "average_precision": 28.6,
+    "average_recall": 35.7
+  }
+}

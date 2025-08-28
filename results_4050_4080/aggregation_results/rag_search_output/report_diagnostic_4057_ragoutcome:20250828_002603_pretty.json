@@ -1,0 +1,114 @@
+[
+  {
+    "query": "epistat placed in his left nose",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "meracell packing in right nose",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "exertional angina",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "exertional angina",
+        "units": [
+          {
+            "u_id": "u_50535",
+            "u_unit": {
+              "d_diagnosis": "exertional angina",
+              "o_organ": {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Heart (Cor)"
+                ]
+              },
+              "b_textual_basis": {
+                "medicalInference": "exertional angina"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "had to get vitamin k before a surgical procedure",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "bleeding from his nose postop in pacu",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "he has been tolerating soft solid diet",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "he has been tolerating soft solid diet",
+        "units": [
+          {
+            "u_id": "u_16023",
+            "u_unit": {
+              "d_diagnosis": "the patient was tolerating a soft diet",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "the patient was tolerating a soft diet"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "he has been tolerating soft solid diet",
+        "units": [
+          {
+            "u_id": "u_81176",
+            "u_unit": {
+              "d_diagnosis": "he is tolerating clear diet",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "he is tolerating clear diet"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "he has been tolerating soft solid diet",
+        "units": [
+          {
+            "u_id": "u_99038",
+            "u_unit": {
+              "d_diagnosis": "he required soft, ground diet initially, though was transitioned to full po after further evaluation by speech & swallow",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "he required soft, ground diet initially, though was transitioned to full po after further evaluation by speech & swallow"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+]

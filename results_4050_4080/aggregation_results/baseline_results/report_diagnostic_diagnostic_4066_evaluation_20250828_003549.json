@@ -1,0 +1,3282 @@
+{
+  "report_id": "diagnostic_4066",
+  "timestamp": "2025-08-28T00:35:49.291963",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4066_symptom_0",
+      "diagnosis": "delirium",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Thalamus"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Upper Lobe",
+            "Right Middle Lobe",
+            "Right Lower Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lower Lobe",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchus",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Coronary Artery",
+            "Left Anterior Descending Artery (LAD)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Upper Lobe (RUL)\",\n        \"Right Middle Lobe (RML)\",\n        \"Right Lower Lobe (RLL)\",\n        \"Left Lower Lobe (LLL)\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Upper Lobe (RUL)",
+              "Right Middle Lobe (RML)",
+              "Right Lower Lobe (RLL)",
+              "Left Lower Lobe (LLL)",
+              "Alveoli",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Upper Lobe (RUL)",
+                    "Right Middle Lobe (RML)",
+                    "Right Lower Lobe (RLL)",
+                    "Left Lower Lobe (LLL)",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Upper Lobe (RUL)",
+            "Right Middle Lobe (RML)",
+            "Right Lower Lobe (RLL)",
+            "Left Lower Lobe (LLL)",
+            "Alveoli",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Alveoli",
+              "Bronchioles",
+              "Pleural Cavity",
+              "Pulmonary Capillaries"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver",
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pleural Cavity",
+            "Pulmonary Capillaries"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4066_symptom_1",
+      "diagnosis": "mildly decompensated heart failure",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Thalamus"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Upper Lobe",
+            "Right Middle Lobe",
+            "Right Lower Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lower Lobe",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchus",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Coronary Artery",
+            "Left Anterior Descending Artery (LAD)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Upper Lobe (RUL)\",\n        \"Right Middle Lobe (RML)\",\n        \"Right Lower Lobe (RLL)\",\n        \"Left Lower Lobe (LLL)\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Upper Lobe (RUL)",
+              "Right Middle Lobe (RML)",
+              "Right Lower Lobe (RLL)",
+              "Left Lower Lobe (LLL)",
+              "Alveoli",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Upper Lobe (RUL)",
+                    "Right Middle Lobe (RML)",
+                    "Right Lower Lobe (RLL)",
+                    "Left Lower Lobe (LLL)",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Upper Lobe (RUL)",
+            "Right Middle Lobe (RML)",
+            "Right Lower Lobe (RLL)",
+            "Left Lower Lobe (LLL)",
+            "Alveoli",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Alveoli",
+              "Bronchioles",
+              "Pleural Cavity",
+              "Pulmonary Capillaries"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver",
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pleural Cavity",
+            "Pulmonary Capillaries"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4066_symptom_2",
+      "diagnosis": "end stage renal dialysis",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Thalamus"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Upper Lobe",
+            "Right Middle Lobe",
+            "Right Lower Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lower Lobe",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchus",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Coronary Artery",
+            "Left Anterior Descending Artery (LAD)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Upper Lobe (RUL)\",\n        \"Right Middle Lobe (RML)\",\n        \"Right Lower Lobe (RLL)\",\n        \"Left Lower Lobe (LLL)\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Upper Lobe (RUL)",
+              "Right Middle Lobe (RML)",
+              "Right Lower Lobe (RLL)",
+              "Left Lower Lobe (LLL)",
+              "Alveoli",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Upper Lobe (RUL)",
+                    "Right Middle Lobe (RML)",
+                    "Right Lower Lobe (RLL)",
+                    "Left Lower Lobe (LLL)",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Upper Lobe (RUL)",
+            "Right Middle Lobe (RML)",
+            "Right Lower Lobe (RLL)",
+            "Left Lower Lobe (LLL)",
+            "Alveoli",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Alveoli",
+              "Bronchioles",
+              "Pleural Cavity",
+              "Pulmonary Capillaries"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver",
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pleural Cavity",
+            "Pulmonary Capillaries"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4066_symptom_3",
+      "diagnosis": "rul consolidation with large effusion and rml/rll atelectasis",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Thalamus"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Upper Lobe",
+            "Right Middle Lobe",
+            "Right Lower Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lower Lobe",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchus",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Coronary Artery",
+            "Left Anterior Descending Artery (LAD)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Upper Lobe (RUL)\",\n        \"Right Middle Lobe (RML)\",\n        \"Right Lower Lobe (RLL)\",\n        \"Left Lower Lobe (LLL)\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Upper Lobe (RUL)",
+              "Right Middle Lobe (RML)",
+              "Right Lower Lobe (RLL)",
+              "Left Lower Lobe (LLL)",
+              "Alveoli",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Upper Lobe (RUL)",
+                    "Right Middle Lobe (RML)",
+                    "Right Lower Lobe (RLL)",
+                    "Left Lower Lobe (LLL)",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Upper Lobe (RUL)",
+            "Right Middle Lobe (RML)",
+            "Right Lower Lobe (RLL)",
+            "Left Lower Lobe (LLL)",
+            "Alveoli",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Alveoli",
+              "Bronchioles",
+              "Pleural Cavity",
+              "Pulmonary Capillaries"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver",
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pleural Cavity",
+            "Pulmonary Capillaries"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4066_symptom_4",
+      "diagnosis": "hypercarbic respiratory failure",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Thalamus"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Upper Lobe",
+            "Right Middle Lobe",
+            "Right Lower Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lower Lobe",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchus",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Coronary Artery",
+            "Left Anterior Descending Artery (LAD)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Upper Lobe (RUL)\",\n        \"Right Middle Lobe (RML)\",\n        \"Right Lower Lobe (RLL)\",\n        \"Left Lower Lobe (LLL)\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Upper Lobe (RUL)",
+              "Right Middle Lobe (RML)",
+              "Right Lower Lobe (RLL)",
+              "Left Lower Lobe (LLL)",
+              "Alveoli",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Upper Lobe (RUL)",
+                    "Right Middle Lobe (RML)",
+                    "Right Lower Lobe (RLL)",
+                    "Left Lower Lobe (LLL)",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Upper Lobe (RUL)",
+            "Right Middle Lobe (RML)",
+            "Right Lower Lobe (RLL)",
+            "Left Lower Lobe (LLL)",
+            "Alveoli",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Alveoli",
+              "Bronchioles",
+              "Pleural Cavity",
+              "Pulmonary Capillaries"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver",
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pleural Cavity",
+            "Pulmonary Capillaries"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4066_symptom_5",
+      "diagnosis": "history of hepatis-c",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Thalamus"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Upper Lobe",
+            "Right Middle Lobe",
+            "Right Lower Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lower Lobe",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchus",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Coronary Artery",
+            "Left Anterior Descending Artery (LAD)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Upper Lobe (RUL)\",\n        \"Right Middle Lobe (RML)\",\n        \"Right Lower Lobe (RLL)\",\n        \"Left Lower Lobe (LLL)\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Upper Lobe (RUL)",
+              "Right Middle Lobe (RML)",
+              "Right Lower Lobe (RLL)",
+              "Left Lower Lobe (LLL)",
+              "Alveoli",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Upper Lobe (RUL)",
+                    "Right Middle Lobe (RML)",
+                    "Right Lower Lobe (RLL)",
+                    "Left Lower Lobe (LLL)",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Upper Lobe (RUL)",
+            "Right Middle Lobe (RML)",
+            "Right Lower Lobe (RLL)",
+            "Left Lower Lobe (LLL)",
+            "Alveoli",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Alveoli",
+              "Bronchioles",
+              "Pleural Cavity",
+              "Pulmonary Capillaries"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver",
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pleural Cavity",
+            "Pulmonary Capillaries"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4066_symptom_6",
+      "diagnosis": "worsening rll infiltrate",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Thalamus"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Upper Lobe",
+            "Right Middle Lobe",
+            "Right Lower Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lower Lobe",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchus",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Coronary Artery",
+            "Left Anterior Descending Artery (LAD)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Upper Lobe (RUL)\",\n        \"Right Middle Lobe (RML)\",\n        \"Right Lower Lobe (RLL)\",\n        \"Left Lower Lobe (LLL)\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Upper Lobe (RUL)",
+              "Right Middle Lobe (RML)",
+              "Right Lower Lobe (RLL)",
+              "Left Lower Lobe (LLL)",
+              "Alveoli",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Upper Lobe (RUL)",
+                    "Right Middle Lobe (RML)",
+                    "Right Lower Lobe (RLL)",
+                    "Left Lower Lobe (LLL)",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Upper Lobe (RUL)",
+            "Right Middle Lobe (RML)",
+            "Right Lower Lobe (RLL)",
+            "Left Lower Lobe (LLL)",
+            "Alveoli",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Alveoli",
+              "Bronchioles",
+              "Pleural Cavity",
+              "Pulmonary Capillaries"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver",
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pleural Cavity",
+            "Pulmonary Capillaries"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4066_symptom_7",
+      "diagnosis": "poor mental status",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Thalamus"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Upper Lobe",
+            "Right Middle Lobe",
+            "Right Lower Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lower Lobe",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchus",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Coronary Artery",
+            "Left Anterior Descending Artery (LAD)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Upper Lobe (RUL)\",\n        \"Right Middle Lobe (RML)\",\n        \"Right Lower Lobe (RLL)\",\n        \"Left Lower Lobe (LLL)\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Upper Lobe (RUL)",
+              "Right Middle Lobe (RML)",
+              "Right Lower Lobe (RLL)",
+              "Left Lower Lobe (LLL)",
+              "Alveoli",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Upper Lobe (RUL)",
+                    "Right Middle Lobe (RML)",
+                    "Right Lower Lobe (RLL)",
+                    "Left Lower Lobe (LLL)",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Upper Lobe (RUL)",
+            "Right Middle Lobe (RML)",
+            "Right Lower Lobe (RLL)",
+            "Left Lower Lobe (LLL)",
+            "Alveoli",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Alveoli",
+              "Bronchioles",
+              "Pleural Cavity",
+              "Pulmonary Capillaries"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver",
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pleural Cavity",
+            "Pulmonary Capillaries"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4066_symptom_8",
+      "diagnosis": "high risk of aspiration",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Thalamus"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Upper Lobe",
+            "Right Middle Lobe",
+            "Right Lower Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lower Lobe",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchus",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Coronary Artery",
+            "Left Anterior Descending Artery (LAD)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Upper Lobe (RUL)\",\n        \"Right Middle Lobe (RML)\",\n        \"Right Lower Lobe (RLL)\",\n        \"Left Lower Lobe (LLL)\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Upper Lobe (RUL)",
+              "Right Middle Lobe (RML)",
+              "Right Lower Lobe (RLL)",
+              "Left Lower Lobe (LLL)",
+              "Alveoli",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Upper Lobe (RUL)",
+                    "Right Middle Lobe (RML)",
+                    "Right Lower Lobe (RLL)",
+                    "Left Lower Lobe (LLL)",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Upper Lobe (RUL)",
+            "Right Middle Lobe (RML)",
+            "Right Lower Lobe (RLL)",
+            "Left Lower Lobe (LLL)",
+            "Alveoli",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Alveoli",
+              "Bronchioles",
+              "Pleural Cavity",
+              "Pulmonary Capillaries"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver",
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pleural Cavity",
+            "Pulmonary Capillaries"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4066_symptom_9",
+      "diagnosis": "fever to 101.5",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Thalamus"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Upper Lobe",
+            "Right Middle Lobe",
+            "Right Lower Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lower Lobe",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchus",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Coronary Artery",
+            "Left Anterior Descending Artery (LAD)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Upper Lobe (RUL)\",\n        \"Right Middle Lobe (RML)\",\n        \"Right Lower Lobe (RLL)\",\n        \"Left Lower Lobe (LLL)\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Upper Lobe (RUL)",
+              "Right Middle Lobe (RML)",
+              "Right Lower Lobe (RLL)",
+              "Left Lower Lobe (LLL)",
+              "Alveoli",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Upper Lobe (RUL)",
+                    "Right Middle Lobe (RML)",
+                    "Right Lower Lobe (RLL)",
+                    "Left Lower Lobe (LLL)",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Upper Lobe (RUL)",
+            "Right Middle Lobe (RML)",
+            "Right Lower Lobe (RLL)",
+            "Left Lower Lobe (LLL)",
+            "Alveoli",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Alveoli",
+              "Bronchioles",
+              "Pleural Cavity",
+              "Pulmonary Capillaries"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver",
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pleural Cavity",
+            "Pulmonary Capillaries"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4066_symptom_10",
+      "diagnosis": "normal coronary arteries",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Thalamus"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Upper Lobe",
+            "Right Middle Lobe",
+            "Right Lower Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lower Lobe",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchus",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Coronary Artery",
+            "Left Anterior Descending Artery (LAD)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Upper Lobe (RUL)\",\n        \"Right Middle Lobe (RML)\",\n        \"Right Lower Lobe (RLL)\",\n        \"Left Lower Lobe (LLL)\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Upper Lobe (RUL)",
+              "Right Middle Lobe (RML)",
+              "Right Lower Lobe (RLL)",
+              "Left Lower Lobe (LLL)",
+              "Alveoli",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Upper Lobe (RUL)",
+                    "Right Middle Lobe (RML)",
+                    "Right Lower Lobe (RLL)",
+                    "Left Lower Lobe (LLL)",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Upper Lobe (RUL)",
+            "Right Middle Lobe (RML)",
+            "Right Lower Lobe (RLL)",
+            "Left Lower Lobe (LLL)",
+            "Alveoli",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Alveoli",
+              "Bronchioles",
+              "Pleural Cavity",
+              "Pulmonary Capillaries"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver",
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pleural Cavity",
+            "Pulmonary Capillaries"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4066_symptom_11",
+      "diagnosis": "respiratory distress",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Thalamus"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Upper Lobe",
+            "Right Middle Lobe",
+            "Right Lower Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lower Lobe",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchus",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Coronary Artery",
+            "Left Anterior Descending Artery (LAD)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Upper Lobe (RUL)\",\n        \"Right Middle Lobe (RML)\",\n        \"Right Lower Lobe (RLL)\",\n        \"Left Lower Lobe (LLL)\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Upper Lobe (RUL)",
+              "Right Middle Lobe (RML)",
+              "Right Lower Lobe (RLL)",
+              "Left Lower Lobe (LLL)",
+              "Alveoli",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Upper Lobe (RUL)",
+                    "Right Middle Lobe (RML)",
+                    "Right Lower Lobe (RLL)",
+                    "Left Lower Lobe (LLL)",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Upper Lobe (RUL)",
+            "Right Middle Lobe (RML)",
+            "Right Lower Lobe (RLL)",
+            "Left Lower Lobe (LLL)",
+            "Alveoli",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Alveoli",
+              "Bronchioles",
+              "Pleural Cavity",
+              "Pulmonary Capillaries"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver",
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pleural Cavity",
+            "Pulmonary Capillaries"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4066_symptom_12",
+      "diagnosis": "microhemorrhages",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Thalamus"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Upper Lobe",
+            "Right Middle Lobe",
+            "Right Lower Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lower Lobe",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchus",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Coronary Artery",
+            "Left Anterior Descending Artery (LAD)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Upper Lobe (RUL)\",\n        \"Right Middle Lobe (RML)\",\n        \"Right Lower Lobe (RLL)\",\n        \"Left Lower Lobe (LLL)\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Upper Lobe (RUL)",
+              "Right Middle Lobe (RML)",
+              "Right Lower Lobe (RLL)",
+              "Left Lower Lobe (LLL)",
+              "Alveoli",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Upper Lobe (RUL)",
+                    "Right Middle Lobe (RML)",
+                    "Right Lower Lobe (RLL)",
+                    "Left Lower Lobe (LLL)",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Upper Lobe (RUL)",
+            "Right Middle Lobe (RML)",
+            "Right Lower Lobe (RLL)",
+            "Left Lower Lobe (LLL)",
+            "Alveoli",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Alveoli",
+              "Bronchioles",
+              "Pleural Cavity",
+              "Pulmonary Capillaries"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver",
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pleural Cavity",
+            "Pulmonary Capillaries"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4066_symptom_13",
+      "diagnosis": "acute respiratory distress with increased o2 requirements",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Thalamus"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Kidney (Ren)",
+          "anatomicalLocations": [
+            "Renal Cortex",
+            "Renal Medulla (Pyramids)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Upper Lobe",
+            "Right Middle Lobe",
+            "Right Lower Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Left Lobe of Liver",
+            "Right Lobe of Liver"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lower Lobe",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchus",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Coronary Artery",
+            "Left Anterior Descending Artery (LAD)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Upper Lobe (RUL)\",\n        \"Right Middle Lobe (RML)\",\n        \"Right Lower Lobe (RLL)\",\n        \"Left Lower Lobe (LLL)\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Upper Lobe (RUL)",
+              "Right Middle Lobe (RML)",
+              "Right Lower Lobe (RLL)",
+              "Left Lower Lobe (LLL)",
+              "Alveoli",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Upper Lobe (RUL)",
+                    "Right Middle Lobe (RML)",
+                    "Right Lower Lobe (RLL)",
+                    "Left Lower Lobe (LLL)",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Upper Lobe (RUL)",
+            "Right Middle Lobe (RML)",
+            "Right Lower Lobe (RLL)",
+            "Left Lower Lobe (LLL)",
+            "Alveoli",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Left Lobe of Liver\",\n        \"Right Lobe of Liver\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Alveoli",
+              "Bronchioles",
+              "Pleural Cavity",
+              "Pulmonary Capillaries"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Right Ventricle (RV)",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Pelvis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Left Lobe of Liver",
+                    "Right Lobe of Liver",
+                    "Portal Vein"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Alveoli",
+            "Bronchioles",
+            "Pleural Cavity",
+            "Pulmonary Capillaries"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

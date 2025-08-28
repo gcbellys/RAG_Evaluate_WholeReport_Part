@@ -1,0 +1,734 @@
+{
+  "comparison_timestamp": "2025-08-28T01:21:29.199692",
+  "total_reports": 31,
+  "method_comparison": {
+    "diagnostic_4050": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 8,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 8,
+        "processing_time": "2025-08-28T00:52:28.023553"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 8,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 8,
+        "processing_time": "2025-08-28T01:07:15.266601"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4051": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 11,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 11,
+        "processing_time": "2025-08-28T00:53:00.792723"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 11,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 11,
+        "processing_time": "2025-08-28T01:07:48.364497"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4052": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 12,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 12,
+        "processing_time": "2025-08-28T00:53:27.586544"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 12,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 12,
+        "processing_time": "2025-08-28T01:08:21.308891"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4053": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 1,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 1,
+        "processing_time": "2025-08-28T00:53:44.929361"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 1,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 1,
+        "processing_time": "2025-08-28T01:08:38.812172"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4054": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 14,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 13,
+        "processing_time": "2025-08-28T00:54:22.252558"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 14,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 13,
+        "processing_time": "2025-08-28T01:09:15.040251"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4055": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 7,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 11,
+        "processing_time": "2025-08-28T00:54:46.569864"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 7,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 11,
+        "processing_time": "2025-08-28T01:09:39.986588"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4056": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 5,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 5,
+        "processing_time": "2025-08-28T00:55:13.840487"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 5,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 5,
+        "processing_time": "2025-08-28T01:10:08.157108"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4057": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 5,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 6,
+        "processing_time": "2025-08-28T00:55:36.284667"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 5,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 6,
+        "processing_time": "2025-08-28T01:10:31.760427"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4058": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 5,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 7,
+        "processing_time": "2025-08-28T00:55:57.038939"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 5,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 7,
+        "processing_time": "2025-08-28T01:10:52.770819"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4059": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 12,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 14,
+        "processing_time": "2025-08-28T00:56:33.499572"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 12,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 14,
+        "processing_time": "2025-08-28T01:11:29.029720"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4060": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 14,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 13,
+        "processing_time": "2025-08-28T00:57:05.295455"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 14,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 13,
+        "processing_time": "2025-08-28T01:12:03.089227"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4061": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 6,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 6,
+        "processing_time": "2025-08-28T00:57:27.368571"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 6,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 6,
+        "processing_time": "2025-08-28T01:12:25.509010"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4062": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 5,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 11,
+        "processing_time": "2025-08-28T00:57:53.490669"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 5,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 7,
+        "processing_time": "2025-08-28T01:12:48.345150"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4063": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 7,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 12,
+        "processing_time": "2025-08-28T00:58:23.381269"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 7,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 11,
+        "processing_time": "2025-08-28T01:13:16.642310"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4064": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 8,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 8,
+        "processing_time": "2025-08-28T00:58:45.885495"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 8,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 8,
+        "processing_time": "2025-08-28T01:13:38.591704"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4065": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 6,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 6,
+        "processing_time": "2025-08-28T00:59:06.024673"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 6,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 6,
+        "processing_time": "2025-08-28T01:13:57.777843"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4066": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 14,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 14,
+        "processing_time": "2025-08-28T00:59:44.066606"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 14,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 14,
+        "processing_time": "2025-08-28T01:14:34.499015"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4067": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 8,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 8,
+        "processing_time": "2025-08-28T01:00:14.339727"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 8,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 8,
+        "processing_time": "2025-08-28T01:15:05.428054"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4068": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 10,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 13,
+        "processing_time": "2025-08-28T01:00:51.477779"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 10,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 13,
+        "processing_time": "2025-08-28T01:15:43.274616"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4069": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 9,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 12,
+        "processing_time": "2025-08-28T01:01:20.395085"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 9,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 12,
+        "processing_time": "2025-08-28T01:16:14.471146"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4070": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 11,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 8,
+        "processing_time": "2025-08-28T01:01:52.871058"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 11,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 11,
+        "processing_time": "2025-08-28T01:16:48.078341"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4071": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 3,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 5,
+        "processing_time": "2025-08-28T01:02:17.256445"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 3,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 5,
+        "processing_time": "2025-08-28T01:17:09.428901"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4072": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 8,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 8,
+        "processing_time": "2025-08-28T01:02:43.900187"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 8,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 8,
+        "processing_time": "2025-08-28T01:17:36.243995"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4073": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 1,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 3,
+        "processing_time": "2025-08-28T01:03:04.929606"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 1,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 3,
+        "processing_time": "2025-08-28T01:17:57.459775"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4074": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 7,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 7,
+        "processing_time": "2025-08-28T01:03:34.226234"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 7,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 7,
+        "processing_time": "2025-08-28T01:18:26.897128"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4075": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 12,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 12,
+        "processing_time": "2025-08-28T01:04:10.441396"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 12,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 12,
+        "processing_time": "2025-08-28T01:19:03.325798"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4076": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 13,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 0,
+        "processing_time": "2025-08-28T01:04:47.036582"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 13,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 0,
+        "processing_time": "2025-08-28T01:19:37.185637"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4077": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 8,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 9,
+        "processing_time": "2025-08-28T01:05:18.324215"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 8,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 9,
+        "processing_time": "2025-08-28T01:20:04.560366"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4078": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 17,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 17,
+        "processing_time": "2025-08-28T01:05:54.203978"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 17,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 17,
+        "processing_time": "2025-08-28T01:20:38.296085"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4079": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 7,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 8,
+        "processing_time": "2025-08-28T01:06:16.901314"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 7,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 8,
+        "processing_time": "2025-08-28T01:21:01.525892"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    },
+    "diagnostic_4080": {
+      "baseline": {
+        "method": "baseline_aggregation",
+        "symptoms_count": 6,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 6,
+        "processing_time": "2025-08-28T01:06:42.126793"
+      },
+      "aggregation": {
+        "method": "aggregation_report_level",
+        "symptoms_count": 6,
+        "prediction_success": true,
+        "intelligent_split_success": true,
+        "rag_searches": 6,
+        "processing_time": "2025-08-28T01:21:29.199669"
+      },
+      "comparison": {
+        "symptoms_consistency": true,
+        "prediction_comparison": "基线: 成功, 增强: 成功",
+        "processing_efficiency": "两种方法都使用症状聚合处理"
+      }
+    }
+  },
+  "summary": {
+    "baseline_method": "症状聚合基线方法",
+    "aggregation_method": "增强症状聚合方法",
+    "comparison_metrics": {
+      "processing_efficiency": "处理效率对比",
+      "prediction_quality": "预测质量对比",
+      "symptom_analysis": "症状分析对比"
+    },
+    "statistics": {
+      "total_reports_compared": 31,
+      "baseline_success_rate": "100.0%",
+      "aggregation_success_rate": "100.0%",
+      "improvement_analysis": "两种方法都采用症状聚合，主要区别在于智能分割和RAG增强"
+    }
+  }
+}

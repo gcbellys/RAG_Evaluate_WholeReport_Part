@@ -1,0 +1,1137 @@
+[
+  {
+    "report_number": "diagnostic_4055",
+    "method": "baseline_aggregation",
+    "method_name": "症状聚合基线方法",
+    "aggregated_symptoms": "sodium of 120 and potassium of 1.7; fena was <0.1 but urine osmolality >300; episodes of syncope; somnolence and encephalopathy; fatigue; poor po intake; increased somnulence, weakness, and episodes of syncope",
+    "expected_results": {
+      "organ": "Brain, Kidney (Ren), Small intestine (Intestinum tenue)",
+      "a_position": "Adrenal Cortex, Adrenal Medulla, Brainstem, Diencephalon, Duodenum, Frontal Lobe, Jejunum, Parietal Lobe, Renal Cortex, Renal Medulla (Pyramids)"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Kidney (Ren)",
+          "a_position": "Renal Cortex, Renal Medulla (Pyramids)"
+        },
+        "api_eva": {
+          "overall_score": 68.0,
+          "precision": 100.0,
+          "recall": 20.0,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Brain",
+          "a_position": "Cerebral Cortex, Brainstem, Diencephalon"
+        },
+        "api_eva": {
+          "overall_score": 54.7,
+          "precision": 66.7,
+          "recall": 20.0,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 61.4,
+      "average_precision": 83.3,
+      "average_recall": 20.0
+    }
+  },
+  {
+    "report_number": "diagnostic_4055",
+    "method": "rag_enhanced_aggregation",
+    "method_name": "增强症状聚合方法",
+    "aggregated_symptoms": "sodium of 120 and potassium of 1.7; fena was <0.1 but urine osmolality >300; episodes of syncope; somnolence and encephalopathy; fatigue; poor po intake; increased somnulence, weakness, and episodes of syncope",
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"sodium of 120\",\n            \"primary_organ\": \"肾脏\",\n            \"severity\": \"严重\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"potassium of 1.7\",\n            \"primary_organ\": \"肾脏\",\n            \"severity\": \"严重\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"fena was <0.1\",\n            \"primary_organ\": \"肾脏\",\n            \"severity\": \"轻微\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"urine osmolality >300\",\n            \"primary_organ\": \"肾脏\",\n            \"severity\": \"轻微\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"episodes of syncope\",\n            \"primary_organ\": \"心血管系统\",\n            \"severity\": \"严重\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"somnolence\",\n            \"primary_organ\": \"神经系统\",\n            \"severity\": \"轻微\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"encephalopathy\",\n            \"primary_organ\": \"神经系统\",\n            \"severity\": \"严重\"\n        },\n        {\n            \"symptom_id\": \"s8\",\n            \"symptom_text\": \"fatigue\",\n            \"primary_organ\": \"全身\",\n            \"severity\": \"轻微\"\n        },\n        {\n            \"symptom_id\": \"s9\",\n            \"symptom_text\": \"poor po intake\",\n            \"primary_organ\": \"消化系统\",\n            \"severity\": \"轻微\"\n        },\n        {\n            \"symptom_id\": \"s10\",\n            \"symptom_text\": \"increased somnulence\",\n            \"primary_organ\": \"神经系统\",\n            \"severity\": \"轻微\"\n        },\n        {\n            \"symptom_id\": \"s11\",\n            \"symptom_text\": \"weakness\",\n            \"primary_organ\": \"全身\",\n            \"severity\": \"轻微\"\n        }\n    ],\n    \"total_count\": 11,\n    \"reasoning\": \"根据症状描述，将症状分割成独立的单元。主要考虑电解质紊乱、肾脏功能异常、心血管系统异常、神经系统异常、消化系统异常等因素。每个症状单元都明确了主要相关器官和严重程度。\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "sodium of 120",
+              "primary_organ": "肾脏",
+              "severity": "严重"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "potassium of 1.7",
+              "primary_organ": "肾脏",
+              "severity": "严重"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "fena was <0.1",
+              "primary_organ": "肾脏",
+              "severity": "轻微"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "urine osmolality >300",
+              "primary_organ": "肾脏",
+              "severity": "轻微"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "episodes of syncope",
+              "primary_organ": "心血管系统",
+              "severity": "严重"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "somnolence",
+              "primary_organ": "神经系统",
+              "severity": "轻微"
+            },
+            {
+              "symptom_id": "s7",
+              "symptom_text": "encephalopathy",
+              "primary_organ": "神经系统",
+              "severity": "严重"
+            },
+            {
+              "symptom_id": "s8",
+              "symptom_text": "fatigue",
+              "primary_organ": "全身",
+              "severity": "轻微"
+            },
+            {
+              "symptom_id": "s9",
+              "symptom_text": "poor po intake",
+              "primary_organ": "消化系统",
+              "severity": "轻微"
+            },
+            {
+              "symptom_id": "s10",
+              "symptom_text": "increased somnulence",
+              "primary_organ": "神经系统",
+              "severity": "轻微"
+            },
+            {
+              "symptom_id": "s11",
+              "symptom_text": "weakness",
+              "primary_organ": "全身",
+              "severity": "轻微"
+            }
+          ],
+          "total_count": 11,
+          "reasoning": "根据症状描述，将症状分割成独立的单元。主要考虑电解质紊乱、肾脏功能异常、心血管系统异常、神经系统异常、消化系统异常等因素。每个症状单元都明确了主要相关器官和严重程度。"
+        }
+      },
+      "timestamp": "2025-08-28T00:23:37.427667"
+    },
+    "rag_search_results": {
+      "success": true,
+      "total_searched": 11,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "sodium of 120",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "sodium of 120",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "sodium of 120",
+                  "units": [
+                    {
+                      "u_id": "u_84891",
+                      "u_unit": {
+                        "d_diagnosis": "sodium was 139",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "sodium was 139"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "sodium of 120",
+                  "units": [
+                    {
+                      "u_id": "u_85877",
+                      "u_unit": {
+                        "d_diagnosis": "sodium was 138",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "sodium was 138"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "sodium of 120",
+                  "units": [
+                    {
+                      "u_id": "u_89748",
+                      "u_unit": {
+                        "d_diagnosis": "sodium 142",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "sodium 142"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:23:39.182509"
+          }
+        },
+        "s2": {
+          "symptom_text": "potassium of 1.7",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "potassium of 1.7",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "potassium of 1.7",
+                  "units": [
+                    {
+                      "u_id": "u_70466",
+                      "u_unit": {
+                        "d_diagnosis": "potassium 4.7",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "potassium 4.7"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "potassium of 1.7",
+                  "units": [
+                    {
+                      "u_id": "u_65727",
+                      "u_unit": {
+                        "d_diagnosis": "potassium of 6.0",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "potassium of 6.0"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "potassium of 1.7",
+                  "units": [
+                    {
+                      "u_id": "u_76390",
+                      "u_unit": {
+                        "d_diagnosis": "potassium-5.3*",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "potassium-5.3*"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:23:40.966361"
+          }
+        },
+        "s3": {
+          "symptom_text": "fena was <0.1",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "fena was <0.1",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "fena was <0.1",
+                  "units": [
+                    {
+                      "u_id": "u_6742",
+                      "u_unit": {
+                        "d_diagnosis": "fena<1%",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "fena<1%"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "fena was <0.1",
+                  "units": [
+                    {
+                      "u_id": "u_93900",
+                      "u_unit": {
+                        "d_diagnosis": "fena was >1",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "fena was >1"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "fena was <0.1",
+                  "units": [
+                    {
+                      "u_id": "u_45104",
+                      "u_unit": {
+                        "d_diagnosis": "fena>1%",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "fena>1%"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:23:42.876878"
+          }
+        },
+        "s4": {
+          "symptom_text": "urine osmolality >300",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "urine osmolality >300",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:23:44.882587"
+          }
+        },
+        "s5": {
+          "symptom_text": "episodes of syncope",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "episodes of syncope",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "episodes of syncope",
+                  "units": [
+                    {
+                      "u_id": "u_56814",
+                      "u_unit": {
+                        "d_diagnosis": "episode of syncope",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "episode of syncope"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "episodes of syncope",
+                  "units": [
+                    {
+                      "u_id": "u_76325",
+                      "u_unit": {
+                        "d_diagnosis": "syncopal episode",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "syncopal episode"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:23:46.654330"
+          }
+        },
+        "s6": {
+          "symptom_text": "somnolence",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "somnolence",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "somnolence",
+                  "units": [
+                    {
+                      "u_id": "u_75176",
+                      "u_unit": {
+                        "d_diagnosis": "somnolence",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "somnolence"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:23:48.406278"
+          }
+        },
+        "s7": {
+          "symptom_text": "encephalopathy",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "encephalopathy",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "encephalopathy",
+                  "units": [
+                    {
+                      "u_id": "u_50932",
+                      "u_unit": {
+                        "d_diagnosis": "encephalopathy",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "encephalopathy"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "encephalopathy",
+                  "units": [
+                    {
+                      "u_id": "u_85743",
+                      "u_unit": {
+                        "d_diagnosis": "history of encephalopathy",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "history of encephalopathy"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:23:50.119956"
+          }
+        },
+        "s8": {
+          "symptom_text": "fatigue",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "fatigue",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "fatigue",
+                  "units": [
+                    {
+                      "u_id": "u_40620",
+                      "u_unit": {
+                        "d_diagnosis": "fatigue",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "fatigue"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:23:51.918888"
+          }
+        },
+        "s9": {
+          "symptom_text": "poor po intake",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "poor po intake",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "poor po intake",
+                  "units": [
+                    {
+                      "u_id": "u_56268",
+                      "u_unit": {
+                        "d_diagnosis": "poor po intake",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "poor po intake"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:23:53.739106"
+          }
+        },
+        "s10": {
+          "symptom_text": "increased somnulence",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "increased somnulence",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "increased somnulence",
+                  "units": [
+                    {
+                      "u_id": "u_12112",
+                      "u_unit": {
+                        "d_diagnosis": "increasing somnolence",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "increasing somnolence"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "increased somnulence",
+                  "units": [
+                    {
+                      "u_id": "u_62981",
+                      "u_unit": {
+                        "d_diagnosis": "episode of increased somnolence",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "episode of increased somnolence"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "increased somnulence",
+                  "units": [
+                    {
+                      "u_id": "u_75176",
+                      "u_unit": {
+                        "d_diagnosis": "somnolence",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "somnolence"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:23:55.490132"
+          }
+        },
+        "s11": {
+          "symptom_text": "weakness",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "weakness",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "weakness",
+                  "units": [
+                    {
+                      "u_id": "u_43998",
+                      "u_unit": {
+                        "d_diagnosis": "weakness",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "weakness"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:23:57.272758"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "sodium of 120",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "sodium of 120",
+              "units": [
+                {
+                  "u_id": "u_84891",
+                  "u_unit": {
+                    "d_diagnosis": "sodium was 139",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "sodium was 139"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "sodium of 120",
+              "units": [
+                {
+                  "u_id": "u_85877",
+                  "u_unit": {
+                    "d_diagnosis": "sodium was 138",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "sodium was 138"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "sodium of 120",
+              "units": [
+                {
+                  "u_id": "u_89748",
+                  "u_unit": {
+                    "d_diagnosis": "sodium 142",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "sodium 142"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "potassium of 1.7",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "potassium of 1.7",
+              "units": [
+                {
+                  "u_id": "u_70466",
+                  "u_unit": {
+                    "d_diagnosis": "potassium 4.7",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "potassium 4.7"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "potassium of 1.7",
+              "units": [
+                {
+                  "u_id": "u_65727",
+                  "u_unit": {
+                    "d_diagnosis": "potassium of 6.0",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "potassium of 6.0"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "potassium of 1.7",
+              "units": [
+                {
+                  "u_id": "u_76390",
+                  "u_unit": {
+                    "d_diagnosis": "potassium-5.3*",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "potassium-5.3*"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "fena was <0.1",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "fena was <0.1",
+              "units": [
+                {
+                  "u_id": "u_6742",
+                  "u_unit": {
+                    "d_diagnosis": "fena<1%",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "fena<1%"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "fena was <0.1",
+              "units": [
+                {
+                  "u_id": "u_93900",
+                  "u_unit": {
+                    "d_diagnosis": "fena was >1",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "fena was >1"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "fena was <0.1",
+              "units": [
+                {
+                  "u_id": "u_45104",
+                  "u_unit": {
+                    "d_diagnosis": "fena>1%",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "fena>1%"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "urine osmolality >300",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "episodes of syncope",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "episodes of syncope",
+              "units": [
+                {
+                  "u_id": "u_56814",
+                  "u_unit": {
+                    "d_diagnosis": "episode of syncope",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "episode of syncope"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "episodes of syncope",
+              "units": [
+                {
+                  "u_id": "u_76325",
+                  "u_unit": {
+                    "d_diagnosis": "syncopal episode",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "syncopal episode"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "somnolence",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "somnolence",
+              "units": [
+                {
+                  "u_id": "u_75176",
+                  "u_unit": {
+                    "d_diagnosis": "somnolence",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "somnolence"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "encephalopathy",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "encephalopathy",
+              "units": [
+                {
+                  "u_id": "u_50932",
+                  "u_unit": {
+                    "d_diagnosis": "encephalopathy",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "encephalopathy"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "encephalopathy",
+              "units": [
+                {
+                  "u_id": "u_85743",
+                  "u_unit": {
+                    "d_diagnosis": "history of encephalopathy",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "history of encephalopathy"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "fatigue",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "fatigue",
+              "units": [
+                {
+                  "u_id": "u_40620",
+                  "u_unit": {
+                    "d_diagnosis": "fatigue",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "fatigue"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "poor po intake",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "poor po intake",
+              "units": [
+                {
+                  "u_id": "u_56268",
+                  "u_unit": {
+                    "d_diagnosis": "poor po intake",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "poor po intake"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "increased somnulence",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "increased somnulence",
+              "units": [
+                {
+                  "u_id": "u_12112",
+                  "u_unit": {
+                    "d_diagnosis": "increasing somnolence",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "increasing somnolence"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "increased somnulence",
+              "units": [
+                {
+                  "u_id": "u_62981",
+                  "u_unit": {
+                    "d_diagnosis": "episode of increased somnolence",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "episode of increased somnolence"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "increased somnulence",
+              "units": [
+                {
+                  "u_id": "u_75176",
+                  "u_unit": {
+                    "d_diagnosis": "somnolence",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "somnolence"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "weakness",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "weakness",
+              "units": [
+                {
+                  "u_id": "u_43998",
+                  "u_unit": {
+                    "d_diagnosis": "weakness",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "weakness"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:23:57.272787"
+    },
+    "expected_results": {
+      "organ": "Brain, Kidney (Ren), Small intestine (Intestinum tenue)",
+      "a_position": "Adrenal Cortex, Adrenal Medulla, Brainstem, Diencephalon, Duodenum, Frontal Lobe, Jejunum, Parietal Lobe, Renal Cortex, Renal Medulla (Pyramids)"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Kidney (Ren)",
+          "a_position": "Renal Cortex, Renal Medulla (Pyramids)"
+        },
+        "api_eva": {
+          "overall_score": 68.0,
+          "precision": 100.0,
+          "recall": 20.0,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Brain",
+          "a_position": "Cerebral Cortex, Brainstem, Cerebrospinal Fluid (CSF)"
+        },
+        "api_eva": {
+          "overall_score": 37.3,
+          "precision": 33.3,
+          "recall": 10.0,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 52.6,
+      "average_precision": 66.7,
+      "average_recall": 15.0
+    }
+  }
+]

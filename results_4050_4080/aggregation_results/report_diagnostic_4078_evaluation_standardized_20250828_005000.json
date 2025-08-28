@@ -1,0 +1,1563 @@
+{
+  "report_number": "diagnostic_4078",
+  "timestamp": "2025-08-28T00:50:00.921393",
+  "baseline_method": {
+    "aggregated_symptoms": "mental status continued to wax/wane; slept through night without event, alert and oriented to person, place, and time; left 3rd rib fracture; hypotension; right acetabular fracture; degenerative changes at the first cmc joint; lethargy and minimal response to sternal rub; bilateral chest tube placement; multiple fractures of the distal radius, distal ulna, fifth metacarpal, and scaphoid; troponin leak of 0.27; mental status was alert and oriented but sleepy; retrocardiac opacity; baseline platelets 50-100k; somnolence; vbg confirmed hypercarbia; bilateral pneumothoraces; patient became more alert",
+    "expected_results": [
+      {
+        "organName": "Brain",
+        "anatomicalLocations": [
+          "Cerebral Cortex",
+          "Frontal Lobe"
+        ]
+      },
+      {
+        "organName": "Brainstem",
+        "anatomicalLocations": [
+          "Bone Marrow Stroma",
+          "Bone Marrow Blood Vessels"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Left Ventricle (LV)",
+          "Aortic Valve"
+        ]
+      },
+      {
+        "organName": "Brain",
+        "anatomicalLocations": [
+          "Cerebral Cortex",
+          "Brainstem"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Pleural Cavity",
+          "Visceral Pleura"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Left Ventricle (LV)",
+          "Coronary Artery"
+        ]
+      },
+      {
+        "organName": "Brainstem",
+        "anatomicalLocations": [
+          "Hematopoietic Tissue",
+          "Bone Marrow Sinusoids"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Alveoli",
+          "Bronchioles"
+        ]
+      }
+    ],
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "success": true,
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Diencephalon",
+          "Brainstem"
+        ],
+        "usage": {
+          "completion_tokens": 178,
+          "prompt_tokens": 2299,
+          "total_tokens": 2477,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "success": true,
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Brainstem",
+          "Cerebrospinal Fluid (CSF)"
+        ],
+        "usage": {
+          "completion_tokens": 178,
+          "prompt_tokens": 2160,
+          "total_tokens": 2338,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 1984
+          },
+          "prompt_cache_hit_tokens": 1984,
+          "prompt_cache_miss_tokens": 176
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 52.4,
+      "average_precision": 66.7,
+      "average_recall": 14.3
+    }
+  },
+  "rag_enhanced_method": {
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"mental status continued to wax/wane\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"slept through night without event, alert and oriented to person, place, and time\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"left 3rd rib fracture\",\n            \"primary_organ\": \"thorax\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"hypotension\",\n            \"primary_organ\": \"circulatory system\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"right acetabular fracture\",\n            \"primary_organ\": \"pelvis\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"degenerative changes at the first cmc joint\",\n            \"primary_organ\": \"hand\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"lethargy and minimal response to sternal rub\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s8\",\n            \"symptom_text\": \"bilateral chest tube placement\",\n            \"primary_organ\": \"thorax\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s9\",\n            \"symptom_text\": \"multiple fractures of the distal radius, distal ulna, fifth metacarpal, and scaphoid\",\n            \"primary_organ\": \"forearm\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s10\",\n            \"symptom_text\": \"troponin leak of 0.27\",\n            \"primary_organ\": \"heart\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s11\",\n            \"symptom_text\": \"mental status was alert and oriented but sleepy\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s12\",\n            \"symptom_text\": \"retrocardiac opacity\",\n            \"primary_organ\": \"thorax\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s13\",\n            \"symptom_text\": \"baseline platelets 50-100k\",\n            \"primary_organ\": \"blood\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s14\",\n            \"symptom_text\": \"somnolence\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s15\",\n            \"symptom_text\": \"vbg confirmed hypercarbia\",\n            \"primary_organ\": \"respiratory system\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s16\",\n            \"symptom_text\": \"bilateral pneumothoraces\",\n            \"primary_organ\": \"thorax\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s17\",\n            \"symptom_text\": \"patient became more alert\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"mild\"\n        }\n    ],\n    \"total_count\": 17,\n    \"reasoning\": \"聚合症状被分割成独立的症状单元，每个单元描述了一个特定的症状，包括症状描述、主要相关器官和严重程度。分割逻辑基于症状描述中提到的身体部位和症状的性质。\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "mental status continued to wax/wane",
+              "primary_organ": "brain",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "slept through night without event, alert and oriented to person, place, and time",
+              "primary_organ": "brain",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "left 3rd rib fracture",
+              "primary_organ": "thorax",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "hypotension",
+              "primary_organ": "circulatory system",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "right acetabular fracture",
+              "primary_organ": "pelvis",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "degenerative changes at the first cmc joint",
+              "primary_organ": "hand",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s7",
+              "symptom_text": "lethargy and minimal response to sternal rub",
+              "primary_organ": "brain",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s8",
+              "symptom_text": "bilateral chest tube placement",
+              "primary_organ": "thorax",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s9",
+              "symptom_text": "multiple fractures of the distal radius, distal ulna, fifth metacarpal, and scaphoid",
+              "primary_organ": "forearm",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s10",
+              "symptom_text": "troponin leak of 0.27",
+              "primary_organ": "heart",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s11",
+              "symptom_text": "mental status was alert and oriented but sleepy",
+              "primary_organ": "brain",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s12",
+              "symptom_text": "retrocardiac opacity",
+              "primary_organ": "thorax",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s13",
+              "symptom_text": "baseline platelets 50-100k",
+              "primary_organ": "blood",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s14",
+              "symptom_text": "somnolence",
+              "primary_organ": "brain",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s15",
+              "symptom_text": "vbg confirmed hypercarbia",
+              "primary_organ": "respiratory system",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s16",
+              "symptom_text": "bilateral pneumothoraces",
+              "primary_organ": "thorax",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s17",
+              "symptom_text": "patient became more alert",
+              "primary_organ": "brain",
+              "severity": "mild"
+            }
+          ],
+          "total_count": 17,
+          "reasoning": "聚合症状被分割成独立的症状单元，每个单元描述了一个特定的症状，包括症状描述、主要相关器官和严重程度。分割逻辑基于症状描述中提到的身体部位和症状的性质。"
+        }
+      },
+      "timestamp": "2025-08-28T00:49:11.974754"
+    },
+    "rag_search_results": {
+      "success": true,
+      "total_searched": 17,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "mental status continued to wax/wane",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "mental status continued to wax/wane",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "mental status continued to wax/wane",
+                  "units": [
+                    {
+                      "u_id": "u_13682",
+                      "u_unit": {
+                        "d_diagnosis": "mental status waxed and waned",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "mental status waxed and waned"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "mental status continued to wax/wane",
+                  "units": [
+                    {
+                      "u_id": "u_25030",
+                      "u_unit": {
+                        "d_diagnosis": "mental status waxed and waned through the hospitalization",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "mental status waxed and waned through the hospitalization"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "mental status continued to wax/wane",
+                  "units": [
+                    {
+                      "u_id": "u_48227",
+                      "u_unit": {
+                        "d_diagnosis": "his mental status waxed and waned over the next several days",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "his mental status waxed and waned over the next several days"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:49:13.726526"
+          }
+        },
+        "s2": {
+          "symptom_text": "slept through night without event, alert and oriented to person, place, and time",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "slept through night without event, alert and oriented to person, place, and time",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "slept through night without event, alert and oriented to person, place, and time",
+                  "units": [
+                    {
+                      "u_id": "u_75562",
+                      "u_unit": {
+                        "d_diagnosis": "he remained alert, awake, and oriented",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "he remained alert, awake, and oriented"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "slept through night without event, alert and oriented to person, place, and time",
+                  "units": [
+                    {
+                      "u_id": "u_62774",
+                      "u_unit": {
+                        "d_diagnosis": "alert, awake and oriented",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "alert, awake and oriented"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:49:15.504041"
+          }
+        },
+        "s3": {
+          "symptom_text": "left 3rd rib fracture",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "left 3rd rib fracture",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "left 3rd rib fracture",
+                  "units": [
+                    {
+                      "u_id": "u_50291",
+                      "u_unit": {
+                        "d_diagnosis": "left rib fractures",
+                        "o_organ": {
+                          "organName": "Bone (Os)",
+                          "anatomicalLocations": [
+                            "Bone (Os)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "left rib fractures"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:49:17.259430"
+          }
+        },
+        "s4": {
+          "symptom_text": "hypotension",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "hypotension",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "hypotension",
+                  "units": [
+                    {
+                      "u_id": "u_83863",
+                      "u_unit": {
+                        "d_diagnosis": "hypotension",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "hypotension"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:49:19.030492"
+          }
+        },
+        "s5": {
+          "symptom_text": "right acetabular fracture",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "right acetabular fracture",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "right acetabular fracture",
+                  "units": [
+                    {
+                      "u_id": "u_49897",
+                      "u_unit": {
+                        "d_diagnosis": "broken right hip",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "broken right hip"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:49:20.879846"
+          }
+        },
+        "s6": {
+          "symptom_text": "degenerative changes at the first cmc joint",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "degenerative changes at the first cmc joint",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:49:22.669147"
+          }
+        },
+        "s7": {
+          "symptom_text": "lethargy and minimal response to sternal rub",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "lethargy and minimal response to sternal rub",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "lethargy and minimal response to sternal rub",
+                  "units": [
+                    {
+                      "u_id": "u_15848",
+                      "u_unit": {
+                        "d_diagnosis": "pt sedated; not responsive to sternal rub or pain",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "pt sedated; not responsive to sternal rub or pain"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:49:24.453570"
+          }
+        },
+        "s8": {
+          "symptom_text": "bilateral chest tube placement",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "bilateral chest tube placement",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "bilateral chest tube placement",
+                  "units": [
+                    {
+                      "u_id": "u_66701",
+                      "u_unit": {
+                        "d_diagnosis": "bilateral chest tube thoracostomies",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "bilateral chest tube thoracostomies"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "bilateral chest tube placement",
+                  "units": [
+                    {
+                      "u_id": "u_26665",
+                      "u_unit": {
+                        "d_diagnosis": "chest tube placement",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "chest tube placement"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:49:26.277093"
+          }
+        },
+        "s9": {
+          "symptom_text": "multiple fractures of the distal radius, distal ulna, fifth metacarpal, and scaphoid",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "multiple fractures of the distal radius, distal ulna, fifth metacarpal, and scaphoid",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:49:28.041651"
+          }
+        },
+        "s10": {
+          "symptom_text": "troponin leak of 0.27",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "troponin leak of 0.27",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "troponin leak of 0.27",
+                  "units": [
+                    {
+                      "u_id": "u_55857",
+                      "u_unit": {
+                        "d_diagnosis": "troponin of 0.28",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "troponin of 0.28"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "troponin leak of 0.27",
+                  "units": [
+                    {
+                      "u_id": "u_60169",
+                      "u_unit": {
+                        "d_diagnosis": "mild troponin t leak ~ 0.7",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "mild troponin t leak ~ 0.7"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "troponin leak of 0.27",
+                  "units": [
+                    {
+                      "u_id": "u_34438",
+                      "u_unit": {
+                        "d_diagnosis": "troponin leak",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "troponin leak"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:49:29.818433"
+          }
+        },
+        "s11": {
+          "symptom_text": "mental status was alert and oriented but sleepy",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "mental status was alert and oriented but sleepy",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "mental status was alert and oriented but sleepy",
+                  "units": [
+                    {
+                      "u_id": "u_62774",
+                      "u_unit": {
+                        "d_diagnosis": "alert, awake and oriented",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "alert, awake and oriented"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "mental status was alert and oriented but sleepy",
+                  "units": [
+                    {
+                      "u_id": "u_75562",
+                      "u_unit": {
+                        "d_diagnosis": "he remained alert, awake, and oriented",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "he remained alert, awake, and oriented"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "mental status was alert and oriented but sleepy",
+                  "units": [
+                    {
+                      "u_id": "u_79479",
+                      "u_unit": {
+                        "d_diagnosis": "somnolence, decreased mental status",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "somnolence, decreased mental status"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:49:31.600284"
+          }
+        },
+        "s12": {
+          "symptom_text": "retrocardiac opacity",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "retrocardiac opacity",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "retrocardiac opacity",
+                  "units": [
+                    {
+                      "u_id": "u_97338",
+                      "u_unit": {
+                        "d_diagnosis": "retrocardiac opacity",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "retrocardiac opacity"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "retrocardiac opacity",
+                  "units": [
+                    {
+                      "u_id": "u_51170",
+                      "u_unit": {
+                        "d_diagnosis": "retrocardiac opacity (likely atelectasis)",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "retrocardiac opacity (likely atelectasis)"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:49:33.397542"
+          }
+        },
+        "s13": {
+          "symptom_text": "baseline platelets 50-100k",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "baseline platelets 50-100k",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:49:35.572731"
+          }
+        },
+        "s14": {
+          "symptom_text": "somnolence",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "somnolence",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "somnolence",
+                  "units": [
+                    {
+                      "u_id": "u_75176",
+                      "u_unit": {
+                        "d_diagnosis": "somnolence",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "somnolence"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:49:37.396234"
+          }
+        },
+        "s15": {
+          "symptom_text": "vbg confirmed hypercarbia",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "vbg confirmed hypercarbia",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "vbg confirmed hypercarbia",
+                  "units": [
+                    {
+                      "u_id": "u_46147",
+                      "u_unit": {
+                        "d_diagnosis": "abg revealed hypercarbia",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "abg revealed hypercarbia"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "vbg confirmed hypercarbia",
+                  "units": [
+                    {
+                      "u_id": "u_41820",
+                      "u_unit": {
+                        "d_diagnosis": "hypercarbia",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "hypercarbia"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:49:39.221194"
+          }
+        },
+        "s16": {
+          "symptom_text": "bilateral pneumothoraces",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "bilateral pneumothoraces",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "bilateral pneumothoraces",
+                  "units": [
+                    {
+                      "u_id": "u_66357",
+                      "u_unit": {
+                        "d_diagnosis": "bilateral pneumothoraces",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "bilateral pneumothoraces"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "bilateral pneumothoraces",
+                  "units": [
+                    {
+                      "u_id": "u_75672",
+                      "u_unit": {
+                        "d_diagnosis": "pneumothorax",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "pneumothorax"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:49:40.939661"
+          }
+        },
+        "s17": {
+          "symptom_text": "patient became more alert",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "patient became more alert",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "patient became more alert",
+                  "units": [
+                    {
+                      "u_id": "u_87603",
+                      "u_unit": {
+                        "d_diagnosis": "more alert and conversive",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "more alert and conversive"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:49:42.842477"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "mental status continued to wax/wane",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "mental status continued to wax/wane",
+              "units": [
+                {
+                  "u_id": "u_13682",
+                  "u_unit": {
+                    "d_diagnosis": "mental status waxed and waned",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "mental status waxed and waned"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "mental status continued to wax/wane",
+              "units": [
+                {
+                  "u_id": "u_25030",
+                  "u_unit": {
+                    "d_diagnosis": "mental status waxed and waned through the hospitalization",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "mental status waxed and waned through the hospitalization"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "mental status continued to wax/wane",
+              "units": [
+                {
+                  "u_id": "u_48227",
+                  "u_unit": {
+                    "d_diagnosis": "his mental status waxed and waned over the next several days",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "his mental status waxed and waned over the next several days"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "slept through night without event, alert and oriented to person, place, and time",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "slept through night without event, alert and oriented to person, place, and time",
+              "units": [
+                {
+                  "u_id": "u_75562",
+                  "u_unit": {
+                    "d_diagnosis": "he remained alert, awake, and oriented",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "he remained alert, awake, and oriented"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "slept through night without event, alert and oriented to person, place, and time",
+              "units": [
+                {
+                  "u_id": "u_62774",
+                  "u_unit": {
+                    "d_diagnosis": "alert, awake and oriented",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "alert, awake and oriented"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "left 3rd rib fracture",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "left 3rd rib fracture",
+              "units": [
+                {
+                  "u_id": "u_50291",
+                  "u_unit": {
+                    "d_diagnosis": "left rib fractures",
+                    "o_organ": {
+                      "organName": "Bone (Os)",
+                      "anatomicalLocations": [
+                        "Bone (Os)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "left rib fractures"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "hypotension",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "hypotension",
+              "units": [
+                {
+                  "u_id": "u_83863",
+                  "u_unit": {
+                    "d_diagnosis": "hypotension",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "hypotension"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "right acetabular fracture",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "right acetabular fracture",
+              "units": [
+                {
+                  "u_id": "u_49897",
+                  "u_unit": {
+                    "d_diagnosis": "broken right hip",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "broken right hip"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "degenerative changes at the first cmc joint",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "lethargy and minimal response to sternal rub",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "lethargy and minimal response to sternal rub",
+              "units": [
+                {
+                  "u_id": "u_15848",
+                  "u_unit": {
+                    "d_diagnosis": "pt sedated; not responsive to sternal rub or pain",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "pt sedated; not responsive to sternal rub or pain"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "bilateral chest tube placement",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "bilateral chest tube placement",
+              "units": [
+                {
+                  "u_id": "u_66701",
+                  "u_unit": {
+                    "d_diagnosis": "bilateral chest tube thoracostomies",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "bilateral chest tube thoracostomies"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "bilateral chest tube placement",
+              "units": [
+                {
+                  "u_id": "u_26665",
+                  "u_unit": {
+                    "d_diagnosis": "chest tube placement",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "chest tube placement"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "multiple fractures of the distal radius, distal ulna, fifth metacarpal, and scaphoid",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "troponin leak of 0.27",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "troponin leak of 0.27",
+              "units": [
+                {
+                  "u_id": "u_55857",
+                  "u_unit": {
+                    "d_diagnosis": "troponin of 0.28",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "troponin of 0.28"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "troponin leak of 0.27",
+              "units": [
+                {
+                  "u_id": "u_60169",
+                  "u_unit": {
+                    "d_diagnosis": "mild troponin t leak ~ 0.7",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "mild troponin t leak ~ 0.7"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "troponin leak of 0.27",
+              "units": [
+                {
+                  "u_id": "u_34438",
+                  "u_unit": {
+                    "d_diagnosis": "troponin leak",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "troponin leak"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "mental status was alert and oriented but sleepy",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "mental status was alert and oriented but sleepy",
+              "units": [
+                {
+                  "u_id": "u_62774",
+                  "u_unit": {
+                    "d_diagnosis": "alert, awake and oriented",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "alert, awake and oriented"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "mental status was alert and oriented but sleepy",
+              "units": [
+                {
+                  "u_id": "u_75562",
+                  "u_unit": {
+                    "d_diagnosis": "he remained alert, awake, and oriented",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "he remained alert, awake, and oriented"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "mental status was alert and oriented but sleepy",
+              "units": [
+                {
+                  "u_id": "u_79479",
+                  "u_unit": {
+                    "d_diagnosis": "somnolence, decreased mental status",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "somnolence, decreased mental status"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "retrocardiac opacity",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "retrocardiac opacity",
+              "units": [
+                {
+                  "u_id": "u_97338",
+                  "u_unit": {
+                    "d_diagnosis": "retrocardiac opacity",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "retrocardiac opacity"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "retrocardiac opacity",
+              "units": [
+                {
+                  "u_id": "u_51170",
+                  "u_unit": {
+                    "d_diagnosis": "retrocardiac opacity (likely atelectasis)",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "retrocardiac opacity (likely atelectasis)"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "baseline platelets 50-100k",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "somnolence",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "somnolence",
+              "units": [
+                {
+                  "u_id": "u_75176",
+                  "u_unit": {
+                    "d_diagnosis": "somnolence",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "somnolence"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "vbg confirmed hypercarbia",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "vbg confirmed hypercarbia",
+              "units": [
+                {
+                  "u_id": "u_46147",
+                  "u_unit": {
+                    "d_diagnosis": "abg revealed hypercarbia",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "abg revealed hypercarbia"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "vbg confirmed hypercarbia",
+              "units": [
+                {
+                  "u_id": "u_41820",
+                  "u_unit": {
+                    "d_diagnosis": "hypercarbia",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "hypercarbia"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "bilateral pneumothoraces",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "bilateral pneumothoraces",
+              "units": [
+                {
+                  "u_id": "u_66357",
+                  "u_unit": {
+                    "d_diagnosis": "bilateral pneumothoraces",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "bilateral pneumothoraces"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "bilateral pneumothoraces",
+              "units": [
+                {
+                  "u_id": "u_75672",
+                  "u_unit": {
+                    "d_diagnosis": "pneumothorax",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "pneumothorax"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "patient became more alert",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "patient became more alert",
+              "units": [
+                {
+                  "u_id": "u_87603",
+                  "u_unit": {
+                    "d_diagnosis": "more alert and conversive",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "more alert and conversive"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:49:42.842515"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "success": true,
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Diencephalon",
+          "Brainstem"
+        ],
+        "usage": {
+          "completion_tokens": 223,
+          "prompt_tokens": 3099,
+          "total_tokens": 3322,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "success": true,
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Brainstem",
+          "Cerebrospinal Fluid (CSF)"
+        ],
+        "usage": {
+          "completion_tokens": 229,
+          "prompt_tokens": 2901,
+          "total_tokens": 3130,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2368
+          },
+          "prompt_cache_hit_tokens": 2368,
+          "prompt_cache_miss_tokens": 533
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 52.4,
+      "average_precision": 66.7,
+      "average_recall": 14.3
+    }
+  },
+  "comparison": {
+    "baseline_score": 52.4,
+    "rag_enhanced_score": 52.4,
+    "improvement": 0.0
+  }
+}

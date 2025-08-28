@@ -1,0 +1,1401 @@
+{
+  "report_number": "diagnostic_4069",
+  "timestamp": "2025-08-28T00:39:42.163837",
+  "baseline_method": {
+    "aggregated_symptoms": "vital signs: 99, 66, 18, blood pressure 140/80, o2 sat 96% on room air, fingerstick glucose 149 on admission; the patient diuresed 1 liter self-diuresis; right leg symptoms for years; pain is noted to be in both legs; mild nausea over the last 3 weeks; pulse exam shows that the left dp is dopplerable. the pt is absent. on the right, the dp and pt are absent both by palpation and doppler; urinalysis was negative; ekg showed a normal sinus rhythm with normal axis, with ventricular couplets and first degree av block; heart is a regular rate and rhythm but faint on auscultation secondary to increased ap diameter",
+    "expected_results": [
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Aortic Valve",
+          "Mitral Valve"
+        ]
+      },
+      {
+        "organName": "Kidney (Ren)",
+        "anatomicalLocations": [
+          "Renal Cortex",
+          "Renal Medulla (Pyramids)"
+        ]
+      },
+      {
+        "organName": "Artery (Arteria)",
+        "anatomicalLocations": [
+          "Femoral Artery",
+          "Anterior Tibial Artery"
+        ]
+      },
+      {
+        "organName": "Artery (Arteria)",
+        "anatomicalLocations": [
+          "Femoral Artery",
+          "Popliteal Artery"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Left Ventricle (LV)",
+          "Mitral Valve"
+        ]
+      }
+    ],
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "success": true,
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Right Ventricle (RV)",
+          "Aortic Valve"
+        ],
+        "usage": {
+          "completion_tokens": 237,
+          "prompt_tokens": 2309,
+          "total_tokens": 2546,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "success": true,
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Aortic Valve",
+          "Coronary Artery"
+        ],
+        "usage": {
+          "completion_tokens": 168,
+          "prompt_tokens": 2178,
+          "total_tokens": 2346,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 1984
+          },
+          "prompt_cache_hit_tokens": 1984,
+          "prompt_cache_miss_tokens": 194
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 56.7,
+      "average_precision": 66.7,
+      "average_recall": 25.0
+    }
+  },
+  "rag_enhanced_method": {
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"vital signs: 99, 66, 18\",\n            \"primary_organ\": \"心血管系统\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"blood pressure 140/80\",\n            \"primary_organ\": \"心血管系统\",\n            \"severity\": \"正常\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"o2 sat 96% on room air\",\n            \"primary_organ\": \"呼吸系统\",\n            \"severity\": \"正常\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"fingerstick glucose 149 on admission\",\n            \"primary_organ\": \"内分泌系统\",\n            \"severity\": \"轻微\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"the patient diuresed 1 liter self-diuresis\",\n            \"primary_organ\": \"泌尿系统\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"right leg symptoms for years\",\n            \"primary_organ\": \"肌肉骨骼系统\",\n            \"severity\": \"慢性\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"pain is noted to be in both legs\",\n            \"primary_organ\": \"肌肉骨骼系统\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s8\",\n            \"symptom_text\": \"mild nausea over the last 3 weeks\",\n            \"primary_organ\": \"消化系统\",\n            \"severity\": \"轻微\"\n        },\n        {\n            \"symptom_id\": \"s9\",\n            \"symptom_text\": \"pulse exam shows that the left dp is dopplerable. the pt is absent. on the right, the dp and pt are absent both by palpation and doppler\",\n            \"primary_organ\": \"心血管系统\",\n            \"severity\": \"严重\"\n        },\n        {\n            \"symptom_id\": \"s10\",\n            \"symptom_text\": \"urinalysis was negative\",\n            \"primary_organ\": \"泌尿系统\",\n            \"severity\": \"正常\"\n        },\n        {\n            \"symptom_id\": \"s11\",\n            \"symptom_text\": \"ekg showed a normal sinus rhythm with normal axis, with ventricular couplets and first degree av block\",\n            \"primary_organ\": \"心血管系统\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s12\",\n            \"symptom_text\": \"heart is a regular rate and rhythm but faint on auscultation secondary to increased ap diameter\",\n            \"primary_organ\": \"心血管系统\",\n            \"severity\": \"中等\"\n        }\n    ],\n    \"total_count\": 12,\n    \"reasoning\": \"根据症状描述，将症状分割为独立的单元，每个单元对应一个主要相关器官和严重程度。分割逻辑主要基于症状描述中提到的身体部位和生理指标。\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "vital signs: 99, 66, 18",
+              "primary_organ": "心血管系统",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "blood pressure 140/80",
+              "primary_organ": "心血管系统",
+              "severity": "正常"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "o2 sat 96% on room air",
+              "primary_organ": "呼吸系统",
+              "severity": "正常"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "fingerstick glucose 149 on admission",
+              "primary_organ": "内分泌系统",
+              "severity": "轻微"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "the patient diuresed 1 liter self-diuresis",
+              "primary_organ": "泌尿系统",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "right leg symptoms for years",
+              "primary_organ": "肌肉骨骼系统",
+              "severity": "慢性"
+            },
+            {
+              "symptom_id": "s7",
+              "symptom_text": "pain is noted to be in both legs",
+              "primary_organ": "肌肉骨骼系统",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s8",
+              "symptom_text": "mild nausea over the last 3 weeks",
+              "primary_organ": "消化系统",
+              "severity": "轻微"
+            },
+            {
+              "symptom_id": "s9",
+              "symptom_text": "pulse exam shows that the left dp is dopplerable. the pt is absent. on the right, the dp and pt are absent both by palpation and doppler",
+              "primary_organ": "心血管系统",
+              "severity": "严重"
+            },
+            {
+              "symptom_id": "s10",
+              "symptom_text": "urinalysis was negative",
+              "primary_organ": "泌尿系统",
+              "severity": "正常"
+            },
+            {
+              "symptom_id": "s11",
+              "symptom_text": "ekg showed a normal sinus rhythm with normal axis, with ventricular couplets and first degree av block",
+              "primary_organ": "心血管系统",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s12",
+              "symptom_text": "heart is a regular rate and rhythm but faint on auscultation secondary to increased ap diameter",
+              "primary_organ": "心血管系统",
+              "severity": "中等"
+            }
+          ],
+          "total_count": 12,
+          "reasoning": "根据症状描述，将症状分割为独立的单元，每个单元对应一个主要相关器官和严重程度。分割逻辑主要基于症状描述中提到的身体部位和生理指标。"
+        }
+      },
+      "timestamp": "2025-08-28T00:38:57.181522"
+    },
+    "rag_search_results": {
+      "success": true,
+      "total_searched": 12,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "vital signs: 99, 66, 18",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "vital signs: 99, 66, 18",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "vital signs: 99, 66, 18",
+                  "units": [
+                    {
+                      "u_id": "u_94690",
+                      "u_unit": {
+                        "d_diagnosis": "vital signs 98.6 f.; 72; 193/55; 28; o2 saturation on room air is 99%",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "vital signs 98.6 f.; 72; 193/55; 28; o2 saturation on room air is 99%"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "vital signs: 99, 66, 18",
+                  "units": [
+                    {
+                      "u_id": "u_27236",
+                      "u_unit": {
+                        "d_diagnosis": "vital signs, temperature 98.3, heart rate 89, sinus rhythm, blood pressure 128/70, respiratory rate 18, o2 saturation 94% on room air",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "vital signs, temperature 98.3, heart rate 89, sinus rhythm, blood pressure 128/70, respiratory rate 18, o2 saturation 94% on room air"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "vital signs: 99, 66, 18",
+                  "units": [
+                    {
+                      "u_id": "u_74981",
+                      "u_unit": {
+                        "d_diagnosis": "initial vital signs were:97.6 76 107/93 18 99%",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "initial vital signs were:97.6 76 107/93 18 99%"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:38:59.029782"
+          }
+        },
+        "s2": {
+          "symptom_text": "blood pressure 140/80",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "blood pressure 140/80",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "blood pressure 140/80",
+                  "units": [
+                    {
+                      "u_id": "u_20247",
+                      "u_unit": {
+                        "d_diagnosis": "blood pressure of 140/80",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "blood pressure of 140/80"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "blood pressure 140/80",
+                  "units": [
+                    {
+                      "u_id": "u_50291",
+                      "u_unit": {
+                        "d_diagnosis": "blood pressure 140/88",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "blood pressure 140/88"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "blood pressure 140/80",
+                  "units": [
+                    {
+                      "u_id": "u_6996",
+                      "u_unit": {
+                        "d_diagnosis": "blood pressure of 140/40",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "blood pressure of 140/40"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:39:01.079577"
+          }
+        },
+        "s3": {
+          "symptom_text": "o2 sat 96% on room air",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "o2 sat 96% on room air",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "o2 sat 96% on room air",
+                  "units": [
+                    {
+                      "u_id": "u_4514",
+                      "u_unit": {
+                        "d_diagnosis": "oxygen saturation of 92-96% on room air",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "oxygen saturation of 92-96% on room air"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "o2 sat 96% on room air",
+                  "units": [
+                    {
+                      "u_id": "u_73082",
+                      "u_unit": {
+                        "d_diagnosis": "on room air with an oxygen saturation of 92%",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "on room air with an oxygen saturation of 92%"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "o2 sat 96% on room air",
+                  "units": [
+                    {
+                      "u_id": "u_75180",
+                      "u_unit": {
+                        "d_diagnosis": "o2 sat 94% ra",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "o2 sat 94% ra"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:39:03.901783"
+          }
+        },
+        "s4": {
+          "symptom_text": "fingerstick glucose 149 on admission",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "fingerstick glucose 149 on admission",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:39:06.023786"
+          }
+        },
+        "s5": {
+          "symptom_text": "the patient diuresed 1 liter self-diuresis",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "the patient diuresed 1 liter self-diuresis",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "the patient diuresed 1 liter self-diuresis",
+                  "units": [
+                    {
+                      "u_id": "u_15157",
+                      "u_unit": {
+                        "d_diagnosis": "diuresis",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "diuresis"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "the patient diuresed 1 liter self-diuresis",
+                  "units": [
+                    {
+                      "u_id": "u_76586",
+                      "u_unit": {
+                        "d_diagnosis": "lasix diuresis",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "lasix diuresis"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "the patient diuresed 1 liter self-diuresis",
+                  "units": [
+                    {
+                      "u_id": "u_65698",
+                      "u_unit": {
+                        "d_diagnosis": "diuresed well",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "diuresed well"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:39:07.794742"
+          }
+        },
+        "s6": {
+          "symptom_text": "right leg symptoms for years",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "right leg symptoms for years",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "right leg symptoms for years",
+                  "units": [
+                    {
+                      "u_id": "u_39218",
+                      "u_unit": {
+                        "d_diagnosis": "right leg pain",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "right leg pain"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:39:09.560791"
+          }
+        },
+        "s7": {
+          "symptom_text": "pain is noted to be in both legs",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "pain is noted to be in both legs",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "pain is noted to be in both legs",
+                  "units": [
+                    {
+                      "u_id": "u_6193",
+                      "u_unit": {
+                        "d_diagnosis": "bilateral leg pain",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "bilateral leg pain"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "pain is noted to be in both legs",
+                  "units": [
+                    {
+                      "u_id": "u_90281",
+                      "u_unit": {
+                        "d_diagnosis": "back and leg pain",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "back and leg pain"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:39:11.448055"
+          }
+        },
+        "s8": {
+          "symptom_text": "mild nausea over the last 3 weeks",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "mild nausea over the last 3 weeks",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "mild nausea over the last 3 weeks",
+                  "units": [
+                    {
+                      "u_id": "u_25394",
+                      "u_unit": {
+                        "d_diagnosis": "severe nausea",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "severe nausea"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "mild nausea over the last 3 weeks",
+                  "units": [
+                    {
+                      "u_id": "u_18393",
+                      "u_unit": {
+                        "d_diagnosis": "rle pain and mild nausea",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "rle pain and mild nausea"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:39:13.286735"
+          }
+        },
+        "s9": {
+          "symptom_text": "pulse exam shows that the left dp is dopplerable. the pt is absent. on the right, the dp and pt are absent both by palpation and doppler",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "pulse exam shows that the left dp is dopplerable. the pt is absent. on the right, the dp and pt are absent both by palpation and doppler",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "pulse exam shows that the left dp is dopplerable. the pt is absent. on the right, the dp and pt are absent both by palpation and doppler",
+                  "units": [
+                    {
+                      "u_id": "u_57619",
+                      "u_unit": {
+                        "d_diagnosis": "dopplerable left pt with a relatively faint dp and an equally strong dp and pt with palpable signals",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "dopplerable left pt with a relatively faint dp and an equally strong dp and pt with palpable signals"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "pulse exam shows that the left dp is dopplerable. the pt is absent. on the right, the dp and pt are absent both by palpation and doppler",
+                  "units": [
+                    {
+                      "u_id": "u_11130",
+                      "u_unit": {
+                        "d_diagnosis": "he had a dopplerable right pt and dopplerable left dp & pt",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "he had a dopplerable right pt and dopplerable left dp & pt"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "pulse exam shows that the left dp is dopplerable. the pt is absent. on the right, the dp and pt are absent both by palpation and doppler",
+                  "units": [
+                    {
+                      "u_id": "u_31163",
+                      "u_unit": {
+                        "d_diagnosis": "left dp and pt pulses 2+",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "left dp and pt pulses 2+"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:39:15.191897"
+          }
+        },
+        "s10": {
+          "symptom_text": "urinalysis was negative",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "urinalysis was negative",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "urinalysis was negative",
+                  "units": [
+                    {
+                      "u_id": "u_95080",
+                      "u_unit": {
+                        "d_diagnosis": "urinalysis was negative",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "urinalysis was negative"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "urinalysis was negative",
+                  "units": [
+                    {
+                      "u_id": "u_69335",
+                      "u_unit": {
+                        "d_diagnosis": "urinalysis which was negative",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "urinalysis which was negative"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:39:17.431070"
+          }
+        },
+        "s11": {
+          "symptom_text": "ekg showed a normal sinus rhythm with normal axis, with ventricular couplets and first degree av block",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "ekg showed a normal sinus rhythm with normal axis, with ventricular couplets and first degree av block",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "ekg showed a normal sinus rhythm with normal axis, with ventricular couplets and first degree av block",
+                  "units": [
+                    {
+                      "u_id": "u_11063",
+                      "u_unit": {
+                        "d_diagnosis": "ekg was significant for normal sinus rhythm with normal axis",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "ekg was significant for normal sinus rhythm with normal axis"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "ekg showed a normal sinus rhythm with normal axis, with ventricular couplets and first degree av block",
+                  "units": [
+                    {
+                      "u_id": "u_72366",
+                      "u_unit": {
+                        "d_diagnosis": "normal sinus rhythm with a prolonged p-r interval with normal axis",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "normal sinus rhythm with a prolonged p-r interval with normal axis"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "ekg showed a normal sinus rhythm with normal axis, with ventricular couplets and first degree av block",
+                  "units": [
+                    {
+                      "u_id": "u_55312",
+                      "u_unit": {
+                        "d_diagnosis": "normal sinus rhythm (first degree av block)",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "normal sinus rhythm (first degree av block)"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:39:20.470160"
+          }
+        },
+        "s12": {
+          "symptom_text": "heart is a regular rate and rhythm but faint on auscultation secondary to increased ap diameter",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "heart is a regular rate and rhythm but faint on auscultation secondary to increased ap diameter",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:39:22.857613"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "vital signs: 99, 66, 18",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "vital signs: 99, 66, 18",
+              "units": [
+                {
+                  "u_id": "u_94690",
+                  "u_unit": {
+                    "d_diagnosis": "vital signs 98.6 f.; 72; 193/55; 28; o2 saturation on room air is 99%",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "vital signs 98.6 f.; 72; 193/55; 28; o2 saturation on room air is 99%"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "vital signs: 99, 66, 18",
+              "units": [
+                {
+                  "u_id": "u_27236",
+                  "u_unit": {
+                    "d_diagnosis": "vital signs, temperature 98.3, heart rate 89, sinus rhythm, blood pressure 128/70, respiratory rate 18, o2 saturation 94% on room air",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "vital signs, temperature 98.3, heart rate 89, sinus rhythm, blood pressure 128/70, respiratory rate 18, o2 saturation 94% on room air"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "vital signs: 99, 66, 18",
+              "units": [
+                {
+                  "u_id": "u_74981",
+                  "u_unit": {
+                    "d_diagnosis": "initial vital signs were:97.6 76 107/93 18 99%",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "initial vital signs were:97.6 76 107/93 18 99%"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "blood pressure 140/80",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "blood pressure 140/80",
+              "units": [
+                {
+                  "u_id": "u_20247",
+                  "u_unit": {
+                    "d_diagnosis": "blood pressure of 140/80",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "blood pressure of 140/80"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "blood pressure 140/80",
+              "units": [
+                {
+                  "u_id": "u_50291",
+                  "u_unit": {
+                    "d_diagnosis": "blood pressure 140/88",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "blood pressure 140/88"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "blood pressure 140/80",
+              "units": [
+                {
+                  "u_id": "u_6996",
+                  "u_unit": {
+                    "d_diagnosis": "blood pressure of 140/40",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "blood pressure of 140/40"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "o2 sat 96% on room air",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "o2 sat 96% on room air",
+              "units": [
+                {
+                  "u_id": "u_4514",
+                  "u_unit": {
+                    "d_diagnosis": "oxygen saturation of 92-96% on room air",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "oxygen saturation of 92-96% on room air"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "o2 sat 96% on room air",
+              "units": [
+                {
+                  "u_id": "u_73082",
+                  "u_unit": {
+                    "d_diagnosis": "on room air with an oxygen saturation of 92%",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "on room air with an oxygen saturation of 92%"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "o2 sat 96% on room air",
+              "units": [
+                {
+                  "u_id": "u_75180",
+                  "u_unit": {
+                    "d_diagnosis": "o2 sat 94% ra",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "o2 sat 94% ra"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "fingerstick glucose 149 on admission",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "the patient diuresed 1 liter self-diuresis",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "the patient diuresed 1 liter self-diuresis",
+              "units": [
+                {
+                  "u_id": "u_15157",
+                  "u_unit": {
+                    "d_diagnosis": "diuresis",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "diuresis"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "the patient diuresed 1 liter self-diuresis",
+              "units": [
+                {
+                  "u_id": "u_76586",
+                  "u_unit": {
+                    "d_diagnosis": "lasix diuresis",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "lasix diuresis"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "the patient diuresed 1 liter self-diuresis",
+              "units": [
+                {
+                  "u_id": "u_65698",
+                  "u_unit": {
+                    "d_diagnosis": "diuresed well",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "diuresed well"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "right leg symptoms for years",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "right leg symptoms for years",
+              "units": [
+                {
+                  "u_id": "u_39218",
+                  "u_unit": {
+                    "d_diagnosis": "right leg pain",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "right leg pain"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "pain is noted to be in both legs",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "pain is noted to be in both legs",
+              "units": [
+                {
+                  "u_id": "u_6193",
+                  "u_unit": {
+                    "d_diagnosis": "bilateral leg pain",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "bilateral leg pain"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "pain is noted to be in both legs",
+              "units": [
+                {
+                  "u_id": "u_90281",
+                  "u_unit": {
+                    "d_diagnosis": "back and leg pain",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "back and leg pain"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "mild nausea over the last 3 weeks",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "mild nausea over the last 3 weeks",
+              "units": [
+                {
+                  "u_id": "u_25394",
+                  "u_unit": {
+                    "d_diagnosis": "severe nausea",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "severe nausea"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "mild nausea over the last 3 weeks",
+              "units": [
+                {
+                  "u_id": "u_18393",
+                  "u_unit": {
+                    "d_diagnosis": "rle pain and mild nausea",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "rle pain and mild nausea"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "pulse exam shows that the left dp is dopplerable. the pt is absent. on the right, the dp and pt are absent both by palpation and doppler",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "pulse exam shows that the left dp is dopplerable. the pt is absent. on the right, the dp and pt are absent both by palpation and doppler",
+              "units": [
+                {
+                  "u_id": "u_57619",
+                  "u_unit": {
+                    "d_diagnosis": "dopplerable left pt with a relatively faint dp and an equally strong dp and pt with palpable signals",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "dopplerable left pt with a relatively faint dp and an equally strong dp and pt with palpable signals"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "pulse exam shows that the left dp is dopplerable. the pt is absent. on the right, the dp and pt are absent both by palpation and doppler",
+              "units": [
+                {
+                  "u_id": "u_11130",
+                  "u_unit": {
+                    "d_diagnosis": "he had a dopplerable right pt and dopplerable left dp & pt",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "he had a dopplerable right pt and dopplerable left dp & pt"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "pulse exam shows that the left dp is dopplerable. the pt is absent. on the right, the dp and pt are absent both by palpation and doppler",
+              "units": [
+                {
+                  "u_id": "u_31163",
+                  "u_unit": {
+                    "d_diagnosis": "left dp and pt pulses 2+",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "left dp and pt pulses 2+"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "urinalysis was negative",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "urinalysis was negative",
+              "units": [
+                {
+                  "u_id": "u_95080",
+                  "u_unit": {
+                    "d_diagnosis": "urinalysis was negative",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "urinalysis was negative"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "urinalysis was negative",
+              "units": [
+                {
+                  "u_id": "u_69335",
+                  "u_unit": {
+                    "d_diagnosis": "urinalysis which was negative",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "urinalysis which was negative"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "ekg showed a normal sinus rhythm with normal axis, with ventricular couplets and first degree av block",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "ekg showed a normal sinus rhythm with normal axis, with ventricular couplets and first degree av block",
+              "units": [
+                {
+                  "u_id": "u_11063",
+                  "u_unit": {
+                    "d_diagnosis": "ekg was significant for normal sinus rhythm with normal axis",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "ekg was significant for normal sinus rhythm with normal axis"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "ekg showed a normal sinus rhythm with normal axis, with ventricular couplets and first degree av block",
+              "units": [
+                {
+                  "u_id": "u_72366",
+                  "u_unit": {
+                    "d_diagnosis": "normal sinus rhythm with a prolonged p-r interval with normal axis",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "normal sinus rhythm with a prolonged p-r interval with normal axis"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "ekg showed a normal sinus rhythm with normal axis, with ventricular couplets and first degree av block",
+              "units": [
+                {
+                  "u_id": "u_55312",
+                  "u_unit": {
+                    "d_diagnosis": "normal sinus rhythm (first degree av block)",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "normal sinus rhythm (first degree av block)"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "heart is a regular rate and rhythm but faint on auscultation secondary to increased ap diameter",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        }
+      ],
+      "timestamp": "2025-08-28T00:39:22.857662"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "success": true,
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Atrium (LA)",
+          "Left Ventricle (LV)"
+        ],
+        "usage": {
+          "completion_tokens": 221,
+          "prompt_tokens": 3079,
+          "total_tokens": 3300,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "success": true,
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Aortic Valve",
+          "Mitral Valve",
+          "Left Ventricle (LV)",
+          "Right Ventricle (RV)"
+        ],
+        "usage": {
+          "completion_tokens": 230,
+          "prompt_tokens": 2907,
+          "total_tokens": 3137,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2368
+          },
+          "prompt_cache_hit_tokens": 2368,
+          "prompt_cache_miss_tokens": 539
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 55.0,
+      "average_precision": 62.5,
+      "average_recall": 25.0
+    }
+  },
+  "comparison": {
+    "baseline_score": 56.7,
+    "rag_enhanced_score": 55.0,
+    "improvement": -1.7000000000000028
+  }
+}

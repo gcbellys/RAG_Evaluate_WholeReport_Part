@@ -1,0 +1,1166 @@
+[
+  {
+    "report_number": "diagnostic_4064",
+    "method": "baseline_aggregation",
+    "method_name": "症状聚合基线方法",
+    "aggregated_symptoms": "no flatus; pt with low grade temp of 100.4; pt able to tolerate pills by mouth and full liquid diet; pt saturating to >92% on room air while ambulating; denies n/v; pt had a bowel movement overnight; minimal bowel sounds; pt feels much better after flatus and multiple bowel movements during the day",
+    "expected_results": {
+      "organ": "Esophagus, Large intestine (Intestinum crassum), Lung (Pulmo), Lymph node, Small intestine (Intestinum tenue), Stomach (Gaster)",
+      "a_position": "Alveoli, Anal Canal, Colon, Esophageal Body, Gastric Antrum, Gastric Body, Ileum, Jejunum, Lower Esophageal Sphincter, Lymph Node Cortex, Lymph Node Medulla, Pleura, Rectum"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Large intestine (Intestinum crassum)",
+          "a_position": "Cecum, Ascending Colon, Transverse Colon, Descending Colon, Sigmoid Colon, Rectum"
+        },
+        "api_eva": {
+          "overall_score": 29.7,
+          "precision": 16.7,
+          "recall": 7.7,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Large intestine (Intestinum crassum)",
+          "a_position": "Colon, Rectum, Sigmoid colon"
+        },
+        "api_eva": {
+          "overall_score": 52.8,
+          "precision": 66.7,
+          "recall": 15.4,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 41.2,
+      "average_precision": 41.7,
+      "average_recall": 11.6
+    }
+  },
+  {
+    "report_number": "diagnostic_4064",
+    "method": "rag_enhanced_aggregation",
+    "method_name": "增强症状聚合方法",
+    "aggregated_symptoms": "no flatus; pt with low grade temp of 100.4; pt able to tolerate pills by mouth and full liquid diet; pt saturating to >92% on room air while ambulating; denies n/v; pt had a bowel movement overnight; minimal bowel sounds; pt feels much better after flatus and multiple bowel movements during the day",
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"no flatus\",\n            \"primary_organ\": \"Gastrointestinal\",\n            \"severity\": \"Mild\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"low grade temp of 100.4\",\n            \"primary_organ\": \"General\",\n            \"severity\": \"Mild\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"able to tolerate pills by mouth and full liquid diet\",\n            \"primary_organ\": \"Gastrointestinal\",\n            \"severity\": \"Mild\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"saturating to >92% on room air while ambulating\",\n            \"primary_organ\": \"Respiratory\",\n            \"severity\": \"Mild\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"denies n/v\",\n            \"primary_organ\": \"Gastrointestinal\",\n            \"severity\": \"None\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"had a bowel movement overnight\",\n            \"primary_organ\": \"Gastrointestinal\",\n            \"severity\": \"Mild\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"minimal bowel sounds\",\n            \"primary_organ\": \"Gastrointestinal\",\n            \"severity\": \"Mild\"\n        },\n        {\n            \"symptom_id\": \"s8\",\n            \"symptom_text\": \"feels much better after flatus and multiple bowel movements during the day\",\n            \"primary_organ\": \"Gastrointestinal\",\n            \"severity\": \"Mild\"\n        }\n    ],\n    \"total_count\": 8,\n    \"reasoning\": \"The symptoms are split based on their nature and the organ system they primarily affect. 'No flatus' and 'minimal bowel sounds' are related to gastrointestinal function. 'Low grade temp of 100.4' is a general symptom indicating a mild fever. 'Able to tolerate pills by mouth and full liquid diet' and 'denies n/v' are also related to gastrointestinal function. 'Saturating to >92% on room air while ambulating' is a respiratory function indicator. 'Had a bowel movement overnight' and 'feels much better after flatus and multiple bowel movements during the day' are also related to gastrointestinal function.\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "no flatus",
+              "primary_organ": "Gastrointestinal",
+              "severity": "Mild"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "low grade temp of 100.4",
+              "primary_organ": "General",
+              "severity": "Mild"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "able to tolerate pills by mouth and full liquid diet",
+              "primary_organ": "Gastrointestinal",
+              "severity": "Mild"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "saturating to >92% on room air while ambulating",
+              "primary_organ": "Respiratory",
+              "severity": "Mild"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "denies n/v",
+              "primary_organ": "Gastrointestinal",
+              "severity": "None"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "had a bowel movement overnight",
+              "primary_organ": "Gastrointestinal",
+              "severity": "Mild"
+            },
+            {
+              "symptom_id": "s7",
+              "symptom_text": "minimal bowel sounds",
+              "primary_organ": "Gastrointestinal",
+              "severity": "Mild"
+            },
+            {
+              "symptom_id": "s8",
+              "symptom_text": "feels much better after flatus and multiple bowel movements during the day",
+              "primary_organ": "Gastrointestinal",
+              "severity": "Mild"
+            }
+          ],
+          "total_count": 8,
+          "reasoning": "The symptoms are split based on their nature and the organ system they primarily affect. 'No flatus' and 'minimal bowel sounds' are related to gastrointestinal function. 'Low grade temp of 100.4' is a general symptom indicating a mild fever. 'Able to tolerate pills by mouth and full liquid diet' and 'denies n/v' are also related to gastrointestinal function. 'Saturating to >92% on room air while ambulating' is a respiratory function indicator. 'Had a bowel movement overnight' and 'feels much better after flatus and multiple bowel movements during the day' are also related to gastrointestinal function."
+        }
+      },
+      "timestamp": "2025-08-28T00:33:03.412068"
+    },
+    "rag_search_results": {
+      "success": true,
+      "total_searched": 8,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "no flatus",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "no flatus",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "no flatus",
+                  "units": [
+                    {
+                      "u_id": "u_85077",
+                      "u_unit": {
+                        "d_diagnosis": "no flatus was noted",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "no flatus was noted"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "no flatus",
+                  "units": [
+                    {
+                      "u_id": "u_1388",
+                      "u_unit": {
+                        "d_diagnosis": "passing flatus",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "passing flatus"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:33:05.126290"
+          }
+        },
+        "s2": {
+          "symptom_text": "low grade temp of 100.4",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "low grade temp of 100.4",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "low grade temp of 100.4",
+                  "units": [
+                    {
+                      "u_id": "u_64428",
+                      "u_unit": {
+                        "d_diagnosis": "low grade temp to 100.5",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "low grade temp to 100.5"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "low grade temp of 100.4",
+                  "units": [
+                    {
+                      "u_id": "u_85551",
+                      "u_unit": {
+                        "d_diagnosis": "temp of 100.2",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "temp of 100.2"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "low grade temp of 100.4",
+                  "units": [
+                    {
+                      "u_id": "u_79613",
+                      "u_unit": {
+                        "d_diagnosis": "low-grade fever of 100.3",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "low-grade fever of 100.3"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:33:06.854432"
+          }
+        },
+        "s3": {
+          "symptom_text": "able to tolerate pills by mouth and full liquid diet",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "able to tolerate pills by mouth and full liquid diet",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "able to tolerate pills by mouth and full liquid diet",
+                  "units": [
+                    {
+                      "u_id": "u_70725",
+                      "u_unit": {
+                        "d_diagnosis": "the patient was able to tolerate a regular diet",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "the patient was able to tolerate a regular diet"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "able to tolerate pills by mouth and full liquid diet",
+                  "units": [
+                    {
+                      "u_id": "u_6973",
+                      "u_unit": {
+                        "d_diagnosis": "patient was tolerating full diet without difficulty",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "patient was tolerating full diet without difficulty"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "able to tolerate pills by mouth and full liquid diet",
+                  "units": [
+                    {
+                      "u_id": "u_34813",
+                      "u_unit": {
+                        "d_diagnosis": "able to tolerate a regular diet",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "able to tolerate a regular diet"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:33:08.597762"
+          }
+        },
+        "s4": {
+          "symptom_text": "saturating to >92% on room air while ambulating",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "saturating to >92% on room air while ambulating",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "saturating to >92% on room air while ambulating",
+                  "units": [
+                    {
+                      "u_id": "u_73082",
+                      "u_unit": {
+                        "d_diagnosis": "on room air with an oxygen saturation of 92%",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "on room air with an oxygen saturation of 92%"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "saturating to >92% on room air while ambulating",
+                  "units": [
+                    {
+                      "u_id": "u_4514",
+                      "u_unit": {
+                        "d_diagnosis": "oxygen saturation of 92-96% on room air",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "oxygen saturation of 92-96% on room air"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "saturating to >92% on room air while ambulating",
+                  "units": [
+                    {
+                      "u_id": "u_90809",
+                      "u_unit": {
+                        "d_diagnosis": "oxygen saturations remained above 92% on room air",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "oxygen saturations remained above 92% on room air"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:33:10.331826"
+          }
+        },
+        "s5": {
+          "symptom_text": "denies n/v",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "denies n/v",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "denies n/v",
+                  "units": [
+                    {
+                      "u_id": "u_61944",
+                      "u_unit": {
+                        "d_diagnosis": "no n/v",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "no n/v"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "denies n/v",
+                  "units": [
+                    {
+                      "u_id": "u_62232",
+                      "u_unit": {
+                        "d_diagnosis": "denies any n/v, diarrhea, constipation",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "denies any n/v, diarrhea, constipation"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:33:12.045511"
+          }
+        },
+        "s6": {
+          "symptom_text": "had a bowel movement overnight",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "had a bowel movement overnight",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "had a bowel movement overnight",
+                  "units": [
+                    {
+                      "u_id": "u_27508",
+                      "u_unit": {
+                        "d_diagnosis": "no bowel movements since admission",
+                        "o_organ": {
+                          "organName": "Gastrointestinal Tract",
+                          "anatomicalLocations": [
+                            "Gastrointestinal Tract"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "no bowel movements since admission"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "had a bowel movement overnight",
+                  "units": [
+                    {
+                      "u_id": "u_33580",
+                      "u_unit": {
+                        "d_diagnosis": "had not had a bowel movement for several hours",
+                        "o_organ": {
+                          "organName": "Gastrointestinal Tract",
+                          "anatomicalLocations": [
+                            "Gastrointestinal Tract"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "had not had a bowel movement for several hours"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "had a bowel movement overnight",
+                  "units": [
+                    {
+                      "u_id": "u_63129",
+                      "u_unit": {
+                        "d_diagnosis": "had had no bowel movements for 24h",
+                        "o_organ": {
+                          "organName": "Gastrointestinal Tract",
+                          "anatomicalLocations": [
+                            "Gastrointestinal Tract"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "had had no bowel movements for 24h"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:33:13.777649"
+          }
+        },
+        "s7": {
+          "symptom_text": "minimal bowel sounds",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "minimal bowel sounds",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "minimal bowel sounds",
+                  "units": [
+                    {
+                      "u_id": "u_11671",
+                      "u_unit": {
+                        "d_diagnosis": "abdomen soft, minimal bowel sounds",
+                        "o_organ": {
+                          "organName": "Gastrointestinal Tract",
+                          "anatomicalLocations": [
+                            "Gastrointestinal Tract"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "abdomen soft, minimal bowel sounds"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "minimal bowel sounds",
+                  "units": [
+                    {
+                      "u_id": "u_9806",
+                      "u_unit": {
+                        "d_diagnosis": "hypoactive bowel sounds",
+                        "o_organ": {
+                          "organName": "Gastrointestinal Tract",
+                          "anatomicalLocations": [
+                            "Gastrointestinal Tract"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "hypoactive bowel sounds"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "minimal bowel sounds",
+                  "units": [
+                    {
+                      "u_id": "u_65119",
+                      "u_unit": {
+                        "d_diagnosis": "soft, nontender, decreased bowel sounds throughout",
+                        "o_organ": {
+                          "organName": "Gastrointestinal Tract",
+                          "anatomicalLocations": [
+                            "Gastrointestinal Tract"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "soft, nontender, decreased bowel sounds throughout"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:33:15.486521"
+          }
+        },
+        "s8": {
+          "symptom_text": "feels much better after flatus and multiple bowel movements during the day",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "feels much better after flatus and multiple bowel movements during the day",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "feels much better after flatus and multiple bowel movements during the day",
+                  "units": [
+                    {
+                      "u_id": "u_69905",
+                      "u_unit": {
+                        "d_diagnosis": "not having any flatus or bowel movements during the same period",
+                        "o_organ": {
+                          "organName": "Gastrointestinal Tract",
+                          "anatomicalLocations": [
+                            "Gastrointestinal Tract"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "not having any flatus or bowel movements during the same period"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "feels much better after flatus and multiple bowel movements during the day",
+                  "units": [
+                    {
+                      "u_id": "u_72232",
+                      "u_unit": {
+                        "d_diagnosis": "significant return of bowel function with positive flatus",
+                        "o_organ": {
+                          "organName": "Gastrointestinal Tract",
+                          "anatomicalLocations": [
+                            "Gastrointestinal Tract"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "significant return of bowel function with positive flatus"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "feels much better after flatus and multiple bowel movements during the day",
+                  "units": [
+                    {
+                      "u_id": "u_47945",
+                      "u_unit": {
+                        "d_diagnosis": "began having several bowel movements a day with large amounts of flatus",
+                        "o_organ": {
+                          "organName": "Gastrointestinal Tract",
+                          "anatomicalLocations": [
+                            "Gastrointestinal Tract"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "began having several bowel movements a day with large amounts of flatus"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:33:17.244254"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "no flatus",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "no flatus",
+              "units": [
+                {
+                  "u_id": "u_85077",
+                  "u_unit": {
+                    "d_diagnosis": "no flatus was noted",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "no flatus was noted"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "no flatus",
+              "units": [
+                {
+                  "u_id": "u_1388",
+                  "u_unit": {
+                    "d_diagnosis": "passing flatus",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "passing flatus"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "low grade temp of 100.4",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "low grade temp of 100.4",
+              "units": [
+                {
+                  "u_id": "u_64428",
+                  "u_unit": {
+                    "d_diagnosis": "low grade temp to 100.5",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "low grade temp to 100.5"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "low grade temp of 100.4",
+              "units": [
+                {
+                  "u_id": "u_85551",
+                  "u_unit": {
+                    "d_diagnosis": "temp of 100.2",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "temp of 100.2"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "low grade temp of 100.4",
+              "units": [
+                {
+                  "u_id": "u_79613",
+                  "u_unit": {
+                    "d_diagnosis": "low-grade fever of 100.3",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "low-grade fever of 100.3"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "able to tolerate pills by mouth and full liquid diet",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "able to tolerate pills by mouth and full liquid diet",
+              "units": [
+                {
+                  "u_id": "u_70725",
+                  "u_unit": {
+                    "d_diagnosis": "the patient was able to tolerate a regular diet",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "the patient was able to tolerate a regular diet"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "able to tolerate pills by mouth and full liquid diet",
+              "units": [
+                {
+                  "u_id": "u_6973",
+                  "u_unit": {
+                    "d_diagnosis": "patient was tolerating full diet without difficulty",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "patient was tolerating full diet without difficulty"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "able to tolerate pills by mouth and full liquid diet",
+              "units": [
+                {
+                  "u_id": "u_34813",
+                  "u_unit": {
+                    "d_diagnosis": "able to tolerate a regular diet",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "able to tolerate a regular diet"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "saturating to >92% on room air while ambulating",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "saturating to >92% on room air while ambulating",
+              "units": [
+                {
+                  "u_id": "u_73082",
+                  "u_unit": {
+                    "d_diagnosis": "on room air with an oxygen saturation of 92%",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "on room air with an oxygen saturation of 92%"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "saturating to >92% on room air while ambulating",
+              "units": [
+                {
+                  "u_id": "u_4514",
+                  "u_unit": {
+                    "d_diagnosis": "oxygen saturation of 92-96% on room air",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "oxygen saturation of 92-96% on room air"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "saturating to >92% on room air while ambulating",
+              "units": [
+                {
+                  "u_id": "u_90809",
+                  "u_unit": {
+                    "d_diagnosis": "oxygen saturations remained above 92% on room air",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "oxygen saturations remained above 92% on room air"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "denies n/v",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "denies n/v",
+              "units": [
+                {
+                  "u_id": "u_61944",
+                  "u_unit": {
+                    "d_diagnosis": "no n/v",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "no n/v"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "denies n/v",
+              "units": [
+                {
+                  "u_id": "u_62232",
+                  "u_unit": {
+                    "d_diagnosis": "denies any n/v, diarrhea, constipation",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "denies any n/v, diarrhea, constipation"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "had a bowel movement overnight",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "had a bowel movement overnight",
+              "units": [
+                {
+                  "u_id": "u_27508",
+                  "u_unit": {
+                    "d_diagnosis": "no bowel movements since admission",
+                    "o_organ": {
+                      "organName": "Gastrointestinal Tract",
+                      "anatomicalLocations": [
+                        "Gastrointestinal Tract"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "no bowel movements since admission"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "had a bowel movement overnight",
+              "units": [
+                {
+                  "u_id": "u_33580",
+                  "u_unit": {
+                    "d_diagnosis": "had not had a bowel movement for several hours",
+                    "o_organ": {
+                      "organName": "Gastrointestinal Tract",
+                      "anatomicalLocations": [
+                        "Gastrointestinal Tract"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "had not had a bowel movement for several hours"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "had a bowel movement overnight",
+              "units": [
+                {
+                  "u_id": "u_63129",
+                  "u_unit": {
+                    "d_diagnosis": "had had no bowel movements for 24h",
+                    "o_organ": {
+                      "organName": "Gastrointestinal Tract",
+                      "anatomicalLocations": [
+                        "Gastrointestinal Tract"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "had had no bowel movements for 24h"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "minimal bowel sounds",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "minimal bowel sounds",
+              "units": [
+                {
+                  "u_id": "u_11671",
+                  "u_unit": {
+                    "d_diagnosis": "abdomen soft, minimal bowel sounds",
+                    "o_organ": {
+                      "organName": "Gastrointestinal Tract",
+                      "anatomicalLocations": [
+                        "Gastrointestinal Tract"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "abdomen soft, minimal bowel sounds"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "minimal bowel sounds",
+              "units": [
+                {
+                  "u_id": "u_9806",
+                  "u_unit": {
+                    "d_diagnosis": "hypoactive bowel sounds",
+                    "o_organ": {
+                      "organName": "Gastrointestinal Tract",
+                      "anatomicalLocations": [
+                        "Gastrointestinal Tract"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "hypoactive bowel sounds"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "minimal bowel sounds",
+              "units": [
+                {
+                  "u_id": "u_65119",
+                  "u_unit": {
+                    "d_diagnosis": "soft, nontender, decreased bowel sounds throughout",
+                    "o_organ": {
+                      "organName": "Gastrointestinal Tract",
+                      "anatomicalLocations": [
+                        "Gastrointestinal Tract"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "soft, nontender, decreased bowel sounds throughout"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "feels much better after flatus and multiple bowel movements during the day",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "feels much better after flatus and multiple bowel movements during the day",
+              "units": [
+                {
+                  "u_id": "u_69905",
+                  "u_unit": {
+                    "d_diagnosis": "not having any flatus or bowel movements during the same period",
+                    "o_organ": {
+                      "organName": "Gastrointestinal Tract",
+                      "anatomicalLocations": [
+                        "Gastrointestinal Tract"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "not having any flatus or bowel movements during the same period"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "feels much better after flatus and multiple bowel movements during the day",
+              "units": [
+                {
+                  "u_id": "u_72232",
+                  "u_unit": {
+                    "d_diagnosis": "significant return of bowel function with positive flatus",
+                    "o_organ": {
+                      "organName": "Gastrointestinal Tract",
+                      "anatomicalLocations": [
+                        "Gastrointestinal Tract"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "significant return of bowel function with positive flatus"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "feels much better after flatus and multiple bowel movements during the day",
+              "units": [
+                {
+                  "u_id": "u_47945",
+                  "u_unit": {
+                    "d_diagnosis": "began having several bowel movements a day with large amounts of flatus",
+                    "o_organ": {
+                      "organName": "Gastrointestinal Tract",
+                      "anatomicalLocations": [
+                        "Gastrointestinal Tract"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "began having several bowel movements a day with large amounts of flatus"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:33:17.244288"
+    },
+    "expected_results": {
+      "organ": "Esophagus, Large intestine (Intestinum crassum), Lung (Pulmo), Lymph node, Small intestine (Intestinum tenue), Stomach (Gaster)",
+      "a_position": "Alveoli, Anal Canal, Colon, Esophageal Body, Gastric Antrum, Gastric Body, Ileum, Jejunum, Lower Esophageal Sphincter, Lymph Node Cortex, Lymph Node Medulla, Pleura, Rectum"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Large intestine (Intestinum crassum)",
+          "a_position": "Ascending Colon, Transverse Colon, Descending Colon, Sigmoid Colon"
+        },
+        "api_eva": {
+          "overall_score": 20.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Large intestine (Intestinum crassum)",
+          "a_position": "Ascending Colon, Transverse Colon, Descending Colon, Sigmoid Colon"
+        },
+        "api_eva": {
+          "overall_score": 20.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 20.0,
+      "average_precision": 0.0,
+      "average_recall": 0.0
+    }
+  }
+]

@@ -1,0 +1,1484 @@
+{
+  "report_id": "diagnostic_4070",
+  "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4070.json",
+  "original_symptoms_count": 11,
+  "baseline": {
+    "aggregated_symptoms": "immature suck/swallow coordination; occasional episodes of apnea/bradycardia; capillary hemangioma on central lower back; patient 7 days n.p.o., day of life 19 to day of life 26. received bowel rest secondary to guaiac positive stools and 2 siblings with concerns for necrotizing enterocolitis. cbc was unremarkable. blood cultures negative to date. 7 days of zosyn, last dose on day of life 26.; circumcision; germinal matrix hemorrhage; patient initially n.p.o. with 80 ml/kg per day parenteral nutrition, started feedings day of life 5, n.p.o. on day of life 19, due to guaiac positive stools and dilated loops on a kub; n.p.o. for 7 days; feedings resumed on day of life 7; reached full feeds on day of life 33, of nutramigen 24 calorie at 150 ml/kg per day p.o./p.g.; he then again developed quiac positive stools, which on became markedly guiac positive, stools never became grossly positive.; hyperbilirubinemia requiring phototherapy; patient treated for hyperbilirubinemia, received phototherapy on day of life 11 until day of life 13. peak bilirubin 9.6 over 0.3.; respiratory distress requiring intubation and surfactant",
+    "expected_results": [
+      {
+        "organName": "Mouth (Oral cavity)",
+        "anatomicalLocations": [
+          "Oral Mucosa",
+          "Tongue (Lingua)"
+        ]
+      },
+      {
+        "organName": "Brain",
+        "anatomicalLocations": [
+          "Brainstem",
+          "Medulla Oblongata"
+        ]
+      },
+      {
+        "organName": "Skin (Cutis)",
+        "anatomicalLocations": [
+          "Dermis",
+          "Subcutaneous Tissue"
+        ]
+      },
+      {
+        "organName": "Liver (Hepar)",
+        "anatomicalLocations": [
+          "Left Lobe of Liver",
+          "Right Lobe of Liver"
+        ]
+      },
+      {
+        "organName": "Penis",
+        "anatomicalLocations": [
+          "Glans Penis",
+          "Foreskin"
+        ]
+      },
+      {
+        "organName": "Brain",
+        "anatomicalLocations": [
+          "Basal Ganglia",
+          "Ventricular System"
+        ]
+      },
+      {
+        "organName": "Liver (Hepar)",
+        "anatomicalLocations": [
+          "Hepatic Artery",
+          "Intrahepatic Bile Ducts"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Alveoli",
+          "Bronchioles"
+        ]
+      }
+    ],
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Medulla Oblongata\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Intrahepatic Bile Ducts\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Intestinum tenue\",\n      \"anatomicalLocations\": [\n        \"Dilated loops\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Medulla Oblongata"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Cerebral Cortex",
+                  "Medulla Oblongata"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Liver (Hepar)",
+                "anatomicalLocations": [
+                  "Intrahepatic Bile Ducts"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Intestinum tenue",
+                "anatomicalLocations": [
+                  "Dilated loops"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Medulla Oblongata"
+        ],
+        "usage": {
+          "completion_tokens": 206,
+          "prompt_tokens": 2458,
+          "total_tokens": 2664,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "evaluation": {
+          "overall_score": 42.5,
+          "precision": 50.0,
+          "recall": 6.2,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 1/2 (50.0%); Recall(召回率): 1/16 (6.2%); 过度生成惩罚: 100.0%"
+        }
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Brainstem\",\n        \"Cerebral Cortex\",\n        \"Medulla Oblongata\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Intestinal Mucosa\",\n        \"Intestinal Wall\",\n        \"Intestinal Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Colonic Mucosa\",\n        \"Colonic Wall\",\n        \"Rectal Mucosa\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Hepatic Artery\",\n        \"Portal Vein\",\n        \"Hepatic Veins\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Brainstem",
+            "Cerebral Cortex",
+            "Medulla Oblongata"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Brainstem",
+                  "Cerebral Cortex",
+                  "Medulla Oblongata"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Small intestine (Intestinum tenue)",
+                "anatomicalLocations": [
+                  "Intestinal Mucosa",
+                  "Intestinal Wall",
+                  "Intestinal Capillaries"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Large intestine (Intestinum crassum)",
+                "anatomicalLocations": [
+                  "Colonic Mucosa",
+                  "Colonic Wall",
+                  "Rectal Mucosa"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Liver (Hepar)",
+                "anatomicalLocations": [
+                  "Hepatic Artery",
+                  "Portal Vein",
+                  "Hepatic Veins"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles",
+                  "Pulmonary Capillaries"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Brainstem",
+          "Cerebral Cortex",
+          "Medulla Oblongata"
+        ],
+        "usage": {
+          "completion_tokens": 292,
+          "prompt_tokens": 2305,
+          "total_tokens": 2597,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 1984
+          },
+          "prompt_cache_hit_tokens": 1984,
+          "prompt_cache_miss_tokens": 321
+        },
+        "model": "deepseek-chat",
+        "evaluation": {
+          "overall_score": 51.7,
+          "precision": 66.7,
+          "recall": 12.5,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/16 (12.5%); 过度生成惩罚: 100.0%"
+        }
+      }
+    },
+    "evaluation": {
+      "report_id": "diagnostic_4070",
+      "total_symptoms": 11,
+      "valid_symptoms": 11,
+      "evaluation_timestamp": "2025-08-28T00:40:03.701055",
+      "symptom_evaluations": [
+        {
+          "symptom_id": "aggregated_symptoms",
+          "symptom_text": "immature suck/swallow coordination; occasional episodes of apnea/bradycardia; capillary hemangioma on central lower back; patient 7 days n.p.o., day of life 19 to day of life 26. received bowel rest secondary to guaiac positive stools and 2 siblings with concerns for necrotizing enterocolitis. cbc was unremarkable. blood cultures negative to date. 7 days of zosyn, last dose on day of life 26.; circumcision; germinal matrix hemorrhage; patient initially n.p.o. with 80 ml/kg per day parenteral nutrition, started feedings day of life 5, n.p.o. on day of life 19, due to guaiac positive stools and dilated loops on a kub; n.p.o. for 7 days; feedings resumed on day of life 7; reached full feeds on day of life 33, of nutramigen 24 calorie at 150 ml/kg per day p.o./p.g.; he then again developed quiac positive stools, which on became markedly guiac positive, stools never became grossly positive.; hyperbilirubinemia requiring phototherapy; patient treated for hyperbilirubinemia, received phototherapy on day of life 11 until day of life 13. peak bilirubin 9.6 over 0.3.; respiratory distress requiring intubation and surfactant",
+          "expected_results": [
+            {
+              "organName": "Mouth (Oral cavity)",
+              "anatomicalLocations": [
+                "Oral Mucosa",
+                "Tongue (Lingua)"
+              ]
+            },
+            {
+              "organName": "Brain",
+              "anatomicalLocations": [
+                "Brainstem",
+                "Medulla Oblongata"
+              ]
+            },
+            {
+              "organName": "Skin (Cutis)",
+              "anatomicalLocations": [
+                "Dermis",
+                "Subcutaneous Tissue"
+              ]
+            },
+            {
+              "organName": "Liver (Hepar)",
+              "anatomicalLocations": [
+                "Left Lobe of Liver",
+                "Right Lobe of Liver"
+              ]
+            },
+            {
+              "organName": "Penis",
+              "anatomicalLocations": [
+                "Glans Penis",
+                "Foreskin"
+              ]
+            },
+            {
+              "organName": "Brain",
+              "anatomicalLocations": [
+                "Basal Ganglia",
+                "Ventricular System"
+              ]
+            },
+            {
+              "organName": "Liver (Hepar)",
+              "anatomicalLocations": [
+                "Hepatic Artery",
+                "Intrahepatic Bile Ducts"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Alveoli",
+                "Bronchioles"
+              ]
+            }
+          ],
+          "api_evaluations": {
+            "moonshot": {
+              "overall_score": 42.5,
+              "precision": 50.0,
+              "recall": 6.2,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 1/2 (50.0%); Recall(召回率): 1/16 (6.2%); 过度生成惩罚: 100.0%"
+            },
+            "deepseek": {
+              "overall_score": 51.7,
+              "precision": 66.7,
+              "recall": 12.5,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/16 (12.5%); 过度生成惩罚: 100.0%"
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total_api_calls": 2,
+        "successful_api_calls": 2,
+        "failed_api_calls": 0,
+        "average_overall_score": 47.1,
+        "average_precision": 58.4,
+        "average_recall": 9.3
+      }
+    }
+  },
+  "rag_search": {
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"immature suck/swallow coordination\",\n            \"primary_organ\": \"mouth\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"occasional episodes of apnea/bradycardia\",\n            \"primary_organ\": \"heart and respiratory system\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"capillary hemangioma on central lower back\",\n            \"primary_organ\": \"skin\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"received bowel rest secondary to guaiac positive stools and 2 siblings with concerns for necrotizing enterocolitis\",\n            \"primary_organ\": \"gastrointestinal system\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"blood cultures negative to date\",\n            \"primary_organ\": \"blood\",\n            \"severity\": \"none\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"circumcision\",\n            \"primary_organ\": \"genital\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"germinal matrix hemorrhage\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s8\",\n            \"symptom_text\": \"n.p.o. for 7 days\",\n            \"primary_organ\": \"gastrointestinal system\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s9\",\n            \"symptom_text\": \"reached full feeds on day of life 33, of nutramigen 24 calorie at 150 ml/kg per day p.o./p.g.\",\n            \"primary_organ\": \"gastrointestinal system\",\n            \"severity\": \"none\"\n        },\n        {\n            \"symptom_id\": \"s10\",\n            \"symptom_text\": \"hyperbilirubinemia requiring phototherapy\",\n            \"primary_organ\": \"liver\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s11\",\n            \"symptom_text\": \"respiratory distress requiring intubation and surfactant\",\n            \"primary_organ\": \"respiratory system\",\n            \"severity\": \"severe\"\n        }\n    ],\n    \"total_count\": 11,\n    \"reasoning\": \"The symptoms are split based on the different body systems they affect and their severity. Symptoms related to feeding and gastrointestinal issues are grouped together, as are symptoms related to the heart and respiratory system. The severity is determined by the need for medical intervention or the potential impact on the patient's health.\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "immature suck/swallow coordination",
+              "primary_organ": "mouth",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "occasional episodes of apnea/bradycardia",
+              "primary_organ": "heart and respiratory system",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "capillary hemangioma on central lower back",
+              "primary_organ": "skin",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "received bowel rest secondary to guaiac positive stools and 2 siblings with concerns for necrotizing enterocolitis",
+              "primary_organ": "gastrointestinal system",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "blood cultures negative to date",
+              "primary_organ": "blood",
+              "severity": "none"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "circumcision",
+              "primary_organ": "genital",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s7",
+              "symptom_text": "germinal matrix hemorrhage",
+              "primary_organ": "brain",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s8",
+              "symptom_text": "n.p.o. for 7 days",
+              "primary_organ": "gastrointestinal system",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s9",
+              "symptom_text": "reached full feeds on day of life 33, of nutramigen 24 calorie at 150 ml/kg per day p.o./p.g.",
+              "primary_organ": "gastrointestinal system",
+              "severity": "none"
+            },
+            {
+              "symptom_id": "s10",
+              "symptom_text": "hyperbilirubinemia requiring phototherapy",
+              "primary_organ": "liver",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s11",
+              "symptom_text": "respiratory distress requiring intubation and surfactant",
+              "primary_organ": "respiratory system",
+              "severity": "severe"
+            }
+          ],
+          "total_count": 11,
+          "reasoning": "The symptoms are split based on the different body systems they affect and their severity. Symptoms related to feeding and gastrointestinal issues are grouped together, as are symptoms related to the heart and respiratory system. The severity is determined by the need for medical intervention or the potential impact on the patient's health."
+        }
+      },
+      "timestamp": "2025-08-28T00:40:18.516121"
+    },
+    "search_results": {
+      "success": true,
+      "total_searched": 11,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "immature suck/swallow coordination",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "immature suck/swallow coordination",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:40:20.825567"
+          }
+        },
+        "s2": {
+          "symptom_text": "occasional episodes of apnea/bradycardia",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "occasional episodes of apnea/bradycardia",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "occasional episodes of apnea/bradycardia",
+                  "units": [
+                    {
+                      "u_id": "u_11048",
+                      "u_unit": {
+                        "d_diagnosis": "occasional episodes of apnea and bradycardia",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "occasional episodes of apnea and bradycardia"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "occasional episodes of apnea/bradycardia",
+                  "units": [
+                    {
+                      "u_id": "u_2361",
+                      "u_unit": {
+                        "d_diagnosis": "many episodes of apnea and bradycardia",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "many episodes of apnea and bradycardia"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "occasional episodes of apnea/bradycardia",
+                  "units": [
+                    {
+                      "u_id": "u_30738",
+                      "u_unit": {
+                        "d_diagnosis": "apnea and bradycardia",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "apnea and bradycardia"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:40:23.976922"
+          }
+        },
+        "s3": {
+          "symptom_text": "capillary hemangioma on central lower back",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "capillary hemangioma on central lower back",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:40:26.031926"
+          }
+        },
+        "s4": {
+          "symptom_text": "received bowel rest secondary to guaiac positive stools and 2 siblings with concerns for necrotizing enterocolitis",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "received bowel rest secondary to guaiac positive stools and 2 siblings with concerns for necrotizing enterocolitis",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:40:28.258785"
+          }
+        },
+        "s5": {
+          "symptom_text": "blood cultures negative to date",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "blood cultures negative to date",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "blood cultures negative to date",
+                  "units": [
+                    {
+                      "u_id": "u_65802",
+                      "u_unit": {
+                        "d_diagnosis": "negative blood cultures",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "negative blood cultures"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "blood cultures negative to date",
+                  "units": [
+                    {
+                      "u_id": "u_66263",
+                      "u_unit": {
+                        "d_diagnosis": "cx negative to date",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "cx negative to date"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:40:30.693747"
+          }
+        },
+        "s6": {
+          "symptom_text": "circumcision",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "circumcision",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "circumcision",
+                  "units": [
+                    {
+                      "u_id": "u_45982",
+                      "u_unit": {
+                        "d_diagnosis": "circumcision",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "circumcision"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "circumcision",
+                  "units": [
+                    {
+                      "u_id": "u_79375",
+                      "u_unit": {
+                        "d_diagnosis": "Routine or ritual circumcision",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "Routine or ritual circumcision"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:40:33.180084"
+          }
+        },
+        "s7": {
+          "symptom_text": "germinal matrix hemorrhage",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "germinal matrix hemorrhage",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "germinal matrix hemorrhage",
+                  "units": [
+                    {
+                      "u_id": "u_33709",
+                      "u_unit": {
+                        "d_diagnosis": "subependymal hemorrhage",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "subependymal hemorrhage"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:40:35.497650"
+          }
+        },
+        "s8": {
+          "symptom_text": "n.p.o. for 7 days",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "n.p.o. for 7 days",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "n.p.o. for 7 days",
+                  "units": [
+                    {
+                      "u_id": "u_63408",
+                      "u_unit": {
+                        "d_diagnosis": "no n/v/d",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "no n/v/d"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:40:38.334410"
+          }
+        },
+        "s9": {
+          "symptom_text": "reached full feeds on day of life 33, of nutramigen 24 calorie at 150 ml/kg per day p.o./p.g.",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "reached full feeds on day of life 33, of nutramigen 24 calorie at 150 ml/kg per day p.o./p.g.",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "reached full feeds on day of life 33, of nutramigen 24 calorie at 150 ml/kg per day p.o./p.g.",
+                  "units": [
+                    {
+                      "u_id": "u_61368",
+                      "u_unit": {
+                        "d_diagnosis": "at the time of discharge, she is taking 150 cc per kg of breast milk or special care formula, 24 calories per ounce p.o. or by gavage",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "at the time of discharge, she is taking 150 cc per kg of breast milk or special care formula, 24 calories per ounce p.o. or by gavage"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "reached full feeds on day of life 33, of nutramigen 24 calorie at 150 ml/kg per day p.o./p.g.",
+                  "units": [
+                    {
+                      "u_id": "u_37896",
+                      "u_unit": {
+                        "d_diagnosis": "enteral feeds were started on day of life #1, and gradually advanced to full volume. she required gavage feedings through . at the time of discharge, she is feeding enfamil fortified to 24 calories/ounce",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "enteral feeds were started on day of life #1, and gradually advanced to full volume. she required gavage feedings through . at the time of discharge, she is feeding enfamil fortified to 24 calories/ounce"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:40:40.595160"
+          }
+        },
+        "s10": {
+          "symptom_text": "hyperbilirubinemia requiring phototherapy",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "hyperbilirubinemia requiring phototherapy",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "hyperbilirubinemia requiring phototherapy",
+                  "units": [
+                    {
+                      "u_id": "u_75230",
+                      "u_unit": {
+                        "d_diagnosis": "hyperbilirubinemia treated with phototherapy",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "hyperbilirubinemia treated with phototherapy"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "hyperbilirubinemia requiring phototherapy",
+                  "units": [
+                    {
+                      "u_id": "u_27593",
+                      "u_unit": {
+                        "d_diagnosis": "required treatment for unconjugated hyperbilirubinemia with phototherapy",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "required treatment for unconjugated hyperbilirubinemia with phototherapy"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "hyperbilirubinemia requiring phototherapy",
+                  "units": [
+                    {
+                      "u_id": "u_91317",
+                      "u_unit": {
+                        "d_diagnosis": "hyperbilirubinemia",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "hyperbilirubinemia"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:40:43.238998"
+          }
+        },
+        "s11": {
+          "symptom_text": "respiratory distress requiring intubation and surfactant",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "respiratory distress requiring intubation and surfactant",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "respiratory distress requiring intubation and surfactant",
+                  "units": [
+                    {
+                      "u_id": "u_44040",
+                      "u_unit": {
+                        "d_diagnosis": "respiratory distress requiring re-intubation",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "respiratory distress requiring re-intubation"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "respiratory distress requiring intubation and surfactant",
+                  "units": [
+                    {
+                      "u_id": "u_53088",
+                      "u_unit": {
+                        "d_diagnosis": "respiratory distress that required intubation",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "respiratory distress that required intubation"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:40:46.007400"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "immature suck/swallow coordination",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "occasional episodes of apnea/bradycardia",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "occasional episodes of apnea/bradycardia",
+              "units": [
+                {
+                  "u_id": "u_11048",
+                  "u_unit": {
+                    "d_diagnosis": "occasional episodes of apnea and bradycardia",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "occasional episodes of apnea and bradycardia"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "occasional episodes of apnea/bradycardia",
+              "units": [
+                {
+                  "u_id": "u_2361",
+                  "u_unit": {
+                    "d_diagnosis": "many episodes of apnea and bradycardia",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "many episodes of apnea and bradycardia"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "occasional episodes of apnea/bradycardia",
+              "units": [
+                {
+                  "u_id": "u_30738",
+                  "u_unit": {
+                    "d_diagnosis": "apnea and bradycardia",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "apnea and bradycardia"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "capillary hemangioma on central lower back",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "received bowel rest secondary to guaiac positive stools and 2 siblings with concerns for necrotizing enterocolitis",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "blood cultures negative to date",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "blood cultures negative to date",
+              "units": [
+                {
+                  "u_id": "u_65802",
+                  "u_unit": {
+                    "d_diagnosis": "negative blood cultures",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "negative blood cultures"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "blood cultures negative to date",
+              "units": [
+                {
+                  "u_id": "u_66263",
+                  "u_unit": {
+                    "d_diagnosis": "cx negative to date",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "cx negative to date"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "circumcision",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "circumcision",
+              "units": [
+                {
+                  "u_id": "u_45982",
+                  "u_unit": {
+                    "d_diagnosis": "circumcision",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "circumcision"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "circumcision",
+              "units": [
+                {
+                  "u_id": "u_79375",
+                  "u_unit": {
+                    "d_diagnosis": "Routine or ritual circumcision",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "Routine or ritual circumcision"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "germinal matrix hemorrhage",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "germinal matrix hemorrhage",
+              "units": [
+                {
+                  "u_id": "u_33709",
+                  "u_unit": {
+                    "d_diagnosis": "subependymal hemorrhage",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "subependymal hemorrhage"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "n.p.o. for 7 days",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "n.p.o. for 7 days",
+              "units": [
+                {
+                  "u_id": "u_63408",
+                  "u_unit": {
+                    "d_diagnosis": "no n/v/d",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "no n/v/d"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "reached full feeds on day of life 33, of nutramigen 24 calorie at 150 ml/kg per day p.o./p.g.",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "reached full feeds on day of life 33, of nutramigen 24 calorie at 150 ml/kg per day p.o./p.g.",
+              "units": [
+                {
+                  "u_id": "u_61368",
+                  "u_unit": {
+                    "d_diagnosis": "at the time of discharge, she is taking 150 cc per kg of breast milk or special care formula, 24 calories per ounce p.o. or by gavage",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "at the time of discharge, she is taking 150 cc per kg of breast milk or special care formula, 24 calories per ounce p.o. or by gavage"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "reached full feeds on day of life 33, of nutramigen 24 calorie at 150 ml/kg per day p.o./p.g.",
+              "units": [
+                {
+                  "u_id": "u_37896",
+                  "u_unit": {
+                    "d_diagnosis": "enteral feeds were started on day of life #1, and gradually advanced to full volume. she required gavage feedings through . at the time of discharge, she is feeding enfamil fortified to 24 calories/ounce",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "enteral feeds were started on day of life #1, and gradually advanced to full volume. she required gavage feedings through . at the time of discharge, she is feeding enfamil fortified to 24 calories/ounce"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "hyperbilirubinemia requiring phototherapy",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "hyperbilirubinemia requiring phototherapy",
+              "units": [
+                {
+                  "u_id": "u_75230",
+                  "u_unit": {
+                    "d_diagnosis": "hyperbilirubinemia treated with phototherapy",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "hyperbilirubinemia treated with phototherapy"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "hyperbilirubinemia requiring phototherapy",
+              "units": [
+                {
+                  "u_id": "u_27593",
+                  "u_unit": {
+                    "d_diagnosis": "required treatment for unconjugated hyperbilirubinemia with phototherapy",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "required treatment for unconjugated hyperbilirubinemia with phototherapy"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "hyperbilirubinemia requiring phototherapy",
+              "units": [
+                {
+                  "u_id": "u_91317",
+                  "u_unit": {
+                    "d_diagnosis": "hyperbilirubinemia",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "hyperbilirubinemia"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "respiratory distress requiring intubation and surfactant",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "respiratory distress requiring intubation and surfactant",
+              "units": [
+                {
+                  "u_id": "u_44040",
+                  "u_unit": {
+                    "d_diagnosis": "respiratory distress requiring re-intubation",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "respiratory distress requiring re-intubation"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "respiratory distress requiring intubation and surfactant",
+              "units": [
+                {
+                  "u_id": "u_53088",
+                  "u_unit": {
+                    "d_diagnosis": "respiratory distress that required intubation",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "respiratory distress that required intubation"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:40:46.007433"
+    }
+  },
+  "rag_enhanced": {
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Medulla Oblongata\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Intrahepatic Bile Ducts\",\n        \"Common Bile Duct (CBD)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric Mucosa\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Intestinum (Small and Large)\",\n      \"anatomicalLocations\": [\n        \"Intestinum Tenue\",\n        \"Intestinum Crassum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Medulla Oblongata"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Cerebral Cortex",
+                  "Brainstem",
+                  "Medulla Oblongata"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles",
+                  "Pleural Cavity"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Liver (Hepar)",
+                "anatomicalLocations": [
+                  "Intrahepatic Bile Ducts",
+                  "Common Bile Duct (CBD)"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Stomach (Gaster)",
+                "anatomicalLocations": [
+                  "Gastric Mucosa"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Intestinum (Small and Large)",
+                "anatomicalLocations": [
+                  "Intestinum Tenue",
+                  "Intestinum Crassum"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Brainstem",
+          "Medulla Oblongata"
+        ],
+        "usage": {
+          "completion_tokens": 290,
+          "prompt_tokens": 3190,
+          "total_tokens": 3480,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "evaluation": {
+          "overall_score": 51.7,
+          "precision": 66.7,
+          "recall": 12.5,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/16 (12.5%); 过度生成惩罚: 100.0%"
+        }
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Brainstem\",\n        \"Medulla Oblongata\",\n        \"Cerebral Cortex\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Right Atrium (RA)\",\n        \"Left Atrium (LA)\",\n        \"Sinoatrial Node\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Hepatocytes\",\n        \"Hepatic Veins\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Small intestine (Intestinum tenue)\",\n      \"anatomicalLocations\": [\n        \"Intestinal Mucosa\",\n        \"Intestinal Villi\",\n        \"Intestinal Capillaries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Brainstem",
+            "Medulla Oblongata",
+            "Cerebral Cortex"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Brainstem",
+                  "Medulla Oblongata",
+                  "Cerebral Cortex"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles",
+                  "Pulmonary Capillaries"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Right Atrium (RA)",
+                  "Left Atrium (LA)",
+                  "Sinoatrial Node"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Liver (Hepar)",
+                "anatomicalLocations": [
+                  "Hepatocytes",
+                  "Hepatic Veins",
+                  "Portal Vein"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Small intestine (Intestinum tenue)",
+                "anatomicalLocations": [
+                  "Intestinal Mucosa",
+                  "Intestinal Villi",
+                  "Intestinal Capillaries"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Brainstem",
+          "Medulla Oblongata",
+          "Cerebral Cortex"
+        ],
+        "usage": {
+          "completion_tokens": 289,
+          "prompt_tokens": 2989,
+          "total_tokens": 3278,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2368
+          },
+          "prompt_cache_hit_tokens": 2368,
+          "prompt_cache_miss_tokens": 621
+        },
+        "model": "deepseek-chat",
+        "evaluation": {
+          "overall_score": 51.7,
+          "precision": 66.7,
+          "recall": 12.5,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/16 (12.5%); 过度生成惩罚: 100.0%"
+        }
+      }
+    },
+    "evaluation": {
+      "report_id": "diagnostic_4070",
+      "total_symptoms": 11,
+      "valid_symptoms": 11,
+      "evaluation_timestamp": "2025-08-28T00:41:09.103934",
+      "symptom_evaluations": [
+        {
+          "symptom_id": "rag_enhanced_symptoms",
+          "symptom_text": "immature suck/swallow coordination; occasional episodes of apnea/bradycardia; capillary hemangioma on central lower back; patient 7 days n.p.o., day of life 19 to day of life 26. received bowel rest secondary to guaiac positive stools and 2 siblings with concerns for necrotizing enterocolitis. cbc was unremarkable. blood cultures negative to date. 7 days of zosyn, last dose on day of life 26.; circumcision; germinal matrix hemorrhage; patient initially n.p.o. with 80 ml/kg per day parenteral nutrition, started feedings day of life 5, n.p.o. on day of life 19, due to guaiac positive stools and dilated loops on a kub; n.p.o. for 7 days; feedings resumed on day of life 7; reached full feeds on day of life 33, of nutramigen 24 calorie at 150 ml/kg per day p.o./p.g.; he then again developed quiac positive stools, which on became markedly guiac positive, stools never became grossly positive.; hyperbilirubinemia requiring phototherapy; patient treated for hyperbilirubinemia, received phototherapy on day of life 11 until day of life 13. peak bilirubin 9.6 over 0.3.; respiratory distress requiring intubation and surfactant",
+          "expected_results": [
+            {
+              "organName": "Mouth (Oral cavity)",
+              "anatomicalLocations": [
+                "Oral Mucosa",
+                "Tongue (Lingua)"
+              ]
+            },
+            {
+              "organName": "Brain",
+              "anatomicalLocations": [
+                "Brainstem",
+                "Medulla Oblongata"
+              ]
+            },
+            {
+              "organName": "Skin (Cutis)",
+              "anatomicalLocations": [
+                "Dermis",
+                "Subcutaneous Tissue"
+              ]
+            },
+            {
+              "organName": "Liver (Hepar)",
+              "anatomicalLocations": [
+                "Left Lobe of Liver",
+                "Right Lobe of Liver"
+              ]
+            },
+            {
+              "organName": "Penis",
+              "anatomicalLocations": [
+                "Glans Penis",
+                "Foreskin"
+              ]
+            },
+            {
+              "organName": "Brain",
+              "anatomicalLocations": [
+                "Basal Ganglia",
+                "Ventricular System"
+              ]
+            },
+            {
+              "organName": "Liver (Hepar)",
+              "anatomicalLocations": [
+                "Hepatic Artery",
+                "Intrahepatic Bile Ducts"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Alveoli",
+                "Bronchioles"
+              ]
+            }
+          ],
+          "api_evaluations": {
+            "moonshot": {
+              "overall_score": 51.7,
+              "precision": 66.7,
+              "recall": 12.5,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/16 (12.5%); 过度生成惩罚: 100.0%"
+            },
+            "deepseek": {
+              "overall_score": 51.7,
+              "precision": 66.7,
+              "recall": 12.5,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/16 (12.5%); 过度生成惩罚: 100.0%"
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total_api_calls": 2,
+        "successful_api_calls": 2,
+        "failed_api_calls": 0,
+        "average_overall_score": 51.7,
+        "average_precision": 66.7,
+        "average_recall": 12.5
+      }
+    }
+  },
+  "comparison": {
+    "baseline_score": 47.1,
+    "rag_enhanced_score": 51.7,
+    "improvement": 4.600000000000001
+  },
+  "processing_timestamp": "2025-08-28T00:41:09.103988"
+}

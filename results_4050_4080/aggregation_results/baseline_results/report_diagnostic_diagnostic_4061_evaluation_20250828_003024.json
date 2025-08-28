@@ -1,0 +1,888 @@
+{
+  "report_id": "diagnostic_4061",
+  "timestamp": "2025-08-28T00:30:24.009379",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4061_symptom_0",
+      "diagnosis": "extubate",
+      "expected_organs": [
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Gallbladder (Vesica biliaris)",
+          "anatomicalLocations": [
+            "Gallbladder Fundus",
+            "Gallbladder Body"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Hepatic Artery",
+            "Intrahepatic Bile Ducts"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Head of the Pancreas",
+            "Main Pancreatic Duct (Duct of Wirsung)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleura\",\n        \"Visceral Pleura\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleura",
+              "Visceral Pleura",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleura",
+                    "Visceral Pleura",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleura",
+            "Visceral Pleura",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleural Cavity\",\n        \"Visceral Pleura\",\n        \"Parietal Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Right Lobe of Liver\",\n        \"Hepatic Veins\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Gallbladder (Vesica biliaris)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleural Cavity",
+              "Visceral Pleura",
+              "Parietal Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleural Cavity",
+                    "Visceral Pleura",
+                    "Parietal Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Right Lobe of Liver",
+                    "Hepatic Veins",
+                    "Portal Vein"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Gallbladder (Vesica biliaris)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleural Cavity",
+            "Visceral Pleura",
+            "Parietal Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4061_symptom_1",
+      "diagnosis": "right upper quadrant pain",
+      "expected_organs": [
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Gallbladder (Vesica biliaris)",
+          "anatomicalLocations": [
+            "Gallbladder Fundus",
+            "Gallbladder Body"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Hepatic Artery",
+            "Intrahepatic Bile Ducts"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Head of the Pancreas",
+            "Main Pancreatic Duct (Duct of Wirsung)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleura\",\n        \"Visceral Pleura\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleura",
+              "Visceral Pleura",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleura",
+                    "Visceral Pleura",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleura",
+            "Visceral Pleura",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleural Cavity\",\n        \"Visceral Pleura\",\n        \"Parietal Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Right Lobe of Liver\",\n        \"Hepatic Veins\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Gallbladder (Vesica biliaris)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleural Cavity",
+              "Visceral Pleura",
+              "Parietal Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleural Cavity",
+                    "Visceral Pleura",
+                    "Parietal Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Right Lobe of Liver",
+                    "Hepatic Veins",
+                    "Portal Vein"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Gallbladder (Vesica biliaris)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleural Cavity",
+            "Visceral Pleura",
+            "Parietal Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4061_symptom_2",
+      "diagnosis": "respiratory distress improved",
+      "expected_organs": [
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Gallbladder (Vesica biliaris)",
+          "anatomicalLocations": [
+            "Gallbladder Fundus",
+            "Gallbladder Body"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Hepatic Artery",
+            "Intrahepatic Bile Ducts"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Head of the Pancreas",
+            "Main Pancreatic Duct (Duct of Wirsung)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleura\",\n        \"Visceral Pleura\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleura",
+              "Visceral Pleura",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleura",
+                    "Visceral Pleura",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleura",
+            "Visceral Pleura",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleural Cavity\",\n        \"Visceral Pleura\",\n        \"Parietal Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Right Lobe of Liver\",\n        \"Hepatic Veins\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Gallbladder (Vesica biliaris)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleural Cavity",
+              "Visceral Pleura",
+              "Parietal Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleural Cavity",
+                    "Visceral Pleura",
+                    "Parietal Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Right Lobe of Liver",
+                    "Hepatic Veins",
+                    "Portal Vein"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Gallbladder (Vesica biliaris)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleural Cavity",
+            "Visceral Pleura",
+            "Parietal Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4061_symptom_3",
+      "diagnosis": "lft normalized",
+      "expected_organs": [
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Gallbladder (Vesica biliaris)",
+          "anatomicalLocations": [
+            "Gallbladder Fundus",
+            "Gallbladder Body"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Hepatic Artery",
+            "Intrahepatic Bile Ducts"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Head of the Pancreas",
+            "Main Pancreatic Duct (Duct of Wirsung)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleura\",\n        \"Visceral Pleura\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleura",
+              "Visceral Pleura",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleura",
+                    "Visceral Pleura",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleura",
+            "Visceral Pleura",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleural Cavity\",\n        \"Visceral Pleura\",\n        \"Parietal Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Right Lobe of Liver\",\n        \"Hepatic Veins\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Gallbladder (Vesica biliaris)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleural Cavity",
+              "Visceral Pleura",
+              "Parietal Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleural Cavity",
+                    "Visceral Pleura",
+                    "Parietal Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Right Lobe of Liver",
+                    "Hepatic Veins",
+                    "Portal Vein"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Gallbladder (Vesica biliaris)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleural Cavity",
+            "Visceral Pleura",
+            "Parietal Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4061_symptom_4",
+      "diagnosis": "no other complications",
+      "expected_organs": [
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Gallbladder (Vesica biliaris)",
+          "anatomicalLocations": [
+            "Gallbladder Fundus",
+            "Gallbladder Body"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Hepatic Artery",
+            "Intrahepatic Bile Ducts"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Head of the Pancreas",
+            "Main Pancreatic Duct (Duct of Wirsung)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleura\",\n        \"Visceral Pleura\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleura",
+              "Visceral Pleura",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleura",
+                    "Visceral Pleura",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleura",
+            "Visceral Pleura",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleural Cavity\",\n        \"Visceral Pleura\",\n        \"Parietal Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Right Lobe of Liver\",\n        \"Hepatic Veins\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Gallbladder (Vesica biliaris)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleural Cavity",
+              "Visceral Pleura",
+              "Parietal Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleural Cavity",
+                    "Visceral Pleura",
+                    "Parietal Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Right Lobe of Liver",
+                    "Hepatic Veins",
+                    "Portal Vein"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Gallbladder (Vesica biliaris)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleural Cavity",
+            "Visceral Pleura",
+            "Parietal Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4061_symptom_5",
+      "diagnosis": "persistent pleural effusion bilaterally",
+      "expected_organs": [
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Gallbladder (Vesica biliaris)",
+          "anatomicalLocations": [
+            "Gallbladder Fundus",
+            "Gallbladder Body"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Liver (Hepar)",
+          "anatomicalLocations": [
+            "Hepatic Artery",
+            "Intrahepatic Bile Ducts"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Head of the Pancreas",
+            "Main Pancreatic Duct (Duct of Wirsung)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Pleural Cavity",
+            "Visceral Pleura"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleura\",\n        \"Visceral Pleura\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Right Lobe of Liver\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleura",
+              "Visceral Pleura",
+              "Pleural Cavity"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleura",
+                    "Visceral Pleura",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Right Lobe of Liver"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleura",
+            "Visceral Pleura",
+            "Pleural Cavity"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleural Cavity\",\n        \"Visceral Pleura\",\n        \"Parietal Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Right Lobe of Liver\",\n        \"Hepatic Veins\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Gallbladder (Vesica biliaris)\",\n      \"anatomicalLocations\": [\n        \"Gallbladder (Vesica biliaris)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleural Cavity",
+              "Visceral Pleura",
+              "Parietal Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleural Cavity",
+                    "Visceral Pleura",
+                    "Parietal Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Liver (Hepar)",
+                  "anatomicalLocations": [
+                    "Right Lobe of Liver",
+                    "Hepatic Veins",
+                    "Portal Vein"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Gallbladder (Vesica biliaris)",
+                  "anatomicalLocations": [
+                    "Gallbladder (Vesica biliaris)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleural Cavity",
+            "Visceral Pleura",
+            "Parietal Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

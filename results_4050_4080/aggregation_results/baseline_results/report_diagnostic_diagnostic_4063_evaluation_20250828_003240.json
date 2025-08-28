@@ -1,0 +1,1689 @@
+{
+  "report_id": "diagnostic_4063",
+  "timestamp": "2025-08-28T00:32:40.122241",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4063_symptom_0",
+      "diagnosis": "red cells were",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Cerebral Arteries"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cervical Spinal Cord",
+            "Cervical Vertebrae"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Common Carotid Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Hilum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Common Carotid Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Hilum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4063_symptom_1",
+      "diagnosis": "white cells were 1.1",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Cerebral Arteries"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cervical Spinal Cord",
+            "Cervical Vertebrae"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Common Carotid Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Hilum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Common Carotid Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Hilum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4063_symptom_2",
+      "diagnosis": "red cells in tube #1 were 339",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Cerebral Arteries"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cervical Spinal Cord",
+            "Cervical Vertebrae"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Common Carotid Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Hilum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Common Carotid Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Hilum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4063_symptom_3",
+      "diagnosis": "protein was 25",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Cerebral Arteries"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cervical Spinal Cord",
+            "Cervical Vertebrae"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Common Carotid Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Hilum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Common Carotid Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Hilum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4063_symptom_4",
+      "diagnosis": "glucose 69",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Cerebral Arteries"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cervical Spinal Cord",
+            "Cervical Vertebrae"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Common Carotid Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Hilum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Common Carotid Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Hilum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4063_symptom_5",
+      "diagnosis": "severely hypertensive and diaphoretic with systolic blood pressure over 220",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Cerebral Arteries"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cervical Spinal Cord",
+            "Cervical Vertebrae"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Common Carotid Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Hilum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Common Carotid Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Hilum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4063_symptom_6",
+      "diagnosis": "severe headache while climbing the stairs",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Cerebral Arteries"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cervical Spinal Cord",
+            "Cervical Vertebrae"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Common Carotid Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Hilum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Common Carotid Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Hilum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4063_symptom_7",
+      "diagnosis": "headache recurred on sunday and monday",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Cerebral Arteries"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cervical Spinal Cord",
+            "Cervical Vertebrae"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Common Carotid Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Hilum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Common Carotid Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Hilum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4063_symptom_8",
+      "diagnosis": "headache on and off since friday before admission",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Cerebral Arteries"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cervical Spinal Cord",
+            "Cervical Vertebrae"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Common Carotid Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Hilum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Common Carotid Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Hilum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4063_symptom_9",
+      "diagnosis": "severe headache which resolved on its own",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Cerebral Arteries"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cervical Spinal Cord",
+            "Cervical Vertebrae"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Common Carotid Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Hilum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Common Carotid Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Hilum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4063_symptom_10",
+      "diagnosis": "cervicalgia",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebrospinal Fluid (CSF)",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Carotid Artery",
+            "Cerebral Arteries"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Meninges"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Cervical Spinal Cord",
+            "Cervical Vertebrae"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Diencephalon",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Diencephalon",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Common Carotid Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Hilum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Brainstem",
+              "Cerebrospinal Fluid (CSF)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Carotid Artery",
+                    "Internal Carotid Artery",
+                    "Common Carotid Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Aortic Root & Ascending Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Kidney (Ren)",
+                  "anatomicalLocations": [
+                    "Renal Cortex",
+                    "Renal Medulla (Pyramids)",
+                    "Renal Hilum"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

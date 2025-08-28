@@ -1,0 +1,1092 @@
+{
+  "report_number": "diagnostic_4062",
+  "timestamp": "2025-08-28T00:31:30.707546",
+  "baseline_method": {
+    "aggregated_symptoms": "headache was nuchal, pounding, increased on straining; blood pressure of 205/114 which later came down to 150/80's; severe headache on friday which resolved by itself, recurred on sunday and on monday; blood in the csf; headache recurred",
+    "expected_results": [
+      {
+        "organName": "Brain",
+        "anatomicalLocations": [
+          "Meninges",
+          "Cerebral Cortex"
+        ]
+      },
+      {
+        "organName": "Artery (Arteria)",
+        "anatomicalLocations": [
+          "Carotid Artery",
+          "Internal Carotid Artery"
+        ]
+      },
+      {
+        "organName": "Brain",
+        "anatomicalLocations": [
+          "Cerebrospinal Fluid (CSF)",
+          "Meninges"
+        ]
+      }
+    ],
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "success": true,
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Cerebrospinal Fluid (CSF)"
+        ],
+        "usage": {
+          "completion_tokens": 121,
+          "prompt_tokens": 2209,
+          "total_tokens": 2330,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "success": true,
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Meninges",
+          "Cerebrospinal Fluid (CSF)",
+          "Blood Vessels"
+        ],
+        "usage": {
+          "completion_tokens": 190,
+          "prompt_tokens": 2083,
+          "total_tokens": 2273,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 1984
+          },
+          "prompt_cache_hit_tokens": 1984,
+          "prompt_cache_miss_tokens": 99
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 75.0,
+      "average_precision": 87.5,
+      "average_recall": 50.0
+    }
+  },
+  "rag_enhanced_method": {
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"headache\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"nuchal\",\n            \"primary_organ\": \"neck\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"pounding\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"increased on straining\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"blood pressure of 205/114\",\n            \"primary_organ\": \"heart\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"blood pressure came down to 150/80's\",\n            \"primary_organ\": \"heart\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"severe headache on friday\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s8\",\n            \"symptom_text\": \"headache resolved by itself\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s9\",\n            \"symptom_text\": \"recurred on sunday\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s10\",\n            \"symptom_text\": \"recurred on monday\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s11\",\n            \"symptom_text\": \"blood in the csf\",\n            \"primary_organ\": \"central nervous system\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s12\",\n            \"symptom_text\": \"headache recurred\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"moderate\"\n        }\n    ],\n    \"total_count\": 12,\n    \"reasoning\": \"The symptoms are split based on the different aspects of the headache, the nuchal pain, the pounding nature of the headache, and the changes in blood pressure. The blood in the CSF is a separate symptom indicating a potential neurological issue. Each symptom is considered a separate entity as they represent distinct clinical manifestations.\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "headache",
+              "primary_organ": "brain",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "nuchal",
+              "primary_organ": "neck",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "pounding",
+              "primary_organ": "brain",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "increased on straining",
+              "primary_organ": "brain",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "blood pressure of 205/114",
+              "primary_organ": "heart",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "blood pressure came down to 150/80's",
+              "primary_organ": "heart",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s7",
+              "symptom_text": "severe headache on friday",
+              "primary_organ": "brain",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s8",
+              "symptom_text": "headache resolved by itself",
+              "primary_organ": "brain",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s9",
+              "symptom_text": "recurred on sunday",
+              "primary_organ": "brain",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s10",
+              "symptom_text": "recurred on monday",
+              "primary_organ": "brain",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s11",
+              "symptom_text": "blood in the csf",
+              "primary_organ": "central nervous system",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s12",
+              "symptom_text": "headache recurred",
+              "primary_organ": "brain",
+              "severity": "moderate"
+            }
+          ],
+          "total_count": 12,
+          "reasoning": "The symptoms are split based on the different aspects of the headache, the nuchal pain, the pounding nature of the headache, and the changes in blood pressure. The blood in the CSF is a separate symptom indicating a potential neurological issue. Each symptom is considered a separate entity as they represent distinct clinical manifestations."
+        }
+      },
+      "timestamp": "2025-08-28T00:30:52.329304"
+    },
+    "rag_search_results": {
+      "success": true,
+      "total_searched": 12,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "headache",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "headache",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "headache",
+                  "units": [
+                    {
+                      "u_id": "u_52224",
+                      "u_unit": {
+                        "d_diagnosis": "headache",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "headache"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:30:54.027010"
+          }
+        },
+        "s2": {
+          "symptom_text": "nuchal",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "nuchal",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "nuchal",
+                  "units": [
+                    {
+                      "u_id": "u_80051",
+                      "u_unit": {
+                        "d_diagnosis": "nuchal rigidity",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "nuchal rigidity"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:30:55.768070"
+          }
+        },
+        "s3": {
+          "symptom_text": "pounding",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "pounding",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:30:57.511471"
+          }
+        },
+        "s4": {
+          "symptom_text": "increased on straining",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "increased on straining",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:30:59.232635"
+          }
+        },
+        "s5": {
+          "symptom_text": "blood pressure of 205/114",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "blood pressure of 205/114",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "blood pressure of 205/114",
+                  "units": [
+                    {
+                      "u_id": "u_3558",
+                      "u_unit": {
+                        "d_diagnosis": "blood pressure is 135/92",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "blood pressure is 135/92"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "blood pressure of 205/114",
+                  "units": [
+                    {
+                      "u_id": "u_64230",
+                      "u_unit": {
+                        "d_diagnosis": "blood pressure was 123/55",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "blood pressure was 123/55"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "blood pressure of 205/114",
+                  "units": [
+                    {
+                      "u_id": "u_28276",
+                      "u_unit": {
+                        "d_diagnosis": "blood pressure was 113/53",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "blood pressure was 113/53"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:31:00.968292"
+          }
+        },
+        "s6": {
+          "symptom_text": "blood pressure came down to 150/80's",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "blood pressure came down to 150/80's",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "blood pressure came down to 150/80's",
+                  "units": [
+                    {
+                      "u_id": "u_8289",
+                      "u_unit": {
+                        "d_diagnosis": "blood pressure of 150/80",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "blood pressure of 150/80"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "blood pressure came down to 150/80's",
+                  "units": [
+                    {
+                      "u_id": "u_32626",
+                      "u_unit": {
+                        "d_diagnosis": "blood pressure 150/90",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "blood pressure 150/90"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "blood pressure came down to 150/80's",
+                  "units": [
+                    {
+                      "u_id": "u_67615",
+                      "u_unit": {
+                        "d_diagnosis": "bp 150/70",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "bp 150/70"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:31:02.714831"
+          }
+        },
+        "s7": {
+          "symptom_text": "severe headache on friday",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "severe headache on friday",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "severe headache on friday",
+                  "units": [
+                    {
+                      "u_id": "u_99927",
+                      "u_unit": {
+                        "d_diagnosis": "complaining of severe headache",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "complaining of severe headache"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "severe headache on friday",
+                  "units": [
+                    {
+                      "u_id": "u_80648",
+                      "u_unit": {
+                        "d_diagnosis": "severe headache",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "severe headache"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:31:04.865507"
+          }
+        },
+        "s8": {
+          "symptom_text": "headache resolved by itself",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "headache resolved by itself",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "headache resolved by itself",
+                  "units": [
+                    {
+                      "u_id": "u_59855",
+                      "u_unit": {
+                        "d_diagnosis": "resolution of headache upon presentation to the floor",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "resolution of headache upon presentation to the floor"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "headache resolved by itself",
+                  "units": [
+                    {
+                      "u_id": "u_91893",
+                      "u_unit": {
+                        "d_diagnosis": "headaches were well controlled with morphine sulfate and had resolved by time of discharge",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "headaches were well controlled with morphine sulfate and had resolved by time of discharge"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "headache resolved by itself",
+                  "units": [
+                    {
+                      "u_id": "u_52224",
+                      "u_unit": {
+                        "d_diagnosis": "headache",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "headache"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:31:06.671969"
+          }
+        },
+        "s9": {
+          "symptom_text": "recurred on sunday",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "recurred on sunday",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:31:08.790144"
+          }
+        },
+        "s10": {
+          "symptom_text": "recurred on monday",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "recurred on monday",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:31:10.475112"
+          }
+        },
+        "s11": {
+          "symptom_text": "blood in the csf",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "blood in the csf",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "blood in the csf",
+                  "units": [
+                    {
+                      "u_id": "u_79396",
+                      "u_unit": {
+                        "d_diagnosis": "csf leak",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "csf leak"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:31:12.188121"
+          }
+        },
+        "s12": {
+          "symptom_text": "headache recurred",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "headache recurred",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "headache recurred",
+                  "units": [
+                    {
+                      "u_id": "u_91734",
+                      "u_unit": {
+                        "d_diagnosis": "persistent headache",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "persistent headache"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "headache recurred",
+                  "units": [
+                    {
+                      "u_id": "u_63279",
+                      "u_unit": {
+                        "d_diagnosis": "chronic headache",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "chronic headache"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "headache recurred",
+                  "units": [
+                    {
+                      "u_id": "u_4632",
+                      "u_unit": {
+                        "d_diagnosis": "several weeks of headache",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "several weeks of headache"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:31:13.941749"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "headache",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "headache",
+              "units": [
+                {
+                  "u_id": "u_52224",
+                  "u_unit": {
+                    "d_diagnosis": "headache",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "headache"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "nuchal",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "nuchal",
+              "units": [
+                {
+                  "u_id": "u_80051",
+                  "u_unit": {
+                    "d_diagnosis": "nuchal rigidity",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "nuchal rigidity"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "pounding",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "increased on straining",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "blood pressure of 205/114",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "blood pressure of 205/114",
+              "units": [
+                {
+                  "u_id": "u_3558",
+                  "u_unit": {
+                    "d_diagnosis": "blood pressure is 135/92",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "blood pressure is 135/92"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "blood pressure of 205/114",
+              "units": [
+                {
+                  "u_id": "u_64230",
+                  "u_unit": {
+                    "d_diagnosis": "blood pressure was 123/55",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "blood pressure was 123/55"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "blood pressure of 205/114",
+              "units": [
+                {
+                  "u_id": "u_28276",
+                  "u_unit": {
+                    "d_diagnosis": "blood pressure was 113/53",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "blood pressure was 113/53"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "blood pressure came down to 150/80's",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "blood pressure came down to 150/80's",
+              "units": [
+                {
+                  "u_id": "u_8289",
+                  "u_unit": {
+                    "d_diagnosis": "blood pressure of 150/80",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "blood pressure of 150/80"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "blood pressure came down to 150/80's",
+              "units": [
+                {
+                  "u_id": "u_32626",
+                  "u_unit": {
+                    "d_diagnosis": "blood pressure 150/90",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "blood pressure 150/90"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "blood pressure came down to 150/80's",
+              "units": [
+                {
+                  "u_id": "u_67615",
+                  "u_unit": {
+                    "d_diagnosis": "bp 150/70",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "bp 150/70"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "severe headache on friday",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "severe headache on friday",
+              "units": [
+                {
+                  "u_id": "u_99927",
+                  "u_unit": {
+                    "d_diagnosis": "complaining of severe headache",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "complaining of severe headache"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "severe headache on friday",
+              "units": [
+                {
+                  "u_id": "u_80648",
+                  "u_unit": {
+                    "d_diagnosis": "severe headache",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "severe headache"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "headache resolved by itself",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "headache resolved by itself",
+              "units": [
+                {
+                  "u_id": "u_59855",
+                  "u_unit": {
+                    "d_diagnosis": "resolution of headache upon presentation to the floor",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "resolution of headache upon presentation to the floor"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "headache resolved by itself",
+              "units": [
+                {
+                  "u_id": "u_91893",
+                  "u_unit": {
+                    "d_diagnosis": "headaches were well controlled with morphine sulfate and had resolved by time of discharge",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "headaches were well controlled with morphine sulfate and had resolved by time of discharge"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "headache resolved by itself",
+              "units": [
+                {
+                  "u_id": "u_52224",
+                  "u_unit": {
+                    "d_diagnosis": "headache",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "headache"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "recurred on sunday",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "recurred on monday",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "blood in the csf",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "blood in the csf",
+              "units": [
+                {
+                  "u_id": "u_79396",
+                  "u_unit": {
+                    "d_diagnosis": "csf leak",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "csf leak"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "headache recurred",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "headache recurred",
+              "units": [
+                {
+                  "u_id": "u_91734",
+                  "u_unit": {
+                    "d_diagnosis": "persistent headache",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "persistent headache"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "headache recurred",
+              "units": [
+                {
+                  "u_id": "u_63279",
+                  "u_unit": {
+                    "d_diagnosis": "chronic headache",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "chronic headache"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "headache recurred",
+              "units": [
+                {
+                  "u_id": "u_4632",
+                  "u_unit": {
+                    "d_diagnosis": "several weeks of headache",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "several weeks of headache"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:31:13.941780"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "success": true,
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Diencephalon",
+          "Cerebrospinal Fluid (CSF)"
+        ],
+        "usage": {
+          "completion_tokens": 173,
+          "prompt_tokens": 2883,
+          "total_tokens": 3056,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "success": true,
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Meninges",
+          "Cerebrospinal Fluid (CSF)",
+          "Blood Vessels"
+        ],
+        "usage": {
+          "completion_tokens": 202,
+          "prompt_tokens": 2721,
+          "total_tokens": 2923,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2368
+          },
+          "prompt_cache_hit_tokens": 2368,
+          "prompt_cache_miss_tokens": 353
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 68.3,
+      "average_precision": 70.8,
+      "average_recall": 50.0
+    }
+  },
+  "comparison": {
+    "baseline_score": 75.0,
+    "rag_enhanced_score": 68.3,
+    "improvement": -6.700000000000003
+  }
+}

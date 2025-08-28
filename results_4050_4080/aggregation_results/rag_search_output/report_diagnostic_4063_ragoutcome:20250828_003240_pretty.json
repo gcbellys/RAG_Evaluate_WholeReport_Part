@@ -1,0 +1,346 @@
+[
+  {
+    "query": "red cells were",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "red cells were",
+        "units": [
+          {
+            "u_id": "u_38771",
+            "u_unit": {
+              "d_diagnosis": "bright red blood",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "bright red blood"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "white cells were 1.1",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "red cells in tube #1 were 339",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "protein was 25",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "glucose 69",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "glucose 69",
+        "units": [
+          {
+            "u_id": "u_33693",
+            "u_unit": {
+              "d_diagnosis": "glucose-108*",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "glucose-108*"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "glucose 69",
+        "units": [
+          {
+            "u_id": "u_28568",
+            "u_unit": {
+              "d_diagnosis": "glucose-286*",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "glucose-286*"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "glucose 69",
+        "units": [
+          {
+            "u_id": "u_28450",
+            "u_unit": {
+              "d_diagnosis": "glucose to 32",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "glucose to 32"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "severely hypertensive and diaphoretic with systolic blood pressure over 220",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "severely hypertensive and diaphoretic with systolic blood pressure over 220",
+        "units": [
+          {
+            "u_id": "u_88925",
+            "u_unit": {
+              "d_diagnosis": "elevated systolic blood pressure to the 220s",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "elevated systolic blood pressure to the 220s"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "severely hypertensive and diaphoretic with systolic blood pressure over 220",
+        "units": [
+          {
+            "u_id": "u_83346",
+            "u_unit": {
+              "d_diagnosis": "systolic blood pressures in the 220s",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "systolic blood pressures in the 220s"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "severely hypertensive and diaphoretic with systolic blood pressure over 220",
+        "units": [
+          {
+            "u_id": "u_47234",
+            "u_unit": {
+              "d_diagnosis": "hypertension to 220/110",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "hypertension to 220/110"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "severe headache while climbing the stairs",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "severe headache while climbing the stairs",
+        "units": [
+          {
+            "u_id": "u_2671",
+            "u_unit": {
+              "d_diagnosis": "headache, persistent o2 requirement when walking stairs",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "headache, persistent o2 requirement when walking stairs"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "severe headache while climbing the stairs",
+        "units": [
+          {
+            "u_id": "u_80648",
+            "u_unit": {
+              "d_diagnosis": "severe headache",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "severe headache"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "headache recurred on sunday and monday",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "headache recurred on sunday and monday",
+        "units": [
+          {
+            "u_id": "u_4632",
+            "u_unit": {
+              "d_diagnosis": "several weeks of headache",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "several weeks of headache"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "headache recurred on sunday and monday",
+        "units": [
+          {
+            "u_id": "u_91734",
+            "u_unit": {
+              "d_diagnosis": "persistent headache",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "persistent headache"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "headache on and off since friday before admission",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "headache on and off since friday before admission",
+        "units": [
+          {
+            "u_id": "u_34203",
+            "u_unit": {
+              "d_diagnosis": "she fell on the day prior to admission and began on the day of admission with a subsequent headache",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "she fell on the day prior to admission and began on the day of admission with a subsequent headache"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "headache on and off since friday before admission",
+        "units": [
+          {
+            "u_id": "u_36381",
+            "u_unit": {
+              "d_diagnosis": "headache for about 4 days prior to the aforementioned incident on the day of admission",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "headache for about 4 days prior to the aforementioned incident on the day of admission"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "severe headache which resolved on its own",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "severe headache which resolved on its own",
+        "units": [
+          {
+            "u_id": "u_80648",
+            "u_unit": {
+              "d_diagnosis": "severe headache",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "severe headache"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "cervicalgia",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "cervicalgia",
+        "units": [
+          {
+            "u_id": "u_69720",
+            "u_unit": {
+              "d_diagnosis": "neck pain",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "neck pain"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+]

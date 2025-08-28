@@ -1,0 +1,1000 @@
+{
+  "report_id": "diagnostic_4058",
+  "timestamp": "2025-08-28T00:26:51.493375",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4058_symptom_0",
+      "diagnosis": "tachypnea",
+      "expected_organs": [
+        {
+          "organName": "Bronchus",
+          "anatomicalLocations": [
+            "Main Bronchi",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Larynx",
+          "anatomicalLocations": [
+            "Vocal Cords",
+            "Epiglottis"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lung",
+            "Superior Lobe"
+          ]
+        },
+        {
+          "organName": "Bronchus",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Terminal Bronchioles"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Lung\",\n        \"Superior Lobe\",\n        \"Alveoli\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Airway\",\n      \"anatomicalLocations\": [\n        \"Trachea\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Lung",
+              "Superior Lobe",
+              "Alveoli"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Lung",
+                    "Superior Lobe",
+                    "Alveoli"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Airway",
+                  "anatomicalLocations": [
+                    "Trachea",
+                    "Bronchi"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Lung",
+            "Superior Lobe",
+            "Alveoli"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Lung\",\n        \"Superior Lobe\",\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Bronchus\",\n      \"anatomicalLocations\": [\n        \"Bronchi\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Lung",
+              "Superior Lobe",
+              "Alveoli",
+              "Bronchioles"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Lung",
+                    "Superior Lobe",
+                    "Alveoli",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Bronchus",
+                  "anatomicalLocations": [
+                    "Bronchi"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Lung",
+            "Superior Lobe",
+            "Alveoli",
+            "Bronchioles"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4058_symptom_1",
+      "diagnosis": "wheezes",
+      "expected_organs": [
+        {
+          "organName": "Bronchus",
+          "anatomicalLocations": [
+            "Main Bronchi",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Larynx",
+          "anatomicalLocations": [
+            "Vocal Cords",
+            "Epiglottis"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lung",
+            "Superior Lobe"
+          ]
+        },
+        {
+          "organName": "Bronchus",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Terminal Bronchioles"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Lung\",\n        \"Superior Lobe\",\n        \"Alveoli\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Airway\",\n      \"anatomicalLocations\": [\n        \"Trachea\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Lung",
+              "Superior Lobe",
+              "Alveoli"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Lung",
+                    "Superior Lobe",
+                    "Alveoli"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Airway",
+                  "anatomicalLocations": [
+                    "Trachea",
+                    "Bronchi"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Lung",
+            "Superior Lobe",
+            "Alveoli"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Lung\",\n        \"Superior Lobe\",\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Bronchus\",\n      \"anatomicalLocations\": [\n        \"Bronchi\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Lung",
+              "Superior Lobe",
+              "Alveoli",
+              "Bronchioles"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Lung",
+                    "Superior Lobe",
+                    "Alveoli",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Bronchus",
+                  "anatomicalLocations": [
+                    "Bronchi"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Lung",
+            "Superior Lobe",
+            "Alveoli",
+            "Bronchioles"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4058_symptom_2",
+      "diagnosis": "sputum production",
+      "expected_organs": [
+        {
+          "organName": "Bronchus",
+          "anatomicalLocations": [
+            "Main Bronchi",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Larynx",
+          "anatomicalLocations": [
+            "Vocal Cords",
+            "Epiglottis"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lung",
+            "Superior Lobe"
+          ]
+        },
+        {
+          "organName": "Bronchus",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Terminal Bronchioles"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Lung\",\n        \"Superior Lobe\",\n        \"Alveoli\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Airway\",\n      \"anatomicalLocations\": [\n        \"Trachea\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Lung",
+              "Superior Lobe",
+              "Alveoli"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Lung",
+                    "Superior Lobe",
+                    "Alveoli"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Airway",
+                  "anatomicalLocations": [
+                    "Trachea",
+                    "Bronchi"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Lung",
+            "Superior Lobe",
+            "Alveoli"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Lung\",\n        \"Superior Lobe\",\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Bronchus\",\n      \"anatomicalLocations\": [\n        \"Bronchi\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Lung",
+              "Superior Lobe",
+              "Alveoli",
+              "Bronchioles"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Lung",
+                    "Superior Lobe",
+                    "Alveoli",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Bronchus",
+                  "anatomicalLocations": [
+                    "Bronchi"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Lung",
+            "Superior Lobe",
+            "Alveoli",
+            "Bronchioles"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4058_symptom_3",
+      "diagnosis": "difficult intubation",
+      "expected_organs": [
+        {
+          "organName": "Bronchus",
+          "anatomicalLocations": [
+            "Main Bronchi",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Larynx",
+          "anatomicalLocations": [
+            "Vocal Cords",
+            "Epiglottis"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lung",
+            "Superior Lobe"
+          ]
+        },
+        {
+          "organName": "Bronchus",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Terminal Bronchioles"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Lung\",\n        \"Superior Lobe\",\n        \"Alveoli\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Airway\",\n      \"anatomicalLocations\": [\n        \"Trachea\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Lung",
+              "Superior Lobe",
+              "Alveoli"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Lung",
+                    "Superior Lobe",
+                    "Alveoli"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Airway",
+                  "anatomicalLocations": [
+                    "Trachea",
+                    "Bronchi"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Lung",
+            "Superior Lobe",
+            "Alveoli"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Lung\",\n        \"Superior Lobe\",\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Bronchus\",\n      \"anatomicalLocations\": [\n        \"Bronchi\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Lung",
+              "Superior Lobe",
+              "Alveoli",
+              "Bronchioles"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Lung",
+                    "Superior Lobe",
+                    "Alveoli",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Bronchus",
+                  "anatomicalLocations": [
+                    "Bronchi"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Lung",
+            "Superior Lobe",
+            "Alveoli",
+            "Bronchioles"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4058_symptom_4",
+      "diagnosis": "right upper lobe opacity",
+      "expected_organs": [
+        {
+          "organName": "Bronchus",
+          "anatomicalLocations": [
+            "Main Bronchi",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Larynx",
+          "anatomicalLocations": [
+            "Vocal Cords",
+            "Epiglottis"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lung",
+            "Superior Lobe"
+          ]
+        },
+        {
+          "organName": "Bronchus",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Terminal Bronchioles"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Lung\",\n        \"Superior Lobe\",\n        \"Alveoli\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Airway\",\n      \"anatomicalLocations\": [\n        \"Trachea\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Lung",
+              "Superior Lobe",
+              "Alveoli"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Lung",
+                    "Superior Lobe",
+                    "Alveoli"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Airway",
+                  "anatomicalLocations": [
+                    "Trachea",
+                    "Bronchi"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Lung",
+            "Superior Lobe",
+            "Alveoli"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Lung\",\n        \"Superior Lobe\",\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Bronchus\",\n      \"anatomicalLocations\": [\n        \"Bronchi\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Lung",
+              "Superior Lobe",
+              "Alveoli",
+              "Bronchioles"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Lung",
+                    "Superior Lobe",
+                    "Alveoli",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Bronchus",
+                  "anatomicalLocations": [
+                    "Bronchi"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Lung",
+            "Superior Lobe",
+            "Alveoli",
+            "Bronchioles"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4058_symptom_5",
+      "diagnosis": "unable to obtain an appropriate sputum specimen for culture",
+      "expected_organs": [
+        {
+          "organName": "Bronchus",
+          "anatomicalLocations": [
+            "Main Bronchi",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Larynx",
+          "anatomicalLocations": [
+            "Vocal Cords",
+            "Epiglottis"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lung",
+            "Superior Lobe"
+          ]
+        },
+        {
+          "organName": "Bronchus",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Terminal Bronchioles"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Lung\",\n        \"Superior Lobe\",\n        \"Alveoli\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Airway\",\n      \"anatomicalLocations\": [\n        \"Trachea\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Lung",
+              "Superior Lobe",
+              "Alveoli"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Lung",
+                    "Superior Lobe",
+                    "Alveoli"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Airway",
+                  "anatomicalLocations": [
+                    "Trachea",
+                    "Bronchi"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Lung",
+            "Superior Lobe",
+            "Alveoli"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Lung\",\n        \"Superior Lobe\",\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Bronchus\",\n      \"anatomicalLocations\": [\n        \"Bronchi\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Lung",
+              "Superior Lobe",
+              "Alveoli",
+              "Bronchioles"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Lung",
+                    "Superior Lobe",
+                    "Alveoli",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Bronchus",
+                  "anatomicalLocations": [
+                    "Bronchi"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Lung",
+            "Superior Lobe",
+            "Alveoli",
+            "Bronchioles"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4058_symptom_6",
+      "diagnosis": "hemodynamically stable",
+      "expected_organs": [
+        {
+          "organName": "Bronchus",
+          "anatomicalLocations": [
+            "Main Bronchi",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Larynx",
+          "anatomicalLocations": [
+            "Vocal Cords",
+            "Epiglottis"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lung",
+            "Superior Lobe"
+          ]
+        },
+        {
+          "organName": "Bronchus",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Terminal Bronchioles"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Lung\",\n        \"Superior Lobe\",\n        \"Alveoli\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Airway\",\n      \"anatomicalLocations\": [\n        \"Trachea\",\n        \"Bronchi\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Lung",
+              "Superior Lobe",
+              "Alveoli"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Lung",
+                    "Superior Lobe",
+                    "Alveoli"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Airway",
+                  "anatomicalLocations": [
+                    "Trachea",
+                    "Bronchi"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Lung",
+            "Superior Lobe",
+            "Alveoli"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Right Lung\",\n        \"Superior Lobe\",\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Bronchus\",\n      \"anatomicalLocations\": [\n        \"Bronchi\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Right Lung",
+              "Superior Lobe",
+              "Alveoli",
+              "Bronchioles"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Right Lung",
+                    "Superior Lobe",
+                    "Alveoli",
+                    "Bronchioles"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Bronchus",
+                  "anatomicalLocations": [
+                    "Bronchi"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Right Lung",
+            "Superior Lobe",
+            "Alveoli",
+            "Bronchioles"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

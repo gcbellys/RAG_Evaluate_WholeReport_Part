@@ -1,0 +1,701 @@
+{
+  "report_id": "diagnostic_4071",
+  "timestamp": "2025-08-28T00:41:56.861960",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4071_symptom_0",
+      "diagnosis": "denied claudication",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Left Anterior Descending Artery (LAD)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Circumflex Artery",
+            "Right Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Subclavian Artery\",\n        \"Carotid Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Coronary Artery",
+              "Left Ventricle (LV)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Subclavian Artery",
+                    "Carotid Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Coronary Artery",
+            "Left Ventricle (LV)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Anterior Descending Artery (LAD)\",\n        \"Aorta\",\n        \"Carotid Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve",
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Anterior Descending Artery (LAD)",
+                    "Aorta",
+                    "Carotid Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve",
+            "Pericardium"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4071_symptom_1",
+      "diagnosis": "stroke",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Left Anterior Descending Artery (LAD)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Circumflex Artery",
+            "Right Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Subclavian Artery\",\n        \"Carotid Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Coronary Artery",
+              "Left Ventricle (LV)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Subclavian Artery",
+                    "Carotid Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Coronary Artery",
+            "Left Ventricle (LV)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Anterior Descending Artery (LAD)\",\n        \"Aorta\",\n        \"Carotid Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve",
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Anterior Descending Artery (LAD)",
+                    "Aorta",
+                    "Carotid Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve",
+            "Pericardium"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4071_symptom_2",
+      "diagnosis": "syncope in the past secondary to hypoglycemia",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Left Anterior Descending Artery (LAD)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Circumflex Artery",
+            "Right Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Subclavian Artery\",\n        \"Carotid Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Coronary Artery",
+              "Left Ventricle (LV)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Subclavian Artery",
+                    "Carotid Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Coronary Artery",
+            "Left Ventricle (LV)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Anterior Descending Artery (LAD)\",\n        \"Aorta\",\n        \"Carotid Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve",
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Anterior Descending Artery (LAD)",
+                    "Aorta",
+                    "Carotid Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve",
+            "Pericardium"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4071_symptom_3",
+      "diagnosis": "substernal chest pain radiating to the neck and jaw with minimal activity",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Left Anterior Descending Artery (LAD)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Circumflex Artery",
+            "Right Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Subclavian Artery\",\n        \"Carotid Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Coronary Artery",
+              "Left Ventricle (LV)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Subclavian Artery",
+                    "Carotid Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Coronary Artery",
+            "Left Ventricle (LV)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Anterior Descending Artery (LAD)\",\n        \"Aorta\",\n        \"Carotid Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve",
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Anterior Descending Artery (LAD)",
+                    "Aorta",
+                    "Carotid Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve",
+            "Pericardium"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4071_symptom_4",
+      "diagnosis": "closure of wrist and axillary lacerations",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Brainstem"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Left Anterior Descending Artery (LAD)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Circumflex Artery",
+            "Right Coronary Artery"
+          ]
+        },
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Subclavian Artery\",\n        \"Carotid Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Coronary Artery",
+              "Left Ventricle (LV)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Subclavian Artery",
+                    "Carotid Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Coronary Artery",
+            "Left Ventricle (LV)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\",\n        \"Pericardium\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Anterior Descending Artery (LAD)\",\n        \"Aorta\",\n        \"Carotid Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve",
+              "Pericardium"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve",
+                    "Pericardium"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Anterior Descending Artery (LAD)",
+                    "Aorta",
+                    "Carotid Artery"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Cerebrospinal Fluid (CSF)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve",
+            "Pericardium"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

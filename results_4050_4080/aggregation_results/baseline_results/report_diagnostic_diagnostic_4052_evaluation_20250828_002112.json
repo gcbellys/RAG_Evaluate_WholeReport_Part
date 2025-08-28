@@ -1,0 +1,2118 @@
+{
+  "report_id": "diagnostic_4052",
+  "timestamp": "2025-08-28T00:21:12.015533",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4052_symptom_0",
+      "diagnosis": "flash pul edema",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Cartilage",
+            "Tracheal Membrane"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Spinal cord (Medulla spinalis)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Stenosis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Bronchi",
+              "Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Stenosis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Bronchi",
+            "Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Lumen\",\n        \"Tracheal Wall\",\n        \"Tracheal Cartilage Rings\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Cervical Spinal Cord\",\n        \"Spinal Nerve Roots\",\n        \"Epidural Space\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Skin (Cutis)\",\n      \"anatomicalLocations\": [\n        \"Neck Skin\",\n        \"Surgical Incision Site\",\n        \"Subcutaneous Tissue\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Trachea",
+            "anatomical_locations": [
+              "Tracheal Lumen",
+              "Tracheal Wall",
+              "Tracheal Cartilage Rings"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Lumen",
+                    "Tracheal Wall",
+                    "Tracheal Cartilage Rings"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Cervical Spinal Cord",
+                    "Spinal Nerve Roots",
+                    "Epidural Space"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Skin (Cutis)",
+                  "anatomicalLocations": [
+                    "Neck Skin",
+                    "Surgical Incision Site",
+                    "Subcutaneous Tissue"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Trachea",
+          "anatomical_locations": [
+            "Tracheal Lumen",
+            "Tracheal Wall",
+            "Tracheal Cartilage Rings"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4052_symptom_1",
+      "diagnosis": "intubation",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Cartilage",
+            "Tracheal Membrane"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Spinal cord (Medulla spinalis)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Stenosis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Bronchi",
+              "Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Stenosis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Bronchi",
+            "Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Lumen\",\n        \"Tracheal Wall\",\n        \"Tracheal Cartilage Rings\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Cervical Spinal Cord\",\n        \"Spinal Nerve Roots\",\n        \"Epidural Space\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Skin (Cutis)\",\n      \"anatomicalLocations\": [\n        \"Neck Skin\",\n        \"Surgical Incision Site\",\n        \"Subcutaneous Tissue\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Trachea",
+            "anatomical_locations": [
+              "Tracheal Lumen",
+              "Tracheal Wall",
+              "Tracheal Cartilage Rings"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Lumen",
+                    "Tracheal Wall",
+                    "Tracheal Cartilage Rings"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Cervical Spinal Cord",
+                    "Spinal Nerve Roots",
+                    "Epidural Space"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Skin (Cutis)",
+                  "anatomicalLocations": [
+                    "Neck Skin",
+                    "Surgical Incision Site",
+                    "Subcutaneous Tissue"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Trachea",
+          "anatomical_locations": [
+            "Tracheal Lumen",
+            "Tracheal Wall",
+            "Tracheal Cartilage Rings"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4052_symptom_2",
+      "diagnosis": "guardian stitch cut",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Cartilage",
+            "Tracheal Membrane"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Spinal cord (Medulla spinalis)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Stenosis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Bronchi",
+              "Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Stenosis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Bronchi",
+            "Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Lumen\",\n        \"Tracheal Wall\",\n        \"Tracheal Cartilage Rings\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Cervical Spinal Cord\",\n        \"Spinal Nerve Roots\",\n        \"Epidural Space\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Skin (Cutis)\",\n      \"anatomicalLocations\": [\n        \"Neck Skin\",\n        \"Surgical Incision Site\",\n        \"Subcutaneous Tissue\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Trachea",
+            "anatomical_locations": [
+              "Tracheal Lumen",
+              "Tracheal Wall",
+              "Tracheal Cartilage Rings"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Lumen",
+                    "Tracheal Wall",
+                    "Tracheal Cartilage Rings"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Cervical Spinal Cord",
+                    "Spinal Nerve Roots",
+                    "Epidural Space"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Skin (Cutis)",
+                  "anatomicalLocations": [
+                    "Neck Skin",
+                    "Surgical Incision Site",
+                    "Subcutaneous Tissue"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Trachea",
+          "anatomical_locations": [
+            "Tracheal Lumen",
+            "Tracheal Wall",
+            "Tracheal Cartilage Rings"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4052_symptom_3",
+      "diagnosis": "extubated to bipap",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Cartilage",
+            "Tracheal Membrane"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Spinal cord (Medulla spinalis)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Stenosis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Bronchi",
+              "Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Stenosis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Bronchi",
+            "Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Lumen\",\n        \"Tracheal Wall\",\n        \"Tracheal Cartilage Rings\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Cervical Spinal Cord\",\n        \"Spinal Nerve Roots\",\n        \"Epidural Space\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Skin (Cutis)\",\n      \"anatomicalLocations\": [\n        \"Neck Skin\",\n        \"Surgical Incision Site\",\n        \"Subcutaneous Tissue\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Trachea",
+            "anatomical_locations": [
+              "Tracheal Lumen",
+              "Tracheal Wall",
+              "Tracheal Cartilage Rings"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Lumen",
+                    "Tracheal Wall",
+                    "Tracheal Cartilage Rings"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Cervical Spinal Cord",
+                    "Spinal Nerve Roots",
+                    "Epidural Space"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Skin (Cutis)",
+                  "anatomicalLocations": [
+                    "Neck Skin",
+                    "Surgical Incision Site",
+                    "Subcutaneous Tissue"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Trachea",
+          "anatomical_locations": [
+            "Tracheal Lumen",
+            "Tracheal Wall",
+            "Tracheal Cartilage Rings"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4052_symptom_4",
+      "diagnosis": "persistent leukocytosis",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Cartilage",
+            "Tracheal Membrane"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Spinal cord (Medulla spinalis)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Stenosis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Bronchi",
+              "Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Stenosis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Bronchi",
+            "Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Lumen\",\n        \"Tracheal Wall\",\n        \"Tracheal Cartilage Rings\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Cervical Spinal Cord\",\n        \"Spinal Nerve Roots\",\n        \"Epidural Space\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Skin (Cutis)\",\n      \"anatomicalLocations\": [\n        \"Neck Skin\",\n        \"Surgical Incision Site\",\n        \"Subcutaneous Tissue\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Trachea",
+            "anatomical_locations": [
+              "Tracheal Lumen",
+              "Tracheal Wall",
+              "Tracheal Cartilage Rings"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Lumen",
+                    "Tracheal Wall",
+                    "Tracheal Cartilage Rings"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Cervical Spinal Cord",
+                    "Spinal Nerve Roots",
+                    "Epidural Space"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Skin (Cutis)",
+                  "anatomicalLocations": [
+                    "Neck Skin",
+                    "Surgical Incision Site",
+                    "Subcutaneous Tissue"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Trachea",
+          "anatomical_locations": [
+            "Tracheal Lumen",
+            "Tracheal Wall",
+            "Tracheal Cartilage Rings"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4052_symptom_5",
+      "diagnosis": "stable stenosis",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Cartilage",
+            "Tracheal Membrane"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Spinal cord (Medulla spinalis)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Stenosis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Bronchi",
+              "Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Stenosis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Bronchi",
+            "Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Lumen\",\n        \"Tracheal Wall\",\n        \"Tracheal Cartilage Rings\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Cervical Spinal Cord\",\n        \"Spinal Nerve Roots\",\n        \"Epidural Space\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Skin (Cutis)\",\n      \"anatomicalLocations\": [\n        \"Neck Skin\",\n        \"Surgical Incision Site\",\n        \"Subcutaneous Tissue\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Trachea",
+            "anatomical_locations": [
+              "Tracheal Lumen",
+              "Tracheal Wall",
+              "Tracheal Cartilage Rings"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Lumen",
+                    "Tracheal Wall",
+                    "Tracheal Cartilage Rings"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Cervical Spinal Cord",
+                    "Spinal Nerve Roots",
+                    "Epidural Space"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Skin (Cutis)",
+                  "anatomicalLocations": [
+                    "Neck Skin",
+                    "Surgical Incision Site",
+                    "Subcutaneous Tissue"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Trachea",
+          "anatomical_locations": [
+            "Tracheal Lumen",
+            "Tracheal Wall",
+            "Tracheal Cartilage Rings"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4052_symptom_6",
+      "diagnosis": "sputum w/ gm+ cocci",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Cartilage",
+            "Tracheal Membrane"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Spinal cord (Medulla spinalis)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Stenosis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Bronchi",
+              "Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Stenosis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Bronchi",
+            "Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Lumen\",\n        \"Tracheal Wall\",\n        \"Tracheal Cartilage Rings\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Cervical Spinal Cord\",\n        \"Spinal Nerve Roots\",\n        \"Epidural Space\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Skin (Cutis)\",\n      \"anatomicalLocations\": [\n        \"Neck Skin\",\n        \"Surgical Incision Site\",\n        \"Subcutaneous Tissue\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Trachea",
+            "anatomical_locations": [
+              "Tracheal Lumen",
+              "Tracheal Wall",
+              "Tracheal Cartilage Rings"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Lumen",
+                    "Tracheal Wall",
+                    "Tracheal Cartilage Rings"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Cervical Spinal Cord",
+                    "Spinal Nerve Roots",
+                    "Epidural Space"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Skin (Cutis)",
+                  "anatomicalLocations": [
+                    "Neck Skin",
+                    "Surgical Incision Site",
+                    "Subcutaneous Tissue"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Trachea",
+          "anatomical_locations": [
+            "Tracheal Lumen",
+            "Tracheal Wall",
+            "Tracheal Cartilage Rings"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4052_symptom_7",
+      "diagnosis": "extubated on pod#1",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Cartilage",
+            "Tracheal Membrane"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Spinal cord (Medulla spinalis)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Stenosis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Bronchi",
+              "Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Stenosis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Bronchi",
+            "Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Lumen\",\n        \"Tracheal Wall\",\n        \"Tracheal Cartilage Rings\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Cervical Spinal Cord\",\n        \"Spinal Nerve Roots\",\n        \"Epidural Space\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Skin (Cutis)\",\n      \"anatomicalLocations\": [\n        \"Neck Skin\",\n        \"Surgical Incision Site\",\n        \"Subcutaneous Tissue\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Trachea",
+            "anatomical_locations": [
+              "Tracheal Lumen",
+              "Tracheal Wall",
+              "Tracheal Cartilage Rings"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Lumen",
+                    "Tracheal Wall",
+                    "Tracheal Cartilage Rings"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Cervical Spinal Cord",
+                    "Spinal Nerve Roots",
+                    "Epidural Space"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Skin (Cutis)",
+                  "anatomicalLocations": [
+                    "Neck Skin",
+                    "Surgical Incision Site",
+                    "Subcutaneous Tissue"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Trachea",
+          "anatomical_locations": [
+            "Tracheal Lumen",
+            "Tracheal Wall",
+            "Tracheal Cartilage Rings"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4052_symptom_8",
+      "diagnosis": "reg diet and ambulating",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Cartilage",
+            "Tracheal Membrane"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Spinal cord (Medulla spinalis)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Stenosis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Bronchi",
+              "Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Stenosis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Bronchi",
+            "Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Lumen\",\n        \"Tracheal Wall\",\n        \"Tracheal Cartilage Rings\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Cervical Spinal Cord\",\n        \"Spinal Nerve Roots\",\n        \"Epidural Space\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Skin (Cutis)\",\n      \"anatomicalLocations\": [\n        \"Neck Skin\",\n        \"Surgical Incision Site\",\n        \"Subcutaneous Tissue\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Trachea",
+            "anatomical_locations": [
+              "Tracheal Lumen",
+              "Tracheal Wall",
+              "Tracheal Cartilage Rings"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Lumen",
+                    "Tracheal Wall",
+                    "Tracheal Cartilage Rings"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Cervical Spinal Cord",
+                    "Spinal Nerve Roots",
+                    "Epidural Space"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Skin (Cutis)",
+                  "anatomicalLocations": [
+                    "Neck Skin",
+                    "Surgical Incision Site",
+                    "Subcutaneous Tissue"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Trachea",
+          "anatomical_locations": [
+            "Tracheal Lumen",
+            "Tracheal Wall",
+            "Tracheal Cartilage Rings"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4052_symptom_9",
+      "diagnosis": "guardian stitch placed in or to maintain neck flexion and to decrease tension on anastomosis",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Cartilage",
+            "Tracheal Membrane"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Spinal cord (Medulla spinalis)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Stenosis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Bronchi",
+              "Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Stenosis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Bronchi",
+            "Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Lumen\",\n        \"Tracheal Wall\",\n        \"Tracheal Cartilage Rings\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Cervical Spinal Cord\",\n        \"Spinal Nerve Roots\",\n        \"Epidural Space\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Skin (Cutis)\",\n      \"anatomicalLocations\": [\n        \"Neck Skin\",\n        \"Surgical Incision Site\",\n        \"Subcutaneous Tissue\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Trachea",
+            "anatomical_locations": [
+              "Tracheal Lumen",
+              "Tracheal Wall",
+              "Tracheal Cartilage Rings"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Lumen",
+                    "Tracheal Wall",
+                    "Tracheal Cartilage Rings"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Cervical Spinal Cord",
+                    "Spinal Nerve Roots",
+                    "Epidural Space"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Skin (Cutis)",
+                  "anatomicalLocations": [
+                    "Neck Skin",
+                    "Surgical Incision Site",
+                    "Subcutaneous Tissue"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Trachea",
+          "anatomical_locations": [
+            "Tracheal Lumen",
+            "Tracheal Wall",
+            "Tracheal Cartilage Rings"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4052_symptom_10",
+      "diagnosis": "epidural d/c'd and maintained on pca",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Cartilage",
+            "Tracheal Membrane"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Spinal cord (Medulla spinalis)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Stenosis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Bronchi",
+              "Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Stenosis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Bronchi",
+            "Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Lumen\",\n        \"Tracheal Wall\",\n        \"Tracheal Cartilage Rings\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Cervical Spinal Cord\",\n        \"Spinal Nerve Roots\",\n        \"Epidural Space\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Skin (Cutis)\",\n      \"anatomicalLocations\": [\n        \"Neck Skin\",\n        \"Surgical Incision Site\",\n        \"Subcutaneous Tissue\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Trachea",
+            "anatomical_locations": [
+              "Tracheal Lumen",
+              "Tracheal Wall",
+              "Tracheal Cartilage Rings"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Lumen",
+                    "Tracheal Wall",
+                    "Tracheal Cartilage Rings"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Cervical Spinal Cord",
+                    "Spinal Nerve Roots",
+                    "Epidural Space"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Skin (Cutis)",
+                  "anatomicalLocations": [
+                    "Neck Skin",
+                    "Surgical Incision Site",
+                    "Subcutaneous Tissue"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Trachea",
+          "anatomical_locations": [
+            "Tracheal Lumen",
+            "Tracheal Wall",
+            "Tracheal Cartilage Rings"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4052_symptom_11",
+      "diagnosis": "tracheal stenosis",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Cartilage",
+            "Tracheal Membrane"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Mucosa"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Hematopoietic Tissue",
+            "Bone Marrow Sinusoids"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Bronchioles",
+            "Alveoli"
+          ]
+        },
+        {
+          "organName": "Small intestine (Intestinum tenue)",
+          "anatomicalLocations": [
+            "Jejunum",
+            "Ileum"
+          ]
+        },
+        {
+          "organName": "Brainstem",
+          "anatomicalLocations": [
+            "Spinal cord (Medulla spinalis)",
+            "Meninges"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Stenosis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Bronchi",
+              "Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Stenosis"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Bronchi",
+            "Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Tracheal Lumen\",\n        \"Tracheal Wall\",\n        \"Tracheal Cartilage Rings\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spinal cord (Medulla spinalis)\",\n      \"anatomicalLocations\": [\n        \"Cervical Spinal Cord\",\n        \"Spinal Nerve Roots\",\n        \"Epidural Space\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Skin (Cutis)\",\n      \"anatomicalLocations\": [\n        \"Neck Skin\",\n        \"Surgical Incision Site\",\n        \"Subcutaneous Tissue\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Trachea",
+            "anatomical_locations": [
+              "Tracheal Lumen",
+              "Tracheal Wall",
+              "Tracheal Cartilage Rings"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Tracheal Lumen",
+                    "Tracheal Wall",
+                    "Tracheal Cartilage Rings"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spinal cord (Medulla spinalis)",
+                  "anatomicalLocations": [
+                    "Cervical Spinal Cord",
+                    "Spinal Nerve Roots",
+                    "Epidural Space"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Skin (Cutis)",
+                  "anatomicalLocations": [
+                    "Neck Skin",
+                    "Surgical Incision Site",
+                    "Subcutaneous Tissue"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Trachea",
+          "anatomical_locations": [
+            "Tracheal Lumen",
+            "Tracheal Wall",
+            "Tracheal Cartilage Rings"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

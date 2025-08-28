@@ -1,0 +1,850 @@
+[
+  {
+    "report_number": "diagnostic_4065",
+    "method": "baseline_aggregation",
+    "method_name": "症状聚合基线方法",
+    "aggregated_symptoms": "his vasoactive drips were weaned to off; he converted to nsr; continued to have bursts of atrial fibrillation; he had several episodes of atrial fibrillation; he remained hemodynamically stable; he was extubated",
+    "expected_results": {
+      "organ": "Heart (Cor), Lung (Pulmo)",
+      "a_position": "Bronchus, Left Atrium (LA), Left Ventricle (LV), Right Atrium (RA), Right Ventricle (RV), Trachea"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Heart (Cor)",
+          "a_position": "Left Atrium (LA), Right Atrium (RA), Aortic Valve"
+        },
+        "api_eva": {
+          "overall_score": 60.0,
+          "precision": 66.7,
+          "recall": 33.3,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Heart (Cor)",
+          "a_position": "Right Atrium (RA), Left Atrium (LA), Interatrial Septum (IAS), Sinoatrial Node (SA Node)"
+        },
+        "api_eva": {
+          "overall_score": 53.3,
+          "precision": 50.0,
+          "recall": 33.3,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 56.6,
+      "average_precision": 58.4,
+      "average_recall": 33.3
+    }
+  },
+  {
+    "report_number": "diagnostic_4065",
+    "method": "rag_enhanced_aggregation",
+    "method_name": "增强症状聚合方法",
+    "aggregated_symptoms": "his vasoactive drips were weaned to off; he converted to nsr; continued to have bursts of atrial fibrillation; he had several episodes of atrial fibrillation; he remained hemodynamically stable; he was extubated",
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"vasoactive drips were weaned to off\",\n            \"primary_organ\": \"心血管系统\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"converted to nsr\",\n            \"primary_organ\": \"心血管系统\",\n            \"severity\": \"轻微\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"continued to have bursts of atrial fibrillation\",\n            \"primary_organ\": \"心血管系统\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"had several episodes of atrial fibrillation\",\n            \"primary_organ\": \"心血管系统\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"remained hemodynamically stable\",\n            \"primary_organ\": \"心血管系统\",\n            \"severity\": \"轻微\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"was extubated\",\n            \"primary_organ\": \"呼吸系统\",\n            \"severity\": \"轻微\"\n        }\n    ],\n    \"total_count\": 6,\n    \"reasoning\": \"聚合症状中包含了多个独立的症状单元，它们分别描述了不同的生理状态和变化。'vasoactive drips were weaned to off'描述了患者从使用血管活性药物过渡到停止使用的过程；'converted to nsr'描述了患者心率从异常转为正常窦性心律；'continued to have bursts of atrial fibrillation'和'had several episodes of atrial fibrillation'均描述了患者持续出现房颤的情况；'remained hemodynamically stable'描述了患者血流动力学稳定的状态；'was extubated'描述了患者从机械通气中拔管的情况。这些症状单元涉及心血管系统和呼吸系统，严重程度从轻微到中等不等。\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "vasoactive drips were weaned to off",
+              "primary_organ": "心血管系统",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "converted to nsr",
+              "primary_organ": "心血管系统",
+              "severity": "轻微"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "continued to have bursts of atrial fibrillation",
+              "primary_organ": "心血管系统",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "had several episodes of atrial fibrillation",
+              "primary_organ": "心血管系统",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "remained hemodynamically stable",
+              "primary_organ": "心血管系统",
+              "severity": "轻微"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "was extubated",
+              "primary_organ": "呼吸系统",
+              "severity": "轻微"
+            }
+          ],
+          "total_count": 6,
+          "reasoning": "聚合症状中包含了多个独立的症状单元，它们分别描述了不同的生理状态和变化。'vasoactive drips were weaned to off'描述了患者从使用血管活性药物过渡到停止使用的过程；'converted to nsr'描述了患者心率从异常转为正常窦性心律；'continued to have bursts of atrial fibrillation'和'had several episodes of atrial fibrillation'均描述了患者持续出现房颤的情况；'remained hemodynamically stable'描述了患者血流动力学稳定的状态；'was extubated'描述了患者从机械通气中拔管的情况。这些症状单元涉及心血管系统和呼吸系统，严重程度从轻微到中等不等。"
+        }
+      },
+      "timestamp": "2025-08-28T00:33:57.342490"
+    },
+    "rag_search_results": {
+      "success": true,
+      "total_searched": 6,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "vasoactive drips were weaned to off",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "vasoactive drips were weaned to off",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "vasoactive drips were weaned to off",
+                  "units": [
+                    {
+                      "u_id": "u_16170",
+                      "u_unit": {
+                        "d_diagnosis": "she was weaned from her vasoactive drips",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "she was weaned from her vasoactive drips"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "vasoactive drips were weaned to off",
+                  "units": [
+                    {
+                      "u_id": "u_42577",
+                      "u_unit": {
+                        "d_diagnosis": "he was weaned from his vasoactive drips",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "he was weaned from his vasoactive drips"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "vasoactive drips were weaned to off",
+                  "units": [
+                    {
+                      "u_id": "u_67072",
+                      "u_unit": {
+                        "d_diagnosis": "weaned from his vasoactive drips",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "weaned from his vasoactive drips"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:33:59.089600"
+          }
+        },
+        "s2": {
+          "symptom_text": "converted to nsr",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "converted to nsr",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "converted to nsr",
+                  "units": [
+                    {
+                      "u_id": "u_98990",
+                      "u_unit": {
+                        "d_diagnosis": "converted to nsr",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "converted to nsr"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "converted to nsr",
+                  "units": [
+                    {
+                      "u_id": "u_72045",
+                      "u_unit": {
+                        "d_diagnosis": "he converted back to nsr",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "he converted back to nsr"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "converted to nsr",
+                  "units": [
+                    {
+                      "u_id": "u_79713",
+                      "u_unit": {
+                        "d_diagnosis": "conversion to nsr following a long pause",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "conversion to nsr following a long pause"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:34:00.815613"
+          }
+        },
+        "s3": {
+          "symptom_text": "continued to have bursts of atrial fibrillation",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "continued to have bursts of atrial fibrillation",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "continued to have bursts of atrial fibrillation",
+                  "units": [
+                    {
+                      "u_id": "u_61228",
+                      "u_unit": {
+                        "d_diagnosis": "continued to atrial fibrillation as noted on the heart monitor's",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Left Atrium (LA)",
+                            "Right Atrium (RA)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "continued to atrial fibrillation as noted on the heart monitor's"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "continued to have bursts of atrial fibrillation",
+                  "units": [
+                    {
+                      "u_id": "u_33312",
+                      "u_unit": {
+                        "d_diagnosis": "he continued to experience bouts of atrial fibrillation",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "he continued to experience bouts of atrial fibrillation"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "continued to have bursts of atrial fibrillation",
+                  "units": [
+                    {
+                      "u_id": "u_11846",
+                      "u_unit": {
+                        "d_diagnosis": "mr. continued to have episodes of atrial fibrillation",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "mr. continued to have episodes of atrial fibrillation"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:34:02.512995"
+          }
+        },
+        "s4": {
+          "symptom_text": "had several episodes of atrial fibrillation",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "had several episodes of atrial fibrillation",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "had several episodes of atrial fibrillation",
+                  "units": [
+                    {
+                      "u_id": "u_11900",
+                      "u_unit": {
+                        "d_diagnosis": "several episodes of atrial fibrillation",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "several episodes of atrial fibrillation"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "had several episodes of atrial fibrillation",
+                  "units": [
+                    {
+                      "u_id": "u_42764",
+                      "u_unit": {
+                        "d_diagnosis": "she had several brief episodes on atrial fibrillation/flutter",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "she had several brief episodes on atrial fibrillation/flutter"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "had several episodes of atrial fibrillation",
+                  "units": [
+                    {
+                      "u_id": "u_746",
+                      "u_unit": {
+                        "d_diagnosis": "episodes of atrial fibrillation",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "episodes of atrial fibrillation"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:34:04.251942"
+          }
+        },
+        "s5": {
+          "symptom_text": "remained hemodynamically stable",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "remained hemodynamically stable",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "remained hemodynamically stable",
+                  "units": [
+                    {
+                      "u_id": "u_26388",
+                      "u_unit": {
+                        "d_diagnosis": "remained hemodynamically stable",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "remained hemodynamically stable"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "remained hemodynamically stable",
+                  "units": [
+                    {
+                      "u_id": "u_15912",
+                      "u_unit": {
+                        "d_diagnosis": "patient remained hemodynamically stable",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "patient remained hemodynamically stable"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:34:05.963152"
+          }
+        },
+        "s6": {
+          "symptom_text": "was extubated",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "was extubated",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "was extubated",
+                  "units": [
+                    {
+                      "u_id": "u_92637",
+                      "u_unit": {
+                        "d_diagnosis": "extubated",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "extubated"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:34:07.660889"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "vasoactive drips were weaned to off",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "vasoactive drips were weaned to off",
+              "units": [
+                {
+                  "u_id": "u_16170",
+                  "u_unit": {
+                    "d_diagnosis": "she was weaned from her vasoactive drips",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "she was weaned from her vasoactive drips"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "vasoactive drips were weaned to off",
+              "units": [
+                {
+                  "u_id": "u_42577",
+                  "u_unit": {
+                    "d_diagnosis": "he was weaned from his vasoactive drips",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "he was weaned from his vasoactive drips"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "vasoactive drips were weaned to off",
+              "units": [
+                {
+                  "u_id": "u_67072",
+                  "u_unit": {
+                    "d_diagnosis": "weaned from his vasoactive drips",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "weaned from his vasoactive drips"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "converted to nsr",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "converted to nsr",
+              "units": [
+                {
+                  "u_id": "u_98990",
+                  "u_unit": {
+                    "d_diagnosis": "converted to nsr",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "converted to nsr"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "converted to nsr",
+              "units": [
+                {
+                  "u_id": "u_72045",
+                  "u_unit": {
+                    "d_diagnosis": "he converted back to nsr",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "he converted back to nsr"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "converted to nsr",
+              "units": [
+                {
+                  "u_id": "u_79713",
+                  "u_unit": {
+                    "d_diagnosis": "conversion to nsr following a long pause",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "conversion to nsr following a long pause"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "continued to have bursts of atrial fibrillation",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "continued to have bursts of atrial fibrillation",
+              "units": [
+                {
+                  "u_id": "u_61228",
+                  "u_unit": {
+                    "d_diagnosis": "continued to atrial fibrillation as noted on the heart monitor's",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Left Atrium (LA)",
+                        "Right Atrium (RA)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "continued to atrial fibrillation as noted on the heart monitor's"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "continued to have bursts of atrial fibrillation",
+              "units": [
+                {
+                  "u_id": "u_33312",
+                  "u_unit": {
+                    "d_diagnosis": "he continued to experience bouts of atrial fibrillation",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "he continued to experience bouts of atrial fibrillation"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "continued to have bursts of atrial fibrillation",
+              "units": [
+                {
+                  "u_id": "u_11846",
+                  "u_unit": {
+                    "d_diagnosis": "mr. continued to have episodes of atrial fibrillation",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "mr. continued to have episodes of atrial fibrillation"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "had several episodes of atrial fibrillation",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "had several episodes of atrial fibrillation",
+              "units": [
+                {
+                  "u_id": "u_11900",
+                  "u_unit": {
+                    "d_diagnosis": "several episodes of atrial fibrillation",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "several episodes of atrial fibrillation"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "had several episodes of atrial fibrillation",
+              "units": [
+                {
+                  "u_id": "u_42764",
+                  "u_unit": {
+                    "d_diagnosis": "she had several brief episodes on atrial fibrillation/flutter",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "she had several brief episodes on atrial fibrillation/flutter"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "had several episodes of atrial fibrillation",
+              "units": [
+                {
+                  "u_id": "u_746",
+                  "u_unit": {
+                    "d_diagnosis": "episodes of atrial fibrillation",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "episodes of atrial fibrillation"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "remained hemodynamically stable",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "remained hemodynamically stable",
+              "units": [
+                {
+                  "u_id": "u_26388",
+                  "u_unit": {
+                    "d_diagnosis": "remained hemodynamically stable",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "remained hemodynamically stable"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "remained hemodynamically stable",
+              "units": [
+                {
+                  "u_id": "u_15912",
+                  "u_unit": {
+                    "d_diagnosis": "patient remained hemodynamically stable",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "patient remained hemodynamically stable"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "was extubated",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "was extubated",
+              "units": [
+                {
+                  "u_id": "u_92637",
+                  "u_unit": {
+                    "d_diagnosis": "extubated",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "extubated"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:34:07.660917"
+    },
+    "expected_results": {
+      "organ": "Heart (Cor), Lung (Pulmo)",
+      "a_position": "Bronchus, Left Atrium (LA), Left Ventricle (LV), Right Atrium (RA), Right Ventricle (RV), Trachea"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Heart (Cor)",
+          "a_position": "Left Atrium (LA), Right Atrium (RA), Aortic Valve, Mitral Valve"
+        },
+        "api_eva": {
+          "overall_score": 53.3,
+          "precision": 50.0,
+          "recall": 33.3,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Heart (Cor)",
+          "a_position": "Right Atrium (RA), Left Atrium (LA), Sinoatrial Node (SA Node), Atrioventricular Node (AV Node)"
+        },
+        "api_eva": {
+          "overall_score": 53.3,
+          "precision": 50.0,
+          "recall": 33.3,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 53.3,
+      "average_precision": 50.0,
+      "average_recall": 33.3
+    }
+  }
+]

@@ -1,0 +1,1273 @@
+[
+  {
+    "report_number": "diagnostic_4054",
+    "method": "baseline_aggregation",
+    "method_name": "症状聚合基线方法",
+    "aggregated_symptoms": "not completely off her norepinephrine drip because she was unable to keep her maps above 60; uti; blood sugars were well-controlled with iss; unable to keep her maps above 60; c. difficile positive; small right hilar opacity seen on cxr; hypernatremia resolved through her hospital stay; iron deficiency anemia; respiratory distress; hypoxia; sputum cultures grew out 2+mrsa and proteus; dyspnea; cortisol stimulation test was normal; completely contracted upper extremities",
+    "expected_results": {
+      "organ": "Brainstem, Heart (Cor), Large intestine (Intestinum crassum), Lung (Pulmo), Thyroid gland, Urinary bladder (Vesica urinaria)",
+      "a_position": "Alveoli, Aortic Valve, Bladder Mucosa, Bladder Wall, Bronchial Tree, Bronchioles, Bronchopulmonary Segments, Cervical Spinal Cord, Colon, Colonic Mucosa, Coronary Artery, Hematopoietic Tissue, Left Lobe of Thyroid, Left Ventricle (LV), Lung Hilum, Mitral Valve, Motor Neurons, Pleura, Pleural Cavity, Rectum, Red Bone Marrow, Right Lobe of Thyroid, Right Lung, Trigone of the Bladder"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Lung (Pulmo)",
+          "a_position": "Alveoli, Bronchi, Pleura"
+        },
+        "api_eva": {
+          "overall_score": 50.0,
+          "precision": 66.7,
+          "recall": 8.3,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Lung (Pulmo)",
+          "a_position": "Alveoli, Bronchioles, Pulmonary Capillaries, Pleural Cavity"
+        },
+        "api_eva": {
+          "overall_score": 55.0,
+          "precision": 75.0,
+          "recall": 12.5,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 52.5,
+      "average_precision": 70.8,
+      "average_recall": 10.4
+    }
+  },
+  {
+    "report_number": "diagnostic_4054",
+    "method": "rag_enhanced_aggregation",
+    "method_name": "增强症状聚合方法",
+    "aggregated_symptoms": "not completely off her norepinephrine drip because she was unable to keep her maps above 60; uti; blood sugars were well-controlled with iss; unable to keep her maps above 60; c. difficile positive; small right hilar opacity seen on cxr; hypernatremia resolved through her hospital stay; iron deficiency anemia; respiratory distress; hypoxia; sputum cultures grew out 2+mrsa and proteus; dyspnea; cortisol stimulation test was normal; completely contracted upper extremities",
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"unable to keep her maps above 60\",\n            \"primary_organ\": \"cardiovascular system\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"uti\",\n            \"primary_organ\": \"urinary system\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"blood sugars were well-controlled with iss\",\n            \"primary_organ\": \"endocrine system\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"c. difficile positive\",\n            \"primary_organ\": \"gastrointestinal system\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"small right hilar opacity seen on cxr\",\n            \"primary_organ\": \"respiratory system\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"hypernatremia resolved through her hospital stay\",\n            \"primary_organ\": \"endocrine system\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"iron deficiency anemia\",\n            \"primary_organ\": \"hematopoietic system\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s8\",\n            \"symptom_text\": \"respiratory distress\",\n            \"primary_organ\": \"respiratory system\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s9\",\n            \"symptom_text\": \"hypoxia\",\n            \"primary_organ\": \"respiratory system\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s10\",\n            \"symptom_text\": \"sputum cultures grew out 2+mrsa and proteus\",\n            \"primary_organ\": \"respiratory system\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s11\",\n            \"symptom_text\": \"dyspnea\",\n            \"primary_organ\": \"respiratory system\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s12\",\n            \"symptom_text\": \"cortisol stimulation test was normal\",\n            \"primary_organ\": \"endocrine system\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s13\",\n            \"symptom_text\": \"completely contracted upper extremities\",\n            \"primary_organ\": \"musculoskeletal system\",\n            \"severity\": \"severe\"\n        }\n    ],\n    \"total_count\": 13,\n    \"reasoning\": \"The symptoms are split based on the affected organ systems and the severity of each symptom. The symptoms are grouped according to their primary organ system involvement, and the severity is estimated based on the context provided.\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "unable to keep her maps above 60",
+              "primary_organ": "cardiovascular system",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "uti",
+              "primary_organ": "urinary system",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "blood sugars were well-controlled with iss",
+              "primary_organ": "endocrine system",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "c. difficile positive",
+              "primary_organ": "gastrointestinal system",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "small right hilar opacity seen on cxr",
+              "primary_organ": "respiratory system",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "hypernatremia resolved through her hospital stay",
+              "primary_organ": "endocrine system",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s7",
+              "symptom_text": "iron deficiency anemia",
+              "primary_organ": "hematopoietic system",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s8",
+              "symptom_text": "respiratory distress",
+              "primary_organ": "respiratory system",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s9",
+              "symptom_text": "hypoxia",
+              "primary_organ": "respiratory system",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s10",
+              "symptom_text": "sputum cultures grew out 2+mrsa and proteus",
+              "primary_organ": "respiratory system",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s11",
+              "symptom_text": "dyspnea",
+              "primary_organ": "respiratory system",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s12",
+              "symptom_text": "cortisol stimulation test was normal",
+              "primary_organ": "endocrine system",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s13",
+              "symptom_text": "completely contracted upper extremities",
+              "primary_organ": "musculoskeletal system",
+              "severity": "severe"
+            }
+          ],
+          "total_count": 13,
+          "reasoning": "The symptoms are split based on the affected organ systems and the severity of each symptom. The symptoms are grouped according to their primary organ system involvement, and the severity is estimated based on the context provided."
+        }
+      },
+      "timestamp": "2025-08-28T00:22:23.276401"
+    },
+    "rag_search_results": {
+      "success": true,
+      "total_searched": 13,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "unable to keep her maps above 60",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "unable to keep her maps above 60",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "unable to keep her maps above 60",
+                  "units": [
+                    {
+                      "u_id": "u_9365",
+                      "u_unit": {
+                        "d_diagnosis": "map >60",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "map >60"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "unable to keep her maps above 60",
+                  "units": [
+                    {
+                      "u_id": "u_93938",
+                      "u_unit": {
+                        "d_diagnosis": "maintaining a map > 60 without any fluid or pressor support",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "maintaining a map > 60 without any fluid or pressor support"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "unable to keep her maps above 60",
+                  "units": [
+                    {
+                      "u_id": "u_49485",
+                      "u_unit": {
+                        "d_diagnosis": "map is to be kept greater than 65",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "map is to be kept greater than 65"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:22:25.043066"
+          }
+        },
+        "s2": {
+          "symptom_text": "uti",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "uti",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "uti",
+                  "units": [
+                    {
+                      "u_id": "u_47141",
+                      "u_unit": {
+                        "d_diagnosis": "uti",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "uti"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:22:26.791274"
+          }
+        },
+        "s3": {
+          "symptom_text": "blood sugars were well-controlled with iss",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "blood sugars were well-controlled with iss",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "blood sugars were well-controlled with iss",
+                  "units": [
+                    {
+                      "u_id": "u_48014",
+                      "u_unit": {
+                        "d_diagnosis": "blood sugars became well controlled",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "blood sugars became well controlled"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "blood sugars were well-controlled with iss",
+                  "units": [
+                    {
+                      "u_id": "u_79378",
+                      "u_unit": {
+                        "d_diagnosis": "controlled blood sugars",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "controlled blood sugars"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "blood sugars were well-controlled with iss",
+                  "units": [
+                    {
+                      "u_id": "u_31047",
+                      "u_unit": {
+                        "d_diagnosis": "blood sugars were aggressively managed with insulin",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "blood sugars were aggressively managed with insulin"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:22:28.516490"
+          }
+        },
+        "s4": {
+          "symptom_text": "c. difficile positive",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "c. difficile positive",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "c. difficile positive",
+                  "units": [
+                    {
+                      "u_id": "u_83596",
+                      "u_unit": {
+                        "d_diagnosis": "c. difficile positive",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "c. difficile positive"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "c. difficile positive",
+                  "units": [
+                    {
+                      "u_id": "u_55512",
+                      "u_unit": {
+                        "d_diagnosis": "tested positive for clostridium difficile",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "tested positive for clostridium difficile"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "c. difficile positive",
+                  "units": [
+                    {
+                      "u_id": "u_26500",
+                      "u_unit": {
+                        "d_diagnosis": "a stool sample was positive for c. difficile",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "a stool sample was positive for c. difficile"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:22:30.208055"
+          }
+        },
+        "s5": {
+          "symptom_text": "small right hilar opacity seen on cxr",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "small right hilar opacity seen on cxr",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "small right hilar opacity seen on cxr",
+                  "units": [
+                    {
+                      "u_id": "u_9651",
+                      "u_unit": {
+                        "d_diagnosis": "small focal opacity in right upper lobe",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "small focal opacity in right upper lobe"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "small right hilar opacity seen on cxr",
+                  "units": [
+                    {
+                      "u_id": "u_23471",
+                      "u_unit": {
+                        "d_diagnosis": "opacity in right lower lobe",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "opacity in right lower lobe"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:22:31.925108"
+          }
+        },
+        "s6": {
+          "symptom_text": "hypernatremia resolved through her hospital stay",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "hypernatremia resolved through her hospital stay",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "hypernatremia resolved through her hospital stay",
+                  "units": [
+                    {
+                      "u_id": "u_28525",
+                      "u_unit": {
+                        "d_diagnosis": "hypernatremia resolved",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "hypernatremia resolved"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "hypernatremia resolved through her hospital stay",
+                  "units": [
+                    {
+                      "u_id": "u_24306",
+                      "u_unit": {
+                        "d_diagnosis": "hypernatremia resolved gradually with increased and free water boluses",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "hypernatremia resolved gradually with increased and free water boluses"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "hypernatremia resolved through her hospital stay",
+                  "units": [
+                    {
+                      "u_id": "u_24243",
+                      "u_unit": {
+                        "d_diagnosis": "she had an episode of hypernatremia",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "she had an episode of hypernatremia"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:22:33.628409"
+          }
+        },
+        "s7": {
+          "symptom_text": "iron deficiency anemia",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "iron deficiency anemia",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "iron deficiency anemia",
+                  "units": [
+                    {
+                      "u_id": "u_73336",
+                      "u_unit": {
+                        "d_diagnosis": "iron deficiency anemia",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "iron deficiency anemia"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:22:35.334894"
+          }
+        },
+        "s8": {
+          "symptom_text": "respiratory distress",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "respiratory distress",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "respiratory distress",
+                  "units": [
+                    {
+                      "u_id": "u_29807",
+                      "u_unit": {
+                        "d_diagnosis": "respiratory distress",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "respiratory distress"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:22:37.049099"
+          }
+        },
+        "s9": {
+          "symptom_text": "hypoxia",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "hypoxia",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "hypoxia",
+                  "units": [
+                    {
+                      "u_id": "u_76066",
+                      "u_unit": {
+                        "d_diagnosis": "hypoxia",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "hypoxia"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:22:38.813640"
+          }
+        },
+        "s10": {
+          "symptom_text": "sputum cultures grew out 2+mrsa and proteus",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "sputum cultures grew out 2+mrsa and proteus",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:22:40.532726"
+          }
+        },
+        "s11": {
+          "symptom_text": "dyspnea",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "dyspnea",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "dyspnea",
+                  "units": [
+                    {
+                      "u_id": "u_13266",
+                      "u_unit": {
+                        "d_diagnosis": "dyspnea",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "dyspnea"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:22:42.330357"
+          }
+        },
+        "s12": {
+          "symptom_text": "cortisol stimulation test was normal",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "cortisol stimulation test was normal",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "cortisol stimulation test was normal",
+                  "units": [
+                    {
+                      "u_id": "u_69727",
+                      "u_unit": {
+                        "d_diagnosis": "cortisol stimulation test was done; the results were within normal range",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "cortisol stimulation test was done; the results were within normal range"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "cortisol stimulation test was normal",
+                  "units": [
+                    {
+                      "u_id": "u_46318",
+                      "u_unit": {
+                        "d_diagnosis": "cortisol stimulation test was not consistent with adrenal insufficiency",
+                        "o_organ": {
+                          "organName": "Kidney (Ren)",
+                          "anatomicalLocations": [
+                            "Kidney (Ren)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "cortisol stimulation test was not consistent with adrenal insufficiency"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "cortisol stimulation test was normal",
+                  "units": [
+                    {
+                      "u_id": "u_47500",
+                      "u_unit": {
+                        "d_diagnosis": "cortisol stimulation test was wnl",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "cortisol stimulation test was wnl"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:22:44.025001"
+          }
+        },
+        "s13": {
+          "symptom_text": "completely contracted upper extremities",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "completely contracted upper extremities",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:22:45.755678"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "unable to keep her maps above 60",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "unable to keep her maps above 60",
+              "units": [
+                {
+                  "u_id": "u_9365",
+                  "u_unit": {
+                    "d_diagnosis": "map >60",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "map >60"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "unable to keep her maps above 60",
+              "units": [
+                {
+                  "u_id": "u_93938",
+                  "u_unit": {
+                    "d_diagnosis": "maintaining a map > 60 without any fluid or pressor support",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "maintaining a map > 60 without any fluid or pressor support"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "unable to keep her maps above 60",
+              "units": [
+                {
+                  "u_id": "u_49485",
+                  "u_unit": {
+                    "d_diagnosis": "map is to be kept greater than 65",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "map is to be kept greater than 65"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "uti",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "uti",
+              "units": [
+                {
+                  "u_id": "u_47141",
+                  "u_unit": {
+                    "d_diagnosis": "uti",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "uti"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "blood sugars were well-controlled with iss",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "blood sugars were well-controlled with iss",
+              "units": [
+                {
+                  "u_id": "u_48014",
+                  "u_unit": {
+                    "d_diagnosis": "blood sugars became well controlled",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "blood sugars became well controlled"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "blood sugars were well-controlled with iss",
+              "units": [
+                {
+                  "u_id": "u_79378",
+                  "u_unit": {
+                    "d_diagnosis": "controlled blood sugars",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "controlled blood sugars"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "blood sugars were well-controlled with iss",
+              "units": [
+                {
+                  "u_id": "u_31047",
+                  "u_unit": {
+                    "d_diagnosis": "blood sugars were aggressively managed with insulin",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "blood sugars were aggressively managed with insulin"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "c. difficile positive",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "c. difficile positive",
+              "units": [
+                {
+                  "u_id": "u_83596",
+                  "u_unit": {
+                    "d_diagnosis": "c. difficile positive",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "c. difficile positive"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "c. difficile positive",
+              "units": [
+                {
+                  "u_id": "u_55512",
+                  "u_unit": {
+                    "d_diagnosis": "tested positive for clostridium difficile",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "tested positive for clostridium difficile"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "c. difficile positive",
+              "units": [
+                {
+                  "u_id": "u_26500",
+                  "u_unit": {
+                    "d_diagnosis": "a stool sample was positive for c. difficile",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "a stool sample was positive for c. difficile"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "small right hilar opacity seen on cxr",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "small right hilar opacity seen on cxr",
+              "units": [
+                {
+                  "u_id": "u_9651",
+                  "u_unit": {
+                    "d_diagnosis": "small focal opacity in right upper lobe",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "small focal opacity in right upper lobe"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "small right hilar opacity seen on cxr",
+              "units": [
+                {
+                  "u_id": "u_23471",
+                  "u_unit": {
+                    "d_diagnosis": "opacity in right lower lobe",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "opacity in right lower lobe"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "hypernatremia resolved through her hospital stay",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "hypernatremia resolved through her hospital stay",
+              "units": [
+                {
+                  "u_id": "u_28525",
+                  "u_unit": {
+                    "d_diagnosis": "hypernatremia resolved",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "hypernatremia resolved"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "hypernatremia resolved through her hospital stay",
+              "units": [
+                {
+                  "u_id": "u_24306",
+                  "u_unit": {
+                    "d_diagnosis": "hypernatremia resolved gradually with increased and free water boluses",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "hypernatremia resolved gradually with increased and free water boluses"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "hypernatremia resolved through her hospital stay",
+              "units": [
+                {
+                  "u_id": "u_24243",
+                  "u_unit": {
+                    "d_diagnosis": "she had an episode of hypernatremia",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "she had an episode of hypernatremia"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "iron deficiency anemia",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "iron deficiency anemia",
+              "units": [
+                {
+                  "u_id": "u_73336",
+                  "u_unit": {
+                    "d_diagnosis": "iron deficiency anemia",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "iron deficiency anemia"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "respiratory distress",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "respiratory distress",
+              "units": [
+                {
+                  "u_id": "u_29807",
+                  "u_unit": {
+                    "d_diagnosis": "respiratory distress",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "respiratory distress"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "hypoxia",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "hypoxia",
+              "units": [
+                {
+                  "u_id": "u_76066",
+                  "u_unit": {
+                    "d_diagnosis": "hypoxia",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "hypoxia"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "sputum cultures grew out 2+mrsa and proteus",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "dyspnea",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "dyspnea",
+              "units": [
+                {
+                  "u_id": "u_13266",
+                  "u_unit": {
+                    "d_diagnosis": "dyspnea",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "dyspnea"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "cortisol stimulation test was normal",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "cortisol stimulation test was normal",
+              "units": [
+                {
+                  "u_id": "u_69727",
+                  "u_unit": {
+                    "d_diagnosis": "cortisol stimulation test was done; the results were within normal range",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "cortisol stimulation test was done; the results were within normal range"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "cortisol stimulation test was normal",
+              "units": [
+                {
+                  "u_id": "u_46318",
+                  "u_unit": {
+                    "d_diagnosis": "cortisol stimulation test was not consistent with adrenal insufficiency",
+                    "o_organ": {
+                      "organName": "Kidney (Ren)",
+                      "anatomicalLocations": [
+                        "Kidney (Ren)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "cortisol stimulation test was not consistent with adrenal insufficiency"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "cortisol stimulation test was normal",
+              "units": [
+                {
+                  "u_id": "u_47500",
+                  "u_unit": {
+                    "d_diagnosis": "cortisol stimulation test was wnl",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "cortisol stimulation test was wnl"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "completely contracted upper extremities",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        }
+      ],
+      "timestamp": "2025-08-28T00:22:45.755716"
+    },
+    "expected_results": {
+      "organ": "Brainstem, Heart (Cor), Large intestine (Intestinum crassum), Lung (Pulmo), Thyroid gland, Urinary bladder (Vesica urinaria)",
+      "a_position": "Alveoli, Aortic Valve, Bladder Mucosa, Bladder Wall, Bronchial Tree, Bronchioles, Bronchopulmonary Segments, Cervical Spinal Cord, Colon, Colonic Mucosa, Coronary Artery, Hematopoietic Tissue, Left Lobe of Thyroid, Left Ventricle (LV), Lung Hilum, Mitral Valve, Motor Neurons, Pleura, Pleural Cavity, Rectum, Red Bone Marrow, Right Lobe of Thyroid, Right Lung, Trigone of the Bladder"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Lung (Pulmo)",
+          "a_position": "Right Lung, Lung Lobes, Pleura, Visceral Pleura, Pleural Cavity, Lung Hilum"
+        },
+        "api_eva": {
+          "overall_score": 53.3,
+          "precision": 66.7,
+          "recall": 16.7,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Lung (Pulmo)",
+          "a_position": "Right Lung, Bronchopulmonary Segments, Alveoli, Pleural Cavity"
+        },
+        "api_eva": {
+          "overall_score": 66.7,
+          "precision": 100.0,
+          "recall": 16.7,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 60.0,
+      "average_precision": 83.3,
+      "average_recall": 16.7
+    }
+  }
+]

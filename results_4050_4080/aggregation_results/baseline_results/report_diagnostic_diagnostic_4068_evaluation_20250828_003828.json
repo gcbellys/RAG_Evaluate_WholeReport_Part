@@ -1,0 +1,2970 @@
+{
+  "report_id": "diagnostic_4068",
+  "timestamp": "2025-08-28T00:38:28.492945",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4068_symptom_0",
+      "diagnosis": "fever",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Left Ventricle (LV)"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Limbic System"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Spleen (Lien)",
+          "anatomicalLocations": [
+            "Splenic Pulp",
+            "Splenic Artery"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Tail of the Pancreas",
+            "Main Pancreatic Duct (Duct of Wirsung)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Right Coronary Artery",
+            "Left Main Coronary Artery"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [\n        \"Red Pulp\",\n        \"White Pulp\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [
+                    "Red Pulp",
+                    "White Pulp"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Ventricle (LV)\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\",\n        \"Tail of the Pancreas\",\n        \"Main Pancreatic Duct (Duct of Wirsung)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\",\n        \"Diencephalon\",\n        \"Basal Ganglia\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Aorta\",\n        \"Abdominal Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Coronary Artery",
+              "Left Ventricle (LV)",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Ventricle (LV)",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas",
+                    "Tail of the Pancreas",
+                    "Main Pancreatic Duct (Duct of Wirsung)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus",
+                    "Diencephalon",
+                    "Basal Ganglia"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Bronchioles"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Aorta",
+                    "Abdominal Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Coronary Artery",
+            "Left Ventricle (LV)",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4068_symptom_1",
+      "diagnosis": "elevated WBC",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Left Ventricle (LV)"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Limbic System"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Spleen (Lien)",
+          "anatomicalLocations": [
+            "Splenic Pulp",
+            "Splenic Artery"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Tail of the Pancreas",
+            "Main Pancreatic Duct (Duct of Wirsung)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Right Coronary Artery",
+            "Left Main Coronary Artery"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [\n        \"Red Pulp\",\n        \"White Pulp\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [
+                    "Red Pulp",
+                    "White Pulp"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Ventricle (LV)\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\",\n        \"Tail of the Pancreas\",\n        \"Main Pancreatic Duct (Duct of Wirsung)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\",\n        \"Diencephalon\",\n        \"Basal Ganglia\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Aorta\",\n        \"Abdominal Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Coronary Artery",
+              "Left Ventricle (LV)",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Ventricle (LV)",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas",
+                    "Tail of the Pancreas",
+                    "Main Pancreatic Duct (Duct of Wirsung)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus",
+                    "Diencephalon",
+                    "Basal Ganglia"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Bronchioles"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Aorta",
+                    "Abdominal Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Coronary Artery",
+            "Left Ventricle (LV)",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4068_symptom_2",
+      "diagnosis": "tachycardia",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Left Ventricle (LV)"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Limbic System"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Spleen (Lien)",
+          "anatomicalLocations": [
+            "Splenic Pulp",
+            "Splenic Artery"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Tail of the Pancreas",
+            "Main Pancreatic Duct (Duct of Wirsung)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Right Coronary Artery",
+            "Left Main Coronary Artery"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [\n        \"Red Pulp\",\n        \"White Pulp\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [
+                    "Red Pulp",
+                    "White Pulp"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Ventricle (LV)\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\",\n        \"Tail of the Pancreas\",\n        \"Main Pancreatic Duct (Duct of Wirsung)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\",\n        \"Diencephalon\",\n        \"Basal Ganglia\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Aorta\",\n        \"Abdominal Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Coronary Artery",
+              "Left Ventricle (LV)",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Ventricle (LV)",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas",
+                    "Tail of the Pancreas",
+                    "Main Pancreatic Duct (Duct of Wirsung)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus",
+                    "Diencephalon",
+                    "Basal Ganglia"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Bronchioles"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Aorta",
+                    "Abdominal Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Coronary Artery",
+            "Left Ventricle (LV)",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4068_symptom_3",
+      "diagnosis": "ST depression",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Left Ventricle (LV)"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Limbic System"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Spleen (Lien)",
+          "anatomicalLocations": [
+            "Splenic Pulp",
+            "Splenic Artery"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Tail of the Pancreas",
+            "Main Pancreatic Duct (Duct of Wirsung)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Right Coronary Artery",
+            "Left Main Coronary Artery"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [\n        \"Red Pulp\",\n        \"White Pulp\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [
+                    "Red Pulp",
+                    "White Pulp"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Ventricle (LV)\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\",\n        \"Tail of the Pancreas\",\n        \"Main Pancreatic Duct (Duct of Wirsung)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\",\n        \"Diencephalon\",\n        \"Basal Ganglia\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Aorta\",\n        \"Abdominal Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Coronary Artery",
+              "Left Ventricle (LV)",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Ventricle (LV)",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas",
+                    "Tail of the Pancreas",
+                    "Main Pancreatic Duct (Duct of Wirsung)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus",
+                    "Diencephalon",
+                    "Basal Ganglia"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Bronchioles"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Aorta",
+                    "Abdominal Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Coronary Artery",
+            "Left Ventricle (LV)",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4068_symptom_4",
+      "diagnosis": "symptoms of depression",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Left Ventricle (LV)"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Limbic System"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Spleen (Lien)",
+          "anatomicalLocations": [
+            "Splenic Pulp",
+            "Splenic Artery"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Tail of the Pancreas",
+            "Main Pancreatic Duct (Duct of Wirsung)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Right Coronary Artery",
+            "Left Main Coronary Artery"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [\n        \"Red Pulp\",\n        \"White Pulp\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [
+                    "Red Pulp",
+                    "White Pulp"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Ventricle (LV)\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\",\n        \"Tail of the Pancreas\",\n        \"Main Pancreatic Duct (Duct of Wirsung)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\",\n        \"Diencephalon\",\n        \"Basal Ganglia\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Aorta\",\n        \"Abdominal Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Coronary Artery",
+              "Left Ventricle (LV)",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Ventricle (LV)",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas",
+                    "Tail of the Pancreas",
+                    "Main Pancreatic Duct (Duct of Wirsung)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus",
+                    "Diencephalon",
+                    "Basal Ganglia"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Bronchioles"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Aorta",
+                    "Abdominal Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Coronary Artery",
+            "Left Ventricle (LV)",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4068_symptom_5",
+      "diagnosis": "symptoms of anxiety",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Left Ventricle (LV)"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Limbic System"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Spleen (Lien)",
+          "anatomicalLocations": [
+            "Splenic Pulp",
+            "Splenic Artery"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Tail of the Pancreas",
+            "Main Pancreatic Duct (Duct of Wirsung)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Right Coronary Artery",
+            "Left Main Coronary Artery"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [\n        \"Red Pulp\",\n        \"White Pulp\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [
+                    "Red Pulp",
+                    "White Pulp"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Ventricle (LV)\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\",\n        \"Tail of the Pancreas\",\n        \"Main Pancreatic Duct (Duct of Wirsung)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\",\n        \"Diencephalon\",\n        \"Basal Ganglia\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Aorta\",\n        \"Abdominal Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Coronary Artery",
+              "Left Ventricle (LV)",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Ventricle (LV)",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas",
+                    "Tail of the Pancreas",
+                    "Main Pancreatic Duct (Duct of Wirsung)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus",
+                    "Diencephalon",
+                    "Basal Ganglia"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Bronchioles"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Aorta",
+                    "Abdominal Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Coronary Artery",
+            "Left Ventricle (LV)",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4068_symptom_6",
+      "diagnosis": "decreasing oxygen saturations",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Left Ventricle (LV)"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Limbic System"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Spleen (Lien)",
+          "anatomicalLocations": [
+            "Splenic Pulp",
+            "Splenic Artery"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Tail of the Pancreas",
+            "Main Pancreatic Duct (Duct of Wirsung)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Right Coronary Artery",
+            "Left Main Coronary Artery"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [\n        \"Red Pulp\",\n        \"White Pulp\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [
+                    "Red Pulp",
+                    "White Pulp"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Ventricle (LV)\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\",\n        \"Tail of the Pancreas\",\n        \"Main Pancreatic Duct (Duct of Wirsung)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\",\n        \"Diencephalon\",\n        \"Basal Ganglia\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Aorta\",\n        \"Abdominal Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Coronary Artery",
+              "Left Ventricle (LV)",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Ventricle (LV)",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas",
+                    "Tail of the Pancreas",
+                    "Main Pancreatic Duct (Duct of Wirsung)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus",
+                    "Diencephalon",
+                    "Basal Ganglia"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Bronchioles"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Aorta",
+                    "Abdominal Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Coronary Artery",
+            "Left Ventricle (LV)",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4068_symptom_7",
+      "diagnosis": "splenic involvement",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Left Ventricle (LV)"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Limbic System"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Spleen (Lien)",
+          "anatomicalLocations": [
+            "Splenic Pulp",
+            "Splenic Artery"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Tail of the Pancreas",
+            "Main Pancreatic Duct (Duct of Wirsung)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Right Coronary Artery",
+            "Left Main Coronary Artery"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [\n        \"Red Pulp\",\n        \"White Pulp\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [
+                    "Red Pulp",
+                    "White Pulp"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Ventricle (LV)\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\",\n        \"Tail of the Pancreas\",\n        \"Main Pancreatic Duct (Duct of Wirsung)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\",\n        \"Diencephalon\",\n        \"Basal Ganglia\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Aorta\",\n        \"Abdominal Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Coronary Artery",
+              "Left Ventricle (LV)",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Ventricle (LV)",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas",
+                    "Tail of the Pancreas",
+                    "Main Pancreatic Duct (Duct of Wirsung)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus",
+                    "Diencephalon",
+                    "Basal Ganglia"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Bronchioles"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Aorta",
+                    "Abdominal Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Coronary Artery",
+            "Left Ventricle (LV)",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4068_symptom_8",
+      "diagnosis": "hypertension postoperatively",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Left Ventricle (LV)"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Limbic System"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Spleen (Lien)",
+          "anatomicalLocations": [
+            "Splenic Pulp",
+            "Splenic Artery"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Tail of the Pancreas",
+            "Main Pancreatic Duct (Duct of Wirsung)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Right Coronary Artery",
+            "Left Main Coronary Artery"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [\n        \"Red Pulp\",\n        \"White Pulp\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [
+                    "Red Pulp",
+                    "White Pulp"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Ventricle (LV)\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\",\n        \"Tail of the Pancreas\",\n        \"Main Pancreatic Duct (Duct of Wirsung)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\",\n        \"Diencephalon\",\n        \"Basal Ganglia\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Aorta\",\n        \"Abdominal Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Coronary Artery",
+              "Left Ventricle (LV)",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Ventricle (LV)",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas",
+                    "Tail of the Pancreas",
+                    "Main Pancreatic Duct (Duct of Wirsung)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus",
+                    "Diencephalon",
+                    "Basal Ganglia"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Bronchioles"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Aorta",
+                    "Abdominal Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Coronary Artery",
+            "Left Ventricle (LV)",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4068_symptom_9",
+      "diagnosis": "pancreatic mass",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Left Ventricle (LV)"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Limbic System"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Spleen (Lien)",
+          "anatomicalLocations": [
+            "Splenic Pulp",
+            "Splenic Artery"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Tail of the Pancreas",
+            "Main Pancreatic Duct (Duct of Wirsung)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Right Coronary Artery",
+            "Left Main Coronary Artery"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [\n        \"Red Pulp\",\n        \"White Pulp\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [
+                    "Red Pulp",
+                    "White Pulp"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Ventricle (LV)\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\",\n        \"Tail of the Pancreas\",\n        \"Main Pancreatic Duct (Duct of Wirsung)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\",\n        \"Diencephalon\",\n        \"Basal Ganglia\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Aorta\",\n        \"Abdominal Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Coronary Artery",
+              "Left Ventricle (LV)",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Ventricle (LV)",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas",
+                    "Tail of the Pancreas",
+                    "Main Pancreatic Duct (Duct of Wirsung)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus",
+                    "Diencephalon",
+                    "Basal Ganglia"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Bronchioles"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Aorta",
+                    "Abdominal Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Coronary Artery",
+            "Left Ventricle (LV)",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4068_symptom_10",
+      "diagnosis": "diarrhea",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Left Ventricle (LV)"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Limbic System"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Spleen (Lien)",
+          "anatomicalLocations": [
+            "Splenic Pulp",
+            "Splenic Artery"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Tail of the Pancreas",
+            "Main Pancreatic Duct (Duct of Wirsung)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Right Coronary Artery",
+            "Left Main Coronary Artery"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [\n        \"Red Pulp\",\n        \"White Pulp\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [
+                    "Red Pulp",
+                    "White Pulp"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Ventricle (LV)\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\",\n        \"Tail of the Pancreas\",\n        \"Main Pancreatic Duct (Duct of Wirsung)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\",\n        \"Diencephalon\",\n        \"Basal Ganglia\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Aorta\",\n        \"Abdominal Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Coronary Artery",
+              "Left Ventricle (LV)",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Ventricle (LV)",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas",
+                    "Tail of the Pancreas",
+                    "Main Pancreatic Duct (Duct of Wirsung)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus",
+                    "Diencephalon",
+                    "Basal Ganglia"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Bronchioles"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Aorta",
+                    "Abdominal Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Coronary Artery",
+            "Left Ventricle (LV)",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4068_symptom_11",
+      "diagnosis": "anterior wall motion abnormalities",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Left Ventricle (LV)"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Limbic System"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Spleen (Lien)",
+          "anatomicalLocations": [
+            "Splenic Pulp",
+            "Splenic Artery"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Tail of the Pancreas",
+            "Main Pancreatic Duct (Duct of Wirsung)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Right Coronary Artery",
+            "Left Main Coronary Artery"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [\n        \"Red Pulp\",\n        \"White Pulp\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [
+                    "Red Pulp",
+                    "White Pulp"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Ventricle (LV)\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\",\n        \"Tail of the Pancreas\",\n        \"Main Pancreatic Duct (Duct of Wirsung)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\",\n        \"Diencephalon\",\n        \"Basal Ganglia\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Aorta\",\n        \"Abdominal Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Coronary Artery",
+              "Left Ventricle (LV)",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Ventricle (LV)",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas",
+                    "Tail of the Pancreas",
+                    "Main Pancreatic Duct (Duct of Wirsung)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus",
+                    "Diencephalon",
+                    "Basal Ganglia"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Bronchioles"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Aorta",
+                    "Abdominal Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Coronary Artery",
+            "Left Ventricle (LV)",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4068_symptom_12",
+      "diagnosis": "coronary artery occlusion",
+      "expected_organs": [
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchopulmonary Segments"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Anterior Descending Artery (LAD)",
+            "Left Ventricle (LV)"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Limbic System"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Spleen (Lien)",
+          "anatomicalLocations": [
+            "Splenic Pulp",
+            "Splenic Artery"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Aortic Valve"
+          ]
+        },
+        {
+          "organName": "Pancreas",
+          "anatomicalLocations": [
+            "Tail of the Pancreas",
+            "Main Pancreatic Duct (Duct of Wirsung)"
+          ]
+        },
+        {
+          "organName": "Large intestine (Intestinum crassum)",
+          "anatomicalLocations": [
+            "Colon",
+            "Rectum"
+          ]
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Right Coronary Artery",
+            "Left Main Coronary Artery"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [\n        \"Red Pulp\",\n        \"White Pulp\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Ventricle (LV)",
+              "Coronary Artery",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Ventricle (LV)",
+                    "Coronary Artery",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [
+                    "Red Pulp",
+                    "White Pulp"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Coronary Artery",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Coronary Artery\",\n        \"Left Ventricle (LV)\",\n        \"Left Ventricular Posterior Wall (LVPW)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Pancreas\",\n      \"anatomicalLocations\": [\n        \"Head of the Pancreas\",\n        \"Body of the Pancreas\",\n        \"Tail of the Pancreas\",\n        \"Main Pancreatic Duct (Duct of Wirsung)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Spleen (Lien)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Hypothalamus\",\n        \"Diencephalon\",\n        \"Basal Ganglia\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Aorta\",\n        \"Abdominal Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Coronary Artery",
+              "Left Ventricle (LV)",
+              "Left Ventricular Posterior Wall (LVPW)",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Coronary Artery",
+                    "Left Ventricle (LV)",
+                    "Left Ventricular Posterior Wall (LVPW)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Pancreas",
+                  "anatomicalLocations": [
+                    "Head of the Pancreas",
+                    "Body of the Pancreas",
+                    "Tail of the Pancreas",
+                    "Main Pancreatic Duct (Duct of Wirsung)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Spleen (Lien)",
+                  "anatomicalLocations": [],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Hypothalamus",
+                    "Diencephalon",
+                    "Basal Ganglia"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Pulmonary Capillaries",
+                    "Bronchioles"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Large intestine (Intestinum crassum)",
+                  "anatomicalLocations": [],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Artery (Arteria)",
+                  "anatomicalLocations": [
+                    "Aorta",
+                    "Abdominal Aorta",
+                    "Coronary Artery"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Coronary Artery",
+            "Left Ventricle (LV)",
+            "Left Ventricular Posterior Wall (LVPW)",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

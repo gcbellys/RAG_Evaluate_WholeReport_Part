@@ -1,0 +1,254 @@
+[
+  {
+    "query": "lacerations were washed out and closed with suturing",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "Continuous invasive mechanical ventilation for less than 96 consecutive hours",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "Continuous invasive mechanical ventilation for less than 96 consecutive hours",
+        "units": [
+          {
+            "u_id": "u_3564",
+            "u_unit": {
+              "d_diagnosis": "Continuous invasive mechanical ventilation for less than 96 consecutive hours",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "Continuous invasive mechanical ventilation for less than 96 consecutive hours"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "placed on 1:1 sitters",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {}
+  },
+  {
+    "query": "intubated",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "intubated",
+        "units": [
+          {
+            "u_id": "u_68404",
+            "u_unit": {
+              "d_diagnosis": "intubated",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "intubated"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "extubated on the morning after his admission without any difficulties",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "extubated on the morning after his admission without any difficulties",
+        "units": [
+          {
+            "u_id": "u_23399",
+            "u_unit": {
+              "d_diagnosis": "extubated without complications",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "extubated without complications"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "extubated on the morning after his admission without any difficulties",
+        "units": [
+          {
+            "u_id": "u_47709",
+            "u_unit": {
+              "d_diagnosis": "extubated afternoon, with no complications",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "extubated afternoon, with no complications"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "remained hemodynamically stable throughout his hospital stay",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "remained hemodynamically stable throughout his hospital stay",
+        "units": [
+          {
+            "u_id": "u_50480",
+            "u_unit": {
+              "d_diagnosis": "he remained hemodynamically stable throughout his course",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "he remained hemodynamically stable throughout his course"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "remained hemodynamically stable throughout his hospital stay",
+        "units": [
+          {
+            "u_id": "u_98830",
+            "u_unit": {
+              "d_diagnosis": "remained hemodynamically stable throughout her admission",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "remained hemodynamically stable throughout her admission"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "remained hemodynamically stable throughout his hospital stay",
+        "units": [
+          {
+            "u_id": "u_86540",
+            "u_unit": {
+              "d_diagnosis": "he remained hemodynamically stable",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "he remained hemodynamically stable"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "Insertion of endotracheal tube",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "Insertion of endotracheal tube",
+        "units": [
+          {
+            "u_id": "u_33279",
+            "u_unit": {
+              "d_diagnosis": "Insertion of endotracheal tube",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "Insertion of endotracheal tube"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "query": "increased combativeness and agitation",
+    "expected_organs": [],
+    "expected_a_locations": [],
+    "s": {
+      "rag_s_1_id": {
+        "s_text": "increased combativeness and agitation",
+        "units": [
+          {
+            "u_id": "u_84131",
+            "u_unit": {
+              "d_diagnosis": "agitated and combative",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "agitated and combative"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_2_id": {
+        "s_text": "increased combativeness and agitation",
+        "units": [
+          {
+            "u_id": "u_33305",
+            "u_unit": {
+              "d_diagnosis": "became agitated and combative",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "became agitated and combative"
+              }
+            }
+          }
+        ]
+      },
+      "rag_s_3_id": {
+        "s_text": "increased combativeness and agitation",
+        "units": [
+          {
+            "u_id": "u_76142",
+            "u_unit": {
+              "d_diagnosis": "increasing agitation",
+              "o_organ": {
+                "organName": "Unknown",
+                "anatomicalLocations": []
+              },
+              "b_textual_basis": {
+                "medicalInference": "increasing agitation"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+]

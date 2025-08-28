@@ -1,0 +1,1542 @@
+{
+  "report_number": "diagnostic_4068",
+  "timestamp": "2025-08-28T00:38:28.492945",
+  "baseline_method": {
+    "aggregated_symptoms": "fever with elevated WBC; tachycardia with ST depression; symptoms of depression and anxiety; decreasing oxygen saturations; splenic involvement; hypertension postoperatively; pancreatic mass; diarrhea; anterior wall motion abnormalities; coronary artery occlusion",
+    "expected_results": [
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Alveoli",
+          "Bronchopulmonary Segments"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Left Anterior Descending Artery (LAD)",
+          "Left Ventricle (LV)"
+        ]
+      },
+      {
+        "organName": "Brain",
+        "anatomicalLocations": [
+          "Frontal Lobe",
+          "Limbic System"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Alveoli",
+          "Bronchioles"
+        ]
+      },
+      {
+        "organName": "Spleen (Lien)",
+        "anatomicalLocations": [
+          "Splenic Pulp",
+          "Splenic Artery"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Left Ventricle (LV)",
+          "Aortic Valve"
+        ]
+      },
+      {
+        "organName": "Pancreas",
+        "anatomicalLocations": [
+          "Tail of the Pancreas",
+          "Main Pancreatic Duct (Duct of Wirsung)"
+        ]
+      },
+      {
+        "organName": "Large intestine (Intestinum crassum)",
+        "anatomicalLocations": [
+          "Colon",
+          "Rectum"
+        ]
+      },
+      {
+        "organName": "Artery (Arteria)",
+        "anatomicalLocations": [
+          "Right Coronary Artery",
+          "Left Main Coronary Artery"
+        ]
+      }
+    ],
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "success": true,
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Coronary Artery",
+          "Aortic Valve"
+        ],
+        "usage": {
+          "completion_tokens": 276,
+          "prompt_tokens": 2202,
+          "total_tokens": 2478,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "success": true,
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Coronary Artery",
+          "Left Ventricle (LV)",
+          "Left Ventricular Posterior Wall (LVPW)",
+          "Aortic Valve"
+        ],
+        "usage": {
+          "completion_tokens": 389,
+          "prompt_tokens": 2067,
+          "total_tokens": 2456,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 1984
+          },
+          "prompt_cache_hit_tokens": 1984,
+          "prompt_cache_miss_tokens": 83
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 48.4,
+      "average_precision": 58.4,
+      "average_recall": 12.5
+    }
+  },
+  "rag_enhanced_method": {
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"fever\",\n            \"primary_organ\": \"全身\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"elevated WBC\",\n            \"primary_organ\": \"血液系统\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"tachycardia\",\n            \"primary_organ\": \"心脏\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"ST depression\",\n            \"primary_organ\": \"心脏\",\n            \"severity\": \"严重\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"symptoms of depression\",\n            \"primary_organ\": \"心理\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"symptoms of anxiety\",\n            \"primary_organ\": \"心理\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"decreasing oxygen saturations\",\n            \"primary_organ\": \"呼吸系统\",\n            \"severity\": \"严重\"\n        },\n        {\n            \"symptom_id\": \"s8\",\n            \"symptom_text\": \"splenic involvement\",\n            \"primary_organ\": \"脾脏\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s9\",\n            \"symptom_text\": \"hypertension postoperatively\",\n            \"primary_organ\": \"心血管系统\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s10\",\n            \"symptom_text\": \"pancreatic mass\",\n            \"primary_organ\": \"胰腺\",\n            \"severity\": \"严重\"\n        },\n        {\n            \"symptom_id\": \"s11\",\n            \"symptom_text\": \"diarrhea\",\n            \"primary_organ\": \"消化系统\",\n            \"severity\": \"中等\"\n        },\n        {\n            \"symptom_id\": \"s12\",\n            \"symptom_text\": \"anterior wall motion abnormalities\",\n            \"primary_organ\": \"心脏\",\n            \"severity\": \"严重\"\n        },\n        {\n            \"symptom_id\": \"s13\",\n            \"symptom_text\": \"coronary artery occlusion\",\n            \"primary_organ\": \"心脏\",\n            \"severity\": \"严重\"\n        }\n    ],\n    \"total_count\": 13,\n    \"reasoning\": \"根据症状描述，将聚合症状分割成独立的症状单元，每个单元对应一个具体的症状描述，并根据症状涉及的器官和严重程度进行分类。\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "fever",
+              "primary_organ": "全身",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "elevated WBC",
+              "primary_organ": "血液系统",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "tachycardia",
+              "primary_organ": "心脏",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "ST depression",
+              "primary_organ": "心脏",
+              "severity": "严重"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "symptoms of depression",
+              "primary_organ": "心理",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "symptoms of anxiety",
+              "primary_organ": "心理",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s7",
+              "symptom_text": "decreasing oxygen saturations",
+              "primary_organ": "呼吸系统",
+              "severity": "严重"
+            },
+            {
+              "symptom_id": "s8",
+              "symptom_text": "splenic involvement",
+              "primary_organ": "脾脏",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s9",
+              "symptom_text": "hypertension postoperatively",
+              "primary_organ": "心血管系统",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s10",
+              "symptom_text": "pancreatic mass",
+              "primary_organ": "胰腺",
+              "severity": "严重"
+            },
+            {
+              "symptom_id": "s11",
+              "symptom_text": "diarrhea",
+              "primary_organ": "消化系统",
+              "severity": "中等"
+            },
+            {
+              "symptom_id": "s12",
+              "symptom_text": "anterior wall motion abnormalities",
+              "primary_organ": "心脏",
+              "severity": "严重"
+            },
+            {
+              "symptom_id": "s13",
+              "symptom_text": "coronary artery occlusion",
+              "primary_organ": "心脏",
+              "severity": "严重"
+            }
+          ],
+          "total_count": 13,
+          "reasoning": "根据症状描述，将聚合症状分割成独立的症状单元，每个单元对应一个具体的症状描述，并根据症状涉及的器官和严重程度进行分类。"
+        }
+      },
+      "timestamp": "2025-08-28T00:37:32.090384"
+    },
+    "rag_search_results": {
+      "success": true,
+      "total_searched": 13,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "fever",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "fever",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "fever",
+                  "units": [
+                    {
+                      "u_id": "u_15334",
+                      "u_unit": {
+                        "d_diagnosis": "fever",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "fever"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:37:33.989015"
+          }
+        },
+        "s2": {
+          "symptom_text": "elevated WBC",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "elevated WBC",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "elevated WBC",
+                  "units": [
+                    {
+                      "u_id": "u_72141",
+                      "u_unit": {
+                        "d_diagnosis": "elevated wbc",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "elevated wbc"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:37:36.445264"
+          }
+        },
+        "s3": {
+          "symptom_text": "tachycardia",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "tachycardia",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "tachycardia",
+                  "units": [
+                    {
+                      "u_id": "u_96371",
+                      "u_unit": {
+                        "d_diagnosis": "tachycardia",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "tachycardia"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:37:38.420876"
+          }
+        },
+        "s4": {
+          "symptom_text": "ST depression",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "ST depression",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "ST depression",
+                  "units": [
+                    {
+                      "u_id": "u_97445",
+                      "u_unit": {
+                        "d_diagnosis": "st depression",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "st depression"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "ST depression",
+                  "units": [
+                    {
+                      "u_id": "u_11806",
+                      "u_unit": {
+                        "d_diagnosis": "st depressions",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "st depressions"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "ST depression",
+                  "units": [
+                    {
+                      "u_id": "u_623",
+                      "u_unit": {
+                        "d_diagnosis": "st depression lat",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "st depression lat"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:37:41.135540"
+          }
+        },
+        "s5": {
+          "symptom_text": "symptoms of depression",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "symptoms of depression",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "symptoms of depression",
+                  "units": [
+                    {
+                      "u_id": "u_15997",
+                      "u_unit": {
+                        "d_diagnosis": "symptoms of depression",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "symptoms of depression"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "symptoms of depression",
+                  "units": [
+                    {
+                      "u_id": "u_52440",
+                      "u_unit": {
+                        "d_diagnosis": "depression",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "depression"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:37:43.342031"
+          }
+        },
+        "s6": {
+          "symptom_text": "symptoms of anxiety",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "symptoms of anxiety",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "symptoms of anxiety",
+                  "units": [
+                    {
+                      "u_id": "u_77296",
+                      "u_unit": {
+                        "d_diagnosis": "anxiety",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "anxiety"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "symptoms of anxiety",
+                  "units": [
+                    {
+                      "u_id": "u_24666",
+                      "u_unit": {
+                        "d_diagnosis": "increased anxiety",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "increased anxiety"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:37:45.979000"
+          }
+        },
+        "s7": {
+          "symptom_text": "decreasing oxygen saturations",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "decreasing oxygen saturations",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "decreasing oxygen saturations",
+                  "units": [
+                    {
+                      "u_id": "u_99372",
+                      "u_unit": {
+                        "d_diagnosis": "decreased oxygen saturations",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "decreased oxygen saturations"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "decreasing oxygen saturations",
+                  "units": [
+                    {
+                      "u_id": "u_57157",
+                      "u_unit": {
+                        "d_diagnosis": "low oxygen saturations",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "low oxygen saturations"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "decreasing oxygen saturations",
+                  "units": [
+                    {
+                      "u_id": "u_84113",
+                      "u_unit": {
+                        "d_diagnosis": "low saturation",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "low saturation"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:37:48.339640"
+          }
+        },
+        "s8": {
+          "symptom_text": "splenic involvement",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "splenic involvement",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "splenic involvement",
+                  "units": [
+                    {
+                      "u_id": "u_8025",
+                      "u_unit": {
+                        "d_diagnosis": "splenic infarcts",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "splenic infarcts"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "splenic involvement",
+                  "units": [
+                    {
+                      "u_id": "u_38633",
+                      "u_unit": {
+                        "d_diagnosis": "splenic infarct",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "splenic infarct"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:37:50.315661"
+          }
+        },
+        "s9": {
+          "symptom_text": "hypertension postoperatively",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "hypertension postoperatively",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "hypertension postoperatively",
+                  "units": [
+                    {
+                      "u_id": "u_71637",
+                      "u_unit": {
+                        "d_diagnosis": "post operatively, the patient developed hypertension to the 180's",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "post operatively, the patient developed hypertension to the 180's"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "hypertension postoperatively",
+                  "units": [
+                    {
+                      "u_id": "u_5925",
+                      "u_unit": {
+                        "d_diagnosis": "he required pressors postoperatively for blood pressure support",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "he required pressors postoperatively for blood pressure support"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:37:52.095297"
+          }
+        },
+        "s10": {
+          "symptom_text": "pancreatic mass",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "pancreatic mass",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "pancreatic mass",
+                  "units": [
+                    {
+                      "u_id": "u_16431",
+                      "u_unit": {
+                        "d_diagnosis": "pancreatic mass",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "pancreatic mass"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "pancreatic mass",
+                  "units": [
+                    {
+                      "u_id": "u_64441",
+                      "u_unit": {
+                        "d_diagnosis": "mass in pancreatic head",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "mass in pancreatic head"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "pancreatic mass",
+                  "units": [
+                    {
+                      "u_id": "u_51269",
+                      "u_unit": {
+                        "d_diagnosis": "mass in the head of the pancreas",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "mass in the head of the pancreas"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:37:53.799288"
+          }
+        },
+        "s11": {
+          "symptom_text": "diarrhea",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "diarrhea",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "diarrhea",
+                  "units": [
+                    {
+                      "u_id": "u_35969",
+                      "u_unit": {
+                        "d_diagnosis": "diarrhea",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "diarrhea"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:37:55.538068"
+          }
+        },
+        "s12": {
+          "symptom_text": "anterior wall motion abnormalities",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "anterior wall motion abnormalities",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "anterior wall motion abnormalities",
+                  "units": [
+                    {
+                      "u_id": "u_90406",
+                      "u_unit": {
+                        "d_diagnosis": "wall motion abnormalities",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "wall motion abnormalities"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "anterior wall motion abnormalities",
+                  "units": [
+                    {
+                      "u_id": "u_59623",
+                      "u_unit": {
+                        "d_diagnosis": "inferior wall motion abnormalities",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "inferior wall motion abnormalities"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "anterior wall motion abnormalities",
+                  "units": [
+                    {
+                      "u_id": "u_21985",
+                      "u_unit": {
+                        "d_diagnosis": "no wall motion abnormalities",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "no wall motion abnormalities"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:37:57.393293"
+          }
+        },
+        "s13": {
+          "symptom_text": "coronary artery occlusion",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "coronary artery occlusion",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "coronary artery occlusion",
+                  "units": [
+                    {
+                      "u_id": "u_81977",
+                      "u_unit": {
+                        "d_diagnosis": "occluded coronary vessels",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "occluded coronary vessels"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "coronary artery occlusion",
+                  "units": [
+                    {
+                      "u_id": "u_11693",
+                      "u_unit": {
+                        "d_diagnosis": "cerebral artery occlusion",
+                        "o_organ": {
+                          "organName": "Brain",
+                          "anatomicalLocations": [
+                            "Brain"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "cerebral artery occlusion"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "coronary artery occlusion",
+                  "units": [
+                    {
+                      "u_id": "u_26606",
+                      "u_unit": {
+                        "d_diagnosis": "left circumflex coronary artery to be occluded",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "left circumflex coronary artery to be occluded"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:37:59.368557"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "fever",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "fever",
+              "units": [
+                {
+                  "u_id": "u_15334",
+                  "u_unit": {
+                    "d_diagnosis": "fever",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "fever"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "elevated WBC",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "elevated WBC",
+              "units": [
+                {
+                  "u_id": "u_72141",
+                  "u_unit": {
+                    "d_diagnosis": "elevated wbc",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "elevated wbc"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "tachycardia",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "tachycardia",
+              "units": [
+                {
+                  "u_id": "u_96371",
+                  "u_unit": {
+                    "d_diagnosis": "tachycardia",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "tachycardia"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "ST depression",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "ST depression",
+              "units": [
+                {
+                  "u_id": "u_97445",
+                  "u_unit": {
+                    "d_diagnosis": "st depression",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "st depression"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "ST depression",
+              "units": [
+                {
+                  "u_id": "u_11806",
+                  "u_unit": {
+                    "d_diagnosis": "st depressions",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "st depressions"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "ST depression",
+              "units": [
+                {
+                  "u_id": "u_623",
+                  "u_unit": {
+                    "d_diagnosis": "st depression lat",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "st depression lat"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "symptoms of depression",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "symptoms of depression",
+              "units": [
+                {
+                  "u_id": "u_15997",
+                  "u_unit": {
+                    "d_diagnosis": "symptoms of depression",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "symptoms of depression"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "symptoms of depression",
+              "units": [
+                {
+                  "u_id": "u_52440",
+                  "u_unit": {
+                    "d_diagnosis": "depression",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "depression"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "symptoms of anxiety",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "symptoms of anxiety",
+              "units": [
+                {
+                  "u_id": "u_77296",
+                  "u_unit": {
+                    "d_diagnosis": "anxiety",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "anxiety"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "symptoms of anxiety",
+              "units": [
+                {
+                  "u_id": "u_24666",
+                  "u_unit": {
+                    "d_diagnosis": "increased anxiety",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "increased anxiety"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "decreasing oxygen saturations",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "decreasing oxygen saturations",
+              "units": [
+                {
+                  "u_id": "u_99372",
+                  "u_unit": {
+                    "d_diagnosis": "decreased oxygen saturations",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "decreased oxygen saturations"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "decreasing oxygen saturations",
+              "units": [
+                {
+                  "u_id": "u_57157",
+                  "u_unit": {
+                    "d_diagnosis": "low oxygen saturations",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "low oxygen saturations"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "decreasing oxygen saturations",
+              "units": [
+                {
+                  "u_id": "u_84113",
+                  "u_unit": {
+                    "d_diagnosis": "low saturation",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "low saturation"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "splenic involvement",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "splenic involvement",
+              "units": [
+                {
+                  "u_id": "u_8025",
+                  "u_unit": {
+                    "d_diagnosis": "splenic infarcts",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "splenic infarcts"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "splenic involvement",
+              "units": [
+                {
+                  "u_id": "u_38633",
+                  "u_unit": {
+                    "d_diagnosis": "splenic infarct",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "splenic infarct"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "hypertension postoperatively",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "hypertension postoperatively",
+              "units": [
+                {
+                  "u_id": "u_71637",
+                  "u_unit": {
+                    "d_diagnosis": "post operatively, the patient developed hypertension to the 180's",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "post operatively, the patient developed hypertension to the 180's"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "hypertension postoperatively",
+              "units": [
+                {
+                  "u_id": "u_5925",
+                  "u_unit": {
+                    "d_diagnosis": "he required pressors postoperatively for blood pressure support",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "he required pressors postoperatively for blood pressure support"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "pancreatic mass",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "pancreatic mass",
+              "units": [
+                {
+                  "u_id": "u_16431",
+                  "u_unit": {
+                    "d_diagnosis": "pancreatic mass",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "pancreatic mass"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "pancreatic mass",
+              "units": [
+                {
+                  "u_id": "u_64441",
+                  "u_unit": {
+                    "d_diagnosis": "mass in pancreatic head",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "mass in pancreatic head"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "pancreatic mass",
+              "units": [
+                {
+                  "u_id": "u_51269",
+                  "u_unit": {
+                    "d_diagnosis": "mass in the head of the pancreas",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "mass in the head of the pancreas"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "diarrhea",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "diarrhea",
+              "units": [
+                {
+                  "u_id": "u_35969",
+                  "u_unit": {
+                    "d_diagnosis": "diarrhea",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "diarrhea"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "anterior wall motion abnormalities",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "anterior wall motion abnormalities",
+              "units": [
+                {
+                  "u_id": "u_90406",
+                  "u_unit": {
+                    "d_diagnosis": "wall motion abnormalities",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "wall motion abnormalities"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "anterior wall motion abnormalities",
+              "units": [
+                {
+                  "u_id": "u_59623",
+                  "u_unit": {
+                    "d_diagnosis": "inferior wall motion abnormalities",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "inferior wall motion abnormalities"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "anterior wall motion abnormalities",
+              "units": [
+                {
+                  "u_id": "u_21985",
+                  "u_unit": {
+                    "d_diagnosis": "no wall motion abnormalities",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "no wall motion abnormalities"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "coronary artery occlusion",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "coronary artery occlusion",
+              "units": [
+                {
+                  "u_id": "u_81977",
+                  "u_unit": {
+                    "d_diagnosis": "occluded coronary vessels",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "occluded coronary vessels"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "coronary artery occlusion",
+              "units": [
+                {
+                  "u_id": "u_11693",
+                  "u_unit": {
+                    "d_diagnosis": "cerebral artery occlusion",
+                    "o_organ": {
+                      "organName": "Brain",
+                      "anatomicalLocations": [
+                        "Brain"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "cerebral artery occlusion"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "coronary artery occlusion",
+              "units": [
+                {
+                  "u_id": "u_26606",
+                  "u_unit": {
+                    "d_diagnosis": "left circumflex coronary artery to be occluded",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "left circumflex coronary artery to be occluded"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:37:59.368587"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "success": true,
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Coronary Artery",
+          "Aortic Valve"
+        ],
+        "usage": {
+          "completion_tokens": 281,
+          "prompt_tokens": 2875,
+          "total_tokens": 3156,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "success": true,
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Coronary Artery",
+          "Left Anterior Descending Artery (LAD)",
+          "Aortic Valve"
+        ],
+        "usage": {
+          "completion_tokens": 415,
+          "prompt_tokens": 2693,
+          "total_tokens": 3108,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2368
+          },
+          "prompt_cache_hit_tokens": 2368,
+          "prompt_cache_miss_tokens": 325
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 54.6,
+      "average_precision": 70.8,
+      "average_recall": 15.7
+    }
+  },
+  "comparison": {
+    "baseline_score": 48.4,
+    "rag_enhanced_score": 54.6,
+    "improvement": 6.200000000000003
+  }
+}

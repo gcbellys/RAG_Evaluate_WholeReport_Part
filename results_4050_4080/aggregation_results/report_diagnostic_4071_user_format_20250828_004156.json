@@ -1,0 +1,561 @@
+[
+  {
+    "report_number": "diagnostic_4071",
+    "method": "baseline_aggregation",
+    "method_name": "症状聚合基线方法",
+    "aggregated_symptoms": "denied claudication, stroke, syncope in the past secondary to hypoglycemia; substernal chest pain radiating to the neck and jaw with minimal activity; closure of wrist and axillary lacerations",
+    "expected_results": {
+      "organ": "Artery (Arteria), Brain, Heart (Cor), Skin (Cutis)",
+      "a_position": "Aortic Valve, Brainstem, Cerebral Cortex, Circumflex Artery, Dermis, Epidermis, Left Anterior Descending Artery (LAD), Left Ventricle (LV), Right Coronary Artery"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Heart (Cor)",
+          "a_position": "Coronary Artery, Left Ventricle (LV)"
+        },
+        "api_eva": {
+          "overall_score": 44.4,
+          "precision": 50.0,
+          "recall": 11.1,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Heart (Cor)",
+          "a_position": "Left Ventricle (LV), Coronary Artery, Aortic Valve, Pericardium"
+        },
+        "api_eva": {
+          "overall_score": 48.9,
+          "precision": 50.0,
+          "recall": 22.2,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 46.6,
+      "average_precision": 50.0,
+      "average_recall": 16.6
+    }
+  },
+  {
+    "report_number": "diagnostic_4071",
+    "method": "rag_enhanced_aggregation",
+    "method_name": "增强症状聚合方法",
+    "aggregated_symptoms": "denied claudication, stroke, syncope in the past secondary to hypoglycemia; substernal chest pain radiating to the neck and jaw with minimal activity; closure of wrist and axillary lacerations",
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"denied claudication\",\n            \"primary_organ\": \"legs\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"stroke\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"syncope in the past secondary to hypoglycemia\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"substernal chest pain radiating to the neck and jaw with minimal activity\",\n            \"primary_organ\": \"heart\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"closure of wrist and axillary lacerations\",\n            \"primary_organ\": \"skin\",\n            \"severity\": \"mild\"\n        }\n    ],\n    \"total_count\": 5,\n    \"reasoning\": \"The given text describes a patient with multiple symptoms. I have split them into individual symptoms based on the affected body part and the nature of the symptom. Denied claudication is related to the legs, stroke is related to the brain, syncope due to hypoglycemia is also related to the brain, substernal chest pain radiating to the neck and jaw is related to the heart, and closure of wrist and axillary lacerations is related to the skin. The severity of each symptom is inferred based on the context provided.\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "denied claudication",
+              "primary_organ": "legs",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "stroke",
+              "primary_organ": "brain",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "syncope in the past secondary to hypoglycemia",
+              "primary_organ": "brain",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "substernal chest pain radiating to the neck and jaw with minimal activity",
+              "primary_organ": "heart",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "closure of wrist and axillary lacerations",
+              "primary_organ": "skin",
+              "severity": "mild"
+            }
+          ],
+          "total_count": 5,
+          "reasoning": "The given text describes a patient with multiple symptoms. I have split them into individual symptoms based on the affected body part and the nature of the symptom. Denied claudication is related to the legs, stroke is related to the brain, syncope due to hypoglycemia is also related to the brain, substernal chest pain radiating to the neck and jaw is related to the heart, and closure of wrist and axillary lacerations is related to the skin. The severity of each symptom is inferred based on the context provided."
+        }
+      },
+      "timestamp": "2025-08-28T00:41:30.775819"
+    },
+    "rag_search_results": {
+      "success": true,
+      "total_searched": 5,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "denied claudication",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "denied claudication",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "denied claudication",
+                  "units": [
+                    {
+                      "u_id": "u_88373",
+                      "u_unit": {
+                        "d_diagnosis": "denies claudication",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "denies claudication"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "denied claudication",
+                  "units": [
+                    {
+                      "u_id": "u_87091",
+                      "u_unit": {
+                        "d_diagnosis": "denies claudication or resting pain",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "denies claudication or resting pain"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "denied claudication",
+                  "units": [
+                    {
+                      "u_id": "u_9719",
+                      "u_unit": {
+                        "d_diagnosis": "claudication on history",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "claudication on history"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:41:32.826778"
+          }
+        },
+        "s2": {
+          "symptom_text": "stroke",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "stroke",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "stroke",
+                  "units": [
+                    {
+                      "u_id": "u_44677",
+                      "u_unit": {
+                        "d_diagnosis": "code stroke",
+                        "o_organ": {
+                          "organName": "Brain",
+                          "anatomicalLocations": [
+                            "Brain"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "code stroke"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "stroke",
+                  "units": [
+                    {
+                      "u_id": "u_16004",
+                      "u_unit": {
+                        "d_diagnosis": "cerebrovascular accident",
+                        "o_organ": {
+                          "organName": "Brain",
+                          "anatomicalLocations": [
+                            "Brain"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "cerebrovascular accident"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:41:35.097028"
+          }
+        },
+        "s3": {
+          "symptom_text": "syncope in the past secondary to hypoglycemia",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "syncope in the past secondary to hypoglycemia",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:41:37.242948"
+          }
+        },
+        "s4": {
+          "symptom_text": "substernal chest pain radiating to the neck and jaw with minimal activity",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "substernal chest pain radiating to the neck and jaw with minimal activity",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "substernal chest pain radiating to the neck and jaw with minimal activity",
+                  "units": [
+                    {
+                      "u_id": "u_84781",
+                      "u_unit": {
+                        "d_diagnosis": "acute onset of substernal chest pain while at rest with radiation to the jaw",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "acute onset of substernal chest pain while at rest with radiation to the jaw"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "substernal chest pain radiating to the neck and jaw with minimal activity",
+                  "units": [
+                    {
+                      "u_id": "u_46196",
+                      "u_unit": {
+                        "d_diagnosis": "substernal chest pain radiating to shoulders",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "substernal chest pain radiating to shoulders"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "substernal chest pain radiating to the neck and jaw with minimal activity",
+                  "units": [
+                    {
+                      "u_id": "u_15103",
+                      "u_unit": {
+                        "d_diagnosis": "chest pain radiating to this jaw",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "chest pain radiating to this jaw"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:41:39.215765"
+          }
+        },
+        "s5": {
+          "symptom_text": "closure of wrist and axillary lacerations",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "closure of wrist and axillary lacerations",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:41:41.417312"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "denied claudication",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "denied claudication",
+              "units": [
+                {
+                  "u_id": "u_88373",
+                  "u_unit": {
+                    "d_diagnosis": "denies claudication",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "denies claudication"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "denied claudication",
+              "units": [
+                {
+                  "u_id": "u_87091",
+                  "u_unit": {
+                    "d_diagnosis": "denies claudication or resting pain",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "denies claudication or resting pain"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "denied claudication",
+              "units": [
+                {
+                  "u_id": "u_9719",
+                  "u_unit": {
+                    "d_diagnosis": "claudication on history",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "claudication on history"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "stroke",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "stroke",
+              "units": [
+                {
+                  "u_id": "u_44677",
+                  "u_unit": {
+                    "d_diagnosis": "code stroke",
+                    "o_organ": {
+                      "organName": "Brain",
+                      "anatomicalLocations": [
+                        "Brain"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "code stroke"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "stroke",
+              "units": [
+                {
+                  "u_id": "u_16004",
+                  "u_unit": {
+                    "d_diagnosis": "cerebrovascular accident",
+                    "o_organ": {
+                      "organName": "Brain",
+                      "anatomicalLocations": [
+                        "Brain"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "cerebrovascular accident"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "syncope in the past secondary to hypoglycemia",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "substernal chest pain radiating to the neck and jaw with minimal activity",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "substernal chest pain radiating to the neck and jaw with minimal activity",
+              "units": [
+                {
+                  "u_id": "u_84781",
+                  "u_unit": {
+                    "d_diagnosis": "acute onset of substernal chest pain while at rest with radiation to the jaw",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "acute onset of substernal chest pain while at rest with radiation to the jaw"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "substernal chest pain radiating to the neck and jaw with minimal activity",
+              "units": [
+                {
+                  "u_id": "u_46196",
+                  "u_unit": {
+                    "d_diagnosis": "substernal chest pain radiating to shoulders",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "substernal chest pain radiating to shoulders"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "substernal chest pain radiating to the neck and jaw with minimal activity",
+              "units": [
+                {
+                  "u_id": "u_15103",
+                  "u_unit": {
+                    "d_diagnosis": "chest pain radiating to this jaw",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "chest pain radiating to this jaw"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "closure of wrist and axillary lacerations",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        }
+      ],
+      "timestamp": "2025-08-28T00:41:41.417352"
+    },
+    "expected_results": {
+      "organ": "Artery (Arteria), Brain, Heart (Cor), Skin (Cutis)",
+      "a_position": "Aortic Valve, Brainstem, Cerebral Cortex, Circumflex Artery, Dermis, Epidermis, Left Anterior Descending Artery (LAD), Left Ventricle (LV), Right Coronary Artery"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Heart (Cor)",
+          "a_position": "Left Ventricle (LV), Coronary Artery, Aortic Valve"
+        },
+        "api_eva": {
+          "overall_score": 55.6,
+          "precision": 66.7,
+          "recall": 22.2,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Heart (Cor)",
+          "a_position": "Left Ventricle (LV), Coronary Artery, Aortic Valve, Pericardium"
+        },
+        "api_eva": {
+          "overall_score": 48.9,
+          "precision": 50.0,
+          "recall": 22.2,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 52.2,
+      "average_precision": 58.4,
+      "average_recall": 22.2
+    }
+  }
+]

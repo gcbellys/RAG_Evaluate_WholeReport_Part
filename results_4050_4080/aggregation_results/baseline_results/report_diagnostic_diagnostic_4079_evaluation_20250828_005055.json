@@ -1,0 +1,1150 @@
+{
+  "report_id": "diagnostic_4079",
+  "timestamp": "2025-08-28T00:50:55.073247",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4079_symptom_0",
+      "diagnosis": "seizure at time of trauma work-up",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lung",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Left Lung",
+            "Right Lung",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Left Lung",
+            "Pleural Cavity"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Left Lung\",\n        \"Right Lung\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Temporal Lobe"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Left Lung",
+                    "Right Lung",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Temporal Lobe"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleural Cavity\",\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Visceral Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleural Cavity",
+              "Alveoli",
+              "Bronchioles",
+              "Visceral Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleural Cavity",
+                    "Alveoli",
+                    "Bronchioles",
+                    "Visceral Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleural Cavity",
+            "Alveoli",
+            "Bronchioles",
+            "Visceral Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4079_symptom_1",
+      "diagnosis": "place dry guaze once a day until site completely scabbed over",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lung",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Left Lung",
+            "Right Lung",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Left Lung",
+            "Pleural Cavity"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Left Lung\",\n        \"Right Lung\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Temporal Lobe"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Left Lung",
+                    "Right Lung",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Temporal Lobe"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleural Cavity\",\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Visceral Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleural Cavity",
+              "Alveoli",
+              "Bronchioles",
+              "Visceral Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleural Cavity",
+                    "Alveoli",
+                    "Bronchioles",
+                    "Visceral Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleural Cavity",
+            "Alveoli",
+            "Bronchioles",
+            "Visceral Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4079_symptom_2",
+      "diagnosis": "patient intubated for airway protection",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lung",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Left Lung",
+            "Right Lung",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Left Lung",
+            "Pleural Cavity"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Left Lung\",\n        \"Right Lung\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Temporal Lobe"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Left Lung",
+                    "Right Lung",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Temporal Lobe"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleural Cavity\",\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Visceral Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleural Cavity",
+              "Alveoli",
+              "Bronchioles",
+              "Visceral Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleural Cavity",
+                    "Alveoli",
+                    "Bronchioles",
+                    "Visceral Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleural Cavity",
+            "Alveoli",
+            "Bronchioles",
+            "Visceral Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4079_symptom_3",
+      "diagnosis": "left pneumothorax",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lung",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Left Lung",
+            "Right Lung",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Left Lung",
+            "Pleural Cavity"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Left Lung\",\n        \"Right Lung\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Temporal Lobe"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Left Lung",
+                    "Right Lung",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Temporal Lobe"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleural Cavity\",\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Visceral Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleural Cavity",
+              "Alveoli",
+              "Bronchioles",
+              "Visceral Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleural Cavity",
+                    "Alveoli",
+                    "Bronchioles",
+                    "Visceral Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleural Cavity",
+            "Alveoli",
+            "Bronchioles",
+            "Visceral Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4079_symptom_4",
+      "diagnosis": "right pneumothorax",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lung",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Left Lung",
+            "Right Lung",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Left Lung",
+            "Pleural Cavity"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Left Lung\",\n        \"Right Lung\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Temporal Lobe"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Left Lung",
+                    "Right Lung",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Temporal Lobe"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleural Cavity\",\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Visceral Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleural Cavity",
+              "Alveoli",
+              "Bronchioles",
+              "Visceral Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleural Cavity",
+                    "Alveoli",
+                    "Bronchioles",
+                    "Visceral Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleural Cavity",
+            "Alveoli",
+            "Bronchioles",
+            "Visceral Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4079_symptom_5",
+      "diagnosis": "keep dressing in place on old right chest tube site for 1 more day before removing",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lung",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Left Lung",
+            "Right Lung",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Left Lung",
+            "Pleural Cavity"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Left Lung\",\n        \"Right Lung\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Temporal Lobe"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Left Lung",
+                    "Right Lung",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Temporal Lobe"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleural Cavity\",\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Visceral Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleural Cavity",
+              "Alveoli",
+              "Bronchioles",
+              "Visceral Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleural Cavity",
+                    "Alveoli",
+                    "Bronchioles",
+                    "Visceral Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleural Cavity",
+            "Alveoli",
+            "Bronchioles",
+            "Visceral Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4079_symptom_6",
+      "diagnosis": "continue with dry gauze over left chest wound and change once a day until completely scabbed over",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lung",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Left Lung",
+            "Right Lung",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Left Lung",
+            "Pleural Cavity"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Left Lung\",\n        \"Right Lung\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Temporal Lobe"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Left Lung",
+                    "Right Lung",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Temporal Lobe"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleural Cavity\",\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Visceral Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleural Cavity",
+              "Alveoli",
+              "Bronchioles",
+              "Visceral Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleural Cavity",
+                    "Alveoli",
+                    "Bronchioles",
+                    "Visceral Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleural Cavity",
+            "Alveoli",
+            "Bronchioles",
+            "Visceral Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4079_symptom_7",
+      "diagnosis": "bilateral chest tubes placed for bilateral pneumothoraces",
+      "expected_organs": [
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Cerebral Cortex",
+            "Temporal Lobe"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Right Lung",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Left Lung",
+            "Right Lung",
+            "Pleural Cavity"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Left Lung",
+            "Pleural Cavity"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Left Lung\",\n        \"Right Lung\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Temporal Lobe"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Left Lung",
+                    "Right Lung",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Temporal Lobe"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Pleural Cavity\",\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Visceral Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Lung (Pulmo)",
+            "anatomical_locations": [
+              "Pleural Cavity",
+              "Alveoli",
+              "Bronchioles",
+              "Visceral Pleura"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Pleural Cavity",
+                    "Alveoli",
+                    "Bronchioles",
+                    "Visceral Pleura"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Brainstem",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Pleural Cavity",
+            "Alveoli",
+            "Bronchioles",
+            "Visceral Pleura"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

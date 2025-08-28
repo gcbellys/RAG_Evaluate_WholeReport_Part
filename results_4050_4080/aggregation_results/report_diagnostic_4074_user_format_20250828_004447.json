@@ -1,0 +1,899 @@
+[
+  {
+    "report_number": "diagnostic_4074",
+    "method": "baseline_aggregation",
+    "method_name": "症状聚合基线方法",
+    "aggregated_symptoms": "lower back pain; foley d/c'd; 1 liter of serous exudative fluid; persistent fevers; le weakness; diarrhea; worsening pleuritic chest pain",
+    "expected_results": {
+      "organ": "Brainstem, Kidney (Ren), Large intestine (Intestinum crassum), Lung (Pulmo)",
+      "a_position": "Colon, Lumbar Spinal Cord, Parietal Pleura, Pleural Cavity, Rectum, Renal Cortex, Renal Medulla (Pyramids), Right Lung, Thoracic Spinal Cord (T12-L2), Visceral Pleura"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Kidney (Ren)",
+          "a_position": "Renal Pelvis, Renal Hilum"
+        },
+        "api_eva": {
+          "overall_score": 20.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Kidney (Ren)",
+          "a_position": "Renal Pelvis, Renal Cortex, Renal Medulla (Pyramids)"
+        },
+        "api_eva": {
+          "overall_score": 54.7,
+          "precision": 66.7,
+          "recall": 20.0,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 37.4,
+      "average_precision": 33.4,
+      "average_recall": 10.0
+    }
+  },
+  {
+    "report_number": "diagnostic_4074",
+    "method": "rag_enhanced_aggregation",
+    "method_name": "增强症状聚合方法",
+    "aggregated_symptoms": "lower back pain; foley d/c'd; 1 liter of serous exudative fluid; persistent fevers; le weakness; diarrhea; worsening pleuritic chest pain",
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"lower back pain\",\n            \"primary_organ\": \"spine\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"foley d/c'd\",\n            \"primary_organ\": \"urinary system\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"1 liter of serous exudative fluid\",\n            \"primary_organ\": \"abdomen\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"persistent fevers\",\n            \"primary_organ\": \"immune system\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"le weakness\",\n            \"primary_organ\": \"nervous system\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"diarrhea\",\n            \"primary_organ\": \"gastrointestinal system\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"worsening pleuritic chest pain\",\n            \"primary_organ\": \"thorax\",\n            \"severity\": \"severe\"\n        }\n    ],\n    \"total_count\": 7,\n    \"reasoning\": \"The given symptoms are related to different body systems. Lower back pain is related to the spine. Foley d/c'd is related to the urinary system. 1 liter of serous exudative fluid is related to the abdomen. Persistent fevers are related to the immune system. Le weakness is related to the nervous system. Diarrhea is related to the gastrointestinal system. Worsening pleuritic chest pain is related to the thorax.\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "lower back pain",
+              "primary_organ": "spine",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "foley d/c'd",
+              "primary_organ": "urinary system",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "1 liter of serous exudative fluid",
+              "primary_organ": "abdomen",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "persistent fevers",
+              "primary_organ": "immune system",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "le weakness",
+              "primary_organ": "nervous system",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "diarrhea",
+              "primary_organ": "gastrointestinal system",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s7",
+              "symptom_text": "worsening pleuritic chest pain",
+              "primary_organ": "thorax",
+              "severity": "severe"
+            }
+          ],
+          "total_count": 7,
+          "reasoning": "The given symptoms are related to different body systems. Lower back pain is related to the spine. Foley d/c'd is related to the urinary system. 1 liter of serous exudative fluid is related to the abdomen. Persistent fevers are related to the immune system. Le weakness is related to the nervous system. Diarrhea is related to the gastrointestinal system. Worsening pleuritic chest pain is related to the thorax."
+        }
+      },
+      "timestamp": "2025-08-28T00:44:13.741335"
+    },
+    "rag_search_results": {
+      "success": true,
+      "total_searched": 7,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "lower back pain",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "lower back pain",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "lower back pain",
+                  "units": [
+                    {
+                      "u_id": "u_14279",
+                      "u_unit": {
+                        "d_diagnosis": "low back pain",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "low back pain"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:44:15.483218"
+          }
+        },
+        "s2": {
+          "symptom_text": "foley d/c'd",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "foley d/c'd",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "foley d/c'd",
+                  "units": [
+                    {
+                      "u_id": "u_97402",
+                      "u_unit": {
+                        "d_diagnosis": "foley d/c'd today",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "foley d/c'd today"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "foley d/c'd",
+                  "units": [
+                    {
+                      "u_id": "u_3098",
+                      "u_unit": {
+                        "d_diagnosis": "foley was d/c'd",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "foley was d/c'd"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "foley d/c'd",
+                  "units": [
+                    {
+                      "u_id": "u_69554",
+                      "u_unit": {
+                        "d_diagnosis": "foley",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "foley"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:44:17.249568"
+          }
+        },
+        "s3": {
+          "symptom_text": "1 liter of serous exudative fluid",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "1 liter of serous exudative fluid",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "1 liter of serous exudative fluid",
+                  "units": [
+                    {
+                      "u_id": "u_50171",
+                      "u_unit": {
+                        "d_diagnosis": "wound draining serous fluid",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "wound draining serous fluid"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "1 liter of serous exudative fluid",
+                  "units": [
+                    {
+                      "u_id": "u_93792",
+                      "u_unit": {
+                        "d_diagnosis": "serous inflammatory ascitic fluid",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "serous inflammatory ascitic fluid"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "1 liter of serous exudative fluid",
+                  "units": [
+                    {
+                      "u_id": "u_47316",
+                      "u_unit": {
+                        "d_diagnosis": "still putting large amount of clear serous exudate",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "still putting large amount of clear serous exudate"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:44:18.991099"
+          }
+        },
+        "s4": {
+          "symptom_text": "persistent fevers",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "persistent fevers",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "persistent fevers",
+                  "units": [
+                    {
+                      "u_id": "u_13482",
+                      "u_unit": {
+                        "d_diagnosis": "persistent fevers",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "persistent fevers"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "persistent fevers",
+                  "units": [
+                    {
+                      "u_id": "u_41833",
+                      "u_unit": {
+                        "d_diagnosis": "fevers persisted",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "fevers persisted"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "persistent fevers",
+                  "units": [
+                    {
+                      "u_id": "u_52828",
+                      "u_unit": {
+                        "d_diagnosis": "recurrent fevers",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "recurrent fevers"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:44:20.703000"
+          }
+        },
+        "s5": {
+          "symptom_text": "le weakness",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "le weakness",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "le weakness",
+                  "units": [
+                    {
+                      "u_id": "u_8643",
+                      "u_unit": {
+                        "d_diagnosis": "le weakness",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "le weakness"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "le weakness",
+                  "units": [
+                    {
+                      "u_id": "u_20503",
+                      "u_unit": {
+                        "d_diagnosis": "rue weakness",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "rue weakness"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:44:22.398838"
+          }
+        },
+        "s6": {
+          "symptom_text": "diarrhea",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "diarrhea",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "diarrhea",
+                  "units": [
+                    {
+                      "u_id": "u_35969",
+                      "u_unit": {
+                        "d_diagnosis": "diarrhea",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "diarrhea"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:44:24.143102"
+          }
+        },
+        "s7": {
+          "symptom_text": "worsening pleuritic chest pain",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "worsening pleuritic chest pain",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "worsening pleuritic chest pain",
+                  "units": [
+                    {
+                      "u_id": "u_53431",
+                      "u_unit": {
+                        "d_diagnosis": "worsening pleural effusions",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "worsening pleural effusions"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "worsening pleuritic chest pain",
+                  "units": [
+                    {
+                      "u_id": "u_98316",
+                      "u_unit": {
+                        "d_diagnosis": "pleuritic type chest pain",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "pleuritic type chest pain"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "worsening pleuritic chest pain",
+                  "units": [
+                    {
+                      "u_id": "u_5896",
+                      "u_unit": {
+                        "d_diagnosis": "pleuritic chest pain",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "pleuritic chest pain"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:44:25.935067"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "lower back pain",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "lower back pain",
+              "units": [
+                {
+                  "u_id": "u_14279",
+                  "u_unit": {
+                    "d_diagnosis": "low back pain",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "low back pain"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "foley d/c'd",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "foley d/c'd",
+              "units": [
+                {
+                  "u_id": "u_97402",
+                  "u_unit": {
+                    "d_diagnosis": "foley d/c'd today",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "foley d/c'd today"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "foley d/c'd",
+              "units": [
+                {
+                  "u_id": "u_3098",
+                  "u_unit": {
+                    "d_diagnosis": "foley was d/c'd",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "foley was d/c'd"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "foley d/c'd",
+              "units": [
+                {
+                  "u_id": "u_69554",
+                  "u_unit": {
+                    "d_diagnosis": "foley",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "foley"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "1 liter of serous exudative fluid",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "1 liter of serous exudative fluid",
+              "units": [
+                {
+                  "u_id": "u_50171",
+                  "u_unit": {
+                    "d_diagnosis": "wound draining serous fluid",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "wound draining serous fluid"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "1 liter of serous exudative fluid",
+              "units": [
+                {
+                  "u_id": "u_93792",
+                  "u_unit": {
+                    "d_diagnosis": "serous inflammatory ascitic fluid",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "serous inflammatory ascitic fluid"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "1 liter of serous exudative fluid",
+              "units": [
+                {
+                  "u_id": "u_47316",
+                  "u_unit": {
+                    "d_diagnosis": "still putting large amount of clear serous exudate",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "still putting large amount of clear serous exudate"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "persistent fevers",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "persistent fevers",
+              "units": [
+                {
+                  "u_id": "u_13482",
+                  "u_unit": {
+                    "d_diagnosis": "persistent fevers",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "persistent fevers"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "persistent fevers",
+              "units": [
+                {
+                  "u_id": "u_41833",
+                  "u_unit": {
+                    "d_diagnosis": "fevers persisted",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "fevers persisted"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "persistent fevers",
+              "units": [
+                {
+                  "u_id": "u_52828",
+                  "u_unit": {
+                    "d_diagnosis": "recurrent fevers",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "recurrent fevers"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "le weakness",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "le weakness",
+              "units": [
+                {
+                  "u_id": "u_8643",
+                  "u_unit": {
+                    "d_diagnosis": "le weakness",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "le weakness"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "le weakness",
+              "units": [
+                {
+                  "u_id": "u_20503",
+                  "u_unit": {
+                    "d_diagnosis": "rue weakness",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "rue weakness"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "diarrhea",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "diarrhea",
+              "units": [
+                {
+                  "u_id": "u_35969",
+                  "u_unit": {
+                    "d_diagnosis": "diarrhea",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "diarrhea"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "worsening pleuritic chest pain",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "worsening pleuritic chest pain",
+              "units": [
+                {
+                  "u_id": "u_53431",
+                  "u_unit": {
+                    "d_diagnosis": "worsening pleural effusions",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "worsening pleural effusions"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "worsening pleuritic chest pain",
+              "units": [
+                {
+                  "u_id": "u_98316",
+                  "u_unit": {
+                    "d_diagnosis": "pleuritic type chest pain",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "pleuritic type chest pain"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "worsening pleuritic chest pain",
+              "units": [
+                {
+                  "u_id": "u_5896",
+                  "u_unit": {
+                    "d_diagnosis": "pleuritic chest pain",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "pleuritic chest pain"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:44:25.935097"
+    },
+    "expected_results": {
+      "organ": "Brainstem, Kidney (Ren), Large intestine (Intestinum crassum), Lung (Pulmo)",
+      "a_position": "Colon, Lumbar Spinal Cord, Parietal Pleura, Pleural Cavity, Rectum, Renal Cortex, Renal Medulla (Pyramids), Right Lung, Thoracic Spinal Cord (T12-L2), Visceral Pleura"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Kidney (Ren)",
+          "a_position": "Renal Pelvis, Renal Hilum"
+        },
+        "api_eva": {
+          "overall_score": 20.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Lung (Pulmo)",
+          "a_position": "Pleura, Visceral Pleura, Parietal Pleura, Pleural Cavity"
+        },
+        "api_eva": {
+          "overall_score": 62.0,
+          "precision": 75.0,
+          "recall": 30.0,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 41.0,
+      "average_precision": 37.5,
+      "average_recall": 15.0
+    }
+  }
+]

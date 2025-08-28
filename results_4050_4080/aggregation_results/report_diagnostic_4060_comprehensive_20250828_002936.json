@@ -1,0 +1,1504 @@
+{
+  "report_id": "diagnostic_4060",
+  "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4060.json",
+  "original_symptoms_count": 14,
+  "baseline": {
+    "aggregated_symptoms": "ivab; nephrostomy site is patent and intact however, very tender to palpation.tender; pt incontinent of moderate amounts of brown loose stool x 3; pt c/o constant urge to urinate; presept cath discontinued; very labored breathing; cvp 4-21; pt has a very dry nonproductive cough; sudden pain in luq (nephrostomy site)in afternoon; sbp 129-157; swallowing small amounts of liquid in am...by afternoon unable to swallow liquids; patent foley draining clear yellow urine; pt. denied pain all morning and reported sudden pain in luq (nephrostomy site)in afternoon; hr 85-100 nsr",
+    "expected_results": [
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Aortic Valve",
+          "Mitral Valve"
+        ]
+      },
+      {
+        "organName": "Kidney (Ren)",
+        "anatomicalLocations": [
+          "Renal Cortex",
+          "Renal Medulla (Pyramids)"
+        ]
+      },
+      {
+        "organName": "Large intestine (Intestinum crassum)",
+        "anatomicalLocations": [
+          "Colon",
+          "Rectum"
+        ]
+      },
+      {
+        "organName": "Kidney (Ren)",
+        "anatomicalLocations": [
+          "Renal Pelvis",
+          "Ureter"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Alveoli",
+          "Pleural Cavity"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Trachea",
+          "Bronchus"
+        ]
+      },
+      {
+        "organName": "Kidney (Ren)",
+        "anatomicalLocations": [
+          "Renal Cortex",
+          "Renal Pelvis"
+        ]
+      },
+      {
+        "organName": "Esophagus",
+        "anatomicalLocations": [
+          "Esophageal Body",
+          "Upper Esophageal Sphincter"
+        ]
+      }
+    ],
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Foley\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Stomach (Gaster)\",\n      \"anatomicalLocations\": [\n        \"Gastric lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophageal lumen\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Pelvis"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Kidney (Ren)",
+                "anatomicalLocations": [
+                  "Renal Pelvis"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Urinary bladder (Vesica urinaria)",
+                "anatomicalLocations": [
+                  "Foley"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Stomach (Gaster)",
+                "anatomicalLocations": [
+                  "Gastric lumen"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Esophagus",
+                "anatomicalLocations": [
+                  "Esophageal lumen"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Kidney (Ren)",
+        "anatomical_locations": [
+          "Renal Pelvis"
+        ],
+        "usage": {
+          "completion_tokens": 242,
+          "prompt_tokens": 2301,
+          "total_tokens": 2543,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "evaluation": {
+          "overall_score": 62.9,
+          "precision": 100.0,
+          "recall": 7.1,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 1/1 (100.0%); Recall(召回率): 1/14 (7.1%); 过度生成惩罚: 100.0%"
+        }
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophagus\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Large intestine (Intestinum crassum)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Urinary bladder (Vesica urinaria)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Kidney (Ren)",
+                "anatomicalLocations": [
+                  "Renal Cortex",
+                  "Renal Pelvis",
+                  "Renal Calyces (Major & Minor)"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles",
+                  "Pleural Cavity"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Esophagus",
+                "anatomicalLocations": [
+                  "Esophagus"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Large intestine (Intestinum crassum)",
+                "anatomicalLocations": [
+                  "Large intestine (Intestinum crassum)"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Urinary bladder (Vesica urinaria)",
+                "anatomicalLocations": [
+                  "Urinary bladder (Vesica urinaria)"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Kidney (Ren)",
+        "anatomical_locations": [
+          "Renal Cortex",
+          "Renal Pelvis",
+          "Renal Calyces (Major & Minor)"
+        ],
+        "usage": {
+          "completion_tokens": 266,
+          "prompt_tokens": 2169,
+          "total_tokens": 2435,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 1984
+          },
+          "prompt_cache_hit_tokens": 1984,
+          "prompt_cache_miss_tokens": 185
+        },
+        "model": "deepseek-chat",
+        "evaluation": {
+          "overall_score": 52.4,
+          "precision": 66.7,
+          "recall": 14.3,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/14 (14.3%); 过度生成惩罚: 100.0%"
+        }
+      }
+    },
+    "evaluation": {
+      "report_id": "diagnostic_4060",
+      "total_symptoms": 14,
+      "valid_symptoms": 14,
+      "evaluation_timestamp": "2025-08-28T00:28:35.784348",
+      "symptom_evaluations": [
+        {
+          "symptom_id": "aggregated_symptoms",
+          "symptom_text": "ivab; nephrostomy site is patent and intact however, very tender to palpation.tender; pt incontinent of moderate amounts of brown loose stool x 3; pt c/o constant urge to urinate; presept cath discontinued; very labored breathing; cvp 4-21; pt has a very dry nonproductive cough; sudden pain in luq (nephrostomy site)in afternoon; sbp 129-157; swallowing small amounts of liquid in am...by afternoon unable to swallow liquids; patent foley draining clear yellow urine; pt. denied pain all morning and reported sudden pain in luq (nephrostomy site)in afternoon; hr 85-100 nsr",
+          "expected_results": [
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Aortic Valve",
+                "Mitral Valve"
+              ]
+            },
+            {
+              "organName": "Kidney (Ren)",
+              "anatomicalLocations": [
+                "Renal Cortex",
+                "Renal Medulla (Pyramids)"
+              ]
+            },
+            {
+              "organName": "Large intestine (Intestinum crassum)",
+              "anatomicalLocations": [
+                "Colon",
+                "Rectum"
+              ]
+            },
+            {
+              "organName": "Kidney (Ren)",
+              "anatomicalLocations": [
+                "Renal Pelvis",
+                "Ureter"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Alveoli",
+                "Pleural Cavity"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Trachea",
+                "Bronchus"
+              ]
+            },
+            {
+              "organName": "Kidney (Ren)",
+              "anatomicalLocations": [
+                "Renal Cortex",
+                "Renal Pelvis"
+              ]
+            },
+            {
+              "organName": "Esophagus",
+              "anatomicalLocations": [
+                "Esophageal Body",
+                "Upper Esophageal Sphincter"
+              ]
+            }
+          ],
+          "api_evaluations": {
+            "moonshot": {
+              "overall_score": 62.9,
+              "precision": 100.0,
+              "recall": 7.1,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 1/1 (100.0%); Recall(召回率): 1/14 (7.1%); 过度生成惩罚: 100.0%"
+            },
+            "deepseek": {
+              "overall_score": 52.4,
+              "precision": 66.7,
+              "recall": 14.3,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/14 (14.3%); 过度生成惩罚: 100.0%"
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total_api_calls": 2,
+        "successful_api_calls": 2,
+        "failed_api_calls": 0,
+        "average_overall_score": 57.6,
+        "average_precision": 83.3,
+        "average_recall": 10.7
+      }
+    }
+  },
+  "rag_search": {
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"nephrostomy site is patent and intact however, very tender to palpation\",\n            \"primary_organ\": \"Kidney\",\n            \"severity\": \"Moderate\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"pt incontinent of moderate amounts of brown loose stool x 3\",\n            \"primary_organ\": \"Intestines\",\n            \"severity\": \"Moderate\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"pt c/o constant urge to urinate\",\n            \"primary_organ\": \"Bladder\",\n            \"severity\": \"Moderate\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"very labored breathing\",\n            \"primary_organ\": \"Lungs\",\n            \"severity\": \"Severe\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"cvp 4-21\",\n            \"primary_organ\": \"Heart\",\n            \"severity\": \"Severe\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"pt has a very dry nonproductive cough\",\n            \"primary_organ\": \"Lungs\",\n            \"severity\": \"Moderate\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"sudden pain in luq (nephrostomy site)in afternoon\",\n            \"primary_organ\": \"Kidney\",\n            \"severity\": \"Acute\"\n        },\n        {\n            \"symptom_id\": \"s8\",\n            \"symptom_text\": \"sbp 129-157\",\n            \"primary_organ\": \"Heart\",\n            \"severity\": \"Moderate\"\n        },\n        {\n            \"symptom_id\": \"s9\",\n            \"symptom_text\": \"swallowing small amounts of liquid in am...by afternoon unable to swallow liquids\",\n            \"primary_organ\": \"Esophagus\",\n            \"severity\": \"Acute\"\n        },\n        {\n            \"symptom_id\": \"s10\",\n            \"symptom_text\": \"patent foley draining clear yellow urine\",\n            \"primary_organ\": \"Bladder\",\n            \"severity\": \"Normal\"\n        },\n        {\n            \"symptom_id\": \"s11\",\n            \"symptom_text\": \"pt. denied pain all morning and reported sudden pain in luq (nephrostomy site)in afternoon\",\n            \"primary_organ\": \"Kidney\",\n            \"severity\": \"Acute\"\n        },\n        {\n            \"symptom_id\": \"s12\",\n            \"symptom_text\": \"hr 85-100 nsr\",\n            \"primary_organ\": \"Heart\",\n            \"severity\": \"Normal\"\n        }\n    ],\n    \"total_count\": 12,\n    \"reasoning\": \"The symptoms are split based on the different body systems they affect and their severity. Each symptom is identified by its unique identifier, description, the primary organ it affects, and its severity level.\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "nephrostomy site is patent and intact however, very tender to palpation",
+              "primary_organ": "Kidney",
+              "severity": "Moderate"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "pt incontinent of moderate amounts of brown loose stool x 3",
+              "primary_organ": "Intestines",
+              "severity": "Moderate"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "pt c/o constant urge to urinate",
+              "primary_organ": "Bladder",
+              "severity": "Moderate"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "very labored breathing",
+              "primary_organ": "Lungs",
+              "severity": "Severe"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "cvp 4-21",
+              "primary_organ": "Heart",
+              "severity": "Severe"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "pt has a very dry nonproductive cough",
+              "primary_organ": "Lungs",
+              "severity": "Moderate"
+            },
+            {
+              "symptom_id": "s7",
+              "symptom_text": "sudden pain in luq (nephrostomy site)in afternoon",
+              "primary_organ": "Kidney",
+              "severity": "Acute"
+            },
+            {
+              "symptom_id": "s8",
+              "symptom_text": "sbp 129-157",
+              "primary_organ": "Heart",
+              "severity": "Moderate"
+            },
+            {
+              "symptom_id": "s9",
+              "symptom_text": "swallowing small amounts of liquid in am...by afternoon unable to swallow liquids",
+              "primary_organ": "Esophagus",
+              "severity": "Acute"
+            },
+            {
+              "symptom_id": "s10",
+              "symptom_text": "patent foley draining clear yellow urine",
+              "primary_organ": "Bladder",
+              "severity": "Normal"
+            },
+            {
+              "symptom_id": "s11",
+              "symptom_text": "pt. denied pain all morning and reported sudden pain in luq (nephrostomy site)in afternoon",
+              "primary_organ": "Kidney",
+              "severity": "Acute"
+            },
+            {
+              "symptom_id": "s12",
+              "symptom_text": "hr 85-100 nsr",
+              "primary_organ": "Heart",
+              "severity": "Normal"
+            }
+          ],
+          "total_count": 12,
+          "reasoning": "The symptoms are split based on the different body systems they affect and their severity. Each symptom is identified by its unique identifier, description, the primary organ it affects, and its severity level."
+        }
+      },
+      "timestamp": "2025-08-28T00:28:49.800495"
+    },
+    "search_results": {
+      "success": true,
+      "total_searched": 12,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "nephrostomy site is patent and intact however, very tender to palpation",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "nephrostomy site is patent and intact however, very tender to palpation",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:28:51.548274"
+          }
+        },
+        "s2": {
+          "symptom_text": "pt incontinent of moderate amounts of brown loose stool x 3",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "pt incontinent of moderate amounts of brown loose stool x 3",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:28:53.286802"
+          }
+        },
+        "s3": {
+          "symptom_text": "pt c/o constant urge to urinate",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "pt c/o constant urge to urinate",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "pt c/o constant urge to urinate",
+                  "units": [
+                    {
+                      "u_id": "u_85673",
+                      "u_unit": {
+                        "d_diagnosis": "pt voiding spontanteously, at times having difficulty with urinal",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "pt voiding spontanteously, at times having difficulty with urinal"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:28:55.027534"
+          }
+        },
+        "s4": {
+          "symptom_text": "very labored breathing",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "very labored breathing",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "very labored breathing",
+                  "units": [
+                    {
+                      "u_id": "u_32040",
+                      "u_unit": {
+                        "d_diagnosis": "labored breathing",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "labored breathing"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "very labored breathing",
+                  "units": [
+                    {
+                      "u_id": "u_82657",
+                      "u_unit": {
+                        "d_diagnosis": "increased labored breathing",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "increased labored breathing"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:28:56.736818"
+          }
+        },
+        "s5": {
+          "symptom_text": "cvp 4-21",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "cvp 4-21",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "cvp 4-21",
+                  "units": [
+                    {
+                      "u_id": "u_34839",
+                      "u_unit": {
+                        "d_diagnosis": "cvp 17-19",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "cvp 17-19"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "cvp 4-21",
+                  "units": [
+                    {
+                      "u_id": "u_5037",
+                      "u_unit": {
+                        "d_diagnosis": "cvp=16-19",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "cvp=16-19"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:28:58.453444"
+          }
+        },
+        "s6": {
+          "symptom_text": "pt has a very dry nonproductive cough",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "pt has a very dry nonproductive cough",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "pt has a very dry nonproductive cough",
+                  "units": [
+                    {
+                      "u_id": "u_55684",
+                      "u_unit": {
+                        "d_diagnosis": "pt with weak non-productive cough",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "pt with weak non-productive cough"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "pt has a very dry nonproductive cough",
+                  "units": [
+                    {
+                      "u_id": "u_1734",
+                      "u_unit": {
+                        "d_diagnosis": "non-productive cough over this time period",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "non-productive cough over this time period"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "pt has a very dry nonproductive cough",
+                  "units": [
+                    {
+                      "u_id": "u_85559",
+                      "u_unit": {
+                        "d_diagnosis": "nonproductive dry cough",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "nonproductive dry cough"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:29:00.150929"
+          }
+        },
+        "s7": {
+          "symptom_text": "sudden pain in luq (nephrostomy site)in afternoon",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "sudden pain in luq (nephrostomy site)in afternoon",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:29:01.938309"
+          }
+        },
+        "s8": {
+          "symptom_text": "sbp 129-157",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "sbp 129-157",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "sbp 129-157",
+                  "units": [
+                    {
+                      "u_id": "u_20211",
+                      "u_unit": {
+                        "d_diagnosis": "sbp 109-176",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "sbp 109-176"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "sbp 129-157",
+                  "units": [
+                    {
+                      "u_id": "u_94904",
+                      "u_unit": {
+                        "d_diagnosis": "sbp 120",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "sbp 120"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "sbp 129-157",
+                  "units": [
+                    {
+                      "u_id": "u_55872",
+                      "u_unit": {
+                        "d_diagnosis": "sbp=92-128",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "sbp=92-128"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:29:03.669228"
+          }
+        },
+        "s9": {
+          "symptom_text": "swallowing small amounts of liquid in am...by afternoon unable to swallow liquids",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "swallowing small amounts of liquid in am...by afternoon unable to swallow liquids",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:29:05.385933"
+          }
+        },
+        "s10": {
+          "symptom_text": "patent foley draining clear yellow urine",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "patent foley draining clear yellow urine",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "patent foley draining clear yellow urine",
+                  "units": [
+                    {
+                      "u_id": "u_18019",
+                      "u_unit": {
+                        "d_diagnosis": "foley patent and draining clear, yellow urine",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "foley patent and draining clear, yellow urine"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "patent foley draining clear yellow urine",
+                  "units": [
+                    {
+                      "u_id": "u_97161",
+                      "u_unit": {
+                        "d_diagnosis": "foley patent and draining adequate amounts of clear, yellow urine",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "foley patent and draining adequate amounts of clear, yellow urine"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "patent foley draining clear yellow urine",
+                  "units": [
+                    {
+                      "u_id": "u_26328",
+                      "u_unit": {
+                        "d_diagnosis": "foley patent and draining clear, yellow urine. uo adequate",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "foley patent and draining clear, yellow urine. uo adequate"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:29:07.102618"
+          }
+        },
+        "s11": {
+          "symptom_text": "pt. denied pain all morning and reported sudden pain in luq (nephrostomy site)in afternoon",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "pt. denied pain all morning and reported sudden pain in luq (nephrostomy site)in afternoon",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:29:08.821555"
+          }
+        },
+        "s12": {
+          "symptom_text": "hr 85-100 nsr",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "hr 85-100 nsr",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "hr 85-100 nsr",
+                  "units": [
+                    {
+                      "u_id": "u_20174",
+                      "u_unit": {
+                        "d_diagnosis": "hr 85",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "hr 85"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "hr 85-100 nsr",
+                  "units": [
+                    {
+                      "u_id": "u_90988",
+                      "u_unit": {
+                        "d_diagnosis": "hr has been 70-90, nsr",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "hr has been 70-90, nsr"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:29:10.568508"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "nephrostomy site is patent and intact however, very tender to palpation",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "pt incontinent of moderate amounts of brown loose stool x 3",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "pt c/o constant urge to urinate",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "pt c/o constant urge to urinate",
+              "units": [
+                {
+                  "u_id": "u_85673",
+                  "u_unit": {
+                    "d_diagnosis": "pt voiding spontanteously, at times having difficulty with urinal",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "pt voiding spontanteously, at times having difficulty with urinal"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "very labored breathing",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "very labored breathing",
+              "units": [
+                {
+                  "u_id": "u_32040",
+                  "u_unit": {
+                    "d_diagnosis": "labored breathing",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "labored breathing"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "very labored breathing",
+              "units": [
+                {
+                  "u_id": "u_82657",
+                  "u_unit": {
+                    "d_diagnosis": "increased labored breathing",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "increased labored breathing"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "cvp 4-21",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "cvp 4-21",
+              "units": [
+                {
+                  "u_id": "u_34839",
+                  "u_unit": {
+                    "d_diagnosis": "cvp 17-19",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "cvp 17-19"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "cvp 4-21",
+              "units": [
+                {
+                  "u_id": "u_5037",
+                  "u_unit": {
+                    "d_diagnosis": "cvp=16-19",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "cvp=16-19"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "pt has a very dry nonproductive cough",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "pt has a very dry nonproductive cough",
+              "units": [
+                {
+                  "u_id": "u_55684",
+                  "u_unit": {
+                    "d_diagnosis": "pt with weak non-productive cough",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "pt with weak non-productive cough"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "pt has a very dry nonproductive cough",
+              "units": [
+                {
+                  "u_id": "u_1734",
+                  "u_unit": {
+                    "d_diagnosis": "non-productive cough over this time period",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "non-productive cough over this time period"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "pt has a very dry nonproductive cough",
+              "units": [
+                {
+                  "u_id": "u_85559",
+                  "u_unit": {
+                    "d_diagnosis": "nonproductive dry cough",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "nonproductive dry cough"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "sudden pain in luq (nephrostomy site)in afternoon",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "sbp 129-157",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "sbp 129-157",
+              "units": [
+                {
+                  "u_id": "u_20211",
+                  "u_unit": {
+                    "d_diagnosis": "sbp 109-176",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "sbp 109-176"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "sbp 129-157",
+              "units": [
+                {
+                  "u_id": "u_94904",
+                  "u_unit": {
+                    "d_diagnosis": "sbp 120",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "sbp 120"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "sbp 129-157",
+              "units": [
+                {
+                  "u_id": "u_55872",
+                  "u_unit": {
+                    "d_diagnosis": "sbp=92-128",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "sbp=92-128"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "swallowing small amounts of liquid in am...by afternoon unable to swallow liquids",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "patent foley draining clear yellow urine",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "patent foley draining clear yellow urine",
+              "units": [
+                {
+                  "u_id": "u_18019",
+                  "u_unit": {
+                    "d_diagnosis": "foley patent and draining clear, yellow urine",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "foley patent and draining clear, yellow urine"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "patent foley draining clear yellow urine",
+              "units": [
+                {
+                  "u_id": "u_97161",
+                  "u_unit": {
+                    "d_diagnosis": "foley patent and draining adequate amounts of clear, yellow urine",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "foley patent and draining adequate amounts of clear, yellow urine"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "patent foley draining clear yellow urine",
+              "units": [
+                {
+                  "u_id": "u_26328",
+                  "u_unit": {
+                    "d_diagnosis": "foley patent and draining clear, yellow urine. uo adequate",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "foley patent and draining clear, yellow urine. uo adequate"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "pt. denied pain all morning and reported sudden pain in luq (nephrostomy site)in afternoon",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "hr 85-100 nsr",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "hr 85-100 nsr",
+              "units": [
+                {
+                  "u_id": "u_20174",
+                  "u_unit": {
+                    "d_diagnosis": "hr 85",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "hr 85"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "hr 85-100 nsr",
+              "units": [
+                {
+                  "u_id": "u_90988",
+                  "u_unit": {
+                    "d_diagnosis": "hr has been 70-90, nsr",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "hr has been 70-90, nsr"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:29:10.568555"
+    }
+  },
+  "rag_enhanced": {
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Pelvis\",\n        \"Renal Hilum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Foley catheter drainage\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Upper esophageal sphincter\",\n        \"Lower esophageal sphincter\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Pelvis",
+            "Renal Hilum"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Kidney (Ren)",
+                "anatomicalLocations": [
+                  "Renal Pelvis",
+                  "Renal Hilum"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Urinary bladder (Vesica urinaria)",
+                "anatomicalLocations": [
+                  "Foley catheter drainage"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Esophagus",
+                "anatomicalLocations": [
+                  "Upper esophageal sphincter",
+                  "Lower esophageal sphincter"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Kidney (Ren)",
+        "anatomical_locations": [
+          "Renal Pelvis",
+          "Renal Hilum"
+        ],
+        "usage": {
+          "completion_tokens": 268,
+          "prompt_tokens": 3053,
+          "total_tokens": 3321,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "evaluation": {
+          "overall_score": 42.9,
+          "precision": 50.0,
+          "recall": 7.1,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 1/2 (50.0%); Recall(召回率): 1/14 (7.1%); 过度生成惩罚: 100.0%"
+        }
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Pelvis\",\n        \"Renal Calyces (Major & Minor)\",\n        \"Renal Hilum\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\",\n        \"Lung Lobes\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Esophagus\",\n      \"anatomicalLocations\": [\n        \"Esophageal lumen\",\n        \"Esophageal mucosa\",\n        \"Esophageal muscular layers\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Large intestine (Intestinum crassum)\",\n      \"anatomicalLocations\": [\n        \"Colon\",\n        \"Rectum\",\n        \"Sigmoid colon\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Urinary bladder (Vesica urinaria)\",\n      \"anatomicalLocations\": [\n        \"Bladder wall\",\n        \"Bladder trigone\",\n        \"Bladder neck\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Right Atrium (RA)\",\n        \"Left Ventricle (LV)\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Kidney (Ren)",
+          "anatomical_locations": [
+            "Renal Cortex",
+            "Renal Pelvis",
+            "Renal Calyces (Major & Minor)",
+            "Renal Hilum"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Kidney (Ren)",
+                "anatomicalLocations": [
+                  "Renal Cortex",
+                  "Renal Pelvis",
+                  "Renal Calyces (Major & Minor)",
+                  "Renal Hilum"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles",
+                  "Pleural Cavity",
+                  "Lung Lobes"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Esophagus",
+                "anatomicalLocations": [
+                  "Esophageal lumen",
+                  "Esophageal mucosa",
+                  "Esophageal muscular layers"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Large intestine (Intestinum crassum)",
+                "anatomicalLocations": [
+                  "Colon",
+                  "Rectum",
+                  "Sigmoid colon"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Urinary bladder (Vesica urinaria)",
+                "anatomicalLocations": [
+                  "Bladder wall",
+                  "Bladder trigone",
+                  "Bladder neck"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Right Atrium (RA)",
+                  "Left Ventricle (LV)",
+                  "Coronary Artery"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Kidney (Ren)",
+        "anatomical_locations": [
+          "Renal Cortex",
+          "Renal Pelvis",
+          "Renal Calyces (Major & Minor)",
+          "Renal Hilum"
+        ],
+        "usage": {
+          "completion_tokens": 362,
+          "prompt_tokens": 2879,
+          "total_tokens": 3241,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2368
+          },
+          "prompt_cache_hit_tokens": 2368,
+          "prompt_cache_miss_tokens": 511
+        },
+        "model": "deepseek-chat",
+        "evaluation": {
+          "overall_score": 45.7,
+          "precision": 50.0,
+          "recall": 14.3,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/14 (14.3%); 过度生成惩罚: 100.0%"
+        }
+      }
+    },
+    "evaluation": {
+      "report_id": "diagnostic_4060",
+      "total_symptoms": 14,
+      "valid_symptoms": 14,
+      "evaluation_timestamp": "2025-08-28T00:29:36.757381",
+      "symptom_evaluations": [
+        {
+          "symptom_id": "rag_enhanced_symptoms",
+          "symptom_text": "ivab; nephrostomy site is patent and intact however, very tender to palpation.tender; pt incontinent of moderate amounts of brown loose stool x 3; pt c/o constant urge to urinate; presept cath discontinued; very labored breathing; cvp 4-21; pt has a very dry nonproductive cough; sudden pain in luq (nephrostomy site)in afternoon; sbp 129-157; swallowing small amounts of liquid in am...by afternoon unable to swallow liquids; patent foley draining clear yellow urine; pt. denied pain all morning and reported sudden pain in luq (nephrostomy site)in afternoon; hr 85-100 nsr",
+          "expected_results": [
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Aortic Valve",
+                "Mitral Valve"
+              ]
+            },
+            {
+              "organName": "Kidney (Ren)",
+              "anatomicalLocations": [
+                "Renal Cortex",
+                "Renal Medulla (Pyramids)"
+              ]
+            },
+            {
+              "organName": "Large intestine (Intestinum crassum)",
+              "anatomicalLocations": [
+                "Colon",
+                "Rectum"
+              ]
+            },
+            {
+              "organName": "Kidney (Ren)",
+              "anatomicalLocations": [
+                "Renal Pelvis",
+                "Ureter"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Alveoli",
+                "Pleural Cavity"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Trachea",
+                "Bronchus"
+              ]
+            },
+            {
+              "organName": "Kidney (Ren)",
+              "anatomicalLocations": [
+                "Renal Cortex",
+                "Renal Pelvis"
+              ]
+            },
+            {
+              "organName": "Esophagus",
+              "anatomicalLocations": [
+                "Esophageal Body",
+                "Upper Esophageal Sphincter"
+              ]
+            }
+          ],
+          "api_evaluations": {
+            "moonshot": {
+              "overall_score": 42.9,
+              "precision": 50.0,
+              "recall": 7.1,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 1/2 (50.0%); Recall(召回率): 1/14 (7.1%); 过度生成惩罚: 100.0%"
+            },
+            "deepseek": {
+              "overall_score": 45.7,
+              "precision": 50.0,
+              "recall": 14.3,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 2/4 (50.0%); Recall(召回率): 2/14 (14.3%); 过度生成惩罚: 100.0%"
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total_api_calls": 2,
+        "successful_api_calls": 2,
+        "failed_api_calls": 0,
+        "average_overall_score": 44.3,
+        "average_precision": 50.0,
+        "average_recall": 10.7
+      }
+    }
+  },
+  "comparison": {
+    "baseline_score": 57.6,
+    "rag_enhanced_score": 44.3,
+    "improvement": -13.300000000000004
+  },
+  "processing_timestamp": "2025-08-28T00:29:36.757422"
+}

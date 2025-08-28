@@ -1,0 +1,1572 @@
+{
+  "report_number": "diagnostic_4066",
+  "timestamp": "2025-08-28T00:35:49.291963",
+  "baseline_method": {
+    "aggregated_symptoms": "delirium; mildly decompensated heart failure; end stage renal dialysis; rul consolidation with large effusion and rml/rll atelectasis; hypercarbic respiratory failure; history of hepatis-c; worsening rll infiltrate; poor mental status; high risk of aspiration; fever to 101.5; normal coronary arteries; respiratory distress; microhemorrhages; acute respiratory distress with increased o2 requirements",
+    "expected_results": [
+      {
+        "organName": "Brain",
+        "anatomicalLocations": [
+          "Cerebral Cortex",
+          "Thalamus"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Left Ventricle (LV)",
+          "Mitral Valve"
+        ]
+      },
+      {
+        "organName": "Kidney (Ren)",
+        "anatomicalLocations": [
+          "Renal Cortex",
+          "Renal Medulla (Pyramids)"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Right Upper Lobe",
+          "Right Middle Lobe",
+          "Right Lower Lobe"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Alveoli",
+          "Bronchioles"
+        ]
+      },
+      {
+        "organName": "Liver (Hepar)",
+        "anatomicalLocations": [
+          "Left Lobe of Liver",
+          "Right Lobe of Liver"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Right Lower Lobe",
+          "Alveoli"
+        ]
+      },
+      {
+        "organName": "Brain",
+        "anatomicalLocations": [
+          "Cerebral Cortex",
+          "Basal Ganglia"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Bronchus",
+          "Alveoli"
+        ]
+      },
+      {
+        "organName": "Artery (Arteria)",
+        "anatomicalLocations": [
+          "Coronary Artery",
+          "Left Anterior Descending Artery (LAD)"
+        ]
+      }
+    ],
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "success": true,
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Right Upper Lobe (RUL)",
+          "Right Middle Lobe (RML)",
+          "Right Lower Lobe (RLL)",
+          "Left Lower Lobe (LLL)",
+          "Alveoli",
+          "Pleural Cavity"
+        ],
+        "usage": {
+          "completion_tokens": 321,
+          "prompt_tokens": 2242,
+          "total_tokens": 2563,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "success": true,
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Alveoli",
+          "Bronchioles",
+          "Pleural Cavity",
+          "Pulmonary Capillaries"
+        ],
+        "usage": {
+          "completion_tokens": 301,
+          "prompt_tokens": 2107,
+          "total_tokens": 2408,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 1984
+          },
+          "prompt_cache_hit_tokens": 1984,
+          "prompt_cache_miss_tokens": 123
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 36.9,
+      "average_precision": 33.4,
+      "average_recall": 8.9
+    }
+  },
+  "rag_enhanced_method": {
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"delirium\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"mildly decompensated heart failure\",\n            \"primary_organ\": \"heart\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"end stage renal dialysis\",\n            \"primary_organ\": \"kidneys\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"rul consolidation with large effusion and rml/rll atelectasis\",\n            \"primary_organ\": \"lungs\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"hypercarbic respiratory failure\",\n            \"primary_organ\": \"lungs\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"history of hepatis-c\",\n            \"primary_organ\": \"liver\",\n            \"severity\": \"chronic\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"worsening rll infiltrate\",\n            \"primary_organ\": \"lungs\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s8\",\n            \"symptom_text\": \"poor mental status\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s9\",\n            \"symptom_text\": \"high risk of aspiration\",\n            \"primary_organ\": \"airway\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s10\",\n            \"symptom_text\": \"fever to 101.5\",\n            \"primary_organ\": \"entire body\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s11\",\n            \"symptom_text\": \"normal coronary arteries\",\n            \"primary_organ\": \"heart\",\n            \"severity\": \"none\"\n        },\n        {\n            \"symptom_id\": \"s12\",\n            \"symptom_text\": \"respiratory distress\",\n            \"primary_organ\": \"lungs\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s13\",\n            \"symptom_text\": \"microhemorrhages\",\n            \"primary_organ\": \"blood vessels\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s14\",\n            \"symptom_text\": \"acute respiratory distress with increased o2 requirements\",\n            \"primary_organ\": \"lungs\",\n            \"severity\": \"severe\"\n        }\n    ],\n    \"total_count\": 14,\n    \"reasoning\": \"The symptoms are split based on the primary organ system involved and the severity of the symptoms. Delirium and poor mental status are related to the brain, while heart failure and normal coronary arteries are related to the heart. End stage renal dialysis and worsening rll infiltrate are related to the kidneys and lungs respectively. Hypercarbic respiratory failure, respiratory distress, and acute respiratory distress with increased o2 requirements are all related to the lungs. History of hepatis-c is related to the liver. High risk of aspiration is related to the airway. Fever to 101.5 is a systemic symptom. Microhemorrhages are related to blood vessels.\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "delirium",
+              "primary_organ": "brain",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "mildly decompensated heart failure",
+              "primary_organ": "heart",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "end stage renal dialysis",
+              "primary_organ": "kidneys",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "rul consolidation with large effusion and rml/rll atelectasis",
+              "primary_organ": "lungs",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "hypercarbic respiratory failure",
+              "primary_organ": "lungs",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "history of hepatis-c",
+              "primary_organ": "liver",
+              "severity": "chronic"
+            },
+            {
+              "symptom_id": "s7",
+              "symptom_text": "worsening rll infiltrate",
+              "primary_organ": "lungs",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s8",
+              "symptom_text": "poor mental status",
+              "primary_organ": "brain",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s9",
+              "symptom_text": "high risk of aspiration",
+              "primary_organ": "airway",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s10",
+              "symptom_text": "fever to 101.5",
+              "primary_organ": "entire body",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s11",
+              "symptom_text": "normal coronary arteries",
+              "primary_organ": "heart",
+              "severity": "none"
+            },
+            {
+              "symptom_id": "s12",
+              "symptom_text": "respiratory distress",
+              "primary_organ": "lungs",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s13",
+              "symptom_text": "microhemorrhages",
+              "primary_organ": "blood vessels",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s14",
+              "symptom_text": "acute respiratory distress with increased o2 requirements",
+              "primary_organ": "lungs",
+              "severity": "severe"
+            }
+          ],
+          "total_count": 14,
+          "reasoning": "The symptoms are split based on the primary organ system involved and the severity of the symptoms. Delirium and poor mental status are related to the brain, while heart failure and normal coronary arteries are related to the heart. End stage renal dialysis and worsening rll infiltrate are related to the kidneys and lungs respectively. Hypercarbic respiratory failure, respiratory distress, and acute respiratory distress with increased o2 requirements are all related to the lungs. History of hepatis-c is related to the liver. High risk of aspiration is related to the airway. Fever to 101.5 is a systemic symptom. Microhemorrhages are related to blood vessels."
+        }
+      },
+      "timestamp": "2025-08-28T00:35:01.078374"
+    },
+    "rag_search_results": {
+      "success": true,
+      "total_searched": 14,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "delirium",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "delirium",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "delirium",
+                  "units": [
+                    {
+                      "u_id": "u_11019",
+                      "u_unit": {
+                        "d_diagnosis": "delirium",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "delirium"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:35:03.062090"
+          }
+        },
+        "s2": {
+          "symptom_text": "mildly decompensated heart failure",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "mildly decompensated heart failure",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "mildly decompensated heart failure",
+                  "units": [
+                    {
+                      "u_id": "u_81630",
+                      "u_unit": {
+                        "d_diagnosis": "mild cardiac failure",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "mild cardiac failure"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "mildly decompensated heart failure",
+                  "units": [
+                    {
+                      "u_id": "u_37370",
+                      "u_unit": {
+                        "d_diagnosis": "unchanged mild congestive heart failure",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "unchanged mild congestive heart failure"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "mildly decompensated heart failure",
+                  "units": [
+                    {
+                      "u_id": "u_19742",
+                      "u_unit": {
+                        "d_diagnosis": "congestive heart failure",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "congestive heart failure"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:35:04.784147"
+          }
+        },
+        "s3": {
+          "symptom_text": "end stage renal dialysis",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "end stage renal dialysis",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "end stage renal dialysis",
+                  "units": [
+                    {
+                      "u_id": "u_5588",
+                      "u_unit": {
+                        "d_diagnosis": "end-stage renal disease on dialysis",
+                        "o_organ": {
+                          "organName": "Kidney (Ren)",
+                          "anatomicalLocations": [
+                            "Kidney (Ren)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "end-stage renal disease on dialysis"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "end stage renal dialysis",
+                  "units": [
+                    {
+                      "u_id": "u_28394",
+                      "u_unit": {
+                        "d_diagnosis": "end stage renal disease on hemodialysis",
+                        "o_organ": {
+                          "organName": "Kidney (Ren)",
+                          "anatomicalLocations": [
+                            "Kidney (Ren)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "end stage renal disease on hemodialysis"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "end stage renal dialysis",
+                  "units": [
+                    {
+                      "u_id": "u_63643",
+                      "u_unit": {
+                        "d_diagnosis": "end-stage renal disease on hemodialysis",
+                        "o_organ": {
+                          "organName": "Kidney (Ren)",
+                          "anatomicalLocations": [
+                            "Kidney (Ren)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "end-stage renal disease on hemodialysis"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:35:06.537133"
+          }
+        },
+        "s4": {
+          "symptom_text": "rul consolidation with large effusion and rml/rll atelectasis",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "rul consolidation with large effusion and rml/rll atelectasis",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "rul consolidation with large effusion and rml/rll atelectasis",
+                  "units": [
+                    {
+                      "u_id": "u_4735",
+                      "u_unit": {
+                        "d_diagnosis": "rul consolidation",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "rul consolidation"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "rul consolidation with large effusion and rml/rll atelectasis",
+                  "units": [
+                    {
+                      "u_id": "u_83054",
+                      "u_unit": {
+                        "d_diagnosis": "rll opacity, lll collapse vs. atelectasis",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "rll opacity, lll collapse vs. atelectasis"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "rul consolidation with large effusion and rml/rll atelectasis",
+                  "units": [
+                    {
+                      "u_id": "u_5858",
+                      "u_unit": {
+                        "d_diagnosis": "a new rll consolidation",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "a new rll consolidation"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:35:08.685898"
+          }
+        },
+        "s5": {
+          "symptom_text": "hypercarbic respiratory failure",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "hypercarbic respiratory failure",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "hypercarbic respiratory failure",
+                  "units": [
+                    {
+                      "u_id": "u_36714",
+                      "u_unit": {
+                        "d_diagnosis": "hypercarbic respiratory failure",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "hypercarbic respiratory failure"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:35:10.394573"
+          }
+        },
+        "s6": {
+          "symptom_text": "history of hepatis-c",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "history of hepatis-c",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "history of hepatis-c",
+                  "units": [
+                    {
+                      "u_id": "u_51302",
+                      "u_unit": {
+                        "d_diagnosis": "hepatitis c",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "hepatitis c"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:35:12.194296"
+          }
+        },
+        "s7": {
+          "symptom_text": "worsening rll infiltrate",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "worsening rll infiltrate",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "worsening rll infiltrate",
+                  "units": [
+                    {
+                      "u_id": "u_74516",
+                      "u_unit": {
+                        "d_diagnosis": "worsening opacity of rll",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "worsening opacity of rll"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "worsening rll infiltrate",
+                  "units": [
+                    {
+                      "u_id": "u_35352",
+                      "u_unit": {
+                        "d_diagnosis": "rll infiltrate",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "rll infiltrate"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:35:13.955246"
+          }
+        },
+        "s8": {
+          "symptom_text": "poor mental status",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "poor mental status",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "poor mental status",
+                  "units": [
+                    {
+                      "u_id": "u_29118",
+                      "u_unit": {
+                        "d_diagnosis": "reduced mental status",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "reduced mental status"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "poor mental status",
+                  "units": [
+                    {
+                      "u_id": "u_16287",
+                      "u_unit": {
+                        "d_diagnosis": "decreased mental status",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "decreased mental status"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:35:15.739258"
+          }
+        },
+        "s9": {
+          "symptom_text": "high risk of aspiration",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "high risk of aspiration",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "high risk of aspiration",
+                  "units": [
+                    {
+                      "u_id": "u_75583",
+                      "u_unit": {
+                        "d_diagnosis": "risk of aspiration",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "risk of aspiration"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "high risk of aspiration",
+                  "units": [
+                    {
+                      "u_id": "u_79026",
+                      "u_unit": {
+                        "d_diagnosis": "aspiration risk",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "aspiration risk"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:35:17.525272"
+          }
+        },
+        "s10": {
+          "symptom_text": "fever to 101.5",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "fever to 101.5",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "fever to 101.5",
+                  "units": [
+                    {
+                      "u_id": "u_59500",
+                      "u_unit": {
+                        "d_diagnosis": "fever to 101.5",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "fever to 101.5"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "fever to 101.5",
+                  "units": [
+                    {
+                      "u_id": "u_17580",
+                      "u_unit": {
+                        "d_diagnosis": "fever to 101.9",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "fever to 101.9"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "fever to 101.5",
+                  "units": [
+                    {
+                      "u_id": "u_16304",
+                      "u_unit": {
+                        "d_diagnosis": "fever to 101.7",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "fever to 101.7"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:35:19.290584"
+          }
+        },
+        "s11": {
+          "symptom_text": "normal coronary arteries",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "normal coronary arteries",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "normal coronary arteries",
+                  "units": [
+                    {
+                      "u_id": "u_78372",
+                      "u_unit": {
+                        "d_diagnosis": "normal coronary arteries",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "normal coronary arteries"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:35:21.052451"
+          }
+        },
+        "s12": {
+          "symptom_text": "respiratory distress",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "respiratory distress",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "respiratory distress",
+                  "units": [
+                    {
+                      "u_id": "u_29807",
+                      "u_unit": {
+                        "d_diagnosis": "respiratory distress",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "respiratory distress"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:35:22.770310"
+          }
+        },
+        "s13": {
+          "symptom_text": "microhemorrhages",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "microhemorrhages",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "microhemorrhages",
+                  "units": [
+                    {
+                      "u_id": "u_53773",
+                      "u_unit": {
+                        "d_diagnosis": "microhematuria",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "microhematuria"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "microhemorrhages",
+                  "units": [
+                    {
+                      "u_id": "u_70417",
+                      "u_unit": {
+                        "d_diagnosis": "microscopic hematuria",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "microscopic hematuria"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:35:24.528722"
+          }
+        },
+        "s14": {
+          "symptom_text": "acute respiratory distress with increased o2 requirements",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "acute respiratory distress with increased o2 requirements",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "acute respiratory distress with increased o2 requirements",
+                  "units": [
+                    {
+                      "u_id": "u_4450",
+                      "u_unit": {
+                        "d_diagnosis": "acute respiratory distress",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "acute respiratory distress"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:35:26.242155"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "delirium",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "delirium",
+              "units": [
+                {
+                  "u_id": "u_11019",
+                  "u_unit": {
+                    "d_diagnosis": "delirium",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "delirium"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "mildly decompensated heart failure",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "mildly decompensated heart failure",
+              "units": [
+                {
+                  "u_id": "u_81630",
+                  "u_unit": {
+                    "d_diagnosis": "mild cardiac failure",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "mild cardiac failure"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "mildly decompensated heart failure",
+              "units": [
+                {
+                  "u_id": "u_37370",
+                  "u_unit": {
+                    "d_diagnosis": "unchanged mild congestive heart failure",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "unchanged mild congestive heart failure"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "mildly decompensated heart failure",
+              "units": [
+                {
+                  "u_id": "u_19742",
+                  "u_unit": {
+                    "d_diagnosis": "congestive heart failure",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "congestive heart failure"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "end stage renal dialysis",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "end stage renal dialysis",
+              "units": [
+                {
+                  "u_id": "u_5588",
+                  "u_unit": {
+                    "d_diagnosis": "end-stage renal disease on dialysis",
+                    "o_organ": {
+                      "organName": "Kidney (Ren)",
+                      "anatomicalLocations": [
+                        "Kidney (Ren)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "end-stage renal disease on dialysis"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "end stage renal dialysis",
+              "units": [
+                {
+                  "u_id": "u_28394",
+                  "u_unit": {
+                    "d_diagnosis": "end stage renal disease on hemodialysis",
+                    "o_organ": {
+                      "organName": "Kidney (Ren)",
+                      "anatomicalLocations": [
+                        "Kidney (Ren)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "end stage renal disease on hemodialysis"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "end stage renal dialysis",
+              "units": [
+                {
+                  "u_id": "u_63643",
+                  "u_unit": {
+                    "d_diagnosis": "end-stage renal disease on hemodialysis",
+                    "o_organ": {
+                      "organName": "Kidney (Ren)",
+                      "anatomicalLocations": [
+                        "Kidney (Ren)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "end-stage renal disease on hemodialysis"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "rul consolidation with large effusion and rml/rll atelectasis",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "rul consolidation with large effusion and rml/rll atelectasis",
+              "units": [
+                {
+                  "u_id": "u_4735",
+                  "u_unit": {
+                    "d_diagnosis": "rul consolidation",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "rul consolidation"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "rul consolidation with large effusion and rml/rll atelectasis",
+              "units": [
+                {
+                  "u_id": "u_83054",
+                  "u_unit": {
+                    "d_diagnosis": "rll opacity, lll collapse vs. atelectasis",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "rll opacity, lll collapse vs. atelectasis"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "rul consolidation with large effusion and rml/rll atelectasis",
+              "units": [
+                {
+                  "u_id": "u_5858",
+                  "u_unit": {
+                    "d_diagnosis": "a new rll consolidation",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "a new rll consolidation"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "hypercarbic respiratory failure",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "hypercarbic respiratory failure",
+              "units": [
+                {
+                  "u_id": "u_36714",
+                  "u_unit": {
+                    "d_diagnosis": "hypercarbic respiratory failure",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "hypercarbic respiratory failure"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "history of hepatis-c",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "history of hepatis-c",
+              "units": [
+                {
+                  "u_id": "u_51302",
+                  "u_unit": {
+                    "d_diagnosis": "hepatitis c",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "hepatitis c"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "worsening rll infiltrate",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "worsening rll infiltrate",
+              "units": [
+                {
+                  "u_id": "u_74516",
+                  "u_unit": {
+                    "d_diagnosis": "worsening opacity of rll",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "worsening opacity of rll"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "worsening rll infiltrate",
+              "units": [
+                {
+                  "u_id": "u_35352",
+                  "u_unit": {
+                    "d_diagnosis": "rll infiltrate",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "rll infiltrate"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "poor mental status",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "poor mental status",
+              "units": [
+                {
+                  "u_id": "u_29118",
+                  "u_unit": {
+                    "d_diagnosis": "reduced mental status",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "reduced mental status"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "poor mental status",
+              "units": [
+                {
+                  "u_id": "u_16287",
+                  "u_unit": {
+                    "d_diagnosis": "decreased mental status",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "decreased mental status"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "high risk of aspiration",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "high risk of aspiration",
+              "units": [
+                {
+                  "u_id": "u_75583",
+                  "u_unit": {
+                    "d_diagnosis": "risk of aspiration",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "risk of aspiration"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "high risk of aspiration",
+              "units": [
+                {
+                  "u_id": "u_79026",
+                  "u_unit": {
+                    "d_diagnosis": "aspiration risk",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "aspiration risk"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "fever to 101.5",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "fever to 101.5",
+              "units": [
+                {
+                  "u_id": "u_59500",
+                  "u_unit": {
+                    "d_diagnosis": "fever to 101.5",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "fever to 101.5"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "fever to 101.5",
+              "units": [
+                {
+                  "u_id": "u_17580",
+                  "u_unit": {
+                    "d_diagnosis": "fever to 101.9",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "fever to 101.9"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "fever to 101.5",
+              "units": [
+                {
+                  "u_id": "u_16304",
+                  "u_unit": {
+                    "d_diagnosis": "fever to 101.7",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "fever to 101.7"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "normal coronary arteries",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "normal coronary arteries",
+              "units": [
+                {
+                  "u_id": "u_78372",
+                  "u_unit": {
+                    "d_diagnosis": "normal coronary arteries",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "normal coronary arteries"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "respiratory distress",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "respiratory distress",
+              "units": [
+                {
+                  "u_id": "u_29807",
+                  "u_unit": {
+                    "d_diagnosis": "respiratory distress",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "respiratory distress"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "microhemorrhages",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "microhemorrhages",
+              "units": [
+                {
+                  "u_id": "u_53773",
+                  "u_unit": {
+                    "d_diagnosis": "microhematuria",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "microhematuria"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "microhemorrhages",
+              "units": [
+                {
+                  "u_id": "u_70417",
+                  "u_unit": {
+                    "d_diagnosis": "microscopic hematuria",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "microscopic hematuria"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "acute respiratory distress with increased o2 requirements",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "acute respiratory distress with increased o2 requirements",
+              "units": [
+                {
+                  "u_id": "u_4450",
+                  "u_unit": {
+                    "d_diagnosis": "acute respiratory distress",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "acute respiratory distress"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:35:26.242189"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "success": true,
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Diencephalon",
+          "Hypothalamus"
+        ],
+        "usage": {
+          "completion_tokens": 321,
+          "prompt_tokens": 2961,
+          "total_tokens": 3282,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "success": true,
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Right Lung",
+          "Alveoli",
+          "Bronchioles",
+          "Pleural Cavity"
+        ],
+        "usage": {
+          "completion_tokens": 300,
+          "prompt_tokens": 2777,
+          "total_tokens": 3077,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2368
+          },
+          "prompt_cache_hit_tokens": 2368,
+          "prompt_cache_miss_tokens": 409
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 40.2,
+      "average_precision": 41.6,
+      "average_recall": 8.9
+    }
+  },
+  "comparison": {
+    "baseline_score": 36.9,
+    "rag_enhanced_score": 40.2,
+    "improvement": 3.3000000000000043
+  }
+}

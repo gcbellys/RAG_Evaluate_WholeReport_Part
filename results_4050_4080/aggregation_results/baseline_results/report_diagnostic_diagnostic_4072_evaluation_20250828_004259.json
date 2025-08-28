@@ -1,0 +1,1518 @@
+{
+  "report_id": "diagnostic_4072",
+  "timestamp": "2025-08-28T00:42:59.325481",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4072_symptom_0",
+      "diagnosis": "lacerations were washed out and closed with suturing",
+      "expected_organs": [
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Mucosa",
+            "Tracheal Cartilage"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Carina"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Laryngeal inlet\",\n        \"Vocal cords\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Proximal trachea\",\n        \"Distal trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Frontal Lobe\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Larynx",
+            "anatomical_locations": [
+              "Laryngeal inlet",
+              "Vocal cords"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Larynx",
+                  "anatomicalLocations": [
+                    "Laryngeal inlet",
+                    "Vocal cords"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Proximal trachea",
+                    "Distal trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Frontal Lobe",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Larynx",
+          "anatomical_locations": [
+            "Laryngeal inlet",
+            "Vocal cords"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Frontal Lobe\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Larynx\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Pharynx\",\n      \"anatomicalLocations\": [\n        \"Pharynx\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Frontal Lobe",
+              "Temporal Lobe"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Frontal Lobe",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Larynx",
+                  "anatomicalLocations": [
+                    "Larynx"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Pharynx",
+                  "anatomicalLocations": [
+                    "Pharynx"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4072_symptom_1",
+      "diagnosis": "Continuous invasive mechanical ventilation for less than 96 consecutive hours",
+      "expected_organs": [
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Mucosa",
+            "Tracheal Cartilage"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Carina"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Laryngeal inlet\",\n        \"Vocal cords\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Proximal trachea\",\n        \"Distal trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Frontal Lobe\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Larynx",
+            "anatomical_locations": [
+              "Laryngeal inlet",
+              "Vocal cords"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Larynx",
+                  "anatomicalLocations": [
+                    "Laryngeal inlet",
+                    "Vocal cords"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Proximal trachea",
+                    "Distal trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Frontal Lobe",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Larynx",
+          "anatomical_locations": [
+            "Laryngeal inlet",
+            "Vocal cords"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Frontal Lobe\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Larynx\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Pharynx\",\n      \"anatomicalLocations\": [\n        \"Pharynx\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Frontal Lobe",
+              "Temporal Lobe"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Frontal Lobe",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Larynx",
+                  "anatomicalLocations": [
+                    "Larynx"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Pharynx",
+                  "anatomicalLocations": [
+                    "Pharynx"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4072_symptom_2",
+      "diagnosis": "placed on 1:1 sitters",
+      "expected_organs": [
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Mucosa",
+            "Tracheal Cartilage"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Carina"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Laryngeal inlet\",\n        \"Vocal cords\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Proximal trachea\",\n        \"Distal trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Frontal Lobe\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Larynx",
+            "anatomical_locations": [
+              "Laryngeal inlet",
+              "Vocal cords"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Larynx",
+                  "anatomicalLocations": [
+                    "Laryngeal inlet",
+                    "Vocal cords"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Proximal trachea",
+                    "Distal trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Frontal Lobe",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Larynx",
+          "anatomical_locations": [
+            "Laryngeal inlet",
+            "Vocal cords"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Frontal Lobe\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Larynx\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Pharynx\",\n      \"anatomicalLocations\": [\n        \"Pharynx\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Frontal Lobe",
+              "Temporal Lobe"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Frontal Lobe",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Larynx",
+                  "anatomicalLocations": [
+                    "Larynx"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Pharynx",
+                  "anatomicalLocations": [
+                    "Pharynx"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4072_symptom_3",
+      "diagnosis": "intubated",
+      "expected_organs": [
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Mucosa",
+            "Tracheal Cartilage"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Carina"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Laryngeal inlet\",\n        \"Vocal cords\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Proximal trachea\",\n        \"Distal trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Frontal Lobe\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Larynx",
+            "anatomical_locations": [
+              "Laryngeal inlet",
+              "Vocal cords"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Larynx",
+                  "anatomicalLocations": [
+                    "Laryngeal inlet",
+                    "Vocal cords"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Proximal trachea",
+                    "Distal trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Frontal Lobe",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Larynx",
+          "anatomical_locations": [
+            "Laryngeal inlet",
+            "Vocal cords"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Frontal Lobe\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Larynx\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Pharynx\",\n      \"anatomicalLocations\": [\n        \"Pharynx\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Frontal Lobe",
+              "Temporal Lobe"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Frontal Lobe",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Larynx",
+                  "anatomicalLocations": [
+                    "Larynx"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Pharynx",
+                  "anatomicalLocations": [
+                    "Pharynx"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4072_symptom_4",
+      "diagnosis": "extubated on the morning after his admission without any difficulties",
+      "expected_organs": [
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Mucosa",
+            "Tracheal Cartilage"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Carina"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Laryngeal inlet\",\n        \"Vocal cords\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Proximal trachea\",\n        \"Distal trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Frontal Lobe\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Larynx",
+            "anatomical_locations": [
+              "Laryngeal inlet",
+              "Vocal cords"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Larynx",
+                  "anatomicalLocations": [
+                    "Laryngeal inlet",
+                    "Vocal cords"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Proximal trachea",
+                    "Distal trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Frontal Lobe",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Larynx",
+          "anatomical_locations": [
+            "Laryngeal inlet",
+            "Vocal cords"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Frontal Lobe\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Larynx\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Pharynx\",\n      \"anatomicalLocations\": [\n        \"Pharynx\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Frontal Lobe",
+              "Temporal Lobe"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Frontal Lobe",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Larynx",
+                  "anatomicalLocations": [
+                    "Larynx"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Pharynx",
+                  "anatomicalLocations": [
+                    "Pharynx"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4072_symptom_5",
+      "diagnosis": "remained hemodynamically stable throughout his hospital stay",
+      "expected_organs": [
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Mucosa",
+            "Tracheal Cartilage"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Carina"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Laryngeal inlet\",\n        \"Vocal cords\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Proximal trachea\",\n        \"Distal trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Frontal Lobe\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Larynx",
+            "anatomical_locations": [
+              "Laryngeal inlet",
+              "Vocal cords"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Larynx",
+                  "anatomicalLocations": [
+                    "Laryngeal inlet",
+                    "Vocal cords"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Proximal trachea",
+                    "Distal trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Frontal Lobe",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Larynx",
+          "anatomical_locations": [
+            "Laryngeal inlet",
+            "Vocal cords"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Frontal Lobe\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Larynx\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Pharynx\",\n      \"anatomicalLocations\": [\n        \"Pharynx\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Frontal Lobe",
+              "Temporal Lobe"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Frontal Lobe",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Larynx",
+                  "anatomicalLocations": [
+                    "Larynx"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Pharynx",
+                  "anatomicalLocations": [
+                    "Pharynx"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4072_symptom_6",
+      "diagnosis": "Insertion of endotracheal tube",
+      "expected_organs": [
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Mucosa",
+            "Tracheal Cartilage"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Carina"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Laryngeal inlet\",\n        \"Vocal cords\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Proximal trachea\",\n        \"Distal trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Frontal Lobe\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Larynx",
+            "anatomical_locations": [
+              "Laryngeal inlet",
+              "Vocal cords"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Larynx",
+                  "anatomicalLocations": [
+                    "Laryngeal inlet",
+                    "Vocal cords"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Proximal trachea",
+                    "Distal trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Frontal Lobe",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Larynx",
+          "anatomical_locations": [
+            "Laryngeal inlet",
+            "Vocal cords"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Frontal Lobe\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Larynx\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Pharynx\",\n      \"anatomicalLocations\": [\n        \"Pharynx\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Frontal Lobe",
+              "Temporal Lobe"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Frontal Lobe",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Larynx",
+                  "anatomicalLocations": [
+                    "Larynx"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Pharynx",
+                  "anatomicalLocations": [
+                    "Pharynx"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4072_symptom_7",
+      "diagnosis": "increased combativeness and agitation",
+      "expected_organs": [
+        {
+          "organName": "Skin (Cutis)",
+          "anatomicalLocations": [
+            "Epidermis",
+            "Dermis"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Basal Ganglia"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Tracheal Bifurcation"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Mucosa",
+            "Tracheal Cartilage"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Aortic Valve",
+            "Mitral Valve"
+          ]
+        },
+        {
+          "organName": "Trachea",
+          "anatomicalLocations": [
+            "Tracheal Rings",
+            "Carina"
+          ]
+        },
+        {
+          "organName": "Brain",
+          "anatomicalLocations": [
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Laryngeal inlet\",\n        \"Vocal cords\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Proximal trachea\",\n        \"Distal trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Frontal Lobe\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Larynx",
+            "anatomical_locations": [
+              "Laryngeal inlet",
+              "Vocal cords"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Larynx",
+                  "anatomicalLocations": [
+                    "Laryngeal inlet",
+                    "Vocal cords"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Proximal trachea",
+                    "Distal trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Frontal Lobe",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Larynx",
+          "anatomical_locations": [
+            "Laryngeal inlet",
+            "Vocal cords"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Frontal Lobe\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Larynx\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Pharynx\",\n      \"anatomicalLocations\": [\n        \"Pharynx\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Brain",
+            "anatomical_locations": [
+              "Cerebral Cortex",
+              "Frontal Lobe",
+              "Temporal Lobe"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Brain",
+                  "anatomicalLocations": [
+                    "Cerebral Cortex",
+                    "Frontal Lobe",
+                    "Temporal Lobe"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Bronchi",
+                    "Alveoli",
+                    "Trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Trachea",
+                  "anatomicalLocations": [
+                    "Trachea"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Larynx",
+                  "anatomicalLocations": [
+                    "Larynx"
+                  ],
+                  "relevance": "Medium"
+                },
+                {
+                  "organName": "Pharynx",
+                  "anatomicalLocations": [
+                    "Pharynx"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

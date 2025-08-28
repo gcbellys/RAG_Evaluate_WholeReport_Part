@@ -1,0 +1,1200 @@
+{
+  "report_id": "diagnostic_4072",
+  "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4072.json",
+  "original_symptoms_count": 8,
+  "baseline": {
+    "aggregated_symptoms": "lacerations were washed out and closed with suturing; Continuous invasive mechanical ventilation for less than 96 consecutive hours; placed on 1:1 sitters; intubated; extubated on the morning after his admission without any difficulties; remained hemodynamically stable throughout his hospital stay; Insertion of endotracheal tube; increased combativeness and agitation",
+    "expected_results": [
+      {
+        "organName": "Skin (Cutis)",
+        "anatomicalLocations": [
+          "Epidermis",
+          "Dermis"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Alveoli",
+          "Bronchioles"
+        ]
+      },
+      {
+        "organName": "Brain",
+        "anatomicalLocations": [
+          "Frontal Lobe",
+          "Basal Ganglia"
+        ]
+      },
+      {
+        "organName": "Trachea",
+        "anatomicalLocations": [
+          "Tracheal Rings",
+          "Tracheal Bifurcation"
+        ]
+      },
+      {
+        "organName": "Trachea",
+        "anatomicalLocations": [
+          "Tracheal Mucosa",
+          "Tracheal Cartilage"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Aortic Valve",
+          "Mitral Valve"
+        ]
+      },
+      {
+        "organName": "Trachea",
+        "anatomicalLocations": [
+          "Tracheal Rings",
+          "Carina"
+        ]
+      },
+      {
+        "organName": "Brain",
+        "anatomicalLocations": [
+          "Frontal Lobe",
+          "Temporal Lobe"
+        ]
+      }
+    ],
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Laryngeal inlet\",\n        \"Vocal cords\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Proximal trachea\",\n        \"Distal trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Frontal Lobe\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Larynx",
+          "anatomical_locations": [
+            "Laryngeal inlet",
+            "Vocal cords"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Larynx",
+                "anatomicalLocations": [
+                  "Laryngeal inlet",
+                  "Vocal cords"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Trachea",
+                "anatomicalLocations": [
+                  "Proximal trachea",
+                  "Distal trachea"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Bronchi",
+                  "Alveoli"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Frontal Lobe",
+                  "Temporal Lobe"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Larynx",
+        "anatomical_locations": [
+          "Laryngeal inlet",
+          "Vocal cords"
+        ],
+        "usage": {
+          "completion_tokens": 212,
+          "prompt_tokens": 2228,
+          "total_tokens": 2440,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "evaluation": {
+          "overall_score": 20.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 0/2 (0.0%); Recall(召回率): 0/14 (0.0%); 过度生成惩罚: 100.0%"
+        }
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Frontal Lobe\",\n        \"Temporal Lobe\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Larynx\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Pharynx\",\n      \"anatomicalLocations\": [\n        \"Pharynx\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Frontal Lobe",
+            "Temporal Lobe"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Cerebral Cortex",
+                  "Frontal Lobe",
+                  "Temporal Lobe"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Bronchi",
+                  "Alveoli",
+                  "Trachea"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Trachea",
+                "anatomicalLocations": [
+                  "Trachea"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Larynx",
+                "anatomicalLocations": [
+                  "Larynx"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Pharynx",
+                "anatomicalLocations": [
+                  "Pharynx"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Frontal Lobe",
+          "Temporal Lobe"
+        ],
+        "usage": {
+          "completion_tokens": 227,
+          "prompt_tokens": 2097,
+          "total_tokens": 2324,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 1984
+          },
+          "prompt_cache_hit_tokens": 1984,
+          "prompt_cache_miss_tokens": 113
+        },
+        "model": "deepseek-chat",
+        "evaluation": {
+          "overall_score": 52.4,
+          "precision": 66.7,
+          "recall": 14.3,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/14 (14.3%); 过度生成惩罚: 100.0%"
+        }
+      }
+    },
+    "evaluation": {
+      "report_id": "diagnostic_4072",
+      "total_symptoms": 8,
+      "valid_symptoms": 8,
+      "evaluation_timestamp": "2025-08-28T00:42:14.777741",
+      "symptom_evaluations": [
+        {
+          "symptom_id": "aggregated_symptoms",
+          "symptom_text": "lacerations were washed out and closed with suturing; Continuous invasive mechanical ventilation for less than 96 consecutive hours; placed on 1:1 sitters; intubated; extubated on the morning after his admission without any difficulties; remained hemodynamically stable throughout his hospital stay; Insertion of endotracheal tube; increased combativeness and agitation",
+          "expected_results": [
+            {
+              "organName": "Skin (Cutis)",
+              "anatomicalLocations": [
+                "Epidermis",
+                "Dermis"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Alveoli",
+                "Bronchioles"
+              ]
+            },
+            {
+              "organName": "Brain",
+              "anatomicalLocations": [
+                "Frontal Lobe",
+                "Basal Ganglia"
+              ]
+            },
+            {
+              "organName": "Trachea",
+              "anatomicalLocations": [
+                "Tracheal Rings",
+                "Tracheal Bifurcation"
+              ]
+            },
+            {
+              "organName": "Trachea",
+              "anatomicalLocations": [
+                "Tracheal Mucosa",
+                "Tracheal Cartilage"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Aortic Valve",
+                "Mitral Valve"
+              ]
+            },
+            {
+              "organName": "Trachea",
+              "anatomicalLocations": [
+                "Tracheal Rings",
+                "Carina"
+              ]
+            },
+            {
+              "organName": "Brain",
+              "anatomicalLocations": [
+                "Frontal Lobe",
+                "Temporal Lobe"
+              ]
+            }
+          ],
+          "api_evaluations": {
+            "moonshot": {
+              "overall_score": 20.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 0/2 (0.0%); Recall(召回率): 0/14 (0.0%); 过度生成惩罚: 100.0%"
+            },
+            "deepseek": {
+              "overall_score": 52.4,
+              "precision": 66.7,
+              "recall": 14.3,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/14 (14.3%); 过度生成惩罚: 100.0%"
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total_api_calls": 2,
+        "successful_api_calls": 2,
+        "failed_api_calls": 0,
+        "average_overall_score": 36.2,
+        "average_precision": 33.4,
+        "average_recall": 7.2
+      }
+    }
+  },
+  "rag_search": {
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"lacerations were washed out and closed with suturing\",\n            \"primary_organ\": \"skin\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"Continuous invasive mechanical ventilation for less than 96 consecutive hours\",\n            \"primary_organ\": \"respiratory system\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"placed on 1:1 sitters\",\n            \"primary_organ\": \"none\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"intubated\",\n            \"primary_organ\": \"respiratory system\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"extubated on the morning after his admission without any difficulties\",\n            \"primary_organ\": \"respiratory system\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"remained hemodynamically stable throughout his hospital stay\",\n            \"primary_organ\": \"cardiovascular system\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"Insertion of endotracheal tube\",\n            \"primary_organ\": \"respiratory system\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s8\",\n            \"symptom_text\": \"increased combativeness and agitation\",\n            \"primary_organ\": \"nervous system\",\n            \"severity\": \"moderate\"\n        }\n    ],\n    \"total_count\": 8,\n    \"reasoning\": \"The provided text describes a series of medical interventions and patient conditions. I have split them into individual symptoms based on the distinct medical actions and patient states mentioned. Each symptom is associated with a primary organ system affected and an estimated severity level.\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "lacerations were washed out and closed with suturing",
+              "primary_organ": "skin",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "Continuous invasive mechanical ventilation for less than 96 consecutive hours",
+              "primary_organ": "respiratory system",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "placed on 1:1 sitters",
+              "primary_organ": "none",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "intubated",
+              "primary_organ": "respiratory system",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "extubated on the morning after his admission without any difficulties",
+              "primary_organ": "respiratory system",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "remained hemodynamically stable throughout his hospital stay",
+              "primary_organ": "cardiovascular system",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s7",
+              "symptom_text": "Insertion of endotracheal tube",
+              "primary_organ": "respiratory system",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s8",
+              "symptom_text": "increased combativeness and agitation",
+              "primary_organ": "nervous system",
+              "severity": "moderate"
+            }
+          ],
+          "total_count": 8,
+          "reasoning": "The provided text describes a series of medical interventions and patient conditions. I have split them into individual symptoms based on the distinct medical actions and patient states mentioned. Each symptom is associated with a primary organ system affected and an estimated severity level."
+        }
+      },
+      "timestamp": "2025-08-28T00:42:24.565533"
+    },
+    "search_results": {
+      "success": true,
+      "total_searched": 8,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "lacerations were washed out and closed with suturing",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "lacerations were washed out and closed with suturing",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:42:26.456847"
+          }
+        },
+        "s2": {
+          "symptom_text": "Continuous invasive mechanical ventilation for less than 96 consecutive hours",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "Continuous invasive mechanical ventilation for less than 96 consecutive hours",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "Continuous invasive mechanical ventilation for less than 96 consecutive hours",
+                  "units": [
+                    {
+                      "u_id": "u_3564",
+                      "u_unit": {
+                        "d_diagnosis": "Continuous invasive mechanical ventilation for less than 96 consecutive hours",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "Continuous invasive mechanical ventilation for less than 96 consecutive hours"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:42:28.288335"
+          }
+        },
+        "s3": {
+          "symptom_text": "placed on 1:1 sitters",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "placed on 1:1 sitters",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:42:30.010210"
+          }
+        },
+        "s4": {
+          "symptom_text": "intubated",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "intubated",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "intubated",
+                  "units": [
+                    {
+                      "u_id": "u_68404",
+                      "u_unit": {
+                        "d_diagnosis": "intubated",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "intubated"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:42:31.808396"
+          }
+        },
+        "s5": {
+          "symptom_text": "extubated on the morning after his admission without any difficulties",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "extubated on the morning after his admission without any difficulties",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "extubated on the morning after his admission without any difficulties",
+                  "units": [
+                    {
+                      "u_id": "u_23399",
+                      "u_unit": {
+                        "d_diagnosis": "extubated without complications",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "extubated without complications"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "extubated on the morning after his admission without any difficulties",
+                  "units": [
+                    {
+                      "u_id": "u_47709",
+                      "u_unit": {
+                        "d_diagnosis": "extubated afternoon, with no complications",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "extubated afternoon, with no complications"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:42:33.947032"
+          }
+        },
+        "s6": {
+          "symptom_text": "remained hemodynamically stable throughout his hospital stay",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "remained hemodynamically stable throughout his hospital stay",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "remained hemodynamically stable throughout his hospital stay",
+                  "units": [
+                    {
+                      "u_id": "u_50480",
+                      "u_unit": {
+                        "d_diagnosis": "he remained hemodynamically stable throughout his course",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "he remained hemodynamically stable throughout his course"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "remained hemodynamically stable throughout his hospital stay",
+                  "units": [
+                    {
+                      "u_id": "u_98830",
+                      "u_unit": {
+                        "d_diagnosis": "remained hemodynamically stable throughout her admission",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "remained hemodynamically stable throughout her admission"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "remained hemodynamically stable throughout his hospital stay",
+                  "units": [
+                    {
+                      "u_id": "u_86540",
+                      "u_unit": {
+                        "d_diagnosis": "he remained hemodynamically stable",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "he remained hemodynamically stable"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:42:35.711190"
+          }
+        },
+        "s7": {
+          "symptom_text": "Insertion of endotracheal tube",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "Insertion of endotracheal tube",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "Insertion of endotracheal tube",
+                  "units": [
+                    {
+                      "u_id": "u_33279",
+                      "u_unit": {
+                        "d_diagnosis": "Insertion of endotracheal tube",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "Insertion of endotracheal tube"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:42:37.541440"
+          }
+        },
+        "s8": {
+          "symptom_text": "increased combativeness and agitation",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "increased combativeness and agitation",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "increased combativeness and agitation",
+                  "units": [
+                    {
+                      "u_id": "u_84131",
+                      "u_unit": {
+                        "d_diagnosis": "agitated and combative",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "agitated and combative"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "increased combativeness and agitation",
+                  "units": [
+                    {
+                      "u_id": "u_33305",
+                      "u_unit": {
+                        "d_diagnosis": "became agitated and combative",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "became agitated and combative"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "increased combativeness and agitation",
+                  "units": [
+                    {
+                      "u_id": "u_76142",
+                      "u_unit": {
+                        "d_diagnosis": "increasing agitation",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "increasing agitation"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:42:39.334391"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "lacerations were washed out and closed with suturing",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "Continuous invasive mechanical ventilation for less than 96 consecutive hours",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "Continuous invasive mechanical ventilation for less than 96 consecutive hours",
+              "units": [
+                {
+                  "u_id": "u_3564",
+                  "u_unit": {
+                    "d_diagnosis": "Continuous invasive mechanical ventilation for less than 96 consecutive hours",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "Continuous invasive mechanical ventilation for less than 96 consecutive hours"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "placed on 1:1 sitters",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "intubated",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "intubated",
+              "units": [
+                {
+                  "u_id": "u_68404",
+                  "u_unit": {
+                    "d_diagnosis": "intubated",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "intubated"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "extubated on the morning after his admission without any difficulties",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "extubated on the morning after his admission without any difficulties",
+              "units": [
+                {
+                  "u_id": "u_23399",
+                  "u_unit": {
+                    "d_diagnosis": "extubated without complications",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "extubated without complications"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "extubated on the morning after his admission without any difficulties",
+              "units": [
+                {
+                  "u_id": "u_47709",
+                  "u_unit": {
+                    "d_diagnosis": "extubated afternoon, with no complications",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "extubated afternoon, with no complications"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "remained hemodynamically stable throughout his hospital stay",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "remained hemodynamically stable throughout his hospital stay",
+              "units": [
+                {
+                  "u_id": "u_50480",
+                  "u_unit": {
+                    "d_diagnosis": "he remained hemodynamically stable throughout his course",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "he remained hemodynamically stable throughout his course"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "remained hemodynamically stable throughout his hospital stay",
+              "units": [
+                {
+                  "u_id": "u_98830",
+                  "u_unit": {
+                    "d_diagnosis": "remained hemodynamically stable throughout her admission",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "remained hemodynamically stable throughout her admission"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "remained hemodynamically stable throughout his hospital stay",
+              "units": [
+                {
+                  "u_id": "u_86540",
+                  "u_unit": {
+                    "d_diagnosis": "he remained hemodynamically stable",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "he remained hemodynamically stable"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "Insertion of endotracheal tube",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "Insertion of endotracheal tube",
+              "units": [
+                {
+                  "u_id": "u_33279",
+                  "u_unit": {
+                    "d_diagnosis": "Insertion of endotracheal tube",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "Insertion of endotracheal tube"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "increased combativeness and agitation",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "increased combativeness and agitation",
+              "units": [
+                {
+                  "u_id": "u_84131",
+                  "u_unit": {
+                    "d_diagnosis": "agitated and combative",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "agitated and combative"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "increased combativeness and agitation",
+              "units": [
+                {
+                  "u_id": "u_33305",
+                  "u_unit": {
+                    "d_diagnosis": "became agitated and combative",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "became agitated and combative"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "increased combativeness and agitation",
+              "units": [
+                {
+                  "u_id": "u_76142",
+                  "u_unit": {
+                    "d_diagnosis": "increasing agitation",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "increasing agitation"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:42:39.334426"
+    }
+  },
+  "rag_enhanced": {
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Laryngeal inlet\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Proximal trachea\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Frontal Lobe\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Larynx",
+          "anatomical_locations": [
+            "Laryngeal inlet"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Larynx",
+                "anatomicalLocations": [
+                  "Laryngeal inlet"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Trachea",
+                "anatomicalLocations": [
+                  "Proximal trachea"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Bronchi"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Frontal Lobe"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Larynx",
+        "anatomical_locations": [
+          "Laryngeal inlet"
+        ],
+        "usage": {
+          "completion_tokens": 186,
+          "prompt_tokens": 2885,
+          "total_tokens": 3071,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "evaluation": {
+          "overall_score": 20.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 0/1 (0.0%); Recall(召回率): 0/14 (0.0%); 过度生成惩罚: 100.0%"
+        }
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Bronchi\",\n        \"Alveoli\",\n        \"Trachea\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Frontal Lobe\",\n        \"Temporal Lobe\",\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Trachea\",\n      \"anatomicalLocations\": [\n        \"Trachea\",\n        \"Tracheal Rings\",\n        \"Carina\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Larynx\",\n      \"anatomicalLocations\": [\n        \"Vocal Cords\",\n        \"Glottis\",\n        \"Epiglottis\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Skin (Cutis)\",\n      \"anatomicalLocations\": [\n        \"Epidermis\",\n        \"Dermis\",\n        \"Subcutaneous Tissue\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Lung (Pulmo)",
+          "anatomical_locations": [
+            "Bronchi",
+            "Alveoli",
+            "Trachea",
+            "Pleural Cavity"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Bronchi",
+                  "Alveoli",
+                  "Trachea",
+                  "Pleural Cavity"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Cerebral Cortex",
+                  "Frontal Lobe",
+                  "Temporal Lobe",
+                  "Brainstem"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Trachea",
+                "anatomicalLocations": [
+                  "Trachea",
+                  "Tracheal Rings",
+                  "Carina"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Larynx",
+                "anatomicalLocations": [
+                  "Vocal Cords",
+                  "Glottis",
+                  "Epiglottis"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Skin (Cutis)",
+                "anatomicalLocations": [
+                  "Epidermis",
+                  "Dermis",
+                  "Subcutaneous Tissue"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Lung (Pulmo)",
+        "anatomical_locations": [
+          "Bronchi",
+          "Alveoli",
+          "Trachea",
+          "Pleural Cavity"
+        ],
+        "usage": {
+          "completion_tokens": 281,
+          "prompt_tokens": 2721,
+          "total_tokens": 3002,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2368
+          },
+          "prompt_cache_hit_tokens": 2368,
+          "prompt_cache_miss_tokens": 353
+        },
+        "model": "deepseek-chat",
+        "evaluation": {
+          "overall_score": 32.9,
+          "precision": 25.0,
+          "recall": 7.1,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 1/4 (25.0%); Recall(召回率): 1/14 (7.1%); 过度生成惩罚: 100.0%"
+        }
+      }
+    },
+    "evaluation": {
+      "report_id": "diagnostic_4072",
+      "total_symptoms": 8,
+      "valid_symptoms": 8,
+      "evaluation_timestamp": "2025-08-28T00:42:59.325425",
+      "symptom_evaluations": [
+        {
+          "symptom_id": "rag_enhanced_symptoms",
+          "symptom_text": "lacerations were washed out and closed with suturing; Continuous invasive mechanical ventilation for less than 96 consecutive hours; placed on 1:1 sitters; intubated; extubated on the morning after his admission without any difficulties; remained hemodynamically stable throughout his hospital stay; Insertion of endotracheal tube; increased combativeness and agitation",
+          "expected_results": [
+            {
+              "organName": "Skin (Cutis)",
+              "anatomicalLocations": [
+                "Epidermis",
+                "Dermis"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Alveoli",
+                "Bronchioles"
+              ]
+            },
+            {
+              "organName": "Brain",
+              "anatomicalLocations": [
+                "Frontal Lobe",
+                "Basal Ganglia"
+              ]
+            },
+            {
+              "organName": "Trachea",
+              "anatomicalLocations": [
+                "Tracheal Rings",
+                "Tracheal Bifurcation"
+              ]
+            },
+            {
+              "organName": "Trachea",
+              "anatomicalLocations": [
+                "Tracheal Mucosa",
+                "Tracheal Cartilage"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Aortic Valve",
+                "Mitral Valve"
+              ]
+            },
+            {
+              "organName": "Trachea",
+              "anatomicalLocations": [
+                "Tracheal Rings",
+                "Carina"
+              ]
+            },
+            {
+              "organName": "Brain",
+              "anatomicalLocations": [
+                "Frontal Lobe",
+                "Temporal Lobe"
+              ]
+            }
+          ],
+          "api_evaluations": {
+            "moonshot": {
+              "overall_score": 20.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 0/1 (0.0%); Recall(召回率): 0/14 (0.0%); 过度生成惩罚: 100.0%"
+            },
+            "deepseek": {
+              "overall_score": 32.9,
+              "precision": 25.0,
+              "recall": 7.1,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 1/4 (25.0%); Recall(召回率): 1/14 (7.1%); 过度生成惩罚: 100.0%"
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total_api_calls": 2,
+        "successful_api_calls": 2,
+        "failed_api_calls": 0,
+        "average_overall_score": 26.4,
+        "average_precision": 12.5,
+        "average_recall": 3.5
+      }
+    }
+  },
+  "comparison": {
+    "baseline_score": 36.2,
+    "rag_enhanced_score": 26.4,
+    "improvement": -9.800000000000004
+  },
+  "processing_timestamp": "2025-08-28T00:42:59.325481"
+}

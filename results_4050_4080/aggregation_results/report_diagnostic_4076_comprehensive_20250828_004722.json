@@ -1,0 +1,635 @@
+{
+  "report_id": "diagnostic_4076",
+  "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4076.json",
+  "original_symptoms_count": 13,
+  "baseline": {
+    "aggregated_symptoms": "leukocytosis; hypotension during dialysis; moderate, fixed perfusion defect in the inferior wall. mild global hypokinesis; dyspnea/sob on admission; obese, soft, non-tender/non-distender, +bs. no hepatosplenomegaly; occasionally develops bruises on her knee from the apparatus; used to ambulate with a walker and but has recently been unable to use it due to the pain; pain developed over the course of 7 weeks and progressively got worse over time; u/s neg for dvt; minimal crackels and wheesing, poor inspiratory effort; ef 40%; mod la/ra dilation; mild lvh/mild global hk (most prominent in the septum); 1+ mr. mod pulmonary htn; rrr, nl s1 and s2, no s3/s4, no m,r,g; developed nausea/vomiting following taking the dicloxacillin",
+    "expected_results": [
+      {
+        "organName": "Kidney (Ren)",
+        "anatomicalLocations": [
+          "Renal Cortex",
+          "Renal Pelvis"
+        ]
+      },
+      {
+        "organName": "Kidney (Ren)",
+        "anatomicalLocations": [
+          "Renal Cortex",
+          "Renal Medulla (Pyramids)"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Right Ventricle (RV)",
+          "Inferior Wall of Left Ventricle"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Left Ventricle (LV)",
+          "Mitral Valve"
+        ]
+      },
+      {
+        "organName": "Pancreas",
+        "anatomicalLocations": [
+          "Head of the Pancreas",
+          "Uncinate Process"
+        ]
+      },
+      {
+        "organName": "Skin (Cutis)",
+        "anatomicalLocations": [
+          "Epidermis",
+          "Dermis"
+        ]
+      },
+      {
+        "organName": "Skin (Cutis)",
+        "anatomicalLocations": [
+          "Dermis",
+          "Subcutaneous Tissue"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Aortic Valve",
+          "Mitral Valve"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Alveoli",
+          "Bronchioles"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Left Ventricle (LV)",
+          "Interventricular Septum (IVS)"
+        ]
+      },
+      {
+        "organName": "Stomach (Gaster)",
+        "anatomicalLocations": [
+          "Gastric Mucosa",
+          "Gastric Antrum"
+        ]
+      }
+    ],
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Mitral Valve\",\n        \"Left Atrium (LA)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleura\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Mitral Valve",
+            "Left Atrium (LA)"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Mitral Valve",
+                  "Left Atrium (LA)"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles",
+                  "Pleura"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Kidney (Ren)",
+                "anatomicalLocations": [
+                  "Renal Cortex",
+                  "Renal Medulla (Pyramids)"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Mitral Valve",
+          "Left Atrium (LA)"
+        ],
+        "usage": {
+          "completion_tokens": 186,
+          "prompt_tokens": 2353,
+          "total_tokens": 2539,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "evaluation": {
+          "overall_score": 51.1,
+          "precision": 66.7,
+          "recall": 11.1,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/18 (11.1%); 过度生成惩罚: 100.0%"
+        }
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Right Ventricle (RV)\",\n        \"Interventricular Septum (IVS)\",\n        \"Mitral Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Bone marrow (Medulla ossium)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)",
+            "Interventricular Septum (IVS)",
+            "Mitral Valve"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Right Ventricle (RV)",
+                  "Interventricular Septum (IVS)",
+                  "Mitral Valve"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Pulmonary Capillaries",
+                  "Bronchioles"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Kidney (Ren)",
+                "anatomicalLocations": [
+                  "Renal Cortex",
+                  "Renal Medulla (Pyramids)",
+                  "Renal Pelvis"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Bone marrow (Medulla ossium)",
+                "anatomicalLocations": [],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Right Ventricle (RV)",
+          "Interventricular Septum (IVS)",
+          "Mitral Valve"
+        ],
+        "usage": {
+          "completion_tokens": 229,
+          "prompt_tokens": 2214,
+          "total_tokens": 2443,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 1984
+          },
+          "prompt_cache_hit_tokens": 1984,
+          "prompt_cache_miss_tokens": 230
+        },
+        "model": "deepseek-chat",
+        "evaluation": {
+          "overall_score": 68.9,
+          "precision": 100.0,
+          "recall": 22.2,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 4/4 (100.0%); Recall(召回率): 4/18 (22.2%); 过度生成惩罚: 100.0%"
+        }
+      }
+    },
+    "evaluation": {
+      "report_id": "diagnostic_4076",
+      "total_symptoms": 13,
+      "valid_symptoms": 13,
+      "evaluation_timestamp": "2025-08-28T00:46:38.749043",
+      "symptom_evaluations": [
+        {
+          "symptom_id": "aggregated_symptoms",
+          "symptom_text": "leukocytosis; hypotension during dialysis; moderate, fixed perfusion defect in the inferior wall. mild global hypokinesis; dyspnea/sob on admission; obese, soft, non-tender/non-distender, +bs. no hepatosplenomegaly; occasionally develops bruises on her knee from the apparatus; used to ambulate with a walker and but has recently been unable to use it due to the pain; pain developed over the course of 7 weeks and progressively got worse over time; u/s neg for dvt; minimal crackels and wheesing, poor inspiratory effort; ef 40%; mod la/ra dilation; mild lvh/mild global hk (most prominent in the septum); 1+ mr. mod pulmonary htn; rrr, nl s1 and s2, no s3/s4, no m,r,g; developed nausea/vomiting following taking the dicloxacillin",
+          "expected_results": [
+            {
+              "organName": "Kidney (Ren)",
+              "anatomicalLocations": [
+                "Renal Cortex",
+                "Renal Pelvis"
+              ]
+            },
+            {
+              "organName": "Kidney (Ren)",
+              "anatomicalLocations": [
+                "Renal Cortex",
+                "Renal Medulla (Pyramids)"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Right Ventricle (RV)",
+                "Inferior Wall of Left Ventricle"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Left Ventricle (LV)",
+                "Mitral Valve"
+              ]
+            },
+            {
+              "organName": "Pancreas",
+              "anatomicalLocations": [
+                "Head of the Pancreas",
+                "Uncinate Process"
+              ]
+            },
+            {
+              "organName": "Skin (Cutis)",
+              "anatomicalLocations": [
+                "Epidermis",
+                "Dermis"
+              ]
+            },
+            {
+              "organName": "Skin (Cutis)",
+              "anatomicalLocations": [
+                "Dermis",
+                "Subcutaneous Tissue"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Aortic Valve",
+                "Mitral Valve"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Alveoli",
+                "Bronchioles"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Left Ventricle (LV)",
+                "Interventricular Septum (IVS)"
+              ]
+            },
+            {
+              "organName": "Stomach (Gaster)",
+              "anatomicalLocations": [
+                "Gastric Mucosa",
+                "Gastric Antrum"
+              ]
+            }
+          ],
+          "api_evaluations": {
+            "moonshot": {
+              "overall_score": 51.1,
+              "precision": 66.7,
+              "recall": 11.1,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/18 (11.1%); 过度生成惩罚: 100.0%"
+            },
+            "deepseek": {
+              "overall_score": 68.9,
+              "precision": 100.0,
+              "recall": 22.2,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 4/4 (100.0%); Recall(召回率): 4/18 (22.2%); 过度生成惩罚: 100.0%"
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total_api_calls": 2,
+        "successful_api_calls": 2,
+        "failed_api_calls": 0,
+        "average_overall_score": 60.0,
+        "average_precision": 83.3,
+        "average_recall": 16.6
+      }
+    }
+  },
+  "rag_search": {
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"leukocytosis\",\n            \"primary_organ\": \"血液系统\",\n            \"severity\": \"中度\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"hypotension during dialysis\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"中度\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"moderate, fixed perfusion defect in the inferior wall\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"中度\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"mild global hypokinesis\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"轻度\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"dyspnea/sob on admission\",\n            \"primary_organ\": \"呼吸系统\",\n            \"severity\": \"轻度\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"obese, soft, non-tender/non-distender, +bs\",\n            \"primary_organ\": \"消化系统\",\n            \"severity\": \"轻度\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"no hepatosplenomegaly\",\n            \"primary_organ\": \"消化系统\",\n            \"severity\": \"无\"\n        },\n        {\n            \"symptom_id\": \"s8\",\n            \"symptom_text\": \"occasionally develops bruises on her knee from the apparatus\",\n            \"primary_organ\": \"皮肤\",\n            \"severity\": \"轻度\"\n        },\n        {\n            \"symptom_id\": \"s9\",\n            \"symptom_text\": \"used to ambulate with a walker and but has recently been unable to use it due to the pain\",\n            \"primary_organ\": \"运动系统\",\n            \"severity\": \"中度\"\n        },\n        {\n            \"symptom_id\": \"s10\",\n            \"symptom_text\": \"pain developed over the course of 7 weeks and progressively got worse over time\",\n            \"primary_organ\": \"运动系统\",\n            \"severity\": \"中度\"\n        },\n        {\n            \"symptom_id\": \"s11\",\n            \"symptom_text\": \"u/s neg for dvt\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"无\"\n        },\n        {\n            \"symptom_id\": \"s12\",\n            \"symptom_text\": \"minimal crackles and wheezing, poor inspiratory effort\",\n            \"primary_organ\": \"呼吸系统\",\n            \"severity\": \"轻度\"\n        },\n        {\n            \"symptom_id\": \"s13\",\n            \"symptom_text\": \"ef 40%\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"中度\"\n        },\n        {\n            \"symptom_id\": \"s14\",\n            \"symptom_text\": \"mod la/ra dilation\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"中度\"\n        },\n        {\n            \"symptom_id\": \"s15\",\n            \"symptom_text\": \"mild lvh/mild global hk (most prominent in the septum)\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"轻度\"\n        },\n        {\n            \"symptom_id\": \"s16\",\n            \"symptom_text\": \"1+ mr\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"轻度\"\n        },\n        {\n            \"symptom_id\": \"s17\",\n            \"symptom_text\": \"mod pulmonary htn\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"中度\"\n        },\n        {\n            \"symptom_id\": \"s18\",\n            \"symptom_text\": \"rrr, nl s1 and s2, no s3/s4, no m,r,g\",\n            \"primary_organ\": \"循环系统\",\n            \"severity\": \"无\"\n        },\n        {\n            \"symptom_id\": \"s19\",\n            \"symptom_text\": \"developed nausea/vomiting following taking the dicloxacillin\",\n            \"primary_",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": []
+      },
+      "timestamp": "2025-08-28T00:47:01.908853"
+    },
+    "search_results": {
+      "success": true,
+      "total_searched": 0,
+      "symptom_rag_results": {},
+      "rag_search_output": [],
+      "timestamp": "2025-08-28T00:47:01.908870"
+    }
+  },
+  "rag_enhanced": {
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Left Atrium (LA)\",\n        \"Interventricular Septum (IVS)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [],\n      \"relevance\": \"Low\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Left Atrium (LA)",
+            "Interventricular Septum (IVS)"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Left Atrium (LA)",
+                  "Interventricular Septum (IVS)"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles",
+                  "Pleura"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Kidney (Ren)",
+                "anatomicalLocations": [
+                  "Renal Cortex",
+                  "Renal Medulla"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Liver (Hepar)",
+                "anatomicalLocations": [],
+                "relevance": "Low"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Left Atrium (LA)",
+          "Interventricular Septum (IVS)"
+        ],
+        "usage": {
+          "completion_tokens": 221,
+          "prompt_tokens": 2749,
+          "total_tokens": 2970,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "evaluation": {
+          "overall_score": 51.1,
+          "precision": 66.7,
+          "recall": 11.1,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/18 (11.1%); 过度生成惩罚: 100.0%"
+        }
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Interventricular Septum (IVS)\",\n        \"Mitral Valve\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Pelvis\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Liver (Hepar)\",\n      \"anatomicalLocations\": [\n        \"Hepatic Artery\",\n        \"Portal Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Ventricle (LV)",
+            "Interventricular Septum (IVS)",
+            "Mitral Valve",
+            "Coronary Artery"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Interventricular Septum (IVS)",
+                  "Mitral Valve",
+                  "Coronary Artery"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Pulmonary Capillaries",
+                  "Bronchioles"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Kidney (Ren)",
+                "anatomicalLocations": [
+                  "Renal Cortex",
+                  "Renal Medulla (Pyramids)",
+                  "Renal Pelvis"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Liver (Hepar)",
+                "anatomicalLocations": [
+                  "Hepatic Artery",
+                  "Portal Vein"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Ventricle (LV)",
+          "Interventricular Septum (IVS)",
+          "Mitral Valve",
+          "Coronary Artery"
+        ],
+        "usage": {
+          "completion_tokens": 241,
+          "prompt_tokens": 2603,
+          "total_tokens": 2844,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2368
+          },
+          "prompt_cache_hit_tokens": 2368,
+          "prompt_cache_miss_tokens": 235
+        },
+        "model": "deepseek-chat",
+        "evaluation": {
+          "overall_score": 56.7,
+          "precision": 75.0,
+          "recall": 16.7,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 3/4 (75.0%); Recall(召回率): 3/18 (16.7%); 过度生成惩罚: 100.0%"
+        }
+      }
+    },
+    "evaluation": {
+      "report_id": "diagnostic_4076",
+      "total_symptoms": 13,
+      "valid_symptoms": 13,
+      "evaluation_timestamp": "2025-08-28T00:47:22.187119",
+      "symptom_evaluations": [
+        {
+          "symptom_id": "rag_enhanced_symptoms",
+          "symptom_text": "leukocytosis; hypotension during dialysis; moderate, fixed perfusion defect in the inferior wall. mild global hypokinesis; dyspnea/sob on admission; obese, soft, non-tender/non-distender, +bs. no hepatosplenomegaly; occasionally develops bruises on her knee from the apparatus; used to ambulate with a walker and but has recently been unable to use it due to the pain; pain developed over the course of 7 weeks and progressively got worse over time; u/s neg for dvt; minimal crackels and wheesing, poor inspiratory effort; ef 40%; mod la/ra dilation; mild lvh/mild global hk (most prominent in the septum); 1+ mr. mod pulmonary htn; rrr, nl s1 and s2, no s3/s4, no m,r,g; developed nausea/vomiting following taking the dicloxacillin",
+          "expected_results": [
+            {
+              "organName": "Kidney (Ren)",
+              "anatomicalLocations": [
+                "Renal Cortex",
+                "Renal Pelvis"
+              ]
+            },
+            {
+              "organName": "Kidney (Ren)",
+              "anatomicalLocations": [
+                "Renal Cortex",
+                "Renal Medulla (Pyramids)"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Right Ventricle (RV)",
+                "Inferior Wall of Left Ventricle"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Left Ventricle (LV)",
+                "Mitral Valve"
+              ]
+            },
+            {
+              "organName": "Pancreas",
+              "anatomicalLocations": [
+                "Head of the Pancreas",
+                "Uncinate Process"
+              ]
+            },
+            {
+              "organName": "Skin (Cutis)",
+              "anatomicalLocations": [
+                "Epidermis",
+                "Dermis"
+              ]
+            },
+            {
+              "organName": "Skin (Cutis)",
+              "anatomicalLocations": [
+                "Dermis",
+                "Subcutaneous Tissue"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Aortic Valve",
+                "Mitral Valve"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Alveoli",
+                "Bronchioles"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Left Ventricle (LV)",
+                "Interventricular Septum (IVS)"
+              ]
+            },
+            {
+              "organName": "Stomach (Gaster)",
+              "anatomicalLocations": [
+                "Gastric Mucosa",
+                "Gastric Antrum"
+              ]
+            }
+          ],
+          "api_evaluations": {
+            "moonshot": {
+              "overall_score": 51.1,
+              "precision": 66.7,
+              "recall": 11.1,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/18 (11.1%); 过度生成惩罚: 100.0%"
+            },
+            "deepseek": {
+              "overall_score": 56.7,
+              "precision": 75.0,
+              "recall": 16.7,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 3/4 (75.0%); Recall(召回率): 3/18 (16.7%); 过度生成惩罚: 100.0%"
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total_api_calls": 2,
+        "successful_api_calls": 2,
+        "failed_api_calls": 0,
+        "average_overall_score": 53.9,
+        "average_precision": 70.8,
+        "average_recall": 13.9
+      }
+    }
+  },
+  "comparison": {
+    "baseline_score": 60.0,
+    "rag_enhanced_score": 53.9,
+    "improvement": -6.100000000000001
+  },
+  "processing_timestamp": "2025-08-28T00:47:22.187162"
+}

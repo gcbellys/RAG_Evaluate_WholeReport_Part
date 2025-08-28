@@ -1,0 +1,696 @@
+{
+  "report_id": "diagnostic_4065",
+  "timestamp": "2025-08-28T00:34:22.419482",
+  "symptoms": [
+    {
+      "symptom_id": "diagnostic_4065_symptom_0",
+      "diagnosis": "vasoactive drips were weaned to off",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Atrium (LA)",
+            "Right Atrium (RA)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Atrium (LA)\",\n        \"Right Atrium (RA)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Atrium (LA)",
+              "Right Atrium (RA)",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Atrium (LA)",
+                    "Right Atrium (RA)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Atrium (LA)",
+            "Right Atrium (RA)",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Right Atrium (RA)\",\n        \"Left Atrium (LA)\",\n        \"Interatrial Septum (IAS)\",\n        \"Sinoatrial Node (SA Node)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Right Atrium (RA)",
+              "Left Atrium (LA)",
+              "Interatrial Septum (IAS)",
+              "Sinoatrial Node (SA Node)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Right Atrium (RA)",
+                    "Left Atrium (LA)",
+                    "Interatrial Septum (IAS)",
+                    "Sinoatrial Node (SA Node)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Right Atrium (RA)",
+            "Left Atrium (LA)",
+            "Interatrial Septum (IAS)",
+            "Sinoatrial Node (SA Node)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4065_symptom_1",
+      "diagnosis": "converted to nsr",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Atrium (LA)",
+            "Right Atrium (RA)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Atrium (LA)\",\n        \"Right Atrium (RA)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Atrium (LA)",
+              "Right Atrium (RA)",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Atrium (LA)",
+                    "Right Atrium (RA)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Atrium (LA)",
+            "Right Atrium (RA)",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Right Atrium (RA)\",\n        \"Left Atrium (LA)\",\n        \"Interatrial Septum (IAS)\",\n        \"Sinoatrial Node (SA Node)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Right Atrium (RA)",
+              "Left Atrium (LA)",
+              "Interatrial Septum (IAS)",
+              "Sinoatrial Node (SA Node)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Right Atrium (RA)",
+                    "Left Atrium (LA)",
+                    "Interatrial Septum (IAS)",
+                    "Sinoatrial Node (SA Node)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Right Atrium (RA)",
+            "Left Atrium (LA)",
+            "Interatrial Septum (IAS)",
+            "Sinoatrial Node (SA Node)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4065_symptom_2",
+      "diagnosis": "continued to have bursts of atrial fibrillation",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Atrium (LA)",
+            "Right Atrium (RA)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Atrium (LA)\",\n        \"Right Atrium (RA)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Atrium (LA)",
+              "Right Atrium (RA)",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Atrium (LA)",
+                    "Right Atrium (RA)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Atrium (LA)",
+            "Right Atrium (RA)",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Right Atrium (RA)\",\n        \"Left Atrium (LA)\",\n        \"Interatrial Septum (IAS)\",\n        \"Sinoatrial Node (SA Node)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Right Atrium (RA)",
+              "Left Atrium (LA)",
+              "Interatrial Septum (IAS)",
+              "Sinoatrial Node (SA Node)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Right Atrium (RA)",
+                    "Left Atrium (LA)",
+                    "Interatrial Septum (IAS)",
+                    "Sinoatrial Node (SA Node)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Right Atrium (RA)",
+            "Left Atrium (LA)",
+            "Interatrial Septum (IAS)",
+            "Sinoatrial Node (SA Node)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4065_symptom_3",
+      "diagnosis": "had several episodes of atrial fibrillation",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Atrium (LA)",
+            "Right Atrium (RA)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Atrium (LA)\",\n        \"Right Atrium (RA)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Atrium (LA)",
+              "Right Atrium (RA)",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Atrium (LA)",
+                    "Right Atrium (RA)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Atrium (LA)",
+            "Right Atrium (RA)",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Right Atrium (RA)\",\n        \"Left Atrium (LA)\",\n        \"Interatrial Septum (IAS)\",\n        \"Sinoatrial Node (SA Node)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Right Atrium (RA)",
+              "Left Atrium (LA)",
+              "Interatrial Septum (IAS)",
+              "Sinoatrial Node (SA Node)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Right Atrium (RA)",
+                    "Left Atrium (LA)",
+                    "Interatrial Septum (IAS)",
+                    "Sinoatrial Node (SA Node)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Right Atrium (RA)",
+            "Left Atrium (LA)",
+            "Interatrial Septum (IAS)",
+            "Sinoatrial Node (SA Node)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4065_symptom_4",
+      "diagnosis": "remained hemodynamically stable",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Atrium (LA)",
+            "Right Atrium (RA)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Atrium (LA)\",\n        \"Right Atrium (RA)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Atrium (LA)",
+              "Right Atrium (RA)",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Atrium (LA)",
+                    "Right Atrium (RA)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Atrium (LA)",
+            "Right Atrium (RA)",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Right Atrium (RA)\",\n        \"Left Atrium (LA)\",\n        \"Interatrial Septum (IAS)\",\n        \"Sinoatrial Node (SA Node)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Right Atrium (RA)",
+              "Left Atrium (LA)",
+              "Interatrial Septum (IAS)",
+              "Sinoatrial Node (SA Node)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Right Atrium (RA)",
+                    "Left Atrium (LA)",
+                    "Interatrial Septum (IAS)",
+                    "Sinoatrial Node (SA Node)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Right Atrium (RA)",
+            "Left Atrium (LA)",
+            "Interatrial Septum (IAS)",
+            "Sinoatrial Node (SA Node)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    },
+    {
+      "symptom_id": "diagnostic_4065_symptom_5",
+      "diagnosis": "was extubated",
+      "expected_organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ]
+        },
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Atrium (LA)",
+            "Right Atrium (RA)"
+          ]
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Trachea",
+            "Bronchus"
+          ]
+        }
+      ],
+      "api_responses": {
+        "moonshot": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Atrium (LA)\",\n        \"Right Atrium (RA)\",\n        \"Aortic Valve\"\n      ],\n      \"relevance\": \"High\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Left Atrium (LA)",
+              "Right Atrium (RA)",
+              "Aortic Valve"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Left Atrium (LA)",
+                    "Right Atrium (RA)",
+                    "Aortic Valve"
+                  ],
+                  "relevance": "High"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Atrium (LA)",
+            "Right Atrium (RA)",
+            "Aortic Valve"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        },
+        "deepseek": {
+          "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Right Atrium (RA)\",\n        \"Left Atrium (LA)\",\n        \"Interatrial Septum (IAS)\",\n        \"Sinoatrial Node (SA Node)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+          "parsed_data": {
+            "organ_name": "Heart (Cor)",
+            "anatomical_locations": [
+              "Right Atrium (RA)",
+              "Left Atrium (LA)",
+              "Interatrial Septum (IAS)",
+              "Sinoatrial Node (SA Node)"
+            ],
+            "full_response": {
+              "organs": [
+                {
+                  "organName": "Heart (Cor)",
+                  "anatomicalLocations": [
+                    "Right Atrium (RA)",
+                    "Left Atrium (LA)",
+                    "Interatrial Septum (IAS)",
+                    "Sinoatrial Node (SA Node)"
+                  ],
+                  "relevance": "High"
+                },
+                {
+                  "organName": "Lung (Pulmo)",
+                  "anatomicalLocations": [
+                    "Alveoli",
+                    "Bronchioles",
+                    "Pleural Cavity"
+                  ],
+                  "relevance": "Medium"
+                }
+              ]
+            }
+          },
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Right Atrium (RA)",
+            "Left Atrium (LA)",
+            "Interatrial Septum (IAS)",
+            "Sinoatrial Node (SA Node)"
+          ],
+          "evaluation": {
+            "overall_score": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "overgeneration_penalty": 0.0,
+            "detailed_analysis": ""
+          }
+        }
+      }
+    }
+  ]
+}

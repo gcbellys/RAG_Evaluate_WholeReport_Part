@@ -1,0 +1,785 @@
+[
+  {
+    "report_number": "diagnostic_4058",
+    "method": "baseline_aggregation",
+    "method_name": "症状聚合基线方法",
+    "aggregated_symptoms": "he had some tachypnea w/wheezes and sputum production; he was kept intubated overnight due to a difficult intubation; his x-ray revealed right upper lobe opacity; it was not posiblt to abtain an appropriate sputum specimen for culture; he has remained hemodynamically stable",
+    "expected_results": {
+      "organ": "Bronchus, Heart (Cor), Larynx, Lung (Pulmo)",
+      "a_position": "Bronchioles, Epiglottis, Left Ventricle (LV), Main Bronchi, Right Lung, Right Ventricle (RV), Superior Lobe, Terminal Bronchioles, Vocal Cords"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Lung (Pulmo)",
+          "a_position": "Right Lung, Superior Lobe, Alveoli"
+        },
+        "api_eva": {
+          "overall_score": 55.6,
+          "precision": 66.7,
+          "recall": 22.2,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Lung (Pulmo)",
+          "a_position": "Right Lung, Superior Lobe, Alveoli, Bronchioles"
+        },
+        "api_eva": {
+          "overall_score": 63.3,
+          "precision": 75.0,
+          "recall": 33.3,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 59.5,
+      "average_precision": 70.8,
+      "average_recall": 27.8
+    }
+  },
+  {
+    "report_number": "diagnostic_4058",
+    "method": "rag_enhanced_aggregation",
+    "method_name": "增强症状聚合方法",
+    "aggregated_symptoms": "he had some tachypnea w/wheezes and sputum production; he was kept intubated overnight due to a difficult intubation; his x-ray revealed right upper lobe opacity; it was not posiblt to abtain an appropriate sputum specimen for culture; he has remained hemodynamically stable",
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"tachypnea\",\n            \"primary_organ\": \"lungs\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"wheezes\",\n            \"primary_organ\": \"lungs\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"sputum production\",\n            \"primary_organ\": \"lungs\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"difficult intubation\",\n            \"primary_organ\": \"airway\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"right upper lobe opacity\",\n            \"primary_organ\": \"lungs\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"unable to obtain an appropriate sputum specimen for culture\",\n            \"primary_organ\": \"lungs\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"hemodynamically stable\",\n            \"primary_organ\": \"cardiovascular system\",\n            \"severity\": \"mild\"\n        }\n    ],\n    \"total_count\": 7,\n    \"reasoning\": \"The provided text describes a patient with multiple symptoms related to respiratory issues and intubation. Tachypnea, wheezes, and sputum production are all symptoms related to lung function. Difficult intubation is related to the airway. Right upper lobe opacity is a radiological finding indicating a potential lung issue. The inability to obtain a sputum specimen for culture is related to the respiratory system. Hemodynamically stable indicates the patient's cardiovascular system is functioning well. Each symptom is considered separately based on the organ system it primarily affects and the severity implied by the context.\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "tachypnea",
+              "primary_organ": "lungs",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "wheezes",
+              "primary_organ": "lungs",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "sputum production",
+              "primary_organ": "lungs",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "difficult intubation",
+              "primary_organ": "airway",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "right upper lobe opacity",
+              "primary_organ": "lungs",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "unable to obtain an appropriate sputum specimen for culture",
+              "primary_organ": "lungs",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s7",
+              "symptom_text": "hemodynamically stable",
+              "primary_organ": "cardiovascular system",
+              "severity": "mild"
+            }
+          ],
+          "total_count": 7,
+          "reasoning": "The provided text describes a patient with multiple symptoms related to respiratory issues and intubation. Tachypnea, wheezes, and sputum production are all symptoms related to lung function. Difficult intubation is related to the airway. Right upper lobe opacity is a radiological finding indicating a potential lung issue. The inability to obtain a sputum specimen for culture is related to the respiratory system. Hemodynamically stable indicates the patient's cardiovascular system is functioning well. Each symptom is considered separately based on the organ system it primarily affects and the severity implied by the context."
+        }
+      },
+      "timestamp": "2025-08-28T00:26:25.735322"
+    },
+    "rag_search_results": {
+      "success": true,
+      "total_searched": 7,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "tachypnea",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "tachypnea",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "tachypnea",
+                  "units": [
+                    {
+                      "u_id": "u_38436",
+                      "u_unit": {
+                        "d_diagnosis": "tachypnea",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "tachypnea"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:26:27.506771"
+          }
+        },
+        "s2": {
+          "symptom_text": "wheezes",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "wheezes",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "wheezes",
+                  "units": [
+                    {
+                      "u_id": "u_68224",
+                      "u_unit": {
+                        "d_diagnosis": "wheezes",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "wheezes"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "wheezes",
+                  "units": [
+                    {
+                      "u_id": "u_21614",
+                      "u_unit": {
+                        "d_diagnosis": "wheezes on exam",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "wheezes on exam"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:26:29.192334"
+          }
+        },
+        "s3": {
+          "symptom_text": "sputum production",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "sputum production",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "sputum production",
+                  "units": [
+                    {
+                      "u_id": "u_45216",
+                      "u_unit": {
+                        "d_diagnosis": "sputum production",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "sputum production"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "sputum production",
+                  "units": [
+                    {
+                      "u_id": "u_77440",
+                      "u_unit": {
+                        "d_diagnosis": "increased sputum production",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "increased sputum production"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "sputum production",
+                  "units": [
+                    {
+                      "u_id": "u_92157",
+                      "u_unit": {
+                        "d_diagnosis": "increase production sputum",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "increase production sputum"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:26:30.918423"
+          }
+        },
+        "s4": {
+          "symptom_text": "difficult intubation",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "difficult intubation",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "difficult intubation",
+                  "units": [
+                    {
+                      "u_id": "u_33509",
+                      "u_unit": {
+                        "d_diagnosis": "this patient is a difficult intubation",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "this patient is a difficult intubation"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "difficult intubation",
+                  "units": [
+                    {
+                      "u_id": "u_47957",
+                      "u_unit": {
+                        "d_diagnosis": "respiratory failure intubation",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "respiratory failure intubation"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "difficult intubation",
+                  "units": [
+                    {
+                      "u_id": "u_54936",
+                      "u_unit": {
+                        "d_diagnosis": "intubated orally, but this was difficult given tracheomalacia",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "intubated orally, but this was difficult given tracheomalacia"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:26:32.630098"
+          }
+        },
+        "s5": {
+          "symptom_text": "right upper lobe opacity",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "right upper lobe opacity",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "right upper lobe opacity",
+                  "units": [
+                    {
+                      "u_id": "u_23471",
+                      "u_unit": {
+                        "d_diagnosis": "opacity in right lower lobe",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "opacity in right lower lobe"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "right upper lobe opacity",
+                  "units": [
+                    {
+                      "u_id": "u_9651",
+                      "u_unit": {
+                        "d_diagnosis": "small focal opacity in right upper lobe",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "small focal opacity in right upper lobe"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "right upper lobe opacity",
+                  "units": [
+                    {
+                      "u_id": "u_48464",
+                      "u_unit": {
+                        "d_diagnosis": "right upper lobe lung mass",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "right upper lobe lung mass"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:26:34.333081"
+          }
+        },
+        "s6": {
+          "symptom_text": "unable to obtain an appropriate sputum specimen for culture",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "unable to obtain an appropriate sputum specimen for culture",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:26:36.032530"
+          }
+        },
+        "s7": {
+          "symptom_text": "hemodynamically stable",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "hemodynamically stable",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "hemodynamically stable",
+                  "units": [
+                    {
+                      "u_id": "u_60425",
+                      "u_unit": {
+                        "d_diagnosis": "hemodynamically stable",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "hemodynamically stable"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:26:38.173513"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "tachypnea",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "tachypnea",
+              "units": [
+                {
+                  "u_id": "u_38436",
+                  "u_unit": {
+                    "d_diagnosis": "tachypnea",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "tachypnea"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "wheezes",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "wheezes",
+              "units": [
+                {
+                  "u_id": "u_68224",
+                  "u_unit": {
+                    "d_diagnosis": "wheezes",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "wheezes"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "wheezes",
+              "units": [
+                {
+                  "u_id": "u_21614",
+                  "u_unit": {
+                    "d_diagnosis": "wheezes on exam",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "wheezes on exam"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "sputum production",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "sputum production",
+              "units": [
+                {
+                  "u_id": "u_45216",
+                  "u_unit": {
+                    "d_diagnosis": "sputum production",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "sputum production"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "sputum production",
+              "units": [
+                {
+                  "u_id": "u_77440",
+                  "u_unit": {
+                    "d_diagnosis": "increased sputum production",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "increased sputum production"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "sputum production",
+              "units": [
+                {
+                  "u_id": "u_92157",
+                  "u_unit": {
+                    "d_diagnosis": "increase production sputum",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "increase production sputum"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "difficult intubation",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "difficult intubation",
+              "units": [
+                {
+                  "u_id": "u_33509",
+                  "u_unit": {
+                    "d_diagnosis": "this patient is a difficult intubation",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "this patient is a difficult intubation"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "difficult intubation",
+              "units": [
+                {
+                  "u_id": "u_47957",
+                  "u_unit": {
+                    "d_diagnosis": "respiratory failure intubation",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "respiratory failure intubation"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "difficult intubation",
+              "units": [
+                {
+                  "u_id": "u_54936",
+                  "u_unit": {
+                    "d_diagnosis": "intubated orally, but this was difficult given tracheomalacia",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "intubated orally, but this was difficult given tracheomalacia"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "right upper lobe opacity",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "right upper lobe opacity",
+              "units": [
+                {
+                  "u_id": "u_23471",
+                  "u_unit": {
+                    "d_diagnosis": "opacity in right lower lobe",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "opacity in right lower lobe"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "right upper lobe opacity",
+              "units": [
+                {
+                  "u_id": "u_9651",
+                  "u_unit": {
+                    "d_diagnosis": "small focal opacity in right upper lobe",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "small focal opacity in right upper lobe"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "right upper lobe opacity",
+              "units": [
+                {
+                  "u_id": "u_48464",
+                  "u_unit": {
+                    "d_diagnosis": "right upper lobe lung mass",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "right upper lobe lung mass"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "unable to obtain an appropriate sputum specimen for culture",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "hemodynamically stable",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "hemodynamically stable",
+              "units": [
+                {
+                  "u_id": "u_60425",
+                  "u_unit": {
+                    "d_diagnosis": "hemodynamically stable",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "hemodynamically stable"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:26:38.173557"
+    },
+    "expected_results": {
+      "organ": "Bronchus, Heart (Cor), Larynx, Lung (Pulmo)",
+      "a_position": "Bronchioles, Epiglottis, Left Ventricle (LV), Main Bronchi, Right Lung, Right Ventricle (RV), Superior Lobe, Terminal Bronchioles, Vocal Cords"
+    },
+    "api_responses": [
+      {
+        "api_number": 1,
+        "api_name": "moonshot",
+        "api_response": {
+          "organ": "Lung (Pulmo)",
+          "a_position": "Right Lung, Superior Lobe, Alveoli, Bronchi"
+        },
+        "api_eva": {
+          "overall_score": 48.9,
+          "precision": 50.0,
+          "recall": 22.2,
+          "overgeneration_penalty": 100.0
+        }
+      },
+      {
+        "api_number": 2,
+        "api_name": "deepseek",
+        "api_response": {
+          "organ": "Lung (Pulmo)",
+          "a_position": "Right Lung, Superior Lobe, Alveoli, Bronchioles"
+        },
+        "api_eva": {
+          "overall_score": 63.3,
+          "precision": 75.0,
+          "recall": 33.3,
+          "overgeneration_penalty": 100.0
+        }
+      }
+    ],
+    "evaluation_summary": {
+      "total_api_calls": 2,
+      "successful_api_calls": 2,
+      "failed_api_calls": 0,
+      "average_overall_score": 56.1,
+      "average_precision": 62.5,
+      "average_recall": 27.8
+    }
+  }
+]

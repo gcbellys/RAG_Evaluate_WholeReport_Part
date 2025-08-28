@@ -1,0 +1,1134 @@
+{
+  "report_id": "diagnostic_4050",
+  "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4050.json",
+  "original_symptoms_count": 8,
+  "baseline": {
+    "aggregated_symptoms": "central line placement; atrial fibrillation; respiratory failure; transesophageal echocardiogram; normal sinus rhythm; chest pain; brain stem cva; poor distals",
+    "expected_results": [
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Aortic Valve",
+          "Mitral Valve"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Left Atrium (LA)",
+          "Right Atrium (RA)"
+        ]
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Alveoli",
+          "Bronchioles"
+        ]
+      },
+      {
+        "organName": "Trachea",
+        "anatomicalLocations": [
+          "Tracheal Rings",
+          "Tracheal Mucosa"
+        ]
+      },
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Left Ventricle (LV)",
+          "Coronary Artery"
+        ]
+      },
+      {
+        "organName": "Brainstem",
+        "anatomicalLocations": [
+          "Medulla Oblongata",
+          "Pons"
+        ]
+      },
+      {
+        "organName": "Artery (Arteria)",
+        "anatomicalLocations": [
+          "Femoral Artery",
+          "Popliteal Artery"
+        ]
+      }
+    ],
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Atrium (LA)\",\n        \"Right Atrium (RA)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Brainstem\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Atrium (LA)",
+            "Right Atrium (RA)"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Atrium (LA)",
+                  "Right Atrium (RA)"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Brainstem"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": [
+                  "Carotid Artery"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Atrium (LA)",
+          "Right Atrium (RA)"
+        ],
+        "usage": {
+          "completion_tokens": 201,
+          "prompt_tokens": 2189,
+          "total_tokens": 2390,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "evaluation": {
+          "overall_score": 65.7,
+          "precision": 100.0,
+          "recall": 14.3,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 2/2 (100.0%); Recall(召回率): 2/14 (14.3%); 过度生成惩罚: 100.0%"
+        }
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Atrium (LA)\",\n        \"Right Atrium (RA)\",\n        \"Aortic Valve\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Brainstem\",\n        \"Medulla Oblongata\",\n        \"Cerebral Cortex\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Pulmonary Capillaries\",\n        \"Bronchioles\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Aorta\",\n        \"Carotid Artery\",\n        \"Femoral Artery\",\n        \"Brachial Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\",\n        \"Jugular Vein\",\n        \"Subclavian Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Atrium (LA)",
+            "Right Atrium (RA)",
+            "Aortic Valve",
+            "Coronary Artery"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Atrium (LA)",
+                  "Right Atrium (RA)",
+                  "Aortic Valve",
+                  "Coronary Artery"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Brainstem",
+                  "Medulla Oblongata",
+                  "Cerebral Cortex",
+                  "Cerebrospinal Fluid (CSF)"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Pulmonary Capillaries",
+                  "Bronchioles",
+                  "Pleural Cavity"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": [
+                  "Aorta",
+                  "Carotid Artery",
+                  "Femoral Artery",
+                  "Brachial Artery"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Vein (Vena)",
+                "anatomicalLocations": [
+                  "Superior Vena Cava",
+                  "Inferior Vena Cava",
+                  "Jugular Vein",
+                  "Subclavian Vein"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Atrium (LA)",
+          "Right Atrium (RA)",
+          "Aortic Valve",
+          "Coronary Artery"
+        ],
+        "usage": {
+          "completion_tokens": 333,
+          "prompt_tokens": 2055,
+          "total_tokens": 2388,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2048
+          },
+          "prompt_cache_hit_tokens": 2048,
+          "prompt_cache_miss_tokens": 7
+        },
+        "model": "deepseek-chat",
+        "evaluation": {
+          "overall_score": 71.4,
+          "precision": 100.0,
+          "recall": 28.6,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 4/4 (100.0%); Recall(召回率): 4/14 (28.6%); 过度生成惩罚: 100.0%"
+        }
+      }
+    },
+    "evaluation": {
+      "report_id": "diagnostic_4050",
+      "total_symptoms": 8,
+      "valid_symptoms": 8,
+      "evaluation_timestamp": "2025-08-28T00:18:01.714213",
+      "symptom_evaluations": [
+        {
+          "symptom_id": "aggregated_symptoms",
+          "symptom_text": "central line placement; atrial fibrillation; respiratory failure; transesophageal echocardiogram; normal sinus rhythm; chest pain; brain stem cva; poor distals",
+          "expected_results": [
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Aortic Valve",
+                "Mitral Valve"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Left Atrium (LA)",
+                "Right Atrium (RA)"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Alveoli",
+                "Bronchioles"
+              ]
+            },
+            {
+              "organName": "Trachea",
+              "anatomicalLocations": [
+                "Tracheal Rings",
+                "Tracheal Mucosa"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Left Ventricle (LV)",
+                "Coronary Artery"
+              ]
+            },
+            {
+              "organName": "Brainstem",
+              "anatomicalLocations": [
+                "Medulla Oblongata",
+                "Pons"
+              ]
+            },
+            {
+              "organName": "Artery (Arteria)",
+              "anatomicalLocations": [
+                "Femoral Artery",
+                "Popliteal Artery"
+              ]
+            }
+          ],
+          "api_evaluations": {
+            "moonshot": {
+              "overall_score": 65.7,
+              "precision": 100.0,
+              "recall": 14.3,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 2/2 (100.0%); Recall(召回率): 2/14 (14.3%); 过度生成惩罚: 100.0%"
+            },
+            "deepseek": {
+              "overall_score": 71.4,
+              "precision": 100.0,
+              "recall": 28.6,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 4/4 (100.0%); Recall(召回率): 4/14 (28.6%); 过度生成惩罚: 100.0%"
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total_api_calls": 2,
+        "successful_api_calls": 2,
+        "failed_api_calls": 0,
+        "average_overall_score": 68.6,
+        "average_precision": 100.0,
+        "average_recall": 21.5
+      }
+    }
+  },
+  "rag_search": {
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"central line placement\",\n            \"primary_organ\": \"heart\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"atrial fibrillation\",\n            \"primary_organ\": \"heart\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"respiratory failure\",\n            \"primary_organ\": \"lungs\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"transesophageal echocardiogram\",\n            \"primary_organ\": \"heart\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"normal sinus rhythm\",\n            \"primary_organ\": \"heart\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"chest pain\",\n            \"primary_organ\": \"chest\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"brain stem cva\",\n            \"primary_organ\": \"brain\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s8\",\n            \"symptom_text\": \"poor distals\",\n            \"primary_organ\": \"limbs\",\n            \"severity\": \"moderate\"\n        }\n    ],\n    \"total_count\": 8,\n    \"reasoning\": \"The given text describes a list of medical conditions and procedures. I have split them into individual symptoms based on their descriptions. The primary organ affected and severity level were also inferred for each symptom.\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "central line placement",
+              "primary_organ": "heart",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "atrial fibrillation",
+              "primary_organ": "heart",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "respiratory failure",
+              "primary_organ": "lungs",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "transesophageal echocardiogram",
+              "primary_organ": "heart",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "normal sinus rhythm",
+              "primary_organ": "heart",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "chest pain",
+              "primary_organ": "chest",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s7",
+              "symptom_text": "brain stem cva",
+              "primary_organ": "brain",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s8",
+              "symptom_text": "poor distals",
+              "primary_organ": "limbs",
+              "severity": "moderate"
+            }
+          ],
+          "total_count": 8,
+          "reasoning": "The given text describes a list of medical conditions and procedures. I have split them into individual symptoms based on their descriptions. The primary organ affected and severity level were also inferred for each symptom."
+        }
+      },
+      "timestamp": "2025-08-28T00:18:10.381539"
+    },
+    "search_results": {
+      "success": true,
+      "total_searched": 8,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "central line placement",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "central line placement",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "central line placement",
+                  "units": [
+                    {
+                      "u_id": "u_58360",
+                      "u_unit": {
+                        "d_diagnosis": "central line placement",
+                        "o_organ": {
+                          "organName": "Vein (Vena)",
+                          "anatomicalLocations": [
+                            "Vein (Vena)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "central line placement"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:18:13.554211"
+          }
+        },
+        "s2": {
+          "symptom_text": "atrial fibrillation",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "atrial fibrillation",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "atrial fibrillation",
+                  "units": [
+                    {
+                      "u_id": "u_80136",
+                      "u_unit": {
+                        "d_diagnosis": "atrial fibrillation",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "atrial fibrillation"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:18:15.292197"
+          }
+        },
+        "s3": {
+          "symptom_text": "respiratory failure",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "respiratory failure",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "respiratory failure",
+                  "units": [
+                    {
+                      "u_id": "u_11574",
+                      "u_unit": {
+                        "d_diagnosis": "respiratory failure",
+                        "o_organ": {
+                          "organName": "Lung (Pulmo)",
+                          "anatomicalLocations": [
+                            "Lung (Pulmo)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "respiratory failure"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:18:17.001715"
+          }
+        },
+        "s4": {
+          "symptom_text": "transesophageal echocardiogram",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "transesophageal echocardiogram",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "transesophageal echocardiogram",
+                  "units": [
+                    {
+                      "u_id": "u_31952",
+                      "u_unit": {
+                        "d_diagnosis": "transesophageal echocardiogram",
+                        "o_organ": {
+                          "organName": "Esophagus",
+                          "anatomicalLocations": [
+                            "Esophagus"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "transesophageal echocardiogram"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "transesophageal echocardiogram",
+                  "units": [
+                    {
+                      "u_id": "u_48912",
+                      "u_unit": {
+                        "d_diagnosis": "transesophageal echo",
+                        "o_organ": {
+                          "organName": "Esophagus",
+                          "anatomicalLocations": [
+                            "Esophagus"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "transesophageal echo"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "transesophageal echocardiogram",
+                  "units": [
+                    {
+                      "u_id": "u_94918",
+                      "u_unit": {
+                        "d_diagnosis": "transesophageal echocardiagram",
+                        "o_organ": {
+                          "organName": "Esophagus",
+                          "anatomicalLocations": [
+                            "Esophagus"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "transesophageal echocardiagram"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:18:18.720170"
+          }
+        },
+        "s5": {
+          "symptom_text": "normal sinus rhythm",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "normal sinus rhythm",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "normal sinus rhythm",
+                  "units": [
+                    {
+                      "u_id": "u_75926",
+                      "u_unit": {
+                        "d_diagnosis": "normal sinus rhythm",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "normal sinus rhythm"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:18:20.471495"
+          }
+        },
+        "s6": {
+          "symptom_text": "chest pain",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "chest pain",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "chest pain",
+                  "units": [
+                    {
+                      "u_id": "u_56125",
+                      "u_unit": {
+                        "d_diagnosis": "chest pain",
+                        "o_organ": {
+                          "organName": "Heart (Cor)",
+                          "anatomicalLocations": [
+                            "Heart (Cor)"
+                          ]
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "chest pain"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:18:22.669285"
+          }
+        },
+        "s7": {
+          "symptom_text": "brain stem cva",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "brain stem cva",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:18:24.417259"
+          }
+        },
+        "s8": {
+          "symptom_text": "poor distals",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "poor distals",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:18:26.146042"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "central line placement",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "central line placement",
+              "units": [
+                {
+                  "u_id": "u_58360",
+                  "u_unit": {
+                    "d_diagnosis": "central line placement",
+                    "o_organ": {
+                      "organName": "Vein (Vena)",
+                      "anatomicalLocations": [
+                        "Vein (Vena)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "central line placement"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "atrial fibrillation",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "atrial fibrillation",
+              "units": [
+                {
+                  "u_id": "u_80136",
+                  "u_unit": {
+                    "d_diagnosis": "atrial fibrillation",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "atrial fibrillation"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "respiratory failure",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "respiratory failure",
+              "units": [
+                {
+                  "u_id": "u_11574",
+                  "u_unit": {
+                    "d_diagnosis": "respiratory failure",
+                    "o_organ": {
+                      "organName": "Lung (Pulmo)",
+                      "anatomicalLocations": [
+                        "Lung (Pulmo)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "respiratory failure"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "transesophageal echocardiogram",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "transesophageal echocardiogram",
+              "units": [
+                {
+                  "u_id": "u_31952",
+                  "u_unit": {
+                    "d_diagnosis": "transesophageal echocardiogram",
+                    "o_organ": {
+                      "organName": "Esophagus",
+                      "anatomicalLocations": [
+                        "Esophagus"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "transesophageal echocardiogram"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "transesophageal echocardiogram",
+              "units": [
+                {
+                  "u_id": "u_48912",
+                  "u_unit": {
+                    "d_diagnosis": "transesophageal echo",
+                    "o_organ": {
+                      "organName": "Esophagus",
+                      "anatomicalLocations": [
+                        "Esophagus"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "transesophageal echo"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "transesophageal echocardiogram",
+              "units": [
+                {
+                  "u_id": "u_94918",
+                  "u_unit": {
+                    "d_diagnosis": "transesophageal echocardiagram",
+                    "o_organ": {
+                      "organName": "Esophagus",
+                      "anatomicalLocations": [
+                        "Esophagus"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "transesophageal echocardiagram"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "normal sinus rhythm",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "normal sinus rhythm",
+              "units": [
+                {
+                  "u_id": "u_75926",
+                  "u_unit": {
+                    "d_diagnosis": "normal sinus rhythm",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "normal sinus rhythm"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "chest pain",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "chest pain",
+              "units": [
+                {
+                  "u_id": "u_56125",
+                  "u_unit": {
+                    "d_diagnosis": "chest pain",
+                    "o_organ": {
+                      "organName": "Heart (Cor)",
+                      "anatomicalLocations": [
+                        "Heart (Cor)"
+                      ]
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "chest pain"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "brain stem cva",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "poor distals",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        }
+      ],
+      "timestamp": "2025-08-28T00:18:26.146078"
+    }
+  },
+  "rag_enhanced": {
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Atrium (LA)\",\n        \"Right Atrium (RA)\",\n        \"Mitral Valve\",\n        \"Tricuspid Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pleura\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Brainstem\",\n        \"Cerebral Cortex\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Vertebral Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Atrium (LA)",
+            "Right Atrium (RA)",
+            "Mitral Valve",
+            "Tricuspid Valve"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Atrium (LA)",
+                  "Right Atrium (RA)",
+                  "Mitral Valve",
+                  "Tricuspid Valve"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles",
+                  "Pleura"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Brainstem",
+                  "Cerebral Cortex"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": [
+                  "Carotid Artery",
+                  "Vertebral Artery"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Vein (Vena)",
+                "anatomicalLocations": [
+                  "Superior Vena Cava",
+                  "Inferior Vena Cava"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Atrium (LA)",
+          "Right Atrium (RA)",
+          "Mitral Valve",
+          "Tricuspid Valve"
+        ],
+        "usage": {
+          "completion_tokens": 292,
+          "prompt_tokens": 2807,
+          "total_tokens": 3099,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "evaluation": {
+          "overall_score": 58.6,
+          "precision": 75.0,
+          "recall": 21.4,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 3/4 (75.0%); Recall(召回率): 3/14 (21.4%); 过度生成惩罚: 100.0%"
+        }
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Atrium (LA)\",\n        \"Right Atrium (RA)\",\n        \"Aortic Valve\",\n        \"Mitral Valve\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Brainstem\",\n        \"Medulla Oblongata\",\n        \"Pons\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Lung (Pulmo)\",\n      \"anatomicalLocations\": [\n        \"Alveoli\",\n        \"Bronchioles\",\n        \"Pulmonary Capillaries\",\n        \"Pleural Cavity\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Aorta\",\n        \"Carotid Artery\",\n        \"Femoral Artery\",\n        \"Brachial Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Vein (Vena)\",\n      \"anatomicalLocations\": [\n        \"Superior Vena Cava\",\n        \"Inferior Vena Cava\",\n        \"Jugular Vein\",\n        \"Subclavian Vein\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Heart (Cor)",
+          "anatomical_locations": [
+            "Left Atrium (LA)",
+            "Right Atrium (RA)",
+            "Aortic Valve",
+            "Mitral Valve"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Atrium (LA)",
+                  "Right Atrium (RA)",
+                  "Aortic Valve",
+                  "Mitral Valve"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Brainstem",
+                  "Medulla Oblongata",
+                  "Pons",
+                  "Cerebrospinal Fluid (CSF)"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Lung (Pulmo)",
+                "anatomicalLocations": [
+                  "Alveoli",
+                  "Bronchioles",
+                  "Pulmonary Capillaries",
+                  "Pleural Cavity"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": [
+                  "Aorta",
+                  "Carotid Artery",
+                  "Femoral Artery",
+                  "Brachial Artery"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Vein (Vena)",
+                "anatomicalLocations": [
+                  "Superior Vena Cava",
+                  "Inferior Vena Cava",
+                  "Jugular Vein",
+                  "Subclavian Vein"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Heart (Cor)",
+        "anatomical_locations": [
+          "Left Atrium (LA)",
+          "Right Atrium (RA)",
+          "Aortic Valve",
+          "Mitral Valve"
+        ],
+        "usage": {
+          "completion_tokens": 329,
+          "prompt_tokens": 2637,
+          "total_tokens": 2966,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2624
+          },
+          "prompt_cache_hit_tokens": 2624,
+          "prompt_cache_miss_tokens": 13
+        },
+        "model": "deepseek-chat",
+        "evaluation": {
+          "overall_score": 71.4,
+          "precision": 100.0,
+          "recall": 28.6,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 4/4 (100.0%); Recall(召回率): 4/14 (28.6%); 过度生成惩罚: 100.0%"
+        }
+      }
+    },
+    "evaluation": {
+      "report_id": "diagnostic_4050",
+      "total_symptoms": 8,
+      "valid_symptoms": 8,
+      "evaluation_timestamp": "2025-08-28T00:18:49.671400",
+      "symptom_evaluations": [
+        {
+          "symptom_id": "rag_enhanced_symptoms",
+          "symptom_text": "central line placement; atrial fibrillation; respiratory failure; transesophageal echocardiogram; normal sinus rhythm; chest pain; brain stem cva; poor distals",
+          "expected_results": [
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Aortic Valve",
+                "Mitral Valve"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Left Atrium (LA)",
+                "Right Atrium (RA)"
+              ]
+            },
+            {
+              "organName": "Lung (Pulmo)",
+              "anatomicalLocations": [
+                "Alveoli",
+                "Bronchioles"
+              ]
+            },
+            {
+              "organName": "Trachea",
+              "anatomicalLocations": [
+                "Tracheal Rings",
+                "Tracheal Mucosa"
+              ]
+            },
+            {
+              "organName": "Heart (Cor)",
+              "anatomicalLocations": [
+                "Left Ventricle (LV)",
+                "Coronary Artery"
+              ]
+            },
+            {
+              "organName": "Brainstem",
+              "anatomicalLocations": [
+                "Medulla Oblongata",
+                "Pons"
+              ]
+            },
+            {
+              "organName": "Artery (Arteria)",
+              "anatomicalLocations": [
+                "Femoral Artery",
+                "Popliteal Artery"
+              ]
+            }
+          ],
+          "api_evaluations": {
+            "moonshot": {
+              "overall_score": 58.6,
+              "precision": 75.0,
+              "recall": 21.4,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 3/4 (75.0%); Recall(召回率): 3/14 (21.4%); 过度生成惩罚: 100.0%"
+            },
+            "deepseek": {
+              "overall_score": 71.4,
+              "precision": 100.0,
+              "recall": 28.6,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 4/4 (100.0%); Recall(召回率): 4/14 (28.6%); 过度生成惩罚: 100.0%"
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total_api_calls": 2,
+        "successful_api_calls": 2,
+        "failed_api_calls": 0,
+        "average_overall_score": 65.0,
+        "average_precision": 87.5,
+        "average_recall": 25.0
+      }
+    }
+  },
+  "comparison": {
+    "baseline_score": 68.6,
+    "rag_enhanced_score": 65.0,
+    "improvement": -3.5999999999999943
+  },
+  "processing_timestamp": "2025-08-28T00:18:49.671443"
+}

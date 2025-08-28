@@ -1,0 +1,1318 @@
+{
+  "report_id": "diagnostic_4063",
+  "file_path": "/home/duojiechen/Projects/Central_Data/RAG_System/test_set/diagnostic_4063.json",
+  "original_symptoms_count": 7,
+  "baseline": {
+    "aggregated_symptoms": "red cells were , white cells were 1.1, red cells in tube #1 were 339, protein was 25, glucose 69; severely hypertensive and diaphoretic with systolic blood pressure over 220; severe headache while climbing the stairs; headache recurred on sunday and monday; headache on and off since friday before admission; severe headache which resolved on its own; cervicalgia",
+    "expected_results": [
+      {
+        "organName": "Brain",
+        "anatomicalLocations": [
+          "Cerebrospinal Fluid (CSF)",
+          "Meninges"
+        ]
+      },
+      {
+        "organName": "Artery (Arteria)",
+        "anatomicalLocations": [
+          "Carotid Artery",
+          "Cerebral Arteries"
+        ]
+      },
+      {
+        "organName": "Brain",
+        "anatomicalLocations": [
+          "Cerebral Cortex",
+          "Meninges"
+        ]
+      },
+      {
+        "organName": "Brainstem",
+        "anatomicalLocations": [
+          "Cervical Spinal Cord",
+          "Cervical Vertebrae"
+        ]
+      }
+    ],
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Diencephalon\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Diencephalon",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Cerebral Cortex",
+                  "Diencephalon",
+                  "Cerebrospinal Fluid (CSF)"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Kidney (Ren)",
+                "anatomicalLocations": [
+                  "Renal Cortex",
+                  "Renal Medulla (Pyramids)"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Aortic Root & Ascending Aorta"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Diencephalon",
+          "Cerebrospinal Fluid (CSF)"
+        ],
+        "usage": {
+          "completion_tokens": 185,
+          "prompt_tokens": 2235,
+          "total_tokens": 2420,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "evaluation": {
+          "overall_score": 58.1,
+          "precision": 66.7,
+          "recall": 28.6,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/7 (28.6%); 过度生成惩罚: 100.0%"
+        }
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Common Carotid Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Hilum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Cerebral Cortex",
+                  "Brainstem",
+                  "Cerebrospinal Fluid (CSF)"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": [
+                  "Carotid Artery",
+                  "Internal Carotid Artery",
+                  "Common Carotid Artery"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Aortic Root & Ascending Aorta",
+                  "Coronary Artery"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Kidney (Ren)",
+                "anatomicalLocations": [
+                  "Renal Cortex",
+                  "Renal Medulla (Pyramids)",
+                  "Renal Hilum"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Brainstem",
+          "Cerebrospinal Fluid (CSF)"
+        ],
+        "usage": {
+          "completion_tokens": 242,
+          "prompt_tokens": 2106,
+          "total_tokens": 2348,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 1984
+          },
+          "prompt_cache_hit_tokens": 1984,
+          "prompt_cache_miss_tokens": 122
+        },
+        "model": "deepseek-chat",
+        "evaluation": {
+          "overall_score": 58.1,
+          "precision": 66.7,
+          "recall": 28.6,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/7 (28.6%); 过度生成惩罚: 100.0%"
+        }
+      }
+    },
+    "evaluation": {
+      "report_id": "diagnostic_4063",
+      "total_symptoms": 7,
+      "valid_symptoms": 7,
+      "evaluation_timestamp": "2025-08-28T00:31:50.548250",
+      "symptom_evaluations": [
+        {
+          "symptom_id": "aggregated_symptoms",
+          "symptom_text": "red cells were , white cells were 1.1, red cells in tube #1 were 339, protein was 25, glucose 69; severely hypertensive and diaphoretic with systolic blood pressure over 220; severe headache while climbing the stairs; headache recurred on sunday and monday; headache on and off since friday before admission; severe headache which resolved on its own; cervicalgia",
+          "expected_results": [
+            {
+              "organName": "Brain",
+              "anatomicalLocations": [
+                "Cerebrospinal Fluid (CSF)",
+                "Meninges"
+              ]
+            },
+            {
+              "organName": "Artery (Arteria)",
+              "anatomicalLocations": [
+                "Carotid Artery",
+                "Cerebral Arteries"
+              ]
+            },
+            {
+              "organName": "Brain",
+              "anatomicalLocations": [
+                "Cerebral Cortex",
+                "Meninges"
+              ]
+            },
+            {
+              "organName": "Brainstem",
+              "anatomicalLocations": [
+                "Cervical Spinal Cord",
+                "Cervical Vertebrae"
+              ]
+            }
+          ],
+          "api_evaluations": {
+            "moonshot": {
+              "overall_score": 58.1,
+              "precision": 66.7,
+              "recall": 28.6,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/7 (28.6%); 过度生成惩罚: 100.0%"
+            },
+            "deepseek": {
+              "overall_score": 58.1,
+              "precision": 66.7,
+              "recall": 28.6,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/7 (28.6%); 过度生成惩罚: 100.0%"
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total_api_calls": 2,
+        "successful_api_calls": 2,
+        "failed_api_calls": 0,
+        "average_overall_score": 58.1,
+        "average_precision": 66.7,
+        "average_recall": 28.6
+      }
+    }
+  },
+  "rag_search": {
+    "split_symptoms": {
+      "success": true,
+      "response": "{\n    \"split_symptoms\": [\n        {\n            \"symptom_id\": \"s1\",\n            \"symptom_text\": \"red cells were\",\n            \"primary_organ\": \"blood\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s2\",\n            \"symptom_text\": \"white cells were 1.1\",\n            \"primary_organ\": \"blood\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s3\",\n            \"symptom_text\": \"red cells in tube #1 were 339\",\n            \"primary_organ\": \"blood\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s4\",\n            \"symptom_text\": \"protein was 25\",\n            \"primary_organ\": \"urine\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s5\",\n            \"symptom_text\": \"glucose 69\",\n            \"primary_organ\": \"blood\",\n            \"severity\": \"mild\"\n        },\n        {\n            \"symptom_id\": \"s6\",\n            \"symptom_text\": \"severely hypertensive and diaphoretic with systolic blood pressure over 220\",\n            \"primary_organ\": \"heart\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s7\",\n            \"symptom_text\": \"severe headache while climbing the stairs\",\n            \"primary_organ\": \"head\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s8\",\n            \"symptom_text\": \"headache recurred on sunday and monday\",\n            \"primary_organ\": \"head\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s9\",\n            \"symptom_text\": \"headache on and off since friday before admission\",\n            \"primary_organ\": \"head\",\n            \"severity\": \"moderate\"\n        },\n        {\n            \"symptom_id\": \"s10\",\n            \"symptom_text\": \"severe headache which resolved on its own\",\n            \"primary_organ\": \"head\",\n            \"severity\": \"severe\"\n        },\n        {\n            \"symptom_id\": \"s11\",\n            \"symptom_text\": \"cervicalgia\",\n            \"primary_organ\": \"neck\",\n            \"severity\": \"moderate\"\n        }\n    ],\n    \"total_count\": 11,\n    \"reasoning\": \"The input text describes a variety of symptoms related to different organs and conditions. I have split them into individual symptoms based on the affected organ and the severity of the symptom. The severity is inferred from the description (e.g., 'severe', 'mild', 'resolved on its own').\"\n}",
+      "parsed_data": {
+        "organ_name": "",
+        "anatomical_locations": [],
+        "full_response": {
+          "split_symptoms": [
+            {
+              "symptom_id": "s1",
+              "symptom_text": "red cells were",
+              "primary_organ": "blood",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s2",
+              "symptom_text": "white cells were 1.1",
+              "primary_organ": "blood",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s3",
+              "symptom_text": "red cells in tube #1 were 339",
+              "primary_organ": "blood",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s4",
+              "symptom_text": "protein was 25",
+              "primary_organ": "urine",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s5",
+              "symptom_text": "glucose 69",
+              "primary_organ": "blood",
+              "severity": "mild"
+            },
+            {
+              "symptom_id": "s6",
+              "symptom_text": "severely hypertensive and diaphoretic with systolic blood pressure over 220",
+              "primary_organ": "heart",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s7",
+              "symptom_text": "severe headache while climbing the stairs",
+              "primary_organ": "head",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s8",
+              "symptom_text": "headache recurred on sunday and monday",
+              "primary_organ": "head",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s9",
+              "symptom_text": "headache on and off since friday before admission",
+              "primary_organ": "head",
+              "severity": "moderate"
+            },
+            {
+              "symptom_id": "s10",
+              "symptom_text": "severe headache which resolved on its own",
+              "primary_organ": "head",
+              "severity": "severe"
+            },
+            {
+              "symptom_id": "s11",
+              "symptom_text": "cervicalgia",
+              "primary_organ": "neck",
+              "severity": "moderate"
+            }
+          ],
+          "total_count": 11,
+          "reasoning": "The input text describes a variety of symptoms related to different organs and conditions. I have split them into individual symptoms based on the affected organ and the severity of the symptom. The severity is inferred from the description (e.g., 'severe', 'mild', 'resolved on its own')."
+        }
+      },
+      "timestamp": "2025-08-28T00:32:02.743963"
+    },
+    "search_results": {
+      "success": true,
+      "total_searched": 11,
+      "symptom_rag_results": {
+        "s1": {
+          "symptom_text": "red cells were",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "red cells were",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "red cells were",
+                  "units": [
+                    {
+                      "u_id": "u_38771",
+                      "u_unit": {
+                        "d_diagnosis": "bright red blood",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "bright red blood"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:32:04.450880"
+          }
+        },
+        "s2": {
+          "symptom_text": "white cells were 1.1",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "white cells were 1.1",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:32:06.156107"
+          }
+        },
+        "s3": {
+          "symptom_text": "red cells in tube #1 were 339",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "red cells in tube #1 were 339",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:32:07.869087"
+          }
+        },
+        "s4": {
+          "symptom_text": "protein was 25",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "protein was 25",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {}
+            },
+            "search_timestamp": "2025-08-28T00:32:09.581195"
+          }
+        },
+        "s5": {
+          "symptom_text": "glucose 69",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "glucose 69",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "glucose 69",
+                  "units": [
+                    {
+                      "u_id": "u_33693",
+                      "u_unit": {
+                        "d_diagnosis": "glucose-108*",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "glucose-108*"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "glucose 69",
+                  "units": [
+                    {
+                      "u_id": "u_28568",
+                      "u_unit": {
+                        "d_diagnosis": "glucose-286*",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "glucose-286*"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "glucose 69",
+                  "units": [
+                    {
+                      "u_id": "u_28450",
+                      "u_unit": {
+                        "d_diagnosis": "glucose to 32",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "glucose to 32"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:32:11.327684"
+          }
+        },
+        "s6": {
+          "symptom_text": "severely hypertensive and diaphoretic with systolic blood pressure over 220",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "severely hypertensive and diaphoretic with systolic blood pressure over 220",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "severely hypertensive and diaphoretic with systolic blood pressure over 220",
+                  "units": [
+                    {
+                      "u_id": "u_88925",
+                      "u_unit": {
+                        "d_diagnosis": "elevated systolic blood pressure to the 220s",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "elevated systolic blood pressure to the 220s"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "severely hypertensive and diaphoretic with systolic blood pressure over 220",
+                  "units": [
+                    {
+                      "u_id": "u_83346",
+                      "u_unit": {
+                        "d_diagnosis": "systolic blood pressures in the 220s",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "systolic blood pressures in the 220s"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_3_id": {
+                  "s_text": "severely hypertensive and diaphoretic with systolic blood pressure over 220",
+                  "units": [
+                    {
+                      "u_id": "u_47234",
+                      "u_unit": {
+                        "d_diagnosis": "hypertension to 220/110",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "hypertension to 220/110"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:32:13.078070"
+          }
+        },
+        "s7": {
+          "symptom_text": "severe headache while climbing the stairs",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "severe headache while climbing the stairs",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "severe headache while climbing the stairs",
+                  "units": [
+                    {
+                      "u_id": "u_2671",
+                      "u_unit": {
+                        "d_diagnosis": "headache, persistent o2 requirement when walking stairs",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "headache, persistent o2 requirement when walking stairs"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "severe headache while climbing the stairs",
+                  "units": [
+                    {
+                      "u_id": "u_80648",
+                      "u_unit": {
+                        "d_diagnosis": "severe headache",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "severe headache"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:32:14.856102"
+          }
+        },
+        "s8": {
+          "symptom_text": "headache recurred on sunday and monday",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "headache recurred on sunday and monday",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "headache recurred on sunday and monday",
+                  "units": [
+                    {
+                      "u_id": "u_4632",
+                      "u_unit": {
+                        "d_diagnosis": "several weeks of headache",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "several weeks of headache"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "headache recurred on sunday and monday",
+                  "units": [
+                    {
+                      "u_id": "u_91734",
+                      "u_unit": {
+                        "d_diagnosis": "persistent headache",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "persistent headache"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:32:16.591837"
+          }
+        },
+        "s9": {
+          "symptom_text": "headache on and off since friday before admission",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "headache on and off since friday before admission",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "headache on and off since friday before admission",
+                  "units": [
+                    {
+                      "u_id": "u_34203",
+                      "u_unit": {
+                        "d_diagnosis": "she fell on the day prior to admission and began on the day of admission with a subsequent headache",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "she fell on the day prior to admission and began on the day of admission with a subsequent headache"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rag_s_2_id": {
+                  "s_text": "headache on and off since friday before admission",
+                  "units": [
+                    {
+                      "u_id": "u_36381",
+                      "u_unit": {
+                        "d_diagnosis": "headache for about 4 days prior to the aforementioned incident on the day of admission",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "headache for about 4 days prior to the aforementioned incident on the day of admission"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:32:18.760802"
+          }
+        },
+        "s10": {
+          "symptom_text": "severe headache which resolved on its own",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "severe headache which resolved on its own",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "severe headache which resolved on its own",
+                  "units": [
+                    {
+                      "u_id": "u_80648",
+                      "u_unit": {
+                        "d_diagnosis": "severe headache",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "severe headache"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:32:20.535338"
+          }
+        },
+        "s11": {
+          "symptom_text": "cervicalgia",
+          "rag_result": {
+            "success": true,
+            "rag_output": {
+              "query": "cervicalgia",
+              "expected_organs": [],
+              "expected_a_locations": [],
+              "s": {
+                "rag_s_1_id": {
+                  "s_text": "cervicalgia",
+                  "units": [
+                    {
+                      "u_id": "u_69720",
+                      "u_unit": {
+                        "d_diagnosis": "neck pain",
+                        "o_organ": {
+                          "organName": "Unknown",
+                          "anatomicalLocations": []
+                        },
+                        "b_textual_basis": {
+                          "medicalInference": "neck pain"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "search_timestamp": "2025-08-28T00:32:22.266156"
+          }
+        }
+      },
+      "rag_search_output": [
+        {
+          "query": "red cells were",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "red cells were",
+              "units": [
+                {
+                  "u_id": "u_38771",
+                  "u_unit": {
+                    "d_diagnosis": "bright red blood",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "bright red blood"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "white cells were 1.1",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "red cells in tube #1 were 339",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "protein was 25",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {}
+        },
+        {
+          "query": "glucose 69",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "glucose 69",
+              "units": [
+                {
+                  "u_id": "u_33693",
+                  "u_unit": {
+                    "d_diagnosis": "glucose-108*",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "glucose-108*"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "glucose 69",
+              "units": [
+                {
+                  "u_id": "u_28568",
+                  "u_unit": {
+                    "d_diagnosis": "glucose-286*",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "glucose-286*"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "glucose 69",
+              "units": [
+                {
+                  "u_id": "u_28450",
+                  "u_unit": {
+                    "d_diagnosis": "glucose to 32",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "glucose to 32"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "severely hypertensive and diaphoretic with systolic blood pressure over 220",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "severely hypertensive and diaphoretic with systolic blood pressure over 220",
+              "units": [
+                {
+                  "u_id": "u_88925",
+                  "u_unit": {
+                    "d_diagnosis": "elevated systolic blood pressure to the 220s",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "elevated systolic blood pressure to the 220s"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "severely hypertensive and diaphoretic with systolic blood pressure over 220",
+              "units": [
+                {
+                  "u_id": "u_83346",
+                  "u_unit": {
+                    "d_diagnosis": "systolic blood pressures in the 220s",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "systolic blood pressures in the 220s"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_3_id": {
+              "s_text": "severely hypertensive and diaphoretic with systolic blood pressure over 220",
+              "units": [
+                {
+                  "u_id": "u_47234",
+                  "u_unit": {
+                    "d_diagnosis": "hypertension to 220/110",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "hypertension to 220/110"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "severe headache while climbing the stairs",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "severe headache while climbing the stairs",
+              "units": [
+                {
+                  "u_id": "u_2671",
+                  "u_unit": {
+                    "d_diagnosis": "headache, persistent o2 requirement when walking stairs",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "headache, persistent o2 requirement when walking stairs"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "severe headache while climbing the stairs",
+              "units": [
+                {
+                  "u_id": "u_80648",
+                  "u_unit": {
+                    "d_diagnosis": "severe headache",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "severe headache"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "headache recurred on sunday and monday",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "headache recurred on sunday and monday",
+              "units": [
+                {
+                  "u_id": "u_4632",
+                  "u_unit": {
+                    "d_diagnosis": "several weeks of headache",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "several weeks of headache"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "headache recurred on sunday and monday",
+              "units": [
+                {
+                  "u_id": "u_91734",
+                  "u_unit": {
+                    "d_diagnosis": "persistent headache",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "persistent headache"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "headache on and off since friday before admission",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "headache on and off since friday before admission",
+              "units": [
+                {
+                  "u_id": "u_34203",
+                  "u_unit": {
+                    "d_diagnosis": "she fell on the day prior to admission and began on the day of admission with a subsequent headache",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "she fell on the day prior to admission and began on the day of admission with a subsequent headache"
+                    }
+                  }
+                }
+              ]
+            },
+            "rag_s_2_id": {
+              "s_text": "headache on and off since friday before admission",
+              "units": [
+                {
+                  "u_id": "u_36381",
+                  "u_unit": {
+                    "d_diagnosis": "headache for about 4 days prior to the aforementioned incident on the day of admission",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "headache for about 4 days prior to the aforementioned incident on the day of admission"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "severe headache which resolved on its own",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "severe headache which resolved on its own",
+              "units": [
+                {
+                  "u_id": "u_80648",
+                  "u_unit": {
+                    "d_diagnosis": "severe headache",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "severe headache"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "query": "cervicalgia",
+          "expected_organs": [],
+          "expected_a_locations": [],
+          "s": {
+            "rag_s_1_id": {
+              "s_text": "cervicalgia",
+              "units": [
+                {
+                  "u_id": "u_69720",
+                  "u_unit": {
+                    "d_diagnosis": "neck pain",
+                    "o_organ": {
+                      "organName": "Unknown",
+                      "anatomicalLocations": []
+                    },
+                    "b_textual_basis": {
+                      "medicalInference": "neck pain"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "timestamp": "2025-08-28T00:32:22.266196"
+    }
+  },
+  "rag_enhanced": {
+    "api_responses": {
+      "moonshot": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Cerebral Arteries\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Cerebral Cortex",
+                  "Brainstem",
+                  "Cerebrospinal Fluid (CSF)"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": [
+                  "Carotid Artery",
+                  "Cerebral Arteries"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Brainstem",
+          "Cerebrospinal Fluid (CSF)"
+        ],
+        "usage": {
+          "completion_tokens": 171,
+          "prompt_tokens": 2923,
+          "total_tokens": 3094,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        },
+        "model": "moonshot-v1-8k",
+        "evaluation": {
+          "overall_score": 58.1,
+          "precision": 66.7,
+          "recall": 28.6,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/7 (28.6%); 过度生成惩罚: 100.0%"
+        }
+      },
+      "deepseek": {
+        "success": true,
+        "response": "```json\n{\n  \"organs\": [\n    {\n      \"organName\": \"Brain\",\n      \"anatomicalLocations\": [\n        \"Cerebral Cortex\",\n        \"Brainstem\",\n        \"Cerebrospinal Fluid (CSF)\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Artery (Arteria)\",\n      \"anatomicalLocations\": [\n        \"Carotid Artery\",\n        \"Internal Carotid Artery\",\n        \"Common Carotid Artery\"\n      ],\n      \"relevance\": \"High\"\n    },\n    {\n      \"organName\": \"Heart (Cor)\",\n      \"anatomicalLocations\": [\n        \"Left Ventricle (LV)\",\n        \"Aortic Root & Ascending Aorta\",\n        \"Coronary Artery\"\n      ],\n      \"relevance\": \"Medium\"\n    },\n    {\n      \"organName\": \"Kidney (Ren)\",\n      \"anatomicalLocations\": [\n        \"Renal Cortex\",\n        \"Renal Medulla (Pyramids)\",\n        \"Renal Hilum\"\n      ],\n      \"relevance\": \"Medium\"\n    }\n  ]\n}\n```",
+        "parsed_data": {
+          "organ_name": "Brain",
+          "anatomical_locations": [
+            "Cerebral Cortex",
+            "Brainstem",
+            "Cerebrospinal Fluid (CSF)"
+          ],
+          "full_response": {
+            "organs": [
+              {
+                "organName": "Brain",
+                "anatomicalLocations": [
+                  "Cerebral Cortex",
+                  "Brainstem",
+                  "Cerebrospinal Fluid (CSF)"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Artery (Arteria)",
+                "anatomicalLocations": [
+                  "Carotid Artery",
+                  "Internal Carotid Artery",
+                  "Common Carotid Artery"
+                ],
+                "relevance": "High"
+              },
+              {
+                "organName": "Heart (Cor)",
+                "anatomicalLocations": [
+                  "Left Ventricle (LV)",
+                  "Aortic Root & Ascending Aorta",
+                  "Coronary Artery"
+                ],
+                "relevance": "Medium"
+              },
+              {
+                "organName": "Kidney (Ren)",
+                "anatomicalLocations": [
+                  "Renal Cortex",
+                  "Renal Medulla (Pyramids)",
+                  "Renal Hilum"
+                ],
+                "relevance": "Medium"
+              }
+            ]
+          }
+        },
+        "organ_name": "Brain",
+        "anatomical_locations": [
+          "Cerebral Cortex",
+          "Brainstem",
+          "Cerebrospinal Fluid (CSF)"
+        ],
+        "usage": {
+          "completion_tokens": 242,
+          "prompt_tokens": 2757,
+          "total_tokens": 2999,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 2368
+          },
+          "prompt_cache_hit_tokens": 2368,
+          "prompt_cache_miss_tokens": 389
+        },
+        "model": "deepseek-chat",
+        "evaluation": {
+          "overall_score": 58.1,
+          "precision": 66.7,
+          "recall": 28.6,
+          "overgeneration_penalty": 100.0,
+          "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/7 (28.6%); 过度生成惩罚: 100.0%"
+        }
+      }
+    },
+    "evaluation": {
+      "report_id": "diagnostic_4063",
+      "total_symptoms": 7,
+      "valid_symptoms": 7,
+      "evaluation_timestamp": "2025-08-28T00:32:40.122202",
+      "symptom_evaluations": [
+        {
+          "symptom_id": "rag_enhanced_symptoms",
+          "symptom_text": "red cells were , white cells were 1.1, red cells in tube #1 were 339, protein was 25, glucose 69; severely hypertensive and diaphoretic with systolic blood pressure over 220; severe headache while climbing the stairs; headache recurred on sunday and monday; headache on and off since friday before admission; severe headache which resolved on its own; cervicalgia",
+          "expected_results": [
+            {
+              "organName": "Brain",
+              "anatomicalLocations": [
+                "Cerebrospinal Fluid (CSF)",
+                "Meninges"
+              ]
+            },
+            {
+              "organName": "Artery (Arteria)",
+              "anatomicalLocations": [
+                "Carotid Artery",
+                "Cerebral Arteries"
+              ]
+            },
+            {
+              "organName": "Brain",
+              "anatomicalLocations": [
+                "Cerebral Cortex",
+                "Meninges"
+              ]
+            },
+            {
+              "organName": "Brainstem",
+              "anatomicalLocations": [
+                "Cervical Spinal Cord",
+                "Cervical Vertebrae"
+              ]
+            }
+          ],
+          "api_evaluations": {
+            "moonshot": {
+              "overall_score": 58.1,
+              "precision": 66.7,
+              "recall": 28.6,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/7 (28.6%); 过度生成惩罚: 100.0%"
+            },
+            "deepseek": {
+              "overall_score": 58.1,
+              "precision": 66.7,
+              "recall": 28.6,
+              "overgeneration_penalty": 100.0,
+              "detailed_analysis": "Precision(精确率): 2/3 (66.7%); Recall(召回率): 2/7 (28.6%); 过度生成惩罚: 100.0%"
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total_api_calls": 2,
+        "successful_api_calls": 2,
+        "failed_api_calls": 0,
+        "average_overall_score": 58.1,
+        "average_precision": 66.7,
+        "average_recall": 28.6
+      }
+    }
+  },
+  "comparison": {
+    "baseline_score": 58.1,
+    "rag_enhanced_score": 58.1,
+    "improvement": 0.0
+  },
+  "processing_timestamp": "2025-08-28T00:32:40.122241"
+}
