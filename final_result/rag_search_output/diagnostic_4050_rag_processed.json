@@ -1,0 +1,115 @@
+{
+  "report_id": "diagnostic_4050",
+  "method": "rag_processed",
+  "decomposed_symptoms": [
+    {
+      "symptom": "central venous catheter",
+      "category": "vascular"
+    },
+    {
+      "symptom": "atrial fibrillation",
+      "category": "cardiac"
+    },
+    {
+      "symptom": "respiratory failure",
+      "category": "pulmonary"
+    },
+    {
+      "symptom": "chest pain",
+      "category": "cardiac"
+    }
+  ],
+  "rag_search_results": [
+    {
+      "query": "central venous catheter",
+      "retrieved_documents": [
+        {
+          "content": "Central venous catheter placement involves central veins",
+          "organ": "Vein (Vena)",
+          "locations": [
+            "Central Vein",
+            "Superior Vena Cava"
+          ],
+          "confidence": 0.92
+        }
+      ]
+    },
+    {
+      "query": "atrial fibrillation",
+      "retrieved_documents": [
+        {
+          "content": "Atrial fibrillation affects heart chambers",
+          "organ": "Heart (Cor)",
+          "locations": [
+            "Left Atrium (LA)",
+            "Right Atrium (RA)"
+          ],
+          "confidence": 0.88
+        }
+      ]
+    },
+    {
+      "query": "respiratory failure",
+      "retrieved_documents": [
+        {
+          "content": "Respiratory failure involves lung function",
+          "organ": "Lung (Pulmo)",
+          "locations": [
+            "Alveoli",
+            "Bronchioles"
+          ],
+          "confidence": 0.85
+        }
+      ]
+    },
+    {
+      "query": "chest pain",
+      "retrieved_documents": [
+        {
+          "content": "Chest pain indicates cardiac involvement",
+          "organ": "Heart (Cor)",
+          "locations": [
+            "Coronary Artery",
+            "Left Ventricle (LV)"
+          ],
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "final_prediction": {
+    "organs": [
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Left Atrium (LA)",
+          "Right Atrium (RA)",
+          "Coronary Artery",
+          "Left Ventricle (LV)"
+        ],
+        "relevance": "High",
+        "confidence": 0.88
+      },
+      {
+        "organName": "Vein (Vena)",
+        "anatomicalLocations": [
+          "Central Vein",
+          "Superior Vena Cava"
+        ],
+        "relevance": "Medium",
+        "confidence": 0.92
+      },
+      {
+        "organName": "Lung (Pulmo)",
+        "anatomicalLocations": [
+          "Alveoli",
+          "Bronchioles"
+        ],
+        "relevance": "Medium",
+        "confidence": 0.85
+      }
+    ]
+  },
+  "processing_time": "simulated",
+  "timestamp": "2025-08-27T15:36:51.084892"
+}

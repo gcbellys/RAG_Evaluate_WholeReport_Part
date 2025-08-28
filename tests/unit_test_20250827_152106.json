@@ -1,0 +1,27 @@
+{
+  "step1_aggregation": {
+    "success": true,
+    "aggregated_symptoms": "chest pain",
+    "symptom_count": 1
+  },
+  "step2_decomposition": {
+    "success": true,
+    "decomposed_count": 1,
+    "decomposed_symptoms": [
+      {
+        "symptom": "chest pain",
+        "category": "cardiac",
+        "severity": "moderate"
+      }
+    ]
+  },
+  "step3_rag_search": {
+    "success": true,
+    "total_searches": 1,
+    "rag_results_count": 1
+  },
+  "step4_integration": {
+    "success": true,
+    "has_integration_results": true
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "report_id": "diagnostic_4050",
+  "comparison_timestamp": "2025-08-27T15:36:51.084980",
+  "methods": {
+    "llm_without_rag": {
+      "organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Coronary Artery",
+            "Aortic Valve",
+            "Left Ventricle (LV)",
+            "Right Ventricle (RV)"
+          ],
+          "confidence": 0.85,
+          "reasoning": "基于症状组合的心脏系统受累"
+        },
+        {
+          "organName": "Artery (Arteria)",
+          "anatomicalLocations": [
+            "Coronary Arteries",
+            "Aorta"
+          ],
+          "confidence": 0.75,
+          "reasoning": "血管系统相关症状"
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Pleural Cavity"
+          ],
+          "confidence": 0.6,
+          "reasoning": "呼吸相关症状"
+        }
+      ],
+      "confidence": "estimated"
+    },
+    "rag_processed": {
+      "organs": [
+        {
+          "organName": "Heart (Cor)",
+          "anatomicalLocations": [
+            "Left Atrium (LA)",
+            "Right Atrium (RA)",
+            "Coronary Artery",
+            "Left Ventricle (LV)"
+          ],
+          "relevance": "High",
+          "confidence": 0.88
+        },
+        {
+          "organName": "Vein (Vena)",
+          "anatomicalLocations": [
+            "Central Vein",
+            "Superior Vena Cava"
+          ],
+          "relevance": "Medium",
+          "confidence": 0.92
+        },
+        {
+          "organName": "Lung (Pulmo)",
+          "anatomicalLocations": [
+            "Alveoli",
+            "Bronchioles"
+          ],
+          "relevance": "Medium",
+          "confidence": 0.85
+        }
+      ],
+      "confidence": "rag_based"
+    }
+  },
+  "similarity_analysis": {
+    "common_organs": [
+      "Heart (Cor)"
+    ],
+    "different_organs": {
+      "llm_only": [
+        "Artery (Arteria)"
+      ],
+      "rag_only": [
+        "Lung (Pulmo)"
+      ]
+    },
+    "location_overlap": [
+      "Coronary Artery",
+      "Left Ventricle (LV)"
+    ],
+    "rag_additional_locations": [
+      "Left Atrium (LA)",
+      "Right Atrium (RA)",
+      "Alveoli",
+      "Bronchioles"
+    ]
+  },
+  "recommendation": {
+    "primary_approach": "RAG_processed",
+    "reason": "更全面的解剖位置覆盖",
+    "confidence": "higher"
+  }
+}

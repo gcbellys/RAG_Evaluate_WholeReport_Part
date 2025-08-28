@@ -1,0 +1,21 @@
+{
+  "total_files": 2,
+  "successful_files": 2,
+  "failed_files": 0,
+  "file_results": [
+    {
+      "file_name": "test1.json",
+      "report_id": "test_file",
+      "status": "success",
+      "decomposed_symptoms": 1,
+      "rag_searches": 1
+    },
+    {
+      "file_name": "test2.json",
+      "report_id": "test_file",
+      "status": "success",
+      "decomposed_symptoms": 1,
+      "rag_searches": 1
+    }
+  ]
+}

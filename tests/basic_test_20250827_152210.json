@@ -1,0 +1,40 @@
+{
+  "report_id": "test_001",
+  "integration_results": {
+    "mock_api": {
+      "success": true,
+      "response": "{\"organs\": [{\"organName\": \"Heart (Cor)\", \"anatomicalLocations\": [\"Left Ventricle (LV)\"], \"relevance\": \"High\"}]}",
+      "parsed_data": {
+        "organs": [
+          {
+            "organName": "Heart (Cor)",
+            "anatomicalLocations": [
+              "Left Ventricle (LV)"
+            ],
+            "relevance": "High"
+          }
+        ]
+      }
+    }
+  },
+  "processing_steps": {
+    "step1_aggregation": {
+      "aggregated_text": "test symptoms",
+      "symptom_count": 1
+    },
+    "step2_decomposition": {
+      "decomposed_symptoms": [
+        {
+          "symptom": "chest pain"
+        }
+      ]
+    },
+    "step3_rag_search": {
+      "total_searches": 1,
+      "rag_results": [
+        {}
+      ]
+    },
+    "step4_integration": {}
+  }
+}

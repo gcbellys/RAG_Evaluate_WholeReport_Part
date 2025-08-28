@@ -1,0 +1,37 @@
+{
+  "report_id": "diagnostic_4050",
+  "method": "llm_without_rag",
+  "organs_to_check": [
+    {
+      "organName": "Heart (Cor)",
+      "anatomicalLocations": [
+        "Coronary Artery",
+        "Aortic Valve",
+        "Left Ventricle (LV)",
+        "Right Ventricle (RV)"
+      ],
+      "confidence": 0.85,
+      "reasoning": "基于症状组合的心脏系统受累"
+    },
+    {
+      "organName": "Artery (Arteria)",
+      "anatomicalLocations": [
+        "Coronary Arteries",
+        "Aorta"
+      ],
+      "confidence": 0.75,
+      "reasoning": "血管系统相关症状"
+    },
+    {
+      "organName": "Lung (Pulmo)",
+      "anatomicalLocations": [
+        "Alveoli",
+        "Pleural Cavity"
+      ],
+      "confidence": 0.6,
+      "reasoning": "呼吸相关症状"
+    }
+  ],
+  "processing_time": "simulated",
+  "timestamp": "2025-08-27T15:36:51.084823"
+}

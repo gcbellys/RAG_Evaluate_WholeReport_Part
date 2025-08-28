@@ -1,0 +1,31 @@
+{
+  "report_id": "diagnostic_4050",
+  "aggregated_symptoms": "central line placement; atrial fibrillation; respiratory failure; transesophageal echocardiogram; normal sinus rhythm; chest pain; brain stem cva; poor distals",
+  "all_organs": [
+    "Trachea",
+    "Artery (Arteria)",
+    "Brainstem",
+    "Lung (Pulmo)",
+    "Heart (Cor)"
+  ],
+  "all_anatomical_locations": [
+    "Medulla Oblongata",
+    "Tracheal Mucosa",
+    "Coronary Artery",
+    "Femoral Artery",
+    "Aortic Valve",
+    "Right Atrium (RA)",
+    "Alveoli",
+    "Tracheal Rings",
+    "Pons",
+    "Popliteal Artery",
+    "Left Atrium (LA)",
+    "Mitral Valve",
+    "Bronchioles",
+    "Left Ventricle (LV)"
+  ],
+  "symptom_count": 8,
+  "organ_count": 5,
+  "location_count": 14,
+  "processing_timestamp": "2025-08-27T15:36:51.084672"
+}

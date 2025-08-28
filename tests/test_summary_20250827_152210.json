@@ -1,0 +1,79 @@
+{
+  "test_timestamp": "2025-08-27T15:22:10.003208",
+  "basic_test_success": true,
+  "unit_test_results": {
+    "step1_aggregation": {
+      "success": true,
+      "aggregated_symptoms": "chest pain",
+      "symptom_count": 1
+    },
+    "step2_decomposition": {
+      "success": true,
+      "decomposed_count": 1,
+      "decomposed_symptoms": [
+        {
+          "symptom": "chest pain",
+          "category": "cardiac",
+          "severity": "moderate"
+        }
+      ]
+    },
+    "step3_rag_search": {
+      "success": true,
+      "total_searches": 1,
+      "rag_results_count": 1
+    },
+    "step4_integration": {
+      "success": true,
+      "has_integration_results": true
+    }
+  },
+  "integration_test_results": {
+    "total_files": 2,
+    "successful_files": 2,
+    "failed_files": 0,
+    "file_results": [
+      {
+        "file_name": "test1.json",
+        "report_id": "test_file",
+        "status": "success",
+        "decomposed_symptoms": 1,
+        "rag_searches": 1
+      },
+      {
+        "file_name": "test2.json",
+        "report_id": "test_file",
+        "status": "success",
+        "decomposed_symptoms": 1,
+        "rag_searches": 1
+      }
+    ]
+  },
+  "performance_test_results": {
+    "test_config": {
+      "max_files": 3,
+      "total_files_available": 2
+    },
+    "performance_metrics": [
+      {
+        "file_name": "test1.json",
+        "report_id": "test_file",
+        "processing_time_seconds": 1.1920928955078125e-06,
+        "symptom_count": 0,
+        "decomposed_symptoms": 1,
+        "status": "success"
+      },
+      {
+        "file_name": "test2.json",
+        "report_id": "test_file",
+        "processing_time_seconds": 1.430511474609375e-06,
+        "symptom_count": 0,
+        "decomposed_symptoms": 1,
+        "status": "success"
+      }
+    ],
+    "total_processing_time": 1.33514404296875e-05,
+    "average_processing_time": 6.67572021484375e-06
+  },
+  "overall_status": "completed"
+}

@@ -1,0 +1,35 @@
+{
+  "report_id": "diagnostic_4050",
+  "final_prediction": {
+    "organs": [
+      {
+        "organName": "Heart (Cor)",
+        "anatomicalLocations": [
+          "Coronary Artery",
+          "Aortic Valve",
+          "Left Ventricle (LV)"
+        ],
+        "relevance": "High"
+      },
+      {
+        "organName": "Artery (Arteria)",
+        "anatomicalLocations": [
+          "Coronary Arteries"
+        ],
+        "relevance": "High"
+      },
+      {
+        "organName": "Vein (Vena)",
+        "anatomicalLocations": [
+          "Central Vein"
+        ],
+        "relevance": "Medium"
+      }
+    ]
+  },
+  "processing_summary": {
+    "total_symptoms": 8,
+    "decomposed_symptoms": 4,
+    "processing_time": "simulated"
+  }
+}

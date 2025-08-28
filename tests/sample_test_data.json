@@ -1,0 +1,51 @@
+[
+  {
+    "report_id": "test_sample_001",
+    "symptoms": [
+      {
+        "symptom_id": "test_symptom_1",
+        "symptom_text": "chest pain with shortness of breath and fatigue",
+        "expected_results": [
+          {
+            "organName": "Heart (Cor)",
+            "anatomicalLocations": ["Left Ventricle (LV)", "Coronary Artery"]
+          },
+          {
+            "organName": "Lung (Pulmo)",
+            "anatomicalLocations": ["Alveoli", "Bronchioles"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "report_id": "test_sample_002",
+    "symptoms": [
+      {
+        "symptom_id": "test_symptom_2",
+        "symptom_text": "severe headache with visual disturbances and nausea",
+        "expected_results": [
+          {
+            "organName": "Brain",
+            "anatomicalLocations": ["Cerebral Cortex", "Occipital Lobe"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "report_id": "test_sample_003",
+    "symptoms": [
+      {
+        "symptom_id": "test_symptom_3",
+        "symptom_text": "abdominal pain with fever and vomiting",
+        "expected_results": [
+          {
+            "organName": "Stomach (Gaster)",
+            "anatomicalLocations": ["Gastric Wall"]
+          }
+        ]
+      }
+    ]
+  }
+]
