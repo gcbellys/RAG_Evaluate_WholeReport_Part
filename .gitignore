@@ -195,15 +195,9 @@ local.properties
 .externalToolBuilders/
 *.launch
 
-# Large data files and results
+# Large data files and archives
 *.tar.gz
 *.zip
-results_4050_4080/
-results_*/**/rag_search_output/*.jsonl
-results_*/**/baseline_results/*.json
-results_*/**/comparison_results/**/*.json
-results_*/**/aggregation_results/**/*.json
-!results_*/**/aggregation_results/*summary*.
 
 # Environment and config files with sensitive data
 config/.env
